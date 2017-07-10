@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0673EBC5-216A-4FAA-81EB-5AA8DEFABD79}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>VersionBuildServer</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v100</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v100</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v100</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v100</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>..\..\..\libevent-2.0.22-stable\include;..\..\..\libevent-2.0.22-stable\WIN32-Code;E:\mysql++-3.2.3\lib;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\..\libevent-2.0.22-stable\x86;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)cache\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>..\..\libevent-2.0.22-stable\WIN32-Code;..\..\libevent-2.0.22-stable\include;E:\MySQL++\3.2.3\include;C:\Program Files\MySQL\MySQL Server 5.6\include;E:\libIconv\libIconv\Iconv;..\..\jsoncpp-src-0.5.0\include;E:\libgit2-0.24.1\include;D:\openssl-1.0.1t\bin\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\libevent-2.0.22-stable\x64;E:\MySQL++\3.2.3;C:\Program Files\MySQL\MySQL Server 5.6\lib;E:\libIconv\x64\Release;..\..\jsoncpp-src-0.5.0\lib\x64;E:\libgit2-0.24.1\lib\x64;D:\openssl-1.0.1t\bin\lib;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)cache\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ws2_32.lib;libevent.lib;libevent_extras.lib;libevent_core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>git2d.lib;ws2_32.lib;libevent.lib;libevent_extras.lib;libevent_core.lib;libmysql.lib;mysqlpp_d.lib;libIconv.lib;lib_jsond.lib;libeay32.lib;ssleay32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>LIBCMTD.lib,MSVCRTD.lib</IgnoreSpecificDefaultLibraries>
+      <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Business\BuildRuleBusiness.cpp" />
+    <ClCompile Include="Business\BuildRule\BuildRuleBuild.cpp" />
+    <ClCompile Include="Business\BuildRule\BuildRuleDeploy.cpp" />
+    <ClCompile Include="Business\BuildRule\BuildRuleQuery.cpp" />
+    <ClCompile Include="Business\Business.cpp" />
+    <ClCompile Include="Business\HostBusiness.cpp" />
+    <ClCompile Include="Business\Host\HostCreate.cpp" />
+    <ClCompile Include="Business\Host\HostQuery.cpp" />
+    <ClCompile Include="Business\Host\HostQueryPhysicalInformation.cpp" />
+    <ClCompile Include="Business\RepertoryBusiness.cpp" />
+    <ClCompile Include="Business\ResourceBusiness.cpp" />
+    <ClCompile Include="Business\Resource\ResourceQuery.cpp" />
+    <ClCompile Include="Business\SourceCodeBusiness.cpp" />
+    <ClCompile Include="Business\SourceCode\SourceCodeBuild.cpp" />
+    <ClCompile Include="Business\SourceCode\SourceCodeCreate.cpp" />
+    <ClCompile Include="Business\SourceCode\SourceCodeDelete.cpp" />
+    <ClCompile Include="Business\SourceCode\SourceCodeDeploy.cpp" />
+    <ClCompile Include="Business\SourceCode\SourceCodeModify.cpp" />
+    <ClCompile Include="Business\SourceCode\SourceCodeQuery.cpp" />
+    <ClCompile Include="Business\StorageBusiness.cpp" />
+    <ClCompile Include="Business\Storage\StorageDownload.cpp" />
+    <ClCompile Include="Business\Storage\StorageDownloadPart.cpp" />
+    <ClCompile Include="Business\Storage\StorageUpload.cpp" />
+    <ClCompile Include="Business\Storage\StorageUploadPart.cpp" />
+    <ClCompile Include="Common.cpp" />
+    <ClCompile Include="Controller\BuildResultController.cpp" />
+    <ClCompile Include="Controller\BuildRuleController.cpp" />
+    <ClCompile Include="Controller\BuildRuleDependController.cpp" />
+    <ClCompile Include="Controller\BuildRuleDeployController.cpp" />
+    <ClCompile Include="Controller\CompressionPackageController.cpp" />
+    <ClCompile Include="Controller\Controller.cpp" />
+    <ClCompile Include="Controller\HostController.cpp" />
+    <ClCompile Include="Controller\ProductController.cpp" />
+    <ClCompile Include="Controller\ResourceController.cpp" />
+    <ClCompile Include="Controller\ServerController.cpp" />
+    <ClCompile Include="Controller\SoftwarePackageController.cpp" />
+    <ClCompile Include="Controller\SourceCodeController.cpp" />
+    <ClCompile Include="Controller\StorageController.cpp" />
+    <ClCompile Include="Database\BuildResult.cpp" />
+    <ClCompile Include="Database\BuildRule.cpp" />
+    <ClCompile Include="Database\BuildRule_Depend.cpp" />
+    <ClCompile Include="Database\BuildRule_Deploy.cpp" />
+    <ClCompile Include="Database\Database.cpp" />
+    <ClCompile Include="Database\Resource.cpp" />
+    <ClCompile Include="Database\Resource_CompressionPackage.cpp" />
+    <ClCompile Include="Database\Resource_Document.cpp" />
+    <ClCompile Include="Database\Resource_Host.cpp" />
+    <ClCompile Include="Database\Resource_SourceCode.cpp" />
+    <ClCompile Include="Database\SourceCode_Deploy.cpp" />
+    <ClCompile Include="Database\Storage.cpp" />
+    <ClCompile Include="Exception\HttpRequestException.cpp" />
+    <ClCompile Include="SystemConfig.cpp" />
+    <ClCompile Include="Tools\HttpClient.cpp" />
+    <ClCompile Include="VBController.cpp" />
+    <ClCompile Include="VBHttpServer.cpp" />
+    <ClCompile Include="VBHttpServerItem.cpp" />
+    <ClCompile Include="VBRoute.cpp" />
+    <ClCompile Include="VBTaskServer.cpp" />
+    <ClCompile Include="VersionBuildServer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Business\BuildRuleBusiness.h" />
+    <ClInclude Include="Business\BuildRule\BuildRuleBuild.h" />
+    <ClInclude Include="Business\BuildRule\BuildRuleDeploy.h" />
+    <ClInclude Include="Business\BuildRule\BuildRuleQuery.h" />
+    <ClInclude Include="Business\Business.h" />
+    <ClInclude Include="Business\HostBusiness.h" />
+    <ClInclude Include="Business\Host\HostCreate.h" />
+    <ClInclude Include="Business\Host\HostQuery.h" />
+    <ClInclude Include="Business\Host\HostQueryPhysicalInformation.h" />
+    <ClInclude Include="Business\RepertoryBusiness.h" />
+    <ClInclude Include="Business\ResourceBusiness.h" />
+    <ClInclude Include="Business\Resource\ResourceQuery.h" />
+    <ClInclude Include="Business\SourceCodeBusiness.h" />
+    <ClInclude Include="Business\SourceCode\SourceCodeBuild.h" />
+    <ClInclude Include="Business\SourceCode\SourceCodeCreate.h" />
+    <ClInclude Include="Business\SourceCode\SourceCodeDelete.h" />
+    <ClInclude Include="Business\SourceCode\SourceCodeDeploy.h" />
+    <ClInclude Include="Business\SourceCode\SourceCodeModify.h" />
+    <ClInclude Include="Business\SourceCode\SourceCodeQuery.h" />
+    <ClInclude Include="Business\StorageBusiness.h" />
+    <ClInclude Include="Business\Storage\StorageDownload.h" />
+    <ClInclude Include="Business\Storage\StorageDownloadPart.h" />
+    <ClInclude Include="Business\Storage\StorageUpload.h" />
+    <ClInclude Include="Business\Storage\StorageUploadPart.h" />
+    <ClInclude Include="Common.h" />
+    <ClInclude Include="Controller\BuildResultController.h" />
+    <ClInclude Include="Controller\BuildRuleController.h" />
+    <ClInclude Include="Controller\BuildRuleDependController.h" />
+    <ClInclude Include="Controller\BuildRuleDeployController.h" />
+    <ClInclude Include="Controller\CompressionPackageController.h" />
+    <ClInclude Include="Controller\Controller.h" />
+    <ClInclude Include="Controller\HostController.h" />
+    <ClInclude Include="Controller\ProductController.h" />
+    <ClInclude Include="Controller\ResourceController.h" />
+    <ClInclude Include="Controller\ServerController.h" />
+    <ClInclude Include="Controller\SoftwarePackageController.h" />
+    <ClInclude Include="Controller\SourceCodeController.h" />
+    <ClInclude Include="Controller\StorageController.h" />
+    <ClInclude Include="Database\BuildResult.h" />
+    <ClInclude Include="Database\BuildRule.h" />
+    <ClInclude Include="Database\BuildRule_Depend.h" />
+    <ClInclude Include="Database\BuildRule_Deploy.h" />
+    <ClInclude Include="Database\Database.h" />
+    <ClInclude Include="Database\Resource.h" />
+    <ClInclude Include="Database\Resource_CompressionPackage.h" />
+    <ClInclude Include="Database\Resource_Document.h" />
+    <ClInclude Include="Database\Resource_Host.h" />
+    <ClInclude Include="Database\Resource_SourceCode.h" />
+    <ClInclude Include="Database\SourceCode_Deploy.h" />
+    <ClInclude Include="Database\Storage.h" />
+    <ClInclude Include="Exception\HttpRequestException.h" />
+    <ClInclude Include="SystemConfig.h" />
+    <ClInclude Include="Tools\HttpClient.h" />
+    <ClInclude Include="VBController.h" />
+    <ClInclude Include="VBHttpServer.h" />
+    <ClInclude Include="VBHttpServerItem.h" />
+    <ClInclude Include="VBRoute.h" />
+    <ClInclude Include="VBTaskServer.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

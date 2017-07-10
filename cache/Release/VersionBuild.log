@@ -1,0 +1,12 @@
+﻿生成启动时间为 2017/1/12 17:51:09。
+     1>项目“E:\Workspace\VersionBuild\VersionBuild\VersionBuild.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /IC:\Qt\Qt5.6.0\5.6\msvc2013\include /I.\GeneratedFiles\Release /IC:\Qt\Qt5.6.0\5.6\msvc2013\include\QtCore /IC:\Qt\Qt5.6.0\5.6\msvc2013\include\QtGui /IC:\Qt\Qt5.6.0\5.6\msvc2013\include\QtMultimedia /IC:\Qt\Qt5.6.0\5.6\msvc2013\include\QtMultimediaWidgets /IC:\Qt\Qt5.6.0\5.6\msvc2013\include\QtNetwork /IC:\Qt\Qt5.6.0\5.6\msvc2013\include\QtSql /IC:\Qt\Qt5.6.0\5.6\msvc2013\include\QtWidgets /nologo /W1 /WX- /O2 /Oy- /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_NO_DEBUG /D NDEBUG /D QT_CORE_LIB /D QT_GUI_LIB /D QT_MULTIMEDIA_LIB /D QT_MULTIMEDIAWIDGETS_LIB /D QT_NETWORK_LIB /D QT_SQL_LIB /D QT_WIDGETS_LIB /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"E:\Workspace\VersionBuild\cache\Release\\" /Fd"E:\Workspace\VersionBuild\cache\Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt dlgcreateproduct.cpp
+         dlgcreateproduct.cpp
+     1>dlgcreateproduct.cpp(9): error C2659: “=”: 作为左操作数
+     1>dlgcreateproduct.cpp(11): error C2659: “=”: 作为左操作数
+     1>已完成生成项目“E:\Workspace\VersionBuild\VersionBuild\VersionBuild.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.82

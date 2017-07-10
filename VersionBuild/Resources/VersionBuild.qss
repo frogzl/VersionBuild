@@ -1,0 +1,21 @@
+QTableView{
+	color:black;
+	selection-color: white;
+	selection-background-color: rgb(108, 108, 108);
+	border: 0;
+	height: 20px;
+}
+
+QHeaderView{
+	color: white;
+	font: bold 10pt;
+	background-color: rgb(108, 108, 108);
+	border: 0;
+}
+
+QHeaderView::section{
+	color: white;
+	font: bold 10pt;
+	background-color: rgb(108, 108, 108);
+	border: 1px solid #f6f7fa;
+}

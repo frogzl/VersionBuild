@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\Controller">
+      <UniqueIdentifier>{7ece4c51-d5f4-4f3d-a0dd-71a876913f40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Controller">
+      <UniqueIdentifier>{8c8bc1cb-37db-4c70-9d20-eb19a81229a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Database">
+      <UniqueIdentifier>{d1614ec2-5064-4a38-8a49-5e5879f0ccf3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Database">
+      <UniqueIdentifier>{ce7fb46a-92bf-4593-a741-35750eca37b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Business">
+      <UniqueIdentifier>{ec525f30-642a-4f49-b8c4-4f7332dea557}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Business">
+      <UniqueIdentifier>{923b167c-98dc-4231-a657-aa9813d04bfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Business\Host">
+      <UniqueIdentifier>{82fa36ae-e781-412a-8efd-a9d71e97a80d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Business\BuildRule">
+      <UniqueIdentifier>{3317d651-7c2f-4aeb-8529-f3871f00e4db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Business\Product">
+      <UniqueIdentifier>{5620c104-dd30-4325-bdc9-334e9c68646e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Business\File">
+      <UniqueIdentifier>{8bdc4305-3bc2-42cc-b205-a842628db5ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Business\BuildRule">
+      <UniqueIdentifier>{7160dd24-6a6c-48d2-a355-bf474457bfc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Business\File">
+      <UniqueIdentifier>{cdb6af4f-0236-43b4-8951-3642d8122504}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Business\Host">
+      <UniqueIdentifier>{fd6e08b9-821f-48fb-9758-77e0e26f97ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Business\Product">
+      <UniqueIdentifier>{4b43fbc4-3644-4b64-8235-16f0fc6a8b3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Exception">
+      <UniqueIdentifier>{15874fa7-d2fe-4001-a17f-11a7baab08b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Exception">
+      <UniqueIdentifier>{e8ae80eb-efba-464e-993a-4b0c0294655a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Business\SourceCode">
+      <UniqueIdentifier>{7ab363ce-d70b-40b2-8452-361913b7c9ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Business\SourceCode">
+      <UniqueIdentifier>{1584d9db-b9eb-461e-8076-72b46d95cdd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Tools">
+      <UniqueIdentifier>{deb9f5c8-2fd5-4ca7-989c-2b8a47af27ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Tools">
+      <UniqueIdentifier>{6d980519-f7a4-4ed4-b77c-2eeb70163cd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Business\Storage">
+      <UniqueIdentifier>{d091cbf5-d18f-42c5-b48e-cb094b4f3be6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Business\Storage">
+      <UniqueIdentifier>{a06d0a44-a972-42c9-90cf-cc4e53968507}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Business\Resource">
+      <UniqueIdentifier>{d96364cb-988a-4450-8342-e3546e4b7a70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Business\Resource">
+      <UniqueIdentifier>{9e36e09a-3471-4042-bb13-50f51321cb4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Task">
+      <UniqueIdentifier>{f12837d4-7bef-4e5a-86e6-824c6fb70626}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Task">
+      <UniqueIdentifier>{025e813e-810e-4f96-824b-265d39df7aa0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="VersionBuildServer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="VBHttpServer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="VBHttpServerItem.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Common.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="VBRoute.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="VBController.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\Controller.cpp">
+      <Filter>源文件\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\Database.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemConfig.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\ProductController.cpp">
+      <Filter>源文件\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\BuildRule.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\ServerController.cpp">
+      <Filter>源文件\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\BuildRuleController.cpp">
+      <Filter>源文件\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\HostController.cpp">
+      <Filter>源文件\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\BuildRule_Depend.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\Business.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\SoftwarePackageController.cpp">
+      <Filter>源文件\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\RepertoryBusiness.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Exception\HttpRequestException.cpp">
+      <Filter>源文件\Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\BuildRule_Deploy.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\BuildResult.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\Resource_CompressionPackage.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\Resource_Document.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\Resource_Host.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\Resource_SourceCode.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\Resource.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\Storage.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\SourceCodeController.cpp">
+      <Filter>源文件\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\StorageController.cpp">
+      <Filter>源文件\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\CompressionPackageController.cpp">
+      <Filter>源文件\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\BuildRuleDeployController.cpp">
+      <Filter>源文件\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\BuildRuleDependController.cpp">
+      <Filter>源文件\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\BuildResultController.cpp">
+      <Filter>源文件\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\SourceCodeBusiness.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\SourceCode\SourceCodeCreate.cpp">
+      <Filter>源文件\Business\SourceCode</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\BuildRule\BuildRuleBuild.cpp">
+      <Filter>源文件\Business\BuildRule</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\BuildRuleBusiness.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\HttpClient.cpp">
+      <Filter>源文件\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\StorageBusiness.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\Storage\StorageDownload.cpp">
+      <Filter>源文件\Business\Storage</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\Storage\StorageDownloadPart.cpp">
+      <Filter>源文件\Business\Storage</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\Storage\StorageUpload.cpp">
+      <Filter>源文件\Business\Storage</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\Storage\StorageUploadPart.cpp">
+      <Filter>源文件\Business\Storage</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\SourceCode\SourceCodeQuery.cpp">
+      <Filter>源文件\Business\SourceCode</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\SourceCode\SourceCodeModify.cpp">
+      <Filter>源文件\Business\SourceCode</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\SourceCode\SourceCodeDelete.cpp">
+      <Filter>源文件\Business\SourceCode</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\BuildRule\BuildRuleQuery.cpp">
+      <Filter>源文件\Business\BuildRule</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\HostBusiness.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\Host\HostQueryPhysicalInformation.cpp">
+      <Filter>源文件\Business\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\Host\HostCreate.cpp">
+      <Filter>源文件\Business\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\Host\HostQuery.cpp">
+      <Filter>源文件\Business\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\SourceCode_Deploy.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\BuildRule\BuildRuleDeploy.cpp">
+      <Filter>源文件\Business\BuildRule</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\SourceCode\SourceCodeDeploy.cpp">
+      <Filter>源文件\Business\SourceCode</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\ResourceController.cpp">
+      <Filter>源文件\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\Resource\ResourceQuery.cpp">
+      <Filter>源文件\Business\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\ResourceBusiness.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\SourceCode\SourceCodeBuild.cpp">
+      <Filter>源文件\Business\SourceCode</Filter>
+    </ClCompile>
+    <ClCompile Include="VBTaskServer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="VBHttpServer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="VBHttpServerItem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="VBRoute.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="VBController.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\Controller.h">
+      <Filter>头文件\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\Database.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemConfig.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\ProductController.h">
+      <Filter>头文件\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\BuildRule.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\ServerController.h">
+      <Filter>头文件\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\BuildRuleController.h">
+      <Filter>头文件\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\HostController.h">
+      <Filter>头文件\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\BuildRule_Depend.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\Business.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\SoftwarePackageController.h">
+      <Filter>头文件\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\RepertoryBusiness.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception\HttpRequestException.h">
+      <Filter>头文件\Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\BuildRule_Deploy.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\BuildResult.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\Resource_CompressionPackage.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\Resource_Document.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\Resource_Host.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\Resource_SourceCode.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\Storage.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\Resource.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\SourceCodeController.h">
+      <Filter>头文件\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\StorageController.h">
+      <Filter>头文件\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\CompressionPackageController.h">
+      <Filter>头文件\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\BuildRuleDeployController.h">
+      <Filter>头文件\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\BuildRuleDependController.h">
+      <Filter>头文件\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\BuildResultController.h">
+      <Filter>头文件\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\SourceCodeBusiness.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\SourceCode\SourceCodeCreate.h">
+      <Filter>头文件\Business\SourceCode</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\BuildRule\BuildRuleBuild.h">
+      <Filter>头文件\Business\BuildRule</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\BuildRuleBusiness.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\HttpClient.h">
+      <Filter>头文件\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\StorageBusiness.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\Storage\StorageDownload.h">
+      <Filter>头文件\Business\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\Storage\StorageUpload.h">
+      <Filter>头文件\Business\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\Storage\StorageDownloadPart.h">
+      <Filter>头文件\Business\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\Storage\StorageUploadPart.h">
+      <Filter>头文件\Business\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\SourceCode\SourceCodeQuery.h">
+      <Filter>头文件\Business\SourceCode</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\SourceCode\SourceCodeModify.h">
+      <Filter>头文件\Business\SourceCode</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\SourceCode\SourceCodeDelete.h">
+      <Filter>头文件\Business\SourceCode</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\BuildRule\BuildRuleQuery.h">
+      <Filter>头文件\Business\BuildRule</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\HostBusiness.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\Host\HostQueryPhysicalInformation.h">
+      <Filter>头文件\Business\Host</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\Host\HostCreate.h">
+      <Filter>头文件\Business\Host</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\Host\HostQuery.h">
+      <Filter>头文件\Business\Host</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\SourceCode_Deploy.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\BuildRule\BuildRuleDeploy.h">
+      <Filter>头文件\Business\BuildRule</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\SourceCode\SourceCodeDeploy.h">
+      <Filter>头文件\Business\SourceCode</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\ResourceController.h">
+      <Filter>头文件\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\Resource\ResourceQuery.h">
+      <Filter>头文件\Business\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\ResourceBusiness.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\SourceCode\SourceCodeBuild.h">
+      <Filter>头文件\Business\SourceCode</Filter>
+    </ClInclude>
+    <ClInclude Include="VBTaskServer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

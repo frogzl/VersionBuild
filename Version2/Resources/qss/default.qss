@@ -1,0 +1,597 @@
+QFrame#centralwidget{
+background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+							stop:0 #3b3b3b,   
+                            stop: 0.5 #3b3b3b,  
+                            stop: 1 white); 
+	border:1px solid #4e4d4d; 
+}
+QDialog{
+	background:white;
+	border:1px solid #ca5100; 
+}
+
+QFrame#titlebar{
+	background-color: transparent;
+	border:0;  
+	height: 40px;
+}
+QFrame#dlgtitlebar{
+	background-color: #ca5100;
+	border:0;  
+	height: 20px;
+}
+
+QFrame#statusbar{
+	background-color: #ca5100;
+	border:0;  
+	height: 20px;
+}
+
+#titlebar QPushButton#logo{
+	background-color: transparent; 
+	border-radius:4px;
+	border:1px solid #4e4d4d;  
+	image: url(:/Resources/png/logo.png);
+	height: 20px;
+	width: 20px;
+}
+#dlgtitlebar QPushButton#logo{
+	background-color: transparent; 
+	border-radius:4px;
+	image: url(:/Resources/png/logo.png);
+	height: 20px;
+	width: 20px;
+}
+
+#titlebar QLabel#title{
+	background-color: transparent;
+	font-family: "verdana","tahoma","微软雅黑","宋体","Arial Narrow";
+	font-size: 12px;
+	color: white;
+}
+
+#dlgtitlebar QLabel#title{
+	background-color: transparent;
+	font-family: "verdana","tahoma","微软雅黑","宋体","Arial Narrow";
+	font-size: 12px;
+	color: white;
+}
+
+#titlebar QPushButton#minus{
+	background-color: transparent; 
+	image: url(:/Resources/png/appbar.minus.png);
+	height: 20px;
+	width: 20px;
+}
+
+#titlebar QPushButton#minus:hover{  
+	background-color: transparent; 
+    image: url(:/Resources/png/appbar.minus.png);  
+	border:1px solid #ca5100; 
+	height: 20px;
+	width: 20px;
+}  
+#titlebar QPushButton#minus:checked{  
+	background-color: transparent; 
+    image: url(:/Resources/png/appbar.minus.png); 
+	height: 20px;
+	width: 20px;
+}  
+
+#titlebar QPushButton#close{
+	background-color: transparent; 
+	image: url(:/Resources/png/appbar.close.png);
+	height: 20px;
+	width: 20px;
+}
+
+#titlebar QPushButton#close:hover{  
+	background-color: transparent; 
+    image: url(:/Resources/png/appbar.close.png);  
+	border:1px solid #ca5100; 
+	height: 20px;
+	width: 20px;
+}  
+#titlebar QPushButton#close:checked{  
+	background-color: transparent; 
+    image: url(:/Resources/png/appbar.close.png); 
+	height: 20px;
+	width: 20px;
+}  
+
+#dlgtitlebar QPushButton#close{
+	background-color: transparent; 
+	image: url(:/Resources/png/appbar.close.png);
+	height: 20px;
+	width: 20px;
+}
+
+#dlgtitlebar QPushButton#close:hover{  
+	background-color: transparent; 
+    image: url(:/Resources/png/appbar.close.png);  
+	border:1px solid #ca5100; 
+	height: 20px;
+	width: 20px;
+}  
+#dlgtitlebar QPushButton#close:checked{  
+	background-color: transparent; 
+    image: url(:/Resources/png/appbar.close.png); 
+	height: 20px;
+	width: 20px;
+}  
+
+QTabWidget{
+	border:0;
+}
+QToolButton{  
+	background-color: #4e4d4d; 
+	image: url(:Resources/png/appbar.control.down.png);  
+	border:0;
+} 
+ 
+QToolButton:hover{  /*鼠标放上后*/  
+	background-color: #007acc; 
+	image: url(:Resources/png/appbar.control.down.png);  	
+	border:0;
+}  
+QToolButton:pressed{ /*按下按钮后*/  
+	background-color: #4e4d4d; 
+	image: url(:Resources/png/appbar.control.down.png);  	
+	border:0;
+}  
+QToolButton:checked{    /*选中后*/  
+	background-color: #007acc; 
+	image: url(:Resources/png/appbar.control.down.png);  
+	border:0;
+}  
+
+QTabWidget::pane{
+	border:none;
+	background:white;
+}
+QTabWidget::tab-bar{
+    alignment:left;
+	border-width:0px;
+}
+QTabBar::tab{
+	background:#3b3b3b;
+	color:white;
+	min-width:74px;
+	min-height:10px;
+}
+QTabBar::tab:hover{
+	background:#007acc;
+}
+QTabBar::tab:selected{
+	border: 1px solid #007acc;
+	background:#007acc;
+	color:white;
+}
+
+/* === QMenu === */
+QMenu {
+    background-color: #4e4d4d;
+    border: 1px solid gray;
+    color: white;
+    padding: 1px;
+}
+
+QMenu::item {
+    padding: 2px 25px 2px 20px;
+    border: 1px solid transparent;
+	color: white;
+}
+
+QMenu::item:disabled {
+    color: #666666;
+}
+
+QMenu::item:selected {
+    border-color: #007acc;
+    background: #007acc;
+}
+
+QMenu::icon:checked {
+
+}
+
+QMenu::separator {
+    height: 1px;
+    background: #222222;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+QMenu::indicator {
+    width: 13px;
+    height: 13px;
+}
+
+/* === QMenuBar === */
+QMenuBar {
+    background-color: white;
+    color: black;
+	border-bottom: 1px solid #4e4d4d;
+}
+
+QMenuBar::item {
+    background: transparent;
+}
+
+QMenuBar::item:disabled {
+    color: gray;
+}
+
+QMenuBar::item:selected {
+	background: #007acc;
+	color: white;
+}
+
+QMenuBar::item:pressed {
+    background: #4e4d4d;
+    color: white;
+}
+
+QPushButton#RefreshBtn{
+	background-color: transparent; 
+	image: url(:/Resources/png/appbar.refresh.png);
+	height: 10px;
+	width: 10px;
+}
+
+QPushButton#RefreshBtn:hover{  
+	background-color: transparent; 
+    image: url(:/Resources/png/appbar.refresh.png);  
+	height: 10px;
+	width: 10px;
+}  
+QPushButton#RefreshBtn:checked{  
+	background-color: transparent; 
+    image: url(:/Resources/png/appbar.refresh.png); 
+	height: 10px;
+	width: 10px;
+}  
+
+QFrame#DlgSubTitleBar{
+	background-color: transparent; 
+	border-bottom: 1px solid #007acc; 
+}
+
+#DlgSubTitleBar #DlgSubTitleBarTitle{
+	background-color: #007acc; 
+	font-family: "verdana","tahoma","微软雅黑","宋体","Arial Narrow";
+	font-size: 12px;
+	font-weight:bold;
+	color: white;
+	alignment:left;
+	padding: 1px;
+	min-height:20px;
+}
+
+QFrame#DlgLineEdit{
+	border: 1px solid #007acc; 
+	border-radius:2px;
+}
+
+QFrame#DlgLineEdit::hover{
+	border: 1px solid #ca5100; 
+	border-radius:2px;
+}
+
+#SourceCodeNameContent QLabel#SourceCodeName{
+	border: 0; 
+	padding: 2px;
+}
+#SourceCodeNameContent QLineEdit#SourceCodeName{
+	border: 0; 
+}
+
+#DlgLineEditTitle{
+	border: 0; 
+	padding: 2px;
+	font-family: "verdana","tahoma","微软雅黑","宋体","Arial Narrow";
+	font-weight:bold;
+}
+
+#DlgLineEditContent{
+	border: 0; 
+}
+
+QComboBox#DlgLineEditList {
+      border: 0;
+      padding: 1px 10px 1px 3px;
+  }
+
+QComboBox#DlgLineEditList::down-arrow {
+	image: url(:/Resources/png/appbar.control.down.png);
+}
+
+QComboBox#DlgLineEditList::down-arrow:hover {
+	image: url(:/Resources/png/appbar.control.down.hover.png);
+}
+
+QComboBox#DlgLineEditList::down-arrow:pressed {
+	border-image: url(:/Resources/png/appbar.control.down.png);
+}
+
+QComboBox#DlgLineEditList::drop-down {
+      subcontrol-origin: padding;
+      subcontrol-position: top right;
+      width: 20px;
+
+      border-left-width: 1px;
+      border-left-color: #007acc;
+      border-left-style: solid; /* just a single line */
+      border-top-right-radius: 3px; /* same radius as the QComboBox */
+      border-bottom-right-radius: 3px;
+}
+  
+QStackedWidget{
+	padding:0;
+	margin:0;
+}
+
+QPushButton#SourceCodeSelectExist{
+	background-color: #007acc; 
+	border:1px solid #007acc; 
+	font-family: "verdana","tahoma","微软雅黑","宋体","Arial Narrow";
+	font-size: 12px;
+	height: 30px;
+	width: 150px;
+	color: white;
+	border-radius: 2px;
+}
+
+QPushButton#SourceCodeSelectExist:hover{  
+	background-color: #ca5100; 
+	border:1px solid #ca5100; 
+	font-family: "verdana","tahoma","微软雅黑","宋体","Arial Narrow";
+	font-size: 12px;
+	font-weight:bold;
+	height: 30px;
+	width: 150px;
+	color: white;
+	border-radius: 2px;
+}  
+QPushButton#SourceCodeSelectExist:checked{  
+	background-color: #007acc; 
+	height: 30px;
+	font-family: "verdana","tahoma","微软雅黑","宋体","Arial Narrow";
+	font-size: 12px;
+	font-weight:bold;
+	width: 150px;
+	color: white;
+	border-radius: 2px;
+}  
+
+QPushButton#SourceCodeLocalPath{
+	background-color: #007acc; 
+	border:1px solid #007acc; 
+	font-family: "verdana","tahoma","微软雅黑","宋体","Arial Narrow";
+	font-size: 12px;
+	height: 30px;
+	width: 150px;
+	color: white;
+	border-radius: 2px;
+}
+
+QPushButton#SourceCodeLocalPath:hover{  
+	background-color: #ca5100; 
+	border:1px solid #ca5100; 
+	font-family: "verdana","tahoma","微软雅黑","宋体","Arial Narrow";
+	font-size: 12px;
+	font-weight:bold;
+	height: 30px;
+	width: 150px;
+	color: white;
+	border-radius: 2px;
+}  
+QPushButton#SourceCodeLocalPath:checked{  
+	background-color: #007acc; 
+	height: 30px;
+	font-family: "verdana","tahoma","微软雅黑","宋体","Arial Narrow";
+	font-size: 12px;
+	font-weight:bold;
+	width: 150px;
+	color: white;
+	border-radius: 2px;
+}  
+
+QPushButton#BuildRuleDeploy{
+	background-color: #007acc; 
+	border:1px solid #007acc; 
+	font-family: "verdana","tahoma","微软雅黑","宋体","Arial Narrow";
+	font-size: 12px;
+	height: 30px;
+	width: 150px;
+	color: white;
+	border-radius: 2px;
+}
+
+QPushButton#BuildRuleDeploy:hover{  
+	background-color: #ca5100; 
+	border:1px solid #ca5100; 
+	font-family: "verdana","tahoma","微软雅黑","宋体","Arial Narrow";
+	font-size: 12px;
+	font-weight:bold;
+	height: 30px;
+	width: 150px;
+	color: white;
+	border-radius: 2px;
+}  
+QPushButton#BuildRuleDeploy:checked{  
+	background-color: #007acc; 
+	height: 30px;
+	font-family: "verdana","tahoma","微软雅黑","宋体","Arial Narrow";
+	font-size: 12px;
+	font-weight:bold;
+	width: 150px;
+	color: white;
+	border-radius: 2px;
+} 
+
+QPushButton#HostConnect{
+	background-color: #007acc; 
+	border:1px solid #007acc; 
+	font-family: "verdana","tahoma","微软雅黑","宋体","Arial Narrow";
+	font-size: 12px;
+	height: 30px;
+	width: 150px;
+	color: white;
+	border-radius: 2px;
+}
+
+QPushButton#HostConnect:hover{  
+	background-color: #ca5100; 
+	border:1px solid #ca5100; 
+	font-family: "verdana","tahoma","微软雅黑","宋体","Arial Narrow";
+	font-size: 12px;
+	font-weight:bold;
+	height: 30px;
+	width: 150px;
+	color: white;
+	border-radius: 2px;
+}  
+QPushButton#HostConnect:checked{  
+	background-color: #007acc; 
+	height: 30px;
+	font-family: "verdana","tahoma","微软雅黑","宋体","Arial Narrow";
+	font-size: 12px;
+	font-weight:bold;
+	width: 150px;
+	color: white;
+	border-radius: 2px;
+} 
+
+QLabel#SourceCodeSelectExist, QLabel#SourceCodeLocalPath, QLabel#BuildRuleDeploy{
+	font-family: "verdana","tahoma","微软雅黑","宋体","Arial Narrow";
+	font-size: 12px;
+	color :#ca5100;
+}
+/*
+QTableView#SourceCodeBuildRule,QTableView#BuildRuleDepends, QTableView#DlgSelectHost,QTableView#DlgSelectResourceSourceCode,QTableView#DlgSelectBuildRulePlatform{
+	color:black;
+	selection-color: white;
+	selection-background-color: #ca5100;
+	border: 0;
+	height: 20px;
+}
+
+QHeaderView#SourceCodeBuildRule,QHeaderView#BuildRuleDepends,QHeaderView#DlgSelectHost,QHeaderView#DlgSelectResourceSourceCode,QHeaderView#DlgSelectBuildRulePlatform{
+	color: white;
+	font: bold 10pt;
+	background-color: #007acc;
+	border: 0;
+}
+
+QHeaderView#SourceCodeBuildRule::section,QHeaderView#BuildRuleDepends::section,QHeaderView#DlgSelectHost::section,QHeaderView#DlgSelectResourceSourceCode::section,QHeaderView#DlgSelectBuildRulePlatform::section{
+	color: white;
+	font: bold 10pt;
+	background-color: #007acc;
+	border: 0;
+}
+*/
+QTableView{  
+    color: rgb(0, 0, 0);  
+    border: 0;          /*边框颜色*/  
+    gridline-color:white;             /*grid线颜色*/  
+    background-color: white;  
+    alternate-background-color: white; /*行交替颜色*/  
+    selection-background-color: white; /*选中行背景颜色*/  
+}  
+  
+QTableView::item:!alternate:!selected{  
+    background-color: rgb(220, 220, 220);    /*交替行的另一颜色*/  
+}  
+
+QPushButton#HostCreate,QPushButton#SourceCodeCreate, QPushButton#BuildRuleCreate, QPushButton#DlgSelectHostOk,QPushButton#DlgSelectResourceSourceCodeOk,QPushButton#DlgSelectBuildRulePlatformOk{
+	background-color: #007acc; 
+	border:1px solid #007acc; 
+	font-family: "verdana","tahoma","微软雅黑","宋体","Arial Narrow";
+	font-size: 14px;
+	height: 30px;
+	width: 100px;
+	color: white;
+	border-radius: 2px;
+}
+
+QPushButton#HostCreate:hover, QPushButton#SourceCodeCreate:hover, QPushButton#BuildRuleCreate:hover, QPushButton#DlgSelectHostOk:hover, QPushButton#DlgSelectResourceSourceCodeOk:hover, QPushButton#DlgSelectBuildRulePlatformOk:hover{  
+	background-color: #ca5100; 
+	border:1px solid #ca5100; 
+	font-family: "verdana","tahoma","微软雅黑","宋体","Arial Narrow";
+	font-weight:bold;
+	font-size: 14px;
+	height: 30px;
+	width: 100px;
+	color: white;
+	border-radius: 2px;
+}  
+QPushButton#HostCreate:checked, QPushButton#SourceCodeCreate:checked, QPushButton#BuildRuleCreate:checked, QPushButton#DlgSelectHostOk:checked, QPushButton#DlgSelectResourceSourceCodeOk:checked, QPushButton#DlgSelectBuildRulePlatformOk:checked{  
+	background-color: #007acc; 
+	font-family: "verdana","tahoma","微软雅黑","宋体","Arial Narrow";
+	font-weight:bold;
+	font-size: 14px;
+	height: 30px;
+	width: 100px;
+	color: white;
+	border-radius: 2px;
+}  
+
+QListView {
+    show-decoration-selected: 1; /* make the selection span the entire width of the view */
+	border:0;
+}
+
+QListView::item:alternate {
+    background: #EEEEEE;
+}
+
+QListView::item:selected {
+    border: 1px solid #6a6ea9;
+}
+
+QListView::item:selected:!active {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #ABAFE5, stop: 1 #8588B2);
+}
+
+QListView::item:selected:active {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #6a6ea9, stop: 1 #888dd9);
+}
+
+QListView::item:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #FAFBFE, stop: 1 #DCDEF1);
+								border:1px solid red;
+}
+
+QTreeView {
+    show-decoration-selected: 1;
+	border: 0;
+}
+
+QTreeView::item {
+    border: 0;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+QTreeView::item:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #e7effd, stop: 1 #cbdaf1);
+    border: 0;
+}
+
+QTreeView::item:selected {
+    border: 0;
+}
+
+QTreeView::item:selected:active{
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #6ea1f1, stop: 1 #567dbc);
+}
+
+QTreeView::item:selected:!active {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #6b9be8, stop: 1 #577fbf);
+}

@@ -1,0 +1,6 @@
+﻿  Moc'ing Common.h...
+  Common.cpp
+  moc_Common.cpp
+  dlgcreategit.cpp
+  LINK : 没有找到 E:\VersionBuild\bin\Debug\x64\\VersionBuild.exe 或上一个增量链接没有生成它；正在执行完全链接
+  VersionBuild.vcxproj -> E:\VersionBuild\bin\Debug\x64\VersionBuild.exe

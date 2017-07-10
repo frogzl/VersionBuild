@@ -1,0 +1,23 @@
+<RCC>
+  <qresource prefix="/">
+    <file>Resources/qss/default.qss</file>
+    <file>Resources/ico/logo.ico</file>
+    <file>Resources/png/logo.png</file>
+    <file>Resources/png/appbar.close.png</file>
+    <file>Resources/png/appbar.minus.png</file>
+    <file>Resources/png/appbar.control.down.png</file>
+    <file>Resources/png/appbar.app.png</file>
+    <file>Resources/png/appbar.tree.leaf.three.png</file>
+    <file>Resources/png/appbar.add.png</file>
+    <file>Resources/png/appbar.refresh.png</file>
+    <file>Resources/png/appbar.add.black.png</file>
+    <file>Resources/png/appbar.add.green.png</file>
+    <file>Resources/png/appbar.control.down.hover.png</file>
+    <file>Resources/png/Doc.png</file>
+    <file>Resources/png/gz.png</file>
+    <file>Resources/png/host.png</file>
+    <file>Resources/png/src.png</file>
+    <file>Resources/png/tar.png</file>
+    <file>Resources/png/zip.png</file>
+  </qresource>
+</RCC>

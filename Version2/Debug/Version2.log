@@ -1,0 +1,59 @@
+﻿生成启动时间为 2017/5/10 17:56:27。
+     1>项目“E:\Workspace\VersionBuild\Version2\Version2.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /IC:\Qt\Qt5.3.0\5.3\msvc2010_opengl\include /I.\GeneratedFiles\Debug /IC:\Qt\Qt5.3.0\5.3\msvc2010_opengl\include\QtCore /IC:\Qt\Qt5.3.0\5.3\msvc2010_opengl\include\QtGui /IC:\Qt\Qt5.3.0\5.3\msvc2010_opengl\include\QtNetwork /IC:\Qt\Qt5.3.0\5.3\msvc2010_opengl\include\QtSql /IC:\Qt\Qt5.3.0\5.3\msvc2010_opengl\include\QtWidgets /I.\main /I.\tab /I.\dlg /I.\delegate /I.\model /Zi /nologo /W1 /WX- /Od /Oy- /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /D QT_NETWORK_LIB /D QT_SQL_LIB /D QT_WIDGETS_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt delegate\delegateresourcelist.cpp
+         delegateresourcelist.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Workspace\VersionBuild\Win32\Debug\\Version2.exe" /NOLOGO /LIBPATH:C:\Qt\Qt5.3.0\5.3\msvc2010_opengl\lib qtmaind.lib Qt5Cored.lib Qt5Guid.lib Qt5Networkd.lib Qt5Sqld.lib Qt5Widgetsd.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Version2.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\Workspace\VersionBuild\Win32\Debug\Version2.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Workspace\VersionBuild\Win32\Debug\Version2.lib" /MACHINE:X86 Debug\http.obj
+         Debug\delegateresourcelist.obj
+         Debug\dlgbase.obj
+         Debug\dlgcreatebuildrule.obj
+         Debug\dlgcreateresourcecompressedfile.obj
+         Debug\dlgcreateresourcefile.obj
+         Debug\dlgcreateresourcehost.obj
+         Debug\dlgcreateresourcesourcecode.obj
+         Debug\dlglineedit.obj
+         Debug\dlgselectbuildruleplatform.obj
+         Debug\dlgselecthost.obj
+         Debug\dlgselectresourcesourcecode.obj
+         Debug\dlgsubtitlebar.obj
+         Debug\dlgtitlebar.obj
+         Debug\moc_centralwidget.obj
+         Debug\moc_delegateresourcelist.obj
+         Debug\moc_dlgbase.obj
+         Debug\moc_dlgcreatebuildrule.obj
+         Debug\moc_dlgcreateresourcecompressedfile.obj
+         Debug\moc_dlgcreateresourcefile.obj
+         Debug\moc_dlgcreateresourcehost.obj
+         Debug\moc_dlgcreateresourcesourcecode.obj
+         Debug\moc_dlglineedit.obj
+         Debug\moc_dlgselectbuildruleplatform.obj
+         Debug\moc_dlgselecthost.obj
+         Debug\moc_dlgselectresourcesourcecode.obj
+         Debug\moc_dlgsubtitlebar.obj
+         Debug\moc_dlgtitlebar.obj
+         Debug\moc_http.obj
+         Debug\moc_maintitlebar.obj
+         Debug\moc_MainWindow.obj
+         Debug\moc_modelresourcelist.obj
+         Debug\moc_statusbar.obj
+         Debug\moc_tabapplication.obj
+         Debug\moc_tabresource.obj
+         Debug\qrc_version2.obj
+         Debug\main.obj
+         Debug\centralwidget.obj
+         Debug\MainWindow.obj
+         Debug\statusbar.obj
+         Debug\maintitlebar.obj
+         Debug\modelresourcelist.obj
+         Debug\tabapplication.obj
+         Debug\tabresource.obj
+         LINK : 没有找到 E:\Workspace\VersionBuild\Win32\Debug\\Version2.exe 或上一个增量链接没有生成它；正在执行完全链接
+         Version2.vcxproj -> E:\Workspace\VersionBuild\Win32\Debug\Version2.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"E:\Workspace\VersionBuild\Win32\Debug\\Version2.exe;#1" /manifest Debug\Version2.exe.intermediate.manifest
+     1>已完成生成项目“E:\Workspace\VersionBuild\Version2\Version2.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:02.07

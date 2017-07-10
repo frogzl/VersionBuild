@@ -1,0 +1,11 @@
+﻿  Moc'ing centralwidget.h...
+  Moc'ing tabresource.h...
+  moc_MainWindow.cpp
+  moc_centralwidget.cpp
+  moc_tabresource.cpp
+  main.cpp
+  MainWindow.cpp
+  centralwidget.cpp
+  tabresource.cpp
+  LINK : 没有找到 E:\VersionBuild\bin\Debug\x64\\Version2.exe 或上一个增量链接没有生成它；正在执行完全链接
+  Version2.vcxproj -> E:\VersionBuild\bin\Debug\x64\Version2.exe
