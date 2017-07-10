@@ -1,13 +1,9 @@
-﻿生成启动时间为 2017/7/10 12:43:25。
+﻿生成启动时间为 2017/7/10 14:32:30。
      1>项目“E:\Workspace\VersionBuild\MicroServicePlugin\MicroServicePlugin.vcxproj”在节点 2 上(Build 个目标)。
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"E:\Workspace\VersionBuild\cache\Debug\\" /Fd"E:\Workspace\VersionBuild\cache\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt MicroServicePlugin.cpp
-         MicroServicePlugin.cpp
-       Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"E:\Workspace\VersionBuild\bin\Debug\Win32\MicroServicePlugins\MicroServicePlugin.lib" /NOLOGO E:\Workspace\VersionBuild\cache\Debug\MicroServicePlugin.obj
+     1>Lib:
          MicroServicePlugin.vcxproj -> E:\Workspace\VersionBuild\bin\Debug\Win32\MicroServicePlugins\MicroServicePlugin.lib
      1>已完成生成项目“E:\Workspace\VersionBuild\MicroServicePlugin\MicroServicePlugin.vcxproj”(Build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:01.34
+已用时间 00:00:00.12
