@@ -3,33 +3,75 @@
 
 ServiceController::ServiceController()
 {
+	riRouteInfos = NULL;
+	nRouteInfoCnt = 0;
+	nRouteInfoIndex = 0;
+	register_http_routes();
 }
 
 ServiceController::~ServiceController()
 {
+	delete [] riRouteInfos;
+	riRouteInfos = NULL;
+	nRouteInfoCnt = 0;
+	nRouteInfoIndex = 0;
 }
 
-string ServiceController::route_infos()
+int ServiceController::route_infos(Route_Info *&routeInfos)
 {
-	return "";
+	return 0;
 }
 
-string ServiceController::unique_id()
+bool ServiceController::register_http_get(const char *szPath, const char *szBusinessName)
 {
-	return "";
+	return register_http_route(szPath, szBusinessName, "get");
 }
 
-string ServiceController::name()
+bool ServiceController::register_http_http_post(const char *szPath, const char *szBusinessName)
 {
-	return "";
+	return register_http_route(szPath, szBusinessName, "post");
 }
 
-string ServiceController::version()
+bool ServiceController::register_http_head(const char *szPath, const char *szBusinessName)
 {
-	return "";
+	return register_http_route(szPath, szBusinessName, "head");
 }
 
-string ServiceController::dispatch_by_route_path(char *szRoutePath, char *sz, Request_Data &inData, Respond_Data &outData)
+bool ServiceController::register_http_put(const char *szPath, const char *szBusinessName)
 {
-	return "";
+	return register_http_route(szPath, szBusinessName, "put");
+}
+
+bool ServiceController::register_http_delete(const char *szPath, const char *szBusinessName)
+{
+	return register_http_route(szPath, szBusinessName, "delete");
+}
+
+bool ServiceController::register_http_trace(const char *szPath, const char *szBusinessName)
+{
+	return register_http_route(szPath, szBusinessName, "trace");
+}
+
+bool ServiceController::register_http_options(const char *szPath, const char *szBusinessName)
+{
+	return register_http_route(szPath, szBusinessName, "options");
+}
+
+bool ServiceController::init_route_count(int nCount)
+{
+	riRouteInfos = new Route_Info[nCount];
+	nRouteInfoCnt = nCount;
+	nRouteInfoIndex = 0;
+}
+
+bool ServiceController::register_http_route(const char *szPath, const char *szBusinessName, const char *szOperation)
+{
+	if (nRouteInfoCnt < nRouteInfoIndex)
+	{
+		riRouteInfos[nRouteInfoIndex].nIndex = nRouteInfoIndex;
+		riRouteInfos[nRouteInfoIndex].szPath = szPath;
+		riRouteInfos[nRouteInfoIndex].szBusinessName = szBusinessName;
+		riRouteInfos[nRouteInfoIndex].szoperation = szOperation;
+	}
+	nRouteInfoIndex++;
 }
