@@ -1,0 +1,14 @@
+﻿生成启动时间为 2017/7/10 15:38:39。
+     1>项目“E:\Workspace\VersionBuild\SourceCodeService\SourceCodeService.vcxproj”在节点 2 上(Build 个目标)。
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Workspace\VersionBuild\bin\Debug\x64\MicroServicePlugins\SourceCodeService.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /DEF:"SourceCodeService.def" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Workspace\VersionBuild\bin\Debug\x64\MicroServicePlugins\SourceCodeService.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Workspace\VersionBuild\bin\Debug\x64\MicroServicePlugins\SourceCodeService.lib" /MACHINE:X64 /DLL E:\Workspace\VersionBuild\cache\SourceCodeService\Debug\dllmain.obj
+         E:\Workspace\VersionBuild\cache\SourceCodeService\Debug\ServiceController.obj
+         E:\Workspace\VersionBuild\cache\SourceCodeService\Debug\SourceCodeService.obj
+         E:\Workspace\VersionBuild\cache\SourceCodeService\Debug\stdafx.obj
+            正在创建库 E:\Workspace\VersionBuild\bin\Debug\x64\MicroServicePlugins\SourceCodeService.lib 和对象 E:\Workspace\VersionBuild\bin\Debug\x64\MicroServicePlugins\SourceCodeService.exp
+         SourceCodeService.vcxproj -> E:\Workspace\VersionBuild\bin\Debug\x64\MicroServicePlugins\SourceCodeService.dll
+     1>已完成生成项目“E:\Workspace\VersionBuild\SourceCodeService\SourceCodeService.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.35
