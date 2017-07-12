@@ -6,7 +6,6 @@ ServiceController::ServiceController()
 	riRouteInfos = NULL;
 	nRouteInfoCnt = 0;
 	nRouteInfoIndex = 0;
-	register_http_routes();
 }
 
 ServiceController::~ServiceController()
@@ -22,12 +21,40 @@ int ServiceController::route_infos(Route_Info *&routeInfos)
 	return 0;
 }
 
+const char* ServiceController::unique_id()
+{
+	return szServiceUniqueId;
+}
+
+const char* ServiceController::name()
+{
+	return szServiceName;
+}
+
+const char* ServiceController::version()
+{
+	return szServiceVersion;
+}
+
+string ServiceController::dispatch_by_route_path(int nIndex, Request_Data &inData, Respond_Data &outData)
+{
+	return "";
+}
+
+bool ServiceController::init_route_count(int nCount)
+{
+	riRouteInfos = new Route_Info[nCount];
+	memset(riRouteInfos, 0, nCount * sizeof(Route_Info));
+	nRouteInfoCnt = nCount;
+	nRouteInfoIndex = 0;
+}
+
 bool ServiceController::register_http_get(const char *szPath, const char *szBusinessName)
 {
 	return register_http_route(szPath, szBusinessName, "get");
 }
 
-bool ServiceController::register_http_http_post(const char *szPath, const char *szBusinessName)
+bool ServiceController::register_http_post(const char *szPath, const char *szBusinessName)
 {
 	return register_http_route(szPath, szBusinessName, "post");
 }
@@ -57,21 +84,36 @@ bool ServiceController::register_http_options(const char *szPath, const char *sz
 	return register_http_route(szPath, szBusinessName, "options");
 }
 
-bool ServiceController::init_route_count(int nCount)
+bool ServiceController::register_service_name(const char *szName)
 {
-	riRouteInfos = new Route_Info[nCount];
-	nRouteInfoCnt = nCount;
-	nRouteInfoIndex = 0;
+	szServiceName = szName;
+	return true;
+}
+
+bool ServiceController::register_service_unique_id(const char *szID)
+{
+	szServiceUniqueId = szID;
+	return true;
+}
+
+
+bool ServiceController::register_service_version(const char *szVersion)
+{
+	szServiceVersion = szVersion;
+	return true;
 }
 
 bool ServiceController::register_http_route(const char *szPath, const char *szBusinessName, const char *szOperation)
 {
+	bool bRet = false;
 	if (nRouteInfoCnt < nRouteInfoIndex)
 	{
 		riRouteInfos[nRouteInfoIndex].nIndex = nRouteInfoIndex;
 		riRouteInfos[nRouteInfoIndex].szPath = szPath;
 		riRouteInfos[nRouteInfoIndex].szBusinessName = szBusinessName;
 		riRouteInfos[nRouteInfoIndex].szoperation = szOperation;
+		bRet = true;
 	}
 	nRouteInfoIndex++;
+	return bRet;
 }
