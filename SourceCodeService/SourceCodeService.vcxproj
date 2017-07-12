@@ -73,6 +73,8 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)bin\$(Configuration)\$(Platform)\MicroServicePlugins\</OutDir>
     <IntDir>$(SolutionDir)cache\$(ProjectName)\$(Configuration)\</IntDir>
+    <IncludePath>E:\MySQL++\3.2.3\include;C:\Program Files\MySQL\MySQL Server 5.6\include;E:\libIconv\libIconv\Iconv;..\..\jsoncpp-src-0.5.0\include;E:\libgit2-0.24.1\include;D:\openssl-1.0.1t\bin\include;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\MySQL++\3.2.3;C:\Program Files\MySQL\MySQL Server 5.6\lib;E:\libIconv\x64\Release;..\..\jsoncpp-src-0.5.0\lib\x64;E:\libgit2-0.24.1\lib\x64;D:\openssl-1.0.1t\bin\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -106,6 +108,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>SourceCodeService.def</ModuleDefinitionFile>
+      <AdditionalDependencies>git2d.lib;libmysql.lib;mysqlpp_d.lib;libIconv.lib;lib_jsond.lib;libeay32.lib;ssleay32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -148,14 +151,18 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BusinessController.h" />
+    <ClInclude Include="Business.h" />
+    <ClInclude Include="BusinessFactory.h" />
+    <ClInclude Include="BusinessFactoryTpl.h" />
     <ClInclude Include="ServiceController.h" />
-    <ClInclude Include="SourceCodeController.h" />
+    <ClInclude Include="ServiceControllerTpl.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BusinessController.cpp" />
+    <ClCompile Include="Business.cpp" />
+    <ClCompile Include="BusinessFactory.cpp" />
+    <ClCompile Include="BusinessFactoryTpl.cpp" />
     <ClCompile Include="dllmain.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
@@ -171,7 +178,7 @@
       </PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="ServiceController.cpp" />
-    <ClCompile Include="SourceCodeController.cpp" />
+    <ClCompile Include="ServiceControllerTpl.cpp" />
     <ClCompile Include="SourceCodeService.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

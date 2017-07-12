@@ -1,119 +1,23 @@
 #include "stdafx.h"
 #include "ServiceController.h"
 
+
 ServiceController::ServiceController()
 {
-	riRouteInfos = NULL;
-	nRouteInfoCnt = 0;
-	nRouteInfoIndex = 0;
+	register_service_name("SourceCode");
+	register_service_unique_id("{e2cb8547-7aa0-4fe0-bad0-0f974d9270c6}");
+	register_service_version("1");
+
+	init_route_count(6);
+	register_http_get("/sourcecode/query", "SourceCodeQuery");
+	register_http_post("/sourcecode/create", "SourceCodeCreate");
+	register_http_post("/sourcecode/modify", "SourceCodeModify");
+	register_http_post("/sourcecode/deploy", "SourceCodeDeploy");
+	register_http_post("/sourcecode/build", "SourceCodeBuild");
+	register_http_post("/sourcecode/delete", "SourceCodeDelete");
 }
+
 
 ServiceController::~ServiceController()
 {
-	delete [] riRouteInfos;
-	riRouteInfos = NULL;
-	nRouteInfoCnt = 0;
-	nRouteInfoIndex = 0;
-}
-
-int ServiceController::route_infos(Route_Info *&routeInfos)
-{
-	return 0;
-}
-
-const char* ServiceController::unique_id()
-{
-	return szServiceUniqueId;
-}
-
-const char* ServiceController::name()
-{
-	return szServiceName;
-}
-
-const char* ServiceController::version()
-{
-	return szServiceVersion;
-}
-
-string ServiceController::dispatch_by_route_path(int nIndex, Request_Data &inData, Respond_Data &outData)
-{
-	return "";
-}
-
-bool ServiceController::init_route_count(int nCount)
-{
-	riRouteInfos = new Route_Info[nCount];
-	memset(riRouteInfos, 0, nCount * sizeof(Route_Info));
-	nRouteInfoCnt = nCount;
-	nRouteInfoIndex = 0;
-}
-
-bool ServiceController::register_http_get(const char *szPath, const char *szBusinessName)
-{
-	return register_http_route(szPath, szBusinessName, "get");
-}
-
-bool ServiceController::register_http_post(const char *szPath, const char *szBusinessName)
-{
-	return register_http_route(szPath, szBusinessName, "post");
-}
-
-bool ServiceController::register_http_head(const char *szPath, const char *szBusinessName)
-{
-	return register_http_route(szPath, szBusinessName, "head");
-}
-
-bool ServiceController::register_http_put(const char *szPath, const char *szBusinessName)
-{
-	return register_http_route(szPath, szBusinessName, "put");
-}
-
-bool ServiceController::register_http_delete(const char *szPath, const char *szBusinessName)
-{
-	return register_http_route(szPath, szBusinessName, "delete");
-}
-
-bool ServiceController::register_http_trace(const char *szPath, const char *szBusinessName)
-{
-	return register_http_route(szPath, szBusinessName, "trace");
-}
-
-bool ServiceController::register_http_options(const char *szPath, const char *szBusinessName)
-{
-	return register_http_route(szPath, szBusinessName, "options");
-}
-
-bool ServiceController::register_service_name(const char *szName)
-{
-	szServiceName = szName;
-	return true;
-}
-
-bool ServiceController::register_service_unique_id(const char *szID)
-{
-	szServiceUniqueId = szID;
-	return true;
-}
-
-
-bool ServiceController::register_service_version(const char *szVersion)
-{
-	szServiceVersion = szVersion;
-	return true;
-}
-
-bool ServiceController::register_http_route(const char *szPath, const char *szBusinessName, const char *szOperation)
-{
-	bool bRet = false;
-	if (nRouteInfoCnt < nRouteInfoIndex)
-	{
-		riRouteInfos[nRouteInfoIndex].nIndex = nRouteInfoIndex;
-		riRouteInfos[nRouteInfoIndex].szPath = szPath;
-		riRouteInfos[nRouteInfoIndex].szBusinessName = szBusinessName;
-		riRouteInfos[nRouteInfoIndex].szoperation = szOperation;
-		bRet = true;
-	}
-	nRouteInfoIndex++;
-	return bRet;
 }

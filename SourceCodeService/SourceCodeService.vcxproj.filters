@@ -24,13 +24,19 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Business.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BusinessFactory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BusinessFactoryTpl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
     <ClInclude Include="ServiceController.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="BusinessController.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="SourceCodeController.h">
+    <ClInclude Include="ServiceControllerTpl.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -44,13 +50,19 @@
     <ClCompile Include="dllmain.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Business.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BusinessFactory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BusinessFactoryTpl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
     <ClCompile Include="ServiceController.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="BusinessController.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="SourceCodeController.cpp">
+    <ClCompile Include="ServiceControllerTpl.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

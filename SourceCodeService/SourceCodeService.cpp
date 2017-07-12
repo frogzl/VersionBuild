@@ -2,30 +2,30 @@
 //
 
 #include "stdafx.h"
-#include "ServiceController.h"
+#include "ServiceControllerTpl.h"
 // 这是导出函数的一个示例。
-ServiceController sc;
+ServiceControllerTpl sc;
 string service_route_infos()
 {
-	return sc.route_infos();
+	return "";
 }
 
 string service_unique_id()
 {
-	return sc.unique_id();
+	return "";
 }
 
 string service_name()
 {
-	return sc.name();
+	return "";
 }
 
 string service_version()
 {
-	return sc.version();
+	return "";
 }
 
-string service_dispatch_by_route_path(char *szRoutePath, char *sz, ServiceController::Request_Data &inData, ServiceController::Respond_Data &outData)
+string service_dispatch_by_route_path(char *szRoutePath, Business::Request_Data &inData, Business::Respond_Data &outData)
 {
-	return sc.dispatch_by_route_path(szRoutePath, sz, inData, outData);
+	return "";
 }
