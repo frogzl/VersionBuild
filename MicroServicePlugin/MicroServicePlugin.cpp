@@ -1,5 +1,6 @@
 #include "MicroServicePlugin.h"
-int sum(int x, int y)
+#include "ServiceTemplate.h"
+ServiceInterface* create_plugin()
 {
-	return x + y;
+	return new ServiceTemplate();
 }

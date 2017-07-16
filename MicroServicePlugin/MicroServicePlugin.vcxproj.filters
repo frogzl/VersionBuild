@@ -21,10 +21,39 @@
     <ClCompile Include="MicroServicePlugin.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Business.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BusinessFactory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceInterface.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceTemplate.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MicroServicePlugin.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Business.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BusinessFactory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceInterface.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceTemplate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MicroServicePlugin.def">
+      <Filter>源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>

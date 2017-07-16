@@ -1,1 +1,3 @@
-int sum(int a, int b);
+#pragma once
+#include "Business.h"
+#include "ServiceInterface.h"
