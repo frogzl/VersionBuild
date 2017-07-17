@@ -22,6 +22,12 @@ class Business
 public:
 	typedef struct
 	{
+		const char *szBusinessName;	// 处理对象名
+		int nIndex;								// 索引
+	}Business_Info;
+
+	typedef struct
+	{
 		map<string, string>mParameters; // url上的参数
 		map<string, string> mHeaders;		// 报文头信息
 		Json::Value jData;							// 报文体数据
@@ -33,6 +39,7 @@ public:
 		Json::Value jData;						// respond data
 		map<string, string> mHeaders; // respond custom headers
 	}Respond_Data;
+
 public:
 	Business();
 	~Business();

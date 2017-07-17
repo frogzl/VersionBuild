@@ -1,11 +1,23 @@
 #pragma once
 #include "Business.h"
+#include <map>
+#include <string>
+
+using namespace std;
 class BusinessFactory
 {
 public:
 	BusinessFactory();
 	~BusinessFactory();
-	bool init_business_count(int nCount);
-	Business* get_business(const char *szBusinessName);
+
+	int register_business(const char *szBusinessName, FuncCreate pCallBack);
+	bool change_to_fast_mode();
+
+	Business* get_business(int nIndex);
+private:
+	map<string, int> *pMapIndex;
+	vector<FuncCreate> *pVecCreator;
+
+	FuncCreate *creators;
 };
 

@@ -3,17 +3,20 @@
 ServiceTemplate::ServiceTemplate()
 {
 	bf = new BusinessFactory();
+	pVecTemp = new vector<Route_Info>;
 	riRouteInfos = NULL;
-	nRouteInfoCnt = 0;
-	nRouteInfoIndex = 0;
+	omObjectMode = enTemplate;
 }
 
 ServiceTemplate::~ServiceTemplate()
 {
-	delete [] riRouteInfos;
+	if (pVecTemp)
+		delete pVecTemp;
+	if (riRouteInfos)
+		delete [] riRouteInfos;
+
+	pVecTemp = NULL;
 	riRouteInfos = NULL;
-	nRouteInfoCnt = 0;
-	nRouteInfoIndex = 0;
 }
 
 int ServiceTemplate::route_infos(Route_Info *&routeInfos)
@@ -40,7 +43,7 @@ const char* ServiceTemplate::dispatch_by_route_path(int nIndex, Business::Reques
 {
 	if (bf)
 	{
-		Business *pB = bf->get_business(riRouteInfos[nIndex].szBusinessName);
+		Business *pB = bf->get_business(riRouteInfos[nIndex].biBusiness.nIndex);
 		if (pB)
 		{
 			outData = pB->do_business(inData);
@@ -70,37 +73,34 @@ bool ServiceTemplate::register_service_version(const char *szVersion)
 	return true;
 }
 
-bool ServiceTemplate::init_route_count(int nCount)
+bool ServiceTemplate::register_http_route(const char *szPath, const char *szOperation, const char *szBusinessName, FuncCreate pCallBack)
 {
-	riRouteInfos = new Route_Info[nCount];
-	memset(riRouteInfos, 0, nCount * sizeof(Route_Info));
-	nRouteInfoCnt = nCount;
-	nRouteInfoIndex = 0;
+	Route_Info ri;
+	ri.nIndex = (int)pVecTemp->size();
+	ri.szPath = szPath;
+	ri.biBusiness.szBusinessName = szBusinessName;
+	ri.biBusiness.nIndex = bf->register_business(szBusinessName, pCallBack);
+	ri.szoperation = szOperation;
+	pVecTemp->push_back(ri);
 	return true;
 }
 
-bool ServiceTemplate::register_http_route(const char *szPath, const char *szBusinessName, const char *szOperation)
+bool ServiceTemplate::change_to_fast_mode()
 {
-	bool bRet = false;
-	if (nRouteInfoCnt < nRouteInfoIndex)
+	if (omObjectMode == enInstantiation)
+		return true;
+
+	int nCount = (int)pVecTemp->size();
+	if (nCount > 0)
 	{
-		riRouteInfos[nRouteInfoIndex].nIndex = nRouteInfoIndex;
-		riRouteInfos[nRouteInfoIndex].szPath = szPath;
-		riRouteInfos[nRouteInfoIndex].szBusinessName = szBusinessName;
-		riRouteInfos[nRouteInfoIndex].szoperation = szOperation;
-		bRet = true;
+		riRouteInfos = new Route_Info[nCount];
+		for (int nIndex = 0; nIndex < nCount; nIndex++)
+			riRouteInfos[nIndex] = (*pVecTemp)[nIndex];
 	}
-	nRouteInfoIndex++;
-	return bRet;
-}
+	delete pVecTemp;
+	pVecTemp = NULL;
 
-bool ServiceTemplate::init_business_count(int nCount)
-{
-	return bf->init_business_count(nCount);
-}
-
-bool ServiceTemplate::register_service_business(const char *szBusinessName, FuncCreate pCallBack)
-{
-//	bf->register_business(szBusinessName, pCallBack);
+	bf->change_to_fast_mode();
+	omObjectMode = enInstantiation;
 	return true;
 }

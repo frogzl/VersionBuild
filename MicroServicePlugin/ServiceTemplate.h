@@ -4,6 +4,11 @@
 #include "BusinessFactory.h"
 class ServiceTemplate : public ServiceInterface
 {
+	enum ObjectMode
+	{
+		enTemplate,
+		enInstantiation
+	};
 public:
 	ServiceTemplate();
 	~ServiceTemplate();
@@ -17,20 +22,18 @@ public:
 	bool register_service_name(const char *szName);
 	bool register_service_unique_id(const char *szID);
 	bool register_service_version(const char *szVersion);
+	bool register_http_route(const char *szPath, const char *szOperation, const char *szBusinessName, FuncCreate pCallBack);
 
-	bool init_route_count(int nCount);
-	bool register_http_route(const char *szPath, const char *szBusinessName, const char *szOperation);
-
-	bool init_business_count(int nCount);
-	bool register_service_business(const char *szBusinessName, FuncCreate pCallBack);
-
+	bool change_to_fast_mode();
 private:
+	vector<Route_Info> *pVecTemp;
+
 	BusinessFactory *bf;
 	Route_Info *riRouteInfos;
-	int nRouteInfoCnt;
-	int nRouteInfoIndex;
 	const char *szServiceName;
 	const char *szServiceUniqueId;
 	const char *szServiceVersion;
+
+	ObjectMode omObjectMode;
 };
 

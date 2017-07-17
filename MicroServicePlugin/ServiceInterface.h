@@ -15,9 +15,10 @@ public:
 	{
 		const char *szPath;					// 路由模板
 		const char *szoperation;			// http 操作
-		const char *szBusinessName;	// 处理对象名
+		Business::Business_Info biBusiness;	// 处理对象名
 		int nIndex;								// 索引
 	}Route_Info;
+
 	void destory();
 	const char* library_version();
 public:
@@ -32,17 +33,13 @@ public:
 	virtual const char* version() = 0;
 	// 用于根据API执行
 	virtual const char* dispatch_by_route_path(int nIndex, Business::Request_Data &inData, Business::Respond_Data &outData) = 0;
-	// 初始化要注册的路由个数，需要在register_http_routes接口的最开始调用
-	virtual bool init_route_count(int nCount) = 0;
-	// 注册路由
-	virtual bool register_http_route(const char *szPath, const char *szBusinessName, const char *szOperation) = 0;
 	// 注册服务名
 	virtual bool register_service_name(const char *szName) = 0;
 	// 注册服务唯一标识
 	virtual bool register_service_unique_id(const char *szID) = 0;
 	// 注册服务版本号
 	virtual bool register_service_version(const char *szVersion) = 0;
-	// 注册业务
-	virtual bool register_service_business(const char *szBusinessName, FuncCreate pCallBack) = 0;
+	// 注册路由
+	virtual bool register_http_route(const char *szPath, const char *szOperation, const char *szBusinessName, FuncCreate pCallBack) = 0;
 };
 

@@ -1,5 +1,8 @@
 E:\VERSIONBUILD\BIN\DEBUG\X64\MICROSERVICEPLUGINS\MICROSERVICEPLUGIN.DLL
-E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\MicroServicePlugin.pdb
+E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\MicroServicePlugin.exp
+E:\VERSIONBUILD\BIN\DEBUG\X64\MICROSERVICEPLUGINS\MICROSERVICEPLUGIN.ILK
+E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\MicroServicePlugin.lib
+E:\VERSIONBUILD\BIN\DEBUG\X64\MICROSERVICEPLUGINS\MICROSERVICEPLUGIN.PDB
 E:\VERSIONBUILD\CACHE\MICROSERVICEPLUGIN\DEBUG\BUSINESS.OBJ
 E:\VERSIONBUILD\CACHE\MICROSERVICEPLUGIN\DEBUG\BUSINESSFACTORY.OBJ
 E:\VERSIONBUILD\CACHE\MICROSERVICEPLUGIN\DEBUG\BUSINESSFACTORYTPL.OBJ
@@ -9,7 +12,7 @@ E:\VersionBuild\cache\MicroServicePlugin\Debug\CL.write.1.tlog
 E:\VersionBuild\cache\MicroServicePlugin\Debug\link.command.1.tlog
 E:\VersionBuild\cache\MicroServicePlugin\Debug\link.read.1.tlog
 E:\VersionBuild\cache\MicroServicePlugin\Debug\link.write.1.tlog
-E:\VersionBuild\cache\MicroServicePlugin\Debug\MicroServicePlugin.dll.intermediate.manifest
+E:\VERSIONBUILD\CACHE\MICROSERVICEPLUGIN\DEBUG\MICROSERVICEPLUGIN.DLL.INTERMEDIATE.MANIFEST
 E:\VERSIONBUILD\CACHE\MICROSERVICEPLUGIN\DEBUG\MICROSERVICEPLUGIN.OBJ
 E:\VersionBuild\cache\MicroServicePlugin\Debug\MicroServicePlugin.write.1.tlog
 E:\VersionBuild\cache\MicroServicePlugin\Debug\mt.command.1.tlog
