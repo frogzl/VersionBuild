@@ -1,10 +1,14 @@
 // SourceCodeService.cpp : 定义 DLL 应用程序的导出函数。
 //
 
-#include "stdafx.h"
-#include "Service.h"
-#include "Business/SourceCodeBuild.h"
-#include "Business/SourceCodeCreate.h"
+#include "ServiceInterface.h"
+#include "Business\SourceCodeBuild.h"
+#include "Business\SourceCodeCreate.h"
+#include "Business\SourceCodeDelete.h"
+#include "Business\SourceCodeDeploy.h"
+#include "Business\SourceCodeModify.h"
+#include "Business\SourceCodeQuery.h"
+
 // 这是导出函数的一个示例。
 ServiceInterface* produce_one()
 {

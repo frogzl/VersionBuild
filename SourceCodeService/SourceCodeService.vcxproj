@@ -73,8 +73,8 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)bin\$(Configuration)\$(Platform)\MicroServicePlugins\</OutDir>
     <IntDir>$(SolutionDir)cache\$(ProjectName)\$(Configuration)\</IntDir>
-    <IncludePath>..\..\libevent-2.0.22-stable\WIN32-Code;..\..\libevent-2.0.22-stable\include;E:\MySQL++\3.2.3\include;C:\Program Files\MySQL\MySQL Server 5.6\include;E:\libIconv\libIconv\Iconv;..\..\jsoncpp-src-0.5.0\include;E:\libgit2-0.24.1\include;D:\openssl-1.0.1t\bin\include;$(IncludePath)</IncludePath>
-    <LibraryPath>..\..\libevent-2.0.22-stable\x64;E:\MySQL++\3.2.3;C:\Program Files\MySQL\MySQL Server 5.6\lib;E:\libIconv\x64\Release;..\..\jsoncpp-src-0.5.0\lib\x64;E:\libgit2-0.24.1\lib\x64;D:\openssl-1.0.1t\bin\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)MicroServicePlugin\include;..\..\libevent-2.0.22-stable\WIN32-Code;..\..\libevent-2.0.22-stable\include;E:\MySQL++\3.2.3\include;C:\Program Files\MySQL\MySQL Server 5.6\include;E:\libIconv\libIconv\Iconv;..\..\jsoncpp-src-0.5.0\include;E:\libgit2-0.24.1\include;D:\openssl-1.0.1t\bin\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)bin\$(Configuration)\$(Platform)\MicroServicePlugins\;..\..\libevent-2.0.22-stable\x64;E:\MySQL++\3.2.3;C:\Program Files\MySQL\MySQL Server 5.6\lib;E:\libIconv\x64\Release;..\..\jsoncpp-src-0.5.0\lib\x64;E:\libgit2-0.24.1\lib\x64;D:\openssl-1.0.1t\bin\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -108,7 +108,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>SourceCodeService.def</ModuleDefinitionFile>
-      <AdditionalDependencies>git2d.lib;ws2_32.lib;libevent.lib;libevent_extras.lib;libevent_core.lib;libmysql.lib;mysqlpp_d.lib;libIconv.lib;lib_jsond.lib;libeay32.lib;ssleay32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>MicroServicePlugin.lib;git2d.lib;ws2_32.lib;libevent.lib;libevent_extras.lib;libevent_core.lib;libmysql.lib;mysqlpp_d.lib;libIconv.lib;lib_jsond.lib;libeay32.lib;ssleay32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <IgnoreSpecificDefaultLibraries>MSVCRT;LIBCMT</IgnoreSpecificDefaultLibraries>
       <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
     </Link>
@@ -153,9 +153,6 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Business.h" />
-    <ClInclude Include="BusinessFactory.h" />
-    <ClInclude Include="BusinessFactoryTpl.h" />
     <ClInclude Include="Business\SourceCodeBuild.h" />
     <ClInclude Include="Business\SourceCodeCreate.h" />
     <ClInclude Include="Business\SourceCodeDelete.h" />
@@ -176,19 +173,11 @@
     <ClInclude Include="Database\SourceCode_Deploy.h" />
     <ClInclude Include="Database\Storage.h" />
     <ClInclude Include="Exception\HttpRequestException.h" />
-    <ClInclude Include="Service.h" />
-    <ClInclude Include="ServiceInterface.h" />
-    <ClInclude Include="ServicePlugin.h" />
-    <ClInclude Include="ServiceTemplate.h" />
-    <ClInclude Include="stdafx.h" />
     <ClInclude Include="SystemConfig.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Tools\HttpClient.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Business.cpp" />
-    <ClCompile Include="BusinessFactory.cpp" />
-    <ClCompile Include="BusinessFactoryTpl.cpp" />
     <ClCompile Include="Business\SourceCodeBuild.cpp" />
     <ClCompile Include="Business\SourceCodeCreate.cpp" />
     <ClCompile Include="Business\SourceCodeDelete.cpp" />
@@ -223,17 +212,7 @@
       </PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Exception\HttpRequestException.cpp" />
-    <ClCompile Include="Service.cpp" />
-    <ClCompile Include="ServiceInterface.cpp" />
-    <ClCompile Include="ServicePlugin.cpp" />
-    <ClCompile Include="ServiceTemplate.cpp" />
     <ClCompile Include="SourceCodeService.cpp" />
-    <ClCompile Include="stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
     <ClCompile Include="SystemConfig.cpp" />
     <ClCompile Include="Tools\HttpClient.cpp" />
   </ItemGroup>

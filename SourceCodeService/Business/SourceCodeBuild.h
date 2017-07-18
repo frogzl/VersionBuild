@@ -1,15 +1,16 @@
 #pragma once
-#include "../Business.h"
+#include "Business.h"
 
-	class SourceCodeBuild : public Business
-	{
-	public:
-		SourceCodeBuild();
-		~SourceCodeBuild();
+class SourceCodeBuild : public Business
+{
+	BUSINESS_OBJECT(SourceCodeBuild)
+public:
+	SourceCodeBuild();
+	~SourceCodeBuild();
 
-		void process_task();
-		void background_process();
-	private:
-		bool check_inputdata(string &sFailedDetail);
-		void* get_buildrule_host(string sDeployid);
-	};
+private:
+	void process_task();
+
+	bool check_inputdata(string &sFailedDetail);
+	void* get_buildrule_host(string sDeployid);
+};

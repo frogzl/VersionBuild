@@ -155,10 +155,10 @@
     <ClCompile Include="ServiceTemplate.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Business.h" />
     <ClInclude Include="BusinessFactory.h" />
+    <ClInclude Include="include\Business.h" />
+    <ClInclude Include="include\ServiceInterface.h" />
     <ClInclude Include="MicroServicePlugin.h" />
-    <ClInclude Include="ServiceInterface.h" />
     <ClInclude Include="ServiceTemplate.h" />
   </ItemGroup>
   <ItemGroup>

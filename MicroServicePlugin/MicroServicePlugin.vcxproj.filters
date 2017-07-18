@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="头文件\include">
+      <UniqueIdentifier>{bd573ea1-9b50-4dc9-8859-79ab58e02ca9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -38,17 +41,17 @@
     <ClInclude Include="MicroServicePlugin.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Business.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="BusinessFactory.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="ServiceInterface.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="ServiceTemplate.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Business.h">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ServiceInterface.h">
+      <Filter>头文件\include</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

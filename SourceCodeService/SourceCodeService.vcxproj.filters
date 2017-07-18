@@ -42,16 +42,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="targetver.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="BusinessFactory.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="BusinessFactoryTpl.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Business\SourceCodeBuild.h">
@@ -71,9 +62,6 @@
     </ClInclude>
     <ClInclude Include="Business\SourceCodeQuery.h">
       <Filter>头文件\Business</Filter>
-    </ClInclude>
-    <ClInclude Include="Business.h">
-      <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Database\BuildResult.h">
       <Filter>头文件\Database</Filter>
@@ -123,36 +111,12 @@
     <ClInclude Include="SystemConfig.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="ServiceInterface.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="ServiceTemplate.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="ServicePlugin.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Service.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="SourceCodeService.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="dllmain.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Business.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="BusinessFactory.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="BusinessFactoryTpl.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Business\SourceCodeBuild.cpp">
@@ -219,18 +183,6 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="SystemConfig.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="ServiceTemplate.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="ServicePlugin.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Service.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="ServiceInterface.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
