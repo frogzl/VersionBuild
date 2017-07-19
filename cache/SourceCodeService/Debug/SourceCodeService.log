@@ -1,71 +1,57 @@
-﻿生成启动时间为 2017/7/19 16:12:21。
-     1>项目“E:\Workspace\VersionBuild\SourceCodeService\SourceCodeService.vcxproj”在节点 2 上(Build 个目标)。
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D SOURCECODESERVICE_EXPORTS /D _CRT_SECURE_NO_WARNINGS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"E:\Workspace\VersionBuild\cache\SourceCodeService\Debug\\" /Fd"E:\Workspace\VersionBuild\cache\SourceCodeService\Debug\vc100.pdb" /Gd /TP /errorReport:prompt Business\SourceCodeBuild.cpp Business\SourceCodeCreate.cpp Business\SourceCodeDelete.cpp Business\SourceCodeDeploy.cpp Business\SourceCodeModify.cpp Business\SourceCodeQuery.cpp Common.cpp Database\BuildResult.cpp Database\BuildRule.cpp Database\BuildRule_Depend.cpp Database\BuildRule_Deploy.cpp Database\Database.cpp Database\Resource.cpp Database\Resource_CompressionPackage.cpp Database\Resource_Document.cpp Database\Resource_Host.cpp Database\Resource_SourceCode.cpp Database\SourceCode_Deploy.cpp Database\Storage.cpp Exception\HttpRequestException.cpp RouteCallBackSet.cpp SourceCodeService.cpp SystemConfig.cpp Tools\HttpClient.cpp
-         HttpClient.cpp
-     1>e:\workspace\versionbuild\sourcecodeservice\tools\../Common.h(18): fatal error C1083: 无法打开包括文件:“iconv.h”: No such file or directory
-         SystemConfig.cpp
-     1>SystemConfig.cpp(21): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-     1>SystemConfig.cpp(61): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-     1>SystemConfig.cpp(65): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _access. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\io.h(299) : 参见“access”的声明
-     1>SystemConfig.cpp(66): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\direct.h(124) : 参见“mkdir”的声明
-     1>SystemConfig.cpp(75): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-     1>SystemConfig.cpp(79): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _access. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\io.h(299) : 参见“access”的声明
-     1>SystemConfig.cpp(80): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\direct.h(124) : 参见“mkdir”的声明
-     1>SystemConfig.cpp(83): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _access. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\io.h(299) : 参见“access”的声明
-     1>SystemConfig.cpp(84): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\direct.h(124) : 参见“mkdir”的声明
-         SourceCodeService.cpp
-     1>e:\workspace\versionbuild\sourcecodeservice\RouteCallBackSet.h(4): error C2143: 语法错误 : 缺少“;”(在“<class-head>”的前面)
-         RouteCallBackSet.cpp
-     1>e:\workspace\versionbuild\sourcecodeservice\database\Database.h(4): fatal error C1083: 无法打开包括文件:“mysql++.h”: No such file or directory
-         HttpRequestException.cpp
-         Storage.cpp
-     1>e:\workspace\versionbuild\sourcecodeservice\database\Database.h(4): fatal error C1083: 无法打开包括文件:“mysql++.h”: No such file or directory
-         SourceCode_Deploy.cpp
-     1>e:\workspace\versionbuild\sourcecodeservice\database\Database.h(4): fatal error C1083: 无法打开包括文件:“mysql++.h”: No such file or directory
-         Resource_SourceCode.cpp
-     1>e:\workspace\versionbuild\sourcecodeservice\database\Database.h(4): fatal error C1083: 无法打开包括文件:“mysql++.h”: No such file or directory
-         Resource_Host.cpp
-     1>e:\workspace\versionbuild\sourcecodeservice\database\Database.h(4): fatal error C1083: 无法打开包括文件:“mysql++.h”: No such file or directory
-         Resource_Document.cpp
-     1>e:\workspace\versionbuild\sourcecodeservice\database\Database.h(4): fatal error C1083: 无法打开包括文件:“mysql++.h”: No such file or directory
-         Resource_CompressionPackage.cpp
-     1>e:\workspace\versionbuild\sourcecodeservice\database\Database.h(4): fatal error C1083: 无法打开包括文件:“mysql++.h”: No such file or directory
-         Resource.cpp
-     1>e:\workspace\versionbuild\sourcecodeservice\database\Database.h(4): fatal error C1083: 无法打开包括文件:“mysql++.h”: No such file or directory
-         Database.cpp
-     1>e:\workspace\versionbuild\sourcecodeservice\database\Database.h(4): fatal error C1083: 无法打开包括文件:“mysql++.h”: No such file or directory
-         BuildRule_Deploy.cpp
-     1>e:\workspace\versionbuild\sourcecodeservice\database\Database.h(4): fatal error C1083: 无法打开包括文件:“mysql++.h”: No such file or directory
-         BuildRule_Depend.cpp
-     1>e:\workspace\versionbuild\sourcecodeservice\database\Database.h(4): fatal error C1083: 无法打开包括文件:“mysql++.h”: No such file or directory
-         BuildRule.cpp
-     1>e:\workspace\versionbuild\sourcecodeservice\database\Database.h(4): fatal error C1083: 无法打开包括文件:“mysql++.h”: No such file or directory
-         BuildResult.cpp
-     1>e:\workspace\versionbuild\sourcecodeservice\database\Database.h(4): fatal error C1083: 无法打开包括文件:“mysql++.h”: No such file or directory
-         Common.cpp
-     1>e:\workspace\versionbuild\sourcecodeservice\Common.h(18): fatal error C1083: 无法打开包括文件:“iconv.h”: No such file or directory
-         SourceCodeQuery.cpp
-     1>e:\workspace\versionbuild\sourcecodeservice\database\Database.h(4): fatal error C1083: 无法打开包括文件:“mysql++.h”: No such file or directory
-         SourceCodeModify.cpp
-         Generating Code...
-         Compiling...
-         SourceCodeDeploy.cpp
-     1>e:\workspace\versionbuild\sourcecodeservice\tools\../Common.h(18): fatal error C1083: 无法打开包括文件:“iconv.h”: No such file or directory
-         SourceCodeDelete.cpp
-         SourceCodeCreate.cpp
-     1>e:\workspace\versionbuild\sourcecodeservice\database\Database.h(4): fatal error C1083: 无法打开包括文件:“mysql++.h”: No such file or directory
-         SourceCodeBuild.cpp
-     1>e:\workspace\versionbuild\sourcecodeservice\tools\../Common.h(18): fatal error C1083: 无法打开包括文件:“iconv.h”: No such file or directory
-         Generating Code...
-     1>已完成生成项目“E:\Workspace\VersionBuild\SourceCodeService\SourceCodeService.vcxproj”(Build 个目标)的操作 - 失败。
-
-生成失败。
-
-已用时间 00:00:11.76
+﻿  SourceCodeService.cpp
+e:\versionbuild - 副本\sourcecodeservice\RouteCallBackSet.h(4): error C2143: 语法错误 : 缺少“;”(在“<class-head>”的前面)
+  RouteCallBackSet.cpp
+  SourceCodeDeploy.cpp
+Business\SourceCodeDeploy.cpp(21): error C2065: “m_szBuf”: 未声明的标识符
+Business\SourceCodeDeploy.cpp(22): error C2065: “m_szBuf”: 未声明的标识符
+Business\SourceCodeDeploy.cpp(22): error C2227: “->all”的左边必须指向类/结构/联合/泛型类型
+  SourceCodeCreate.cpp
+Business\SourceCodeCreate.cpp(95): error C2065: “m_rdInData”: 未声明的标识符
+Business\SourceCodeCreate.cpp(95): error C2228: “.jData”的左边必须有类/结构/联合
+          类型是“'unknown-type'”
+Business\SourceCodeCreate.cpp(95): error C2228: “.asString”的左边必须有类/结构/联合
+Business\SourceCodeCreate.cpp(96): error C2065: “m_rdInData”: 未声明的标识符
+Business\SourceCodeCreate.cpp(96): error C2228: “.jData”的左边必须有类/结构/联合
+          类型是“'unknown-type'”
+Business\SourceCodeCreate.cpp(96): error C2228: “.asString”的左边必须有类/结构/联合
+Business\SourceCodeCreate.cpp(97): error C2065: “m_szBuf”: 未声明的标识符
+Business\SourceCodeCreate.cpp(98): error C2065: “m_szBuf”: 未声明的标识符
+Business\SourceCodeCreate.cpp(99): error C2065: “m_rdInData”: 未声明的标识符
+Business\SourceCodeCreate.cpp(99): error C2228: “.jData”的左边必须有类/结构/联合
+          类型是“'unknown-type'”
+Business\SourceCodeCreate.cpp(99): error C2228: “.asString”的左边必须有类/结构/联合
+Business\SourceCodeCreate.cpp(100): error C2065: “m_szBuf”: 未声明的标识符
+Business\SourceCodeCreate.cpp(101): error C2065: “m_szBuf”: 未声明的标识符
+Business\SourceCodeCreate.cpp(102): error C2065: “m_rdInData”: 未声明的标识符
+Business\SourceCodeCreate.cpp(102): error C2228: “.jData”的左边必须有类/结构/联合
+          类型是“'unknown-type'”
+Business\SourceCodeCreate.cpp(102): error C2228: “.asString”的左边必须有类/结构/联合
+Business\SourceCodeCreate.cpp(103): error C2065: “m_szBuf”: 未声明的标识符
+Business\SourceCodeCreate.cpp(104): error C2065: “m_szBuf”: 未声明的标识符
+Business\SourceCodeCreate.cpp(105): error C2065: “m_rdInData”: 未声明的标识符
+Business\SourceCodeCreate.cpp(105): error C2228: “.jData”的左边必须有类/结构/联合
+          类型是“'unknown-type'”
+Business\SourceCodeCreate.cpp(105): error C2228: “.asInt”的左边必须有类/结构/联合
+Business\SourceCodeCreate.cpp(107): error C2065: “m_rdInData”: 未声明的标识符
+Business\SourceCodeCreate.cpp(107): error C2228: “.jData”的左边必须有类/结构/联合
+          类型是“'unknown-type'”
+Business\SourceCodeCreate.cpp(107): error C2228: “.asInt”的左边必须有类/结构/联合
+Business\SourceCodeCreate.cpp(108): error C2065: “m_rdInData”: 未声明的标识符
+Business\SourceCodeCreate.cpp(108): error C2228: “.jData”的左边必须有类/结构/联合
+          类型是“'unknown-type'”
+Business\SourceCodeCreate.cpp(108): error C2228: “.asInt”的左边必须有类/结构/联合
+Business\SourceCodeCreate.cpp(109): error C2065: “m_rdInData”: 未声明的标识符
+Business\SourceCodeCreate.cpp(109): error C2228: “.jData”的左边必须有类/结构/联合
+          类型是“'unknown-type'”
+Business\SourceCodeCreate.cpp(109): error C2228: “.asInt”的左边必须有类/结构/联合
+Business\SourceCodeCreate.cpp(117): error C2065: “m_rdInData”: 未声明的标识符
+Business\SourceCodeCreate.cpp(117): error C2228: “.jData”的左边必须有类/结构/联合
+          类型是“'unknown-type'”
+Business\SourceCodeCreate.cpp(118): warning C4018: “<”: 有符号/无符号不匹配
+Business\SourceCodeCreate.cpp(166): warning C4018: “<”: 有符号/无符号不匹配
+  SourceCodeBuild.cpp
+Business\SourceCodeBuild.cpp(30): error C2065: “m_rdInData”: 未声明的标识符
+Business\SourceCodeBuild.cpp(30): error C2228: “.jData”的左边必须有类/结构/联合
+          类型是“'unknown-type'”
+Business\SourceCodeBuild.cpp(30): error C2228: “.asString”的左边必须有类/结构/联合
+  Generating Code...

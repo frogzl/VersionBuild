@@ -1,6 +1,10 @@
 #pragma once
 #include "include/ServiceInterface.h"
-#include <json/json.h>
+
+class B
+{
+
+};
 class ServiceTemplate : public ServiceInterface
 {
 	enum ObjectMode
@@ -14,7 +18,7 @@ public:
 
 	void destory();
 	int route_infos(Route_Info *&routeInfos);
-	const char* unique_id();
+	const char* unique_id();	
 	const char* name();
 	const char* version();
 	const char* dispatch_by_route_path(int nIndex, BusinessInterface *pB);
@@ -26,13 +30,12 @@ public:
 
 	bool change_to_fast_mode();
 private:
-	vector<Route_Info> *pVecTmpRI;  // 用于临时存储
-	vector<FuncProcess> *pVecTmpFP; // 用于临时存储
+	std::vector<Route_Info> *pVecTmpRI;  // 用于临时存储
+	std::vector<FuncProcess> *pVecTmpFP; // 用于临时存储
 
 	const char *szServiceName;
 	const char *szServiceUniqueId;
 	const char *szServiceVersion;
-
 
 	int nRouteCount;
 	Route_Info *riRouteInfos;
@@ -40,4 +43,3 @@ private:
 
 	ObjectMode omObjectMode;
 };
-

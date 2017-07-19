@@ -6,8 +6,8 @@ ServiceTemplate::ServiceTemplate()
 	riRouteInfos = NULL;
 	fpRoutesProcess = NULL;
 	omObjectMode = enTemplate;
-	pVecTmpRI = new vector<Route_Info>;
-	pVecTmpFP = new vector<FuncProcess>;
+	pVecTmpRI = new std::vector<Route_Info>();
+	pVecTmpFP = new std::vector<FuncProcess>();
 }
 
 ServiceTemplate::~ServiceTemplate()

@@ -62,8 +62,8 @@ string SystemConfig::getStoragePath()
 	int nCount = sizeof("VersionBuildServer.exe");
 	sPath.erase(nPos, nCount - 1);
 	sPath += "storage";
-	if (access(sPath.c_str(), 0) != 0)
-		mkdir(sPath.c_str());
+	if (_access(sPath.c_str(), 0) != 0)
+		_mkdir(sPath.c_str());
 	return sPath;
 }
 
@@ -76,11 +76,11 @@ string SystemConfig::getStorageTmpPath()
 	int nCount = sizeof("VersionBuildServer.exe");
 	sPath.erase(nPos, nCount - 1);
 	sPath += "storage";
-	if (access(sPath.c_str(), 0) != 0)
-		mkdir(sPath.c_str());
+	if (_access(sPath.c_str(), 0) != 0)
+		_mkdir(sPath.c_str());
 	sPath += "\\"; 
 	sPath += "tmp";
-	if (access(sPath.c_str(), 0) != 0)
-		mkdir(sPath.c_str());
+	if (_access(sPath.c_str(), 0) != 0)
+		_mkdir(sPath.c_str());
 	return sPath;
 }

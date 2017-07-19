@@ -17,12 +17,10 @@
 #define HTTP_NOTIMPLEMENTED     501     /**< not implemented */
 #define HTTP_SERVUNAVAIL	503	/**< the server is not available */
 
-using namespace std;
-
 typedef struct
 {
-	map<string, string>mParameters; // url上的参数
-	map<string, string> mHeaders;	// 报文头信息
+	std::map<std::string, std::string>mParameters; // url上的参数
+	std::map<std::string, std::string> mHeaders;	// 报文头信息
 	Json::Value jData;				// 报文体数据
 }Request_Data;
 
@@ -30,22 +28,24 @@ typedef struct
 {
 	int nHttpStatus;				// respond http 状态码
 	Json::Value jData;				// respond data
-	map<string, string> mHeaders;	// respond custom headers
+	std::map<std::string, std::string> mHeaders;	// respond custom headers
 }Respond_Data;
 
 class BusinessInterface
 {
 public:
-	virtual ~BusinessInterface();
+
+public:
+	virtual ~BusinessInterface() {};
 
 	virtual Request_Data& request_data() = 0;
 	virtual Respond_Data& respond_data() = 0;
 
 	virtual void set_request_data(Request_Data &rd) = 0;
-	virtual void set_respond_header(string sKey, string sValue) = 0;
-	virtual void set_respond_back(int nHttpStatus, string sCode, string sMessage, string sDiscription) = 0;
-	virtual void set_respond_back(int nHttpStatus, string sCode, string sMessage, string sDiscription, Json::Value &jsonValue) = 0;
-	virtual void set_respond_back(int nHttpStatus, string sCode, string sMessage, string sDiscription, string &sValue) = 0;
+	virtual void set_respond_header(std::string sKey, std::string sValue) = 0;
+	virtual void set_respond_back(int nHttpStatus, std::string sCode, std::string sMessage, std::string sDiscription) = 0;
+	virtual void set_respond_back(int nHttpStatus, std::string sCode, std::string sMessage, std::string sDiscription, Json::Value &jsonValue) = 0;
+	virtual void set_respond_back(int nHttpStatus, std::string sCode, std::string sMessage, std::string sDiscription, std::string &sValue) = 0;
 };
 
 typedef void(*FuncProcess)(BusinessInterface*);

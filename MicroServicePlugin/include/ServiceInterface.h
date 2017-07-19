@@ -1,5 +1,6 @@
 #pragma once
 #include "BusinessInterface.h"
+
 #define Http_Operator_Get			"get"		//	请求获取Request - URI所标识的资源
 #define Http_Operator_Post			"post"		//	在Request - URI所标识的资源后附加新的数据
 #define Http_Operator_Head			"head"		//	请求获取由Request - URI所标识的资源的响应消息报头
@@ -18,9 +19,7 @@ typedef struct
 class ServiceInterface
 {
 public:
-
-public:
-	virtual ~ServiceInterface();
+	virtual ~ServiceInterface() {}
 	// 自销毁
 	virtual void destory() = 0;
 	// 用于获取路由信息
@@ -42,4 +41,3 @@ public:
 	// 注册路由
 	virtual bool register_http_route(const char *szPath, const char *szOperation, FuncProcess pCallBack) = 0;
 };
-

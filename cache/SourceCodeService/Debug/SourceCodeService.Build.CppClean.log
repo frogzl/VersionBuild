@@ -1,56 +1,46 @@
-E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\SourceCodeService.ilk
+E:\VersionBuild - 副本\cache\SourceCodeService\Debug\BuildResult.obj
+E:\VersionBuild - 副本\cache\SourceCodeService\Debug\BuildRule.obj
+E:\VersionBuild - 副本\cache\SourceCodeService\Debug\BuildRule_Depend.obj
+E:\VersionBuild - 副本\cache\SourceCodeService\Debug\BuildRule_Deploy.obj
+E:\VersionBuild - 副本\cache\SourceCodeService\Debug\cl.command.1.tlog
+E:\VersionBuild - 副本\cache\SourceCodeService\Debug\CL.read.1.tlog
+E:\VersionBuild - 副本\cache\SourceCodeService\Debug\CL.write.1.tlog
+E:\VersionBuild - 副本\cache\SourceCodeService\Debug\Common.obj
+E:\VersionBuild - 副本\cache\SourceCodeService\Debug\Database.obj
+E:\VersionBuild - 副本\cache\SourceCodeService\Debug\HttpClient.obj
+E:\VersionBuild - 副本\cache\SourceCodeService\Debug\HttpRequestException.obj
+E:\VersionBuild - 副本\cache\SourceCodeService\Debug\Resource.obj
+E:\VersionBuild - 副本\cache\SourceCodeService\Debug\Resource_CompressionPackage.obj
+E:\VersionBuild - 副本\cache\SourceCodeService\Debug\Resource_Document.obj
+E:\VersionBuild - 副本\cache\SourceCodeService\Debug\Resource_Host.obj
+E:\VersionBuild - 副本\cache\SourceCodeService\Debug\Resource_SourceCode.obj
+E:\VersionBuild - 副本\cache\SourceCodeService\Debug\RouteCallBackSet.obj
+E:\VersionBuild - 副本\cache\SourceCodeService\Debug\SourceCode_Deploy.obj
+E:\VersionBuild - 副本\cache\SourceCodeService\Debug\SourceCodeDelete.obj
+E:\VersionBuild - 副本\cache\SourceCodeService\Debug\SourceCodeModify.obj
+E:\VersionBuild - 副本\cache\SourceCodeService\Debug\SourceCodeQuery.obj
+E:\VersionBuild - 副本\cache\SourceCodeService\Debug\Storage.obj
+E:\VersionBuild - 副本\cache\SourceCodeService\Debug\SystemConfig.obj
+E:\VersionBuild - 副本\cache\SourceCodeService\Debug\vc100.idb
+E:\VersionBuild - 副本\cache\SourceCodeService\Debug\vc100.pdb
 E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\BUILDRESULT.OBJ
 E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\BUILDRULE.OBJ
 E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\BUILDRULE_DEPEND.OBJ
 E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\BUILDRULE_DEPLOY.OBJ
-E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\BUSINESS.OBJ
-E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\BUSINESSFACTORY.OBJ
-E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\BUSINESSFACTORYTPL.OBJ
-E:\VersionBuild\cache\SourceCodeService\Debug\cl.command.1.tlog
-E:\VersionBuild\cache\SourceCodeService\Debug\CL.read.1.tlog
-E:\VersionBuild\cache\SourceCodeService\Debug\CL.write.1.tlog
 E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\COMMON.OBJ
 E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\DATABASE.OBJ
-E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\DLLMAIN.OBJ
 E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\HTTPCLIENT.OBJ
 E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\HTTPREQUESTEXCEPTION.OBJ
-E:\VersionBuild\cache\SourceCodeService\Debug\link.12532.read.1.tlog
-E:\VersionBuild\cache\SourceCodeService\Debug\link.12532.write.1.tlog
-E:\VersionBuild\cache\SourceCodeService\Debug\link.1752.read.1.tlog
-E:\VersionBuild\cache\SourceCodeService\Debug\link.1752.write.1.tlog
-E:\VersionBuild\cache\SourceCodeService\Debug\link.1848.read.1.tlog
-E:\VersionBuild\cache\SourceCodeService\Debug\link.1848.write.1.tlog
-E:\VersionBuild\cache\SourceCodeService\Debug\link.7624.read.1.tlog
-E:\VersionBuild\cache\SourceCodeService\Debug\link.7624.write.1.tlog
-E:\VersionBuild\cache\SourceCodeService\Debug\link.9464.read.1.tlog
-E:\VersionBuild\cache\SourceCodeService\Debug\link.9464.write.1.tlog
-E:\VersionBuild\cache\SourceCodeService\Debug\link.command.1.tlog
-E:\VersionBuild\cache\SourceCodeService\Debug\link.read.1.tlog
-E:\VersionBuild\cache\SourceCodeService\Debug\link.write.1.tlog
-E:\VersionBuild\cache\SourceCodeService\Debug\rc.command.1.tlog
-E:\VersionBuild\cache\SourceCodeService\Debug\rc.read.1.tlog
-E:\VersionBuild\cache\SourceCodeService\Debug\rc.write.1.tlog
 E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\RESOURCE.OBJ
 E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\RESOURCE_COMPRESSIONPACKAGE.OBJ
 E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\RESOURCE_DOCUMENT.OBJ
 E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\RESOURCE_HOST.OBJ
 E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\RESOURCE_SOURCECODE.OBJ
-E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\SERVICECONTROLLER.OBJ
-E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\SERVICECONTROLLERTPL.OBJ
+E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\ROUTECALLBACKSET.OBJ
 E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\SOURCECODE_DEPLOY.OBJ
-E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\SOURCECODEBUILD.OBJ
-E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\SOURCECODECREATE.OBJ
 E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\SOURCECODEDELETE.OBJ
-E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\SOURCECODEDEPLOY.OBJ
 E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\SOURCECODEMODIFY.OBJ
 E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\SOURCECODEQUERY.OBJ
-E:\VersionBuild\cache\SourceCodeService\Debug\SourceCodeService.dll.embed.manifest
-E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\SOURCECODESERVICE.DLL.EMBED.MANIFEST.RES
-E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\SOURCECODESERVICE.OBJ
-E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\SOURCECODESERVICE.PCH
-E:\VersionBuild\cache\SourceCodeService\Debug\SourceCodeService_manifest.rc
-E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\STDAFX.OBJ
 E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\STORAGE.OBJ
 E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\SYSTEMCONFIG.OBJ
-E:\VersionBuild\cache\SourceCodeService\Debug\vc100.idb
 E:\VERSIONBUILD\CACHE\SOURCECODESERVICE\DEBUG\VC100.PDB

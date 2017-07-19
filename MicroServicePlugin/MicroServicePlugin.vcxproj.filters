@@ -24,9 +24,6 @@
     <ClCompile Include="MicroServicePlugin.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="ServiceInterface.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="ServiceTemplate.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -35,9 +32,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ServiceTemplate.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="include\ServiceInterface.h">
       <Filter>头文件\include</Filter>
     </ClInclude>
@@ -49,6 +43,9 @@
     </ClInclude>
     <ClInclude Include="include\MicroServicePlugin.h">
       <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceTemplate.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
