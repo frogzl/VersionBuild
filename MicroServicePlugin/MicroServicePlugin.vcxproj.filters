@@ -24,39 +24,31 @@
     <ClCompile Include="MicroServicePlugin.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Business.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="BusinessFactory.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="ServiceInterface.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="ServiceTemplate.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="BusinessTemplate.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MicroServicePlugin.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="BusinessFactory.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="ServiceTemplate.h">
       <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Business.h">
-      <Filter>头文件\include</Filter>
     </ClInclude>
     <ClInclude Include="include\ServiceInterface.h">
       <Filter>头文件\include</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="MicroServicePlugin.def">
-      <Filter>源文件</Filter>
-    </None>
+    <ClInclude Include="include\BusinessInterface.h">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="BusinessTemplate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MicroServicePlugin.h">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

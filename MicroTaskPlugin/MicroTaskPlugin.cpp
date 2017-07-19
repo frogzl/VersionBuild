@@ -1,20 +1,21 @@
 // MicroTaskPlugin.cpp : 定义 DLL 应用程序的导出函数。
 //
-#include "MicroTaskPlugin.h"
+#include "include/MicroTaskPlugin.h"
 
-
-// 这是导出变量的一个示例
-MICROTASKPLUGIN_API int nMicroTaskPlugin=0;
-
-// 这是导出函数的一个示例。
-MICROTASKPLUGIN_API int fnMicroTaskPlugin(void)
+DlLL_API const char* library_version()
 {
-	return 42;
+	return "1";
 }
 
-// 这是已导出类的构造函数。
-// 有关类定义的信息，请参阅 MicroTaskPlugin.h
-CMicroTaskPlugin::CMicroTaskPlugin()
+DlLL_API TaskInterface* create_plugin_template()
 {
-	return;
+	return new TaskTemplate();
+}
+
+DlLL_API TaskInterface*  instantiate_plugin_template(TaskInterface *pInterface)
+{
+	TaskTemplate *pTemp = dynamic_cast<TaskTemplate*>(pInterface);
+	if (pTemp)
+		pTemp->change_to_fast_mode();
+	return pTemp;
 }

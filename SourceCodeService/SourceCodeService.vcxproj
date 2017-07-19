@@ -173,6 +173,7 @@
     <ClInclude Include="Database\SourceCode_Deploy.h" />
     <ClInclude Include="Database\Storage.h" />
     <ClInclude Include="Exception\HttpRequestException.h" />
+    <ClInclude Include="RouteCallBackSet.h" />
     <ClInclude Include="SystemConfig.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Tools\HttpClient.h" />
@@ -212,6 +213,7 @@
       </PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Exception\HttpRequestException.cpp" />
+    <ClCompile Include="RouteCallBackSet.cpp" />
     <ClCompile Include="SourceCodeService.cpp" />
     <ClCompile Include="SystemConfig.cpp" />
     <ClCompile Include="Tools\HttpClient.cpp" />

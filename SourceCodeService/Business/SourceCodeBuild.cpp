@@ -7,7 +7,7 @@
 #include "../Database/Resource_SourceCode.h"
 #include "../Database/Resource_Host.h"
 
-SourceCodeBuild::SourceCodeBuild()
+SourceCodeBuild::SourceCodeBuild(BusinessInterface *pB) :m_pB(pB)
 {
 }
 
@@ -21,7 +21,7 @@ void SourceCodeBuild::process_task()
 	string sFailedDetail;
 	if (!check_inputdata(sFailedDetail))
 	{
-		set_respond_back(HTTP_BADREQUEST, "1", "param missing", sFailedDetail);
+		m_pB->set_respond_back(HTTP_BADREQUEST, "1", "param missing", sFailedDetail);
 		return;
 	}
 
@@ -60,15 +60,10 @@ void SourceCodeBuild::process_task()
 	}
 	else
 	{
-		set_respond_back(HTTP_BADREQUEST, "1", "no source code matched", "");
+		m_pB->set_respond_back(HTTP_BADREQUEST, "1", "no source code matched", "");
 		return;
 	}
-	set_respond_back(HTTP_OK, "0", "successed", "");
-}
-
-void SourceCodeBuild::background_process()
-{
-
+	m_pB->set_respond_back(HTTP_OK, "0", "successed", "");
 }
 
 bool SourceCodeBuild::check_inputdata(string &sFailedDetail)
@@ -79,19 +74,19 @@ bool SourceCodeBuild::check_inputdata(string &sFailedDetail)
 	size
 	clone_url
 	*/
-	if (m_rdInData.jData["name"].asString().compare("") == 0)
+	if (m_pB->request_data().jData["name"].asString().compare("") == 0)
 	{
 		sFailedDetail = "name is missing";
 		return false;
 	}
 
-	if (m_rdInData.jData["head"].asString().compare("") == 0)
+	if (m_pB->request_data().jData["head"].asString().compare("") == 0)
 	{
 		sFailedDetail = "head is missing";
 		return false;
 	}
 
-	if (m_rdInData.jData["clone_url"].asString().compare("") == 0)
+	if (m_pB->request_data().jData["clone_url"].asString().compare("") == 0)
 	{
 		sFailedDetail = "clone_url is missing";
 		return false;

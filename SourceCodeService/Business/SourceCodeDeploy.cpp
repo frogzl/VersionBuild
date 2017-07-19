@@ -4,7 +4,7 @@
 #include "../Database/BuildRule.h"
 #include "../Database/BuildRule_Deploy.h"
 #include "../Database/Resource_Host.h"
-SourceCodeDeploy::SourceCodeDeploy()
+SourceCodeDeploy::SourceCodeDeploy(BusinessInterface *pB) :m_pB(pB)
 {
 }
 
@@ -15,7 +15,7 @@ SourceCodeDeploy::~SourceCodeDeploy()
 void SourceCodeDeploy::process_task()
 {
 	string sPath = "/buildrule/deploy";
-	string sID = m_rdInData.jData["id"].asString();
+	string sID = m_pB->request_data().jData["id"].asString();
 
 	// 找到所有未部署或者部署失败的buildrule
 	sprintf(m_szBuf, " `sourcecodeid`=\"%s\" and `status` in (0,99)", sID.c_str());
@@ -30,7 +30,7 @@ void SourceCodeDeploy::process_task()
 			DB::BuildRule_DeployData *pBRDD = DB::BuildRule_Deploy().query()->where(conditions)->first();
 			if (!pBRDD)
 			{
-				set_respond_back(HTTP_INTERNAL, "1", "BuildRule_DeployData failed", "");
+				m_pB->set_respond_back(HTTP_INTERNAL, "1", "BuildRule_DeployData failed", "");
 				return;
 			}
 
@@ -39,7 +39,7 @@ void SourceCodeDeploy::process_task()
 			DB::Resource_HostData *pHD = DB::Resource_Host().query()->where(conditions)->first();
 			if (!pHD)
 			{
-				set_respond_back(HTTP_INTERNAL, "1", "Resource_HostData failed", "");
+				m_pB->set_respond_back(HTTP_INTERNAL, "1", "Resource_HostData failed", "");
 				return;
 			}
 
@@ -54,10 +54,5 @@ void SourceCodeDeploy::process_task()
 			http.post(pHD->address, pHD->port, sPath, Json::FastWriter().write(jsonPost));
 		}
 	}
-	set_respond_back(HTTP_OK, "0", "create sourcecode resource success!", "");
-}
-
-void SourceCodeDeploy::background_process()
-{
-
+	m_pB->set_respond_back(HTTP_OK, "0", "create sourcecode resource success!", "");
 }

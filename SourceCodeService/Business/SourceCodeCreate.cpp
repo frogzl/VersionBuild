@@ -1,7 +1,7 @@
 #include "SourceCodeCreate.h"
 #include "../Exception/HttpRequestException.h"
 #include "../Common.h"
-SourceCodeCreate::SourceCodeCreate()
+SourceCodeCreate::SourceCodeCreate(BusinessInterface *pB) :m_pB(pB)
 {
 }
 
@@ -109,7 +109,7 @@ void SourceCodeCreate::process_task()
 	dbSourceCodeData.buildstatemask = m_rdInData.jData["buildstatemask"].asInt();
 	if (!dbSourceCode.create(dbSourceCodeData)->exec())
 	{
-		set_respond_back(HTTP_INTERNAL, "1", "create sourcecode failed", "");
+		m_pB->set_respond_back(HTTP_INTERNAL, "1", "create sourcecode failed", "");
 		return;
 	}
 	jsonRespondData["guid"] = dbSourceCodeData.guid;
@@ -129,7 +129,7 @@ void SourceCodeCreate::process_task()
 		dbBuildRuleDeployData.deploypath = jsonDeploy["path"].asString();
 		if (!dbBuildRuleDeploy.create(dbBuildRuleDeployData)->exec())
 		{
-			set_respond_back(HTTP_INTERNAL, "1", "create buildrule_deploy failed", "");
+			m_pB->set_respond_back(HTTP_INTERNAL, "1", "create buildrule_deploy failed", "");
 			return;
 		}
 		Json::Value jsonRespondDeploy;
@@ -153,7 +153,7 @@ void SourceCodeCreate::process_task()
 		dbBuildRuleData.status = 0;
 		if (!dbBuildRule.create(dbBuildRuleData)->exec())
 		{
-			set_respond_back(HTTP_INTERNAL, "1", "create buildrule failed", "");
+			m_pB->set_respond_back(HTTP_INTERNAL, "1", "create buildrule failed", "");
 			return;
 		}
 		Json::Value jsonRespondBuildRule;
@@ -176,7 +176,7 @@ void SourceCodeCreate::process_task()
 			dbBuildRuleDependData.dependusagemode = jsonDepend["dependusagemode"].asInt();
 			if (!dbBuildRuleDepend.create(dbBuildRuleDependData)->exec())
 			{
-				set_respond_back(HTTP_INTERNAL, "1", "create buildrule_depend failed", "");
+				m_pB->set_respond_back(HTTP_INTERNAL, "1", "create buildrule_depend failed", "");
 				return;
 			}
 			Json::Value jsonRespondDepend;
@@ -187,10 +187,5 @@ void SourceCodeCreate::process_task()
 		jsonRespondData["buildrules"].append(jsonRespondBuildRule);
 	}
 
-	set_respond_back(HTTP_OK, "0", "create sourcecode resource success!", "", jsonRespondData);
-}
-
-void SourceCodeCreate::background_process()
-{
-
+	m_pB->set_respond_back(HTTP_OK, "0", "create sourcecode resource success!", "", jsonRespondData);
 }

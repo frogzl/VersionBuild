@@ -1,4 +1,17 @@
-﻿  BusinessFactory.cpp
-  LINK : 没有找到 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\MicroServicePlugin.dll 或上一个增量链接没有生成它；正在执行完全链接
-     正在创建库 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\MicroServicePlugin.lib 和对象 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\MicroServicePlugin.exp
-  MicroServicePlugin.vcxproj -> E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\MicroServicePlugin.dll
+﻿生成启动时间为 2017/7/19 16:10:53。
+     1>项目“E:\Workspace\VersionBuild\MicroServicePlugin\MicroServicePlugin.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D DLL_EXPORTS /D WIN32 /D _DEBUG /D _LIB /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"E:\Workspace\VersionBuild\cache\MicroServicePlugin\Debug\\" /Fd"E:\Workspace\VersionBuild\cache\MicroServicePlugin\Debug\vc100.pdb" /Gd /TP /errorReport:prompt BusinessTemplate.cpp MicroServicePlugin.cpp ServiceInterface.cpp ServiceTemplate.cpp
+         ServiceTemplate.cpp
+         MicroServicePlugin.cpp
+     1>e:\workspace\versionbuild\microserviceplugin\ServiceTemplate.h(4): error C2143: 语法错误 : 缺少“;”(在“<class-head>”的前面)
+         Generating Code...
+         Compiling...
+         ServiceInterface.cpp
+         BusinessTemplate.cpp
+         Generating Code...
+     1>已完成生成项目“E:\Workspace\VersionBuild\MicroServicePlugin\MicroServicePlugin.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:02.01

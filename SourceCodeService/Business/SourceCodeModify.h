@@ -1,11 +1,11 @@
 #pragma once
-#include "Business.h"
-class SourceCodeModify : public Business
+#include "BusinessInterface.h"
+class SourceCodeModify
 {
-	BUSINESS_OBJECT(SourceCodeModify)
 public:
-	SourceCodeModify();
+	SourceCodeModify(BusinessInterface *pB);
 	~SourceCodeModify();
-protected:
 	void process_task();
+protected:
+	BusinessInterface *m_pB;
 };

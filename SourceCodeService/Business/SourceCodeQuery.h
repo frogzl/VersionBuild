@@ -1,12 +1,12 @@
 #pragma once
-#include "Business.h"
+#include "BusinessInterface.h"
 
-class SourceCodeQuery : public Business
+class SourceCodeQuery
 {
-	BUSINESS_OBJECT(SourceCodeQuery)
 public:
-	SourceCodeQuery();
+	SourceCodeQuery(BusinessInterface *pB);
 	~SourceCodeQuery();
-protected:
 	void process_task();
+protected:
+	BusinessInterface *m_pB;
 };

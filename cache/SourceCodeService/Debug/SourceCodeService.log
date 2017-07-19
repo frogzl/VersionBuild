@@ -1,143 +1,71 @@
-﻿  SourceCodeService.cpp
-LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/FORCE”规范)
-SourceCodeBuild.obj : warning LNK4006: "public: static char const * * DB::BuildRuleData::names" (?names@BuildRuleData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeBuild.obj : warning LNK4006: "private: static char const * const DB::BuildRuleData::table_" (?table_@BuildRuleData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeBuild.obj : warning LNK4006: "public: static char const * * DB::BuildRule_DeployData::names" (?names@BuildRule_DeployData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeBuild.obj : warning LNK4006: "private: static char const * const DB::BuildRule_DeployData::table_" (?table_@BuildRule_DeployData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeBuild.obj : warning LNK4006: "public: static char const * * DB::Resource_SourceCodeData::names" (?names@Resource_SourceCodeData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeBuild.obj : warning LNK4006: "private: static char const * const DB::Resource_SourceCodeData::table_" (?table_@Resource_SourceCodeData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeCreate.obj : warning LNK4006: "public: static char const * * DB::Resource_SourceCodeData::names" (?names@Resource_SourceCodeData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeCreate.obj : warning LNK4006: "private: static char const * const DB::Resource_SourceCodeData::table_" (?table_@Resource_SourceCodeData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeCreate.obj : warning LNK4006: "public: static char const * * DB::BuildRuleData::names" (?names@BuildRuleData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeCreate.obj : warning LNK4006: "private: static char const * const DB::BuildRuleData::table_" (?table_@BuildRuleData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeCreate.obj : warning LNK4006: "public: static char const * * DB::BuildRule_DeployData::names" (?names@BuildRule_DeployData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeCreate.obj : warning LNK4006: "private: static char const * const DB::BuildRule_DeployData::table_" (?table_@BuildRule_DeployData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeCreate.obj : warning LNK4006: "public: static char const * * DB::BuildRule_DependData::names" (?names@BuildRule_DependData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeCreate.obj : warning LNK4006: "private: static char const * const DB::BuildRule_DependData::table_" (?table_@BuildRule_DependData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeDeploy.obj : warning LNK4006: "public: static char const * * DB::BuildRuleData::names" (?names@BuildRuleData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeDeploy.obj : warning LNK4006: "private: static char const * const DB::BuildRuleData::table_" (?table_@BuildRuleData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeDeploy.obj : warning LNK4006: "public: static char const * * DB::BuildRule_DeployData::names" (?names@BuildRule_DeployData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeDeploy.obj : warning LNK4006: "private: static char const * const DB::BuildRule_DeployData::table_" (?table_@BuildRule_DeployData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeDeploy.obj : warning LNK4006: "public: static char const * * DB::Resource_HostData::names" (?names@Resource_HostData@DB@@2PAPEBDA) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
-SourceCodeDeploy.obj : warning LNK4006: "private: static char const * const DB::Resource_HostData::table_" (?table_@Resource_HostData@DB@@0PEBDEB) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
-SourceCodeQuery.obj : warning LNK4006: "public: static char const * * DB::Resource_SourceCodeData::names" (?names@Resource_SourceCodeData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeQuery.obj : warning LNK4006: "private: static char const * const DB::Resource_SourceCodeData::table_" (?table_@Resource_SourceCodeData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-BuildRule.obj : warning LNK4006: "public: static char const * * DB::BuildRuleData::names" (?names@BuildRuleData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-BuildRule.obj : warning LNK4006: "private: static char const * const DB::BuildRuleData::table_" (?table_@BuildRuleData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-BuildRule_Depend.obj : warning LNK4006: "public: static char const * * DB::BuildRule_DependData::names" (?names@BuildRule_DependData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-BuildRule_Depend.obj : warning LNK4006: "private: static char const * const DB::BuildRule_DependData::table_" (?table_@BuildRule_DependData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-BuildRule_Deploy.obj : warning LNK4006: "public: static char const * * DB::BuildRule_DeployData::names" (?names@BuildRule_DeployData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-BuildRule_Deploy.obj : warning LNK4006: "private: static char const * const DB::BuildRule_DeployData::table_" (?table_@BuildRule_DeployData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-Resource_Host.obj : warning LNK4006: "public: static char const * * DB::Resource_HostData::names" (?names@Resource_HostData@DB@@2PAPEBDA) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
-Resource_Host.obj : warning LNK4006: "private: static char const * const DB::Resource_HostData::table_" (?table_@Resource_HostData@DB@@0PEBDEB) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
-Resource_SourceCode.obj : warning LNK4006: "public: static char const * * DB::Resource_SourceCodeData::names" (?names@Resource_SourceCodeData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-Resource_SourceCode.obj : warning LNK4006: "private: static char const * const DB::Resource_SourceCodeData::table_" (?table_@Resource_SourceCodeData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCode_Deploy.obj : warning LNK4006: "public: static char const * * DB::SourceCode_DeployData::names" (?names@SourceCode_DeployData@DB@@2PAPEBDA) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
-SourceCode_Deploy.obj : warning LNK4006: "private: static char const * const DB::SourceCode_DeployData::table_" (?table_@SourceCode_DeployData@DB@@0PEBDEB) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
-SourceCodeService.obj : warning LNK4006: "public: static char const * * DB::Resource_SourceCodeData::names" (?names@Resource_SourceCodeData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeService.obj : warning LNK4006: "private: static char const * const DB::Resource_SourceCodeData::table_" (?table_@Resource_SourceCodeData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeService.obj : warning LNK4006: "public: static char const * * DB::BuildRuleData::names" (?names@BuildRuleData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeService.obj : warning LNK4006: "private: static char const * const DB::BuildRuleData::table_" (?table_@BuildRuleData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeService.obj : warning LNK4006: "public: static char const * * DB::BuildRule_DeployData::names" (?names@BuildRule_DeployData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeService.obj : warning LNK4006: "private: static char const * const DB::BuildRule_DeployData::table_" (?table_@BuildRule_DeployData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeService.obj : warning LNK4006: "public: static char const * * DB::BuildRule_DependData::names" (?names@BuildRule_DependData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeService.obj : warning LNK4006: "private: static char const * const DB::BuildRule_DependData::table_" (?table_@BuildRule_DependData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-HttpClient.obj : warning LNK4006: "public: static char const * * DB::Resource_HostData::names" (?names@Resource_HostData@DB@@2PAPEBDA) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
-HttpClient.obj : warning LNK4006: "private: static char const * const DB::Resource_HostData::table_" (?table_@Resource_HostData@DB@@0PEBDEB) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
-  libIconv.lib(iconv.obj) : 找到 MSIL .netmodule 或使用 /GL 编译的模块；正在使用 /LTCG 重新启动链接；将 /LTCG 添加到链接命令行以改进链接器性能
-LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/LTCG”规范)
-SourceCodeBuild.obj : warning LNK4006: "public: static char const * * DB::BuildRuleData::names" (?names@BuildRuleData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeBuild.obj : warning LNK4006: "private: static char const * const DB::BuildRuleData::table_" (?table_@BuildRuleData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeBuild.obj : warning LNK4006: "public: static char const * * DB::BuildRule_DeployData::names" (?names@BuildRule_DeployData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeBuild.obj : warning LNK4006: "private: static char const * const DB::BuildRule_DeployData::table_" (?table_@BuildRule_DeployData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeBuild.obj : warning LNK4006: "public: static char const * * DB::Resource_SourceCodeData::names" (?names@Resource_SourceCodeData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeBuild.obj : warning LNK4006: "private: static char const * const DB::Resource_SourceCodeData::table_" (?table_@Resource_SourceCodeData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeCreate.obj : warning LNK4006: "public: static char const * * DB::Resource_SourceCodeData::names" (?names@Resource_SourceCodeData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeCreate.obj : warning LNK4006: "private: static char const * const DB::Resource_SourceCodeData::table_" (?table_@Resource_SourceCodeData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeCreate.obj : warning LNK4006: "public: static char const * * DB::BuildRuleData::names" (?names@BuildRuleData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeCreate.obj : warning LNK4006: "private: static char const * const DB::BuildRuleData::table_" (?table_@BuildRuleData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeCreate.obj : warning LNK4006: "public: static char const * * DB::BuildRule_DeployData::names" (?names@BuildRule_DeployData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeCreate.obj : warning LNK4006: "private: static char const * const DB::BuildRule_DeployData::table_" (?table_@BuildRule_DeployData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeCreate.obj : warning LNK4006: "public: static char const * * DB::BuildRule_DependData::names" (?names@BuildRule_DependData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeCreate.obj : warning LNK4006: "private: static char const * const DB::BuildRule_DependData::table_" (?table_@BuildRule_DependData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeDeploy.obj : warning LNK4006: "public: static char const * * DB::BuildRuleData::names" (?names@BuildRuleData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeDeploy.obj : warning LNK4006: "private: static char const * const DB::BuildRuleData::table_" (?table_@BuildRuleData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeDeploy.obj : warning LNK4006: "public: static char const * * DB::BuildRule_DeployData::names" (?names@BuildRule_DeployData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeDeploy.obj : warning LNK4006: "private: static char const * const DB::BuildRule_DeployData::table_" (?table_@BuildRule_DeployData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeDeploy.obj : warning LNK4006: "public: static char const * * DB::Resource_HostData::names" (?names@Resource_HostData@DB@@2PAPEBDA) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
-SourceCodeDeploy.obj : warning LNK4006: "private: static char const * const DB::Resource_HostData::table_" (?table_@Resource_HostData@DB@@0PEBDEB) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
-SourceCodeQuery.obj : warning LNK4006: "public: static char const * * DB::Resource_SourceCodeData::names" (?names@Resource_SourceCodeData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeQuery.obj : warning LNK4006: "private: static char const * const DB::Resource_SourceCodeData::table_" (?table_@Resource_SourceCodeData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-BuildRule.obj : warning LNK4006: "public: static char const * * DB::BuildRuleData::names" (?names@BuildRuleData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-BuildRule.obj : warning LNK4006: "private: static char const * const DB::BuildRuleData::table_" (?table_@BuildRuleData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-BuildRule_Depend.obj : warning LNK4006: "public: static char const * * DB::BuildRule_DependData::names" (?names@BuildRule_DependData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-BuildRule_Depend.obj : warning LNK4006: "private: static char const * const DB::BuildRule_DependData::table_" (?table_@BuildRule_DependData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-BuildRule_Deploy.obj : warning LNK4006: "public: static char const * * DB::BuildRule_DeployData::names" (?names@BuildRule_DeployData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-BuildRule_Deploy.obj : warning LNK4006: "private: static char const * const DB::BuildRule_DeployData::table_" (?table_@BuildRule_DeployData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-Resource_Host.obj : warning LNK4006: "public: static char const * * DB::Resource_HostData::names" (?names@Resource_HostData@DB@@2PAPEBDA) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
-Resource_Host.obj : warning LNK4006: "private: static char const * const DB::Resource_HostData::table_" (?table_@Resource_HostData@DB@@0PEBDEB) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
-Resource_SourceCode.obj : warning LNK4006: "public: static char const * * DB::Resource_SourceCodeData::names" (?names@Resource_SourceCodeData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-Resource_SourceCode.obj : warning LNK4006: "private: static char const * const DB::Resource_SourceCodeData::table_" (?table_@Resource_SourceCodeData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCode_Deploy.obj : warning LNK4006: "public: static char const * * DB::SourceCode_DeployData::names" (?names@SourceCode_DeployData@DB@@2PAPEBDA) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
-SourceCode_Deploy.obj : warning LNK4006: "private: static char const * const DB::SourceCode_DeployData::table_" (?table_@SourceCode_DeployData@DB@@0PEBDEB) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
-SourceCodeService.obj : warning LNK4006: "public: static char const * * DB::Resource_SourceCodeData::names" (?names@Resource_SourceCodeData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeService.obj : warning LNK4006: "private: static char const * const DB::Resource_SourceCodeData::table_" (?table_@Resource_SourceCodeData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeService.obj : warning LNK4006: "public: static char const * * DB::BuildRuleData::names" (?names@BuildRuleData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeService.obj : warning LNK4006: "private: static char const * const DB::BuildRuleData::table_" (?table_@BuildRuleData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeService.obj : warning LNK4006: "public: static char const * * DB::BuildRule_DeployData::names" (?names@BuildRule_DeployData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeService.obj : warning LNK4006: "private: static char const * const DB::BuildRule_DeployData::table_" (?table_@BuildRule_DeployData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeService.obj : warning LNK4006: "public: static char const * * DB::BuildRule_DependData::names" (?names@BuildRule_DependData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeService.obj : warning LNK4006: "private: static char const * const DB::BuildRule_DependData::table_" (?table_@BuildRule_DependData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-HttpClient.obj : warning LNK4006: "public: static char const * * DB::Resource_HostData::names" (?names@Resource_HostData@DB@@2PAPEBDA) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
-HttpClient.obj : warning LNK4006: "private: static char const * const DB::Resource_HostData::table_" (?table_@Resource_HostData@DB@@0PEBDEB) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
-     正在创建库 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\SourceCodeService.lib 和对象 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\SourceCodeService.exp
-E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\SourceCodeService.dll : warning LNK4088: 因 /FORCE 选项生成了映像；映像可能不能运行
-  正在生成代码
-  已完成代码的生成
-SourceCodeBuild.obj : warning LNK4006: "public: static char const * * DB::BuildRuleData::names" (?names@BuildRuleData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeBuild.obj : warning LNK4006: "private: static char const * const DB::BuildRuleData::table_" (?table_@BuildRuleData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeBuild.obj : warning LNK4006: "public: static char const * * DB::BuildRule_DeployData::names" (?names@BuildRule_DeployData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeBuild.obj : warning LNK4006: "private: static char const * const DB::BuildRule_DeployData::table_" (?table_@BuildRule_DeployData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeBuild.obj : warning LNK4006: "public: static char const * * DB::Resource_SourceCodeData::names" (?names@Resource_SourceCodeData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeBuild.obj : warning LNK4006: "private: static char const * const DB::Resource_SourceCodeData::table_" (?table_@Resource_SourceCodeData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeCreate.obj : warning LNK4006: "public: static char const * * DB::Resource_SourceCodeData::names" (?names@Resource_SourceCodeData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeCreate.obj : warning LNK4006: "private: static char const * const DB::Resource_SourceCodeData::table_" (?table_@Resource_SourceCodeData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeCreate.obj : warning LNK4006: "public: static char const * * DB::BuildRuleData::names" (?names@BuildRuleData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeCreate.obj : warning LNK4006: "private: static char const * const DB::BuildRuleData::table_" (?table_@BuildRuleData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeCreate.obj : warning LNK4006: "public: static char const * * DB::BuildRule_DeployData::names" (?names@BuildRule_DeployData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeCreate.obj : warning LNK4006: "private: static char const * const DB::BuildRule_DeployData::table_" (?table_@BuildRule_DeployData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeCreate.obj : warning LNK4006: "public: static char const * * DB::BuildRule_DependData::names" (?names@BuildRule_DependData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeCreate.obj : warning LNK4006: "private: static char const * const DB::BuildRule_DependData::table_" (?table_@BuildRule_DependData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeDeploy.obj : warning LNK4006: "public: static char const * * DB::BuildRuleData::names" (?names@BuildRuleData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeDeploy.obj : warning LNK4006: "private: static char const * const DB::BuildRuleData::table_" (?table_@BuildRuleData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeDeploy.obj : warning LNK4006: "public: static char const * * DB::BuildRule_DeployData::names" (?names@BuildRule_DeployData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeDeploy.obj : warning LNK4006: "private: static char const * const DB::BuildRule_DeployData::table_" (?table_@BuildRule_DeployData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeDeploy.obj : warning LNK4006: "public: static char const * * DB::Resource_HostData::names" (?names@Resource_HostData@DB@@2PAPEBDA) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
-SourceCodeDeploy.obj : warning LNK4006: "private: static char const * const DB::Resource_HostData::table_" (?table_@Resource_HostData@DB@@0PEBDEB) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
-SourceCodeQuery.obj : warning LNK4006: "public: static char const * * DB::Resource_SourceCodeData::names" (?names@Resource_SourceCodeData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeQuery.obj : warning LNK4006: "private: static char const * const DB::Resource_SourceCodeData::table_" (?table_@Resource_SourceCodeData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-BuildRule.obj : warning LNK4006: "public: static char const * * DB::BuildRuleData::names" (?names@BuildRuleData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-BuildRule.obj : warning LNK4006: "private: static char const * const DB::BuildRuleData::table_" (?table_@BuildRuleData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-BuildRule_Depend.obj : warning LNK4006: "public: static char const * * DB::BuildRule_DependData::names" (?names@BuildRule_DependData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-BuildRule_Depend.obj : warning LNK4006: "private: static char const * const DB::BuildRule_DependData::table_" (?table_@BuildRule_DependData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-BuildRule_Deploy.obj : warning LNK4006: "public: static char const * * DB::BuildRule_DeployData::names" (?names@BuildRule_DeployData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-BuildRule_Deploy.obj : warning LNK4006: "private: static char const * const DB::BuildRule_DeployData::table_" (?table_@BuildRule_DeployData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-Resource_Host.obj : warning LNK4006: "public: static char const * * DB::Resource_HostData::names" (?names@Resource_HostData@DB@@2PAPEBDA) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
-Resource_Host.obj : warning LNK4006: "private: static char const * const DB::Resource_HostData::table_" (?table_@Resource_HostData@DB@@0PEBDEB) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
-Resource_SourceCode.obj : warning LNK4006: "public: static char const * * DB::Resource_SourceCodeData::names" (?names@Resource_SourceCodeData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-Resource_SourceCode.obj : warning LNK4006: "private: static char const * const DB::Resource_SourceCodeData::table_" (?table_@Resource_SourceCodeData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCode_Deploy.obj : warning LNK4006: "public: static char const * * DB::SourceCode_DeployData::names" (?names@SourceCode_DeployData@DB@@2PAPEBDA) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
-SourceCode_Deploy.obj : warning LNK4006: "private: static char const * const DB::SourceCode_DeployData::table_" (?table_@SourceCode_DeployData@DB@@0PEBDEB) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
-SourceCodeService.obj : warning LNK4006: "public: static char const * * DB::Resource_SourceCodeData::names" (?names@Resource_SourceCodeData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeService.obj : warning LNK4006: "private: static char const * const DB::Resource_SourceCodeData::table_" (?table_@Resource_SourceCodeData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeService.obj : warning LNK4006: "public: static char const * * DB::BuildRuleData::names" (?names@BuildRuleData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeService.obj : warning LNK4006: "private: static char const * const DB::BuildRuleData::table_" (?table_@BuildRuleData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeService.obj : warning LNK4006: "public: static char const * * DB::BuildRule_DeployData::names" (?names@BuildRule_DeployData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeService.obj : warning LNK4006: "private: static char const * const DB::BuildRule_DeployData::table_" (?table_@BuildRule_DeployData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeService.obj : warning LNK4006: "public: static char const * * DB::BuildRule_DependData::names" (?names@BuildRule_DependData@DB@@2PAPEBDA) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-SourceCodeService.obj : warning LNK4006: "private: static char const * const DB::BuildRule_DependData::table_" (?table_@BuildRule_DependData@DB@@0PEBDEB) 已在 BusinessFactory.obj 中定义；已忽略第二个定义
-HttpClient.obj : warning LNK4006: "public: static char const * * DB::Resource_HostData::names" (?names@Resource_HostData@DB@@2PAPEBDA) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
-HttpClient.obj : warning LNK4006: "private: static char const * const DB::Resource_HostData::table_" (?table_@Resource_HostData@DB@@0PEBDEB) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
-E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\SourceCodeService.dll : warning LNK4088: 因 /FORCE 选项生成了映像；映像可能不能运行
-  SourceCodeService.vcxproj -> E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\SourceCodeService.dll
-  SourceCodeService.vcxproj -> E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\SourceCodeService.dll
+﻿生成启动时间为 2017/7/19 16:12:21。
+     1>项目“E:\Workspace\VersionBuild\SourceCodeService\SourceCodeService.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D SOURCECODESERVICE_EXPORTS /D _CRT_SECURE_NO_WARNINGS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"E:\Workspace\VersionBuild\cache\SourceCodeService\Debug\\" /Fd"E:\Workspace\VersionBuild\cache\SourceCodeService\Debug\vc100.pdb" /Gd /TP /errorReport:prompt Business\SourceCodeBuild.cpp Business\SourceCodeCreate.cpp Business\SourceCodeDelete.cpp Business\SourceCodeDeploy.cpp Business\SourceCodeModify.cpp Business\SourceCodeQuery.cpp Common.cpp Database\BuildResult.cpp Database\BuildRule.cpp Database\BuildRule_Depend.cpp Database\BuildRule_Deploy.cpp Database\Database.cpp Database\Resource.cpp Database\Resource_CompressionPackage.cpp Database\Resource_Document.cpp Database\Resource_Host.cpp Database\Resource_SourceCode.cpp Database\SourceCode_Deploy.cpp Database\Storage.cpp Exception\HttpRequestException.cpp RouteCallBackSet.cpp SourceCodeService.cpp SystemConfig.cpp Tools\HttpClient.cpp
+         HttpClient.cpp
+     1>e:\workspace\versionbuild\sourcecodeservice\tools\../Common.h(18): fatal error C1083: 无法打开包括文件:“iconv.h”: No such file or directory
+         SystemConfig.cpp
+     1>SystemConfig.cpp(21): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>SystemConfig.cpp(61): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>SystemConfig.cpp(65): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _access. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\io.h(299) : 参见“access”的声明
+     1>SystemConfig.cpp(66): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\direct.h(124) : 参见“mkdir”的声明
+     1>SystemConfig.cpp(75): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>SystemConfig.cpp(79): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _access. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\io.h(299) : 参见“access”的声明
+     1>SystemConfig.cpp(80): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\direct.h(124) : 参见“mkdir”的声明
+     1>SystemConfig.cpp(83): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _access. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\io.h(299) : 参见“access”的声明
+     1>SystemConfig.cpp(84): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\direct.h(124) : 参见“mkdir”的声明
+         SourceCodeService.cpp
+     1>e:\workspace\versionbuild\sourcecodeservice\RouteCallBackSet.h(4): error C2143: 语法错误 : 缺少“;”(在“<class-head>”的前面)
+         RouteCallBackSet.cpp
+     1>e:\workspace\versionbuild\sourcecodeservice\database\Database.h(4): fatal error C1083: 无法打开包括文件:“mysql++.h”: No such file or directory
+         HttpRequestException.cpp
+         Storage.cpp
+     1>e:\workspace\versionbuild\sourcecodeservice\database\Database.h(4): fatal error C1083: 无法打开包括文件:“mysql++.h”: No such file or directory
+         SourceCode_Deploy.cpp
+     1>e:\workspace\versionbuild\sourcecodeservice\database\Database.h(4): fatal error C1083: 无法打开包括文件:“mysql++.h”: No such file or directory
+         Resource_SourceCode.cpp
+     1>e:\workspace\versionbuild\sourcecodeservice\database\Database.h(4): fatal error C1083: 无法打开包括文件:“mysql++.h”: No such file or directory
+         Resource_Host.cpp
+     1>e:\workspace\versionbuild\sourcecodeservice\database\Database.h(4): fatal error C1083: 无法打开包括文件:“mysql++.h”: No such file or directory
+         Resource_Document.cpp
+     1>e:\workspace\versionbuild\sourcecodeservice\database\Database.h(4): fatal error C1083: 无法打开包括文件:“mysql++.h”: No such file or directory
+         Resource_CompressionPackage.cpp
+     1>e:\workspace\versionbuild\sourcecodeservice\database\Database.h(4): fatal error C1083: 无法打开包括文件:“mysql++.h”: No such file or directory
+         Resource.cpp
+     1>e:\workspace\versionbuild\sourcecodeservice\database\Database.h(4): fatal error C1083: 无法打开包括文件:“mysql++.h”: No such file or directory
+         Database.cpp
+     1>e:\workspace\versionbuild\sourcecodeservice\database\Database.h(4): fatal error C1083: 无法打开包括文件:“mysql++.h”: No such file or directory
+         BuildRule_Deploy.cpp
+     1>e:\workspace\versionbuild\sourcecodeservice\database\Database.h(4): fatal error C1083: 无法打开包括文件:“mysql++.h”: No such file or directory
+         BuildRule_Depend.cpp
+     1>e:\workspace\versionbuild\sourcecodeservice\database\Database.h(4): fatal error C1083: 无法打开包括文件:“mysql++.h”: No such file or directory
+         BuildRule.cpp
+     1>e:\workspace\versionbuild\sourcecodeservice\database\Database.h(4): fatal error C1083: 无法打开包括文件:“mysql++.h”: No such file or directory
+         BuildResult.cpp
+     1>e:\workspace\versionbuild\sourcecodeservice\database\Database.h(4): fatal error C1083: 无法打开包括文件:“mysql++.h”: No such file or directory
+         Common.cpp
+     1>e:\workspace\versionbuild\sourcecodeservice\Common.h(18): fatal error C1083: 无法打开包括文件:“iconv.h”: No such file or directory
+         SourceCodeQuery.cpp
+     1>e:\workspace\versionbuild\sourcecodeservice\database\Database.h(4): fatal error C1083: 无法打开包括文件:“mysql++.h”: No such file or directory
+         SourceCodeModify.cpp
+         Generating Code...
+         Compiling...
+         SourceCodeDeploy.cpp
+     1>e:\workspace\versionbuild\sourcecodeservice\tools\../Common.h(18): fatal error C1083: 无法打开包括文件:“iconv.h”: No such file or directory
+         SourceCodeDelete.cpp
+         SourceCodeCreate.cpp
+     1>e:\workspace\versionbuild\sourcecodeservice\database\Database.h(4): fatal error C1083: 无法打开包括文件:“mysql++.h”: No such file or directory
+         SourceCodeBuild.cpp
+     1>e:\workspace\versionbuild\sourcecodeservice\tools\../Common.h(18): fatal error C1083: 无法打开包括文件:“iconv.h”: No such file or directory
+         Generating Code...
+     1>已完成生成项目“E:\Workspace\VersionBuild\SourceCodeService\SourceCodeService.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:11.76

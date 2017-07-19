@@ -1,15 +1,15 @@
 #pragma once
-#include "Business.h"
+#include "BusinessInterface.h"
 #include "../Database/Resource_SourceCode.h"
 #include "../Database/BuildRule.h"
 #include "../Database/BuildRule_Deploy.h"
 #include "../Database/BuildRule_Depend.h"
-class SourceCodeCreate : public Business
+class SourceCodeCreate
 {
-	BUSINESS_OBJECT(SourceCodeCreate)
 public:
-	SourceCodeCreate();
+	SourceCodeCreate(BusinessInterface *pB);
 	~SourceCodeCreate();
-protected:
 	void process_task();
+protected:
+	BusinessInterface *m_pB;
 };

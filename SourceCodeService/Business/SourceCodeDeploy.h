@@ -1,12 +1,12 @@
 #pragma once
-#include "Business.h"
+#include "BusinessInterface.h"
 
-class SourceCodeDeploy : public Business
+class SourceCodeDeploy
 {
-	BUSINESS_OBJECT(SourceCodeDeploy)
 public:
-	SourceCodeDeploy();
+	SourceCodeDeploy(BusinessInterface *pB);
 	~SourceCodeDeploy();
-protected:
 	void process_task();
+protected:
+	BusinessInterface *m_pB;
 };

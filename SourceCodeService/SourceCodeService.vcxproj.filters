@@ -111,6 +111,9 @@
     <ClInclude Include="SystemConfig.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="RouteCallBackSet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SourceCodeService.cpp">
@@ -183,6 +186,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="SystemConfig.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RouteCallBackSet.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

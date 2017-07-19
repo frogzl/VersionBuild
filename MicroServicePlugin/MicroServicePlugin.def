@@ -1,4 +1,0 @@
-LIBRARY
-EXPORTS
-create_plugin_template
-instantiate_plugin_template
