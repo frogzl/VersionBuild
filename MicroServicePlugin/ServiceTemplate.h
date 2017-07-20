@@ -1,10 +1,6 @@
 #pragma once
 #include "include/ServiceInterface.h"
-
-class B
-{
-
-};
+;
 class ServiceTemplate : public ServiceInterface
 {
 	enum ObjectMode

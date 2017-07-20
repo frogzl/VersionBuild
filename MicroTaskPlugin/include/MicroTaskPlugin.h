@@ -9,7 +9,7 @@
 #else
 #define DlLL_API __declspec(dllimport)
 #endif
-
+#include "TaskInterface.h"
 DlLL_API const char* library_version();
 
 DlLL_API TaskInterface* create_plugin_template();
