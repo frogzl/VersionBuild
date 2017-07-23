@@ -1,6 +1,5 @@
-﻿  MicroServicePlugin.cpp
-e:\versionbuild - 副本\microserviceplugin\ServiceTemplate.h(5): error C2143: 语法错误 : 缺少“;”(在“<class-head>”的前面)
+﻿  ServiceTemplate.cpp
+  MicroServicePlugin.cpp
   Generating Code...
-  Compiling...
-  ServiceTemplate.cpp
-  Generating Code...
+     正在创建库 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\MicroServicePlugin.lib 和对象 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\MicroServicePlugin.exp
+  MicroServicePlugin.vcxproj -> E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\MicroServicePlugin.dll

@@ -1,18 +1,20 @@
 // MicroTaskPlugin.cpp : 定义 DLL 应用程序的导出函数。
 //
 #include "include/MicroTaskPlugin.h"
+#include "TaskTemplate.h"
+#include "TaskDataTemplate.h"
 
-DlLL_API const char* library_version()
+DLL_API TaskData* create_business()
 {
-	return "1";
+	return new TaskDataTemplate();
 }
 
-DlLL_API TaskInterface* create_plugin_template()
+DLL_API TaskInterface* create_plugin_template()
 {
 	return new TaskTemplate();
 }
 
-DlLL_API TaskInterface*  instantiate_plugin_template(TaskInterface *pInterface)
+DLL_API TaskInterface*  instantiate_plugin_template(TaskInterface *pInterface)
 {
 	TaskTemplate *pTemp = dynamic_cast<TaskTemplate*>(pInterface);
 	if (pTemp)

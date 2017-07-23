@@ -31,7 +31,8 @@ void VBHttpServer::wait_for_end()
 
 void VBHttpServer::stop()
 {
-
+	for (int nIndex = 0; nIndex < (int)m_vecItems.size(); nIndex++)
+		m_vecItems[nIndex]->stop();
 }
 
 SOCKET VBHttpServer::bind_socket(int port, int backlog) 

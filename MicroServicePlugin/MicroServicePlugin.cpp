@@ -2,11 +2,6 @@
 #include "ServiceTemplate.h"
 #include "BusinessTemplate.h"
 
-DLL_API const char* library_version()
-{
-	return "1";
-}
-
 DLL_API BusinessInterface* create_business()
 {
 	return new BusinessTemplate();

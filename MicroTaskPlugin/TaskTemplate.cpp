@@ -1,19 +1,19 @@
-#include "ServiceTemplate.h"
+#include "TaskTemplate.h"
 
-ServiceTemplate::ServiceTemplate()
+TaskTemplate::TaskTemplate()
 {
 	nRouteCount = -1;
 	riRouteInfos = NULL;
-	fpRoutesProcess = NULL;
+	fpTaskCreateProcess = NULL;
 	omObjectMode = enTemplate;
-	pVecTmpRI = new vector<Route_Info>;
-	pVecTmpFP = new vector<FuncProcess>;
+	pVecTmpRI = new vector<Task_Route_Info>;
+	pVecTmpFP = new vector<FuncTaskProcess>;
 }
 
-ServiceTemplate::~ServiceTemplate()
+TaskTemplate::~TaskTemplate()
 {
-	if (fpRoutesProcess)
-		delete [] fpRoutesProcess;
+	if (fpTaskCreateProcess)
+		delete [] fpTaskCreateProcess;
 	if (riRouteInfos)
 		delete [] riRouteInfos;
 
@@ -24,77 +24,81 @@ ServiceTemplate::~ServiceTemplate()
 
 	pVecTmpRI = NULL;
 	pVecTmpFP = NULL;
-	fpRoutesProcess = NULL;
+	fpTaskCreateProcess = NULL;
 	riRouteInfos = NULL;
 }
 
-void ServiceTemplate::destory()
+void TaskTemplate::destory()
 {
 	delete this;
 }
 
-int ServiceTemplate::route_infos(Route_Info *&routeInfos)
+int TaskTemplate::route_infos(Task_Route_Info *&routeInfos)
 {
 	return 0;
 }
 
-const char* ServiceTemplate::unique_id()
+const char* TaskTemplate::unique_id()
 {
-	return szServiceUniqueId;
+	return szTaskUniqueId;
 }
 
-const char* ServiceTemplate::name()
+const char* TaskTemplate::name()
 {
-	return szServiceName;
+	return szTaskName;
 }
 
-const char* ServiceTemplate::version()
+const char* TaskTemplate::version()
 {
-	return szServiceVersion;
+	return szTaskVersion;
 }
 
-const char* ServiceTemplate::dispatch_by_route_path(int nIndex, BusinessInterface *pB)
+const char* TaskTemplate::library_version()
+{
+	return "0.1";
+}
+
+const char* TaskTemplate::dispatch_by_route_path(int nIndex, TaskData *pTD)
 {
 	if (nIndex >= 0 && nIndex < nRouteCount)
 	{
-		fpRoutesProcess[nIndex](pB);
+		fpTaskCreateProcess[nIndex](pTD);
 		return "1";
 	}
 	else
 		return "0";
 }
 
-bool ServiceTemplate::register_service_name(const char *szName)
+bool TaskTemplate::register_task_name(const char *szName)
 {
-	szServiceName = szName;
+	szTaskName = szName;
 	return true;
 }
 
-bool ServiceTemplate::register_service_unique_id(const char *szID)
+bool TaskTemplate::register_task_unique_id(const char *szID)
 {
-	szServiceUniqueId = szID;
+	szTaskUniqueId = szID;
 	return true;
 }
 
 
-bool ServiceTemplate::register_service_version(const char *szVersion)
+bool TaskTemplate::register_task_version(const char *szVersion)
 {
-	szServiceVersion = szVersion;
+	szTaskVersion = szVersion;
 	return true;
 }
 
-bool ServiceTemplate::register_http_route(const char *szPath, const char *szOperation, FuncProcess pCallBack)
+bool TaskTemplate::register_task_route(const char *szPath, FuncTaskProcess pCallBack)
 {
-	Route_Info ri;
-	ri.nIndex = (int)pVecTmpFP->size();
-	ri.szPath = szPath;
-	ri.szoperation = szOperation;
-	pVecTmpRI->push_back(ri);
+	Task_Route_Info tri;
+	tri.nIndex = (int)pVecTmpFP->size();
+	tri.szPath = szPath;
+	pVecTmpRI->push_back(tri);
 	pVecTmpFP->push_back(pCallBack);
 	return true;
 }
 
-bool ServiceTemplate::change_to_fast_mode()
+bool TaskTemplate::change_to_fast_mode()
 {
 	if (omObjectMode == enInstantiation)
 		return true;
@@ -104,12 +108,12 @@ bool ServiceTemplate::change_to_fast_mode()
 	nRouteCount = (int)pVecTmpRI->size();
 	if (nRouteCount > 0)
 	{
-		riRouteInfos = new Route_Info[nRouteCount];
-		fpRoutesProcess = new FuncProcess[nRouteCount];
+		riRouteInfos = new Task_Route_Info[nRouteCount];
+		fpTaskCreateProcess = new FuncTaskProcess[nRouteCount];
 		for (int nIndexRI = 0; nIndexRI < nRouteCount; nIndexRI++)
 			riRouteInfos[nIndexRI] = (*pVecTmpRI)[nIndexRI];
 		for (int nIndexFP = 0; nIndexFP < nRouteCount; nIndexFP++)
-			fpRoutesProcess[nIndexFP] = (*pVecTmpFP)[nIndexFP];
+			fpTaskCreateProcess[nIndexFP] = (*pVecTmpFP)[nIndexFP];
 	}
 	delete pVecTmpRI;
 	pVecTmpRI = NULL;

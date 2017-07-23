@@ -53,6 +53,11 @@ const char* ServiceTemplate::version()
 	return szServiceVersion;
 }
 
+const char* ServiceTemplate::library_version()
+{
+	return "0.1";
+}
+
 const char* ServiceTemplate::dispatch_by_route_path(int nIndex, BusinessInterface *pB)
 {
 	if (nIndex >= 0 && nIndex < nRouteCount)
@@ -83,7 +88,7 @@ bool ServiceTemplate::register_service_version(const char *szVersion)
 	return true;
 }
 
-bool ServiceTemplate::register_http_route(const char *szPath, const char *szOperation, FuncProcess pCallBack)
+bool ServiceTemplate::register_service_route(const char *szPath, const char *szOperation, FuncProcess pCallBack)
 {
 	Route_Info ri;
 	ri.nIndex = (int)pVecTmpFP->size();

@@ -1,6 +1,8 @@
 #pragma once
 #include "include/TaskInterface.h"
 #include <json/json.h>
+#include <vector>
+using namespace std;
 class TaskTemplate : public TaskInterface
 {
 	enum ObjectMode
@@ -13,30 +15,30 @@ public:
 	~TaskTemplate();
 
 	void destory();
-	int route_infos(Route_Info *&routeInfos);
+	int route_infos(Task_Route_Info *&routeInfos);
 	const char* unique_id();
 	const char* name();
 	const char* version();
-	const char* dispatch_by_route_path(int nIndex, BusinessInterface *pB);
-
-	bool register_service_name(const char *szName);
-	bool register_service_unique_id(const char *szID);
-	bool register_service_version(const char *szVersion);
-	bool register_http_route(const char *szPath, const char *szOperation, FuncProcess pCallBack);
+	const char* library_version();
+	const char* dispatch_by_route_path(int nIndex, TaskData *pTD);
+	bool register_task_name(const char *szName);
+	bool register_task_unique_id(const char *szID);
+	bool register_task_version(const char *szVersion);
+	bool register_task_route(const char *szPath, FuncTaskProcess pCallBack);
 
 	bool change_to_fast_mode();
 private:
-	vector<Route_Info> *pVecTmpRI;  // 用于临时存储
-	vector<FuncProcess> *pVecTmpFP; // 用于临时存储
+	vector<Task_Route_Info> *pVecTmpRI;  // 用于临时存储
+	vector<FuncTaskProcess> *pVecTmpFP; // 用于临时存储
 
-	const char *szServiceName;
-	const char *szServiceUniqueId;
-	const char *szServiceVersion;
+	const char *szTaskName;
+	const char *szTaskUniqueId;
+	const char *szTaskVersion;
 
 
 	int nRouteCount;
-	Route_Info *riRouteInfos;
-	FuncProcess *fpRoutesProcess;
+	Task_Route_Info *riRouteInfos;
+	FuncTaskProcess *fpTaskCreateProcess;
 
 	ObjectMode omObjectMode;
 };

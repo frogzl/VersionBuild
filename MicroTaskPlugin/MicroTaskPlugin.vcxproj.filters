@@ -33,6 +33,9 @@
     <ClCompile Include="TaskTemplate.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="TaskDataTemplate.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\TaskInterface.h">
@@ -42,6 +45,12 @@
       <Filter>头文件\include</Filter>
     </ClInclude>
     <ClInclude Include="TaskTemplate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TaskData.h">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskDataTemplate.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

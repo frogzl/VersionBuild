@@ -167,12 +167,15 @@
       </PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="MicroTaskPlugin.cpp" />
+    <ClCompile Include="TaskDataTemplate.cpp" />
     <ClCompile Include="TaskInterface.cpp" />
     <ClCompile Include="TaskTemplate.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\MicroTaskPlugin.h" />
+    <ClInclude Include="include\TaskData.h" />
     <ClInclude Include="include\TaskInterface.h" />
+    <ClInclude Include="TaskDataTemplate.h" />
     <ClInclude Include="TaskTemplate.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

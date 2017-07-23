@@ -3,6 +3,7 @@
 
 VBHttpServerItem::VBHttpServerItem()
 {
+	m_enState = enStop;
 }
 
 
@@ -24,13 +25,20 @@ void VBHttpServerItem::start(SOCKET s)
 	if (nRet != 0)
 		return;
 
-	evhttp_set_gencb(m_eHttp, generic_callback, NULL);
+	m_enState = enStart;
+	evhttp_set_gencb(m_eHttp, generic_callback, this);
 	m_hThread = (HANDLE)_beginthread(dispatch, 0, m_ebBase);
 }
 
 void VBHttpServerItem::stop()
 {
+	m_enState = enStop;
+	WaitForSingleObject(m_hThread, INFINITE);
+}
 
+VBHttpServerItem::ENState VBHttpServerItem::state()
+{
+	return m_enState;
 }
 
 HANDLE VBHttpServerItem::thread_handle()
@@ -40,7 +48,14 @@ HANDLE VBHttpServerItem::thread_handle()
 
 void VBHttpServerItem::generic_callback(struct evhttp_request *req, void *arg) 
 {
+	VBHttpServerItem *pItem = (VBHttpServerItem*)arg;
+	if (pItem->state() == enStop)
+		return;
+
 	VBRoute::dispatch(req);
+
+	if (pItem->state() == enStop)
+		event_base_loopbreak((struct event_base*)arg);
 }
 
 void VBHttpServerItem::dispatch(void *arg)
