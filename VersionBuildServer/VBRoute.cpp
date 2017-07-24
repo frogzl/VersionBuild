@@ -5,7 +5,7 @@
 using namespace Controller;
 map<string, string> VBRoute::m_mapPostRoutes;
 map<string, string> VBRoute::m_mapGetRoutes;
-VBRoute::VBRoute()
+VBRoute::VBRoute()                                                                                                                                               
 {
 }
 
