@@ -1,5 +1,6 @@
 ﻿  ServiceTemplate.cpp
   MicroServicePlugin.cpp
+  ServiceDataTemplate.cpp
   Generating Code...
      正在创建库 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\MicroServicePlugin.lib 和对象 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\MicroServicePlugin.exp
   MicroServicePlugin.vcxproj -> E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\MicroServicePlugin.dll

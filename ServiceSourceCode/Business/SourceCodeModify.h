@@ -1,11 +1,11 @@
 #pragma once
-#include "BusinessInterface.h"
+#include "ServiceData.h"
 class SourceCodeModify
 {
 public:
-	SourceCodeModify(BusinessInterface *pB);
+	SourceCodeModify(ServiceData *pD);
 	~SourceCodeModify();
 	void process_task();
 protected:
-	BusinessInterface *m_pB;
+	ServiceData *m_pD;
 };

@@ -2,7 +2,7 @@
 #include "../Exception/HttpRequestException.h"
 #include "../Database/Resource_SourceCode.h"
 
-SourceCodeQuery::SourceCodeQuery(BusinessInterface *pB) :m_pB(pB)
+SourceCodeQuery::SourceCodeQuery(ServiceData *pD) :m_pD(pD)
 {
 }
 
@@ -14,14 +14,14 @@ void SourceCodeQuery::process_task()
 {
 	DB::Resource_SourceCode dbSourceCode;
 	vector<DB::Resource_SourceCodeData> *pVecSourceCodeDatas = NULL;
-	if (m_pB->request_data().mParameters["sourcecodeid"].compare("") == 0)
+	if (m_pD->request_data().mConditions["sourcecodeid"].compare("") == 0)
 	{
 		pVecSourceCodeDatas = dbSourceCode.query()->all();
 	}
 	else
 	{
 		DB::Conditions conditions;
-		conditions.insert(pair<string, string>("guid", m_pB->request_data().mParameters["sourcecodeid"]));
+		conditions.insert(pair<string, string>("guid", m_pD->request_data().mConditions["sourcecodeid"]));
 		pVecSourceCodeDatas = dbSourceCode.query()->where(conditions)->all();
 	}
 
@@ -46,5 +46,5 @@ void SourceCodeQuery::process_task()
 		}
 		delete pVecSourceCodeDatas;
 	}
-	m_pB->set_respond_back(HTTP_OK, "0", "successed", "", jsonData);
+	m_pD->set_respond_back(HTTP_OK, "0", "successed", "", jsonData);
 }

@@ -6,38 +6,38 @@
 #include "Business\SourceCodeModify.h"
 #include "Business\SourceCodeQuery.h"
 
-void RouteCallBackSet::sourcecode_query(BusinessInterface *pB)
+void RouteCallBackSet::sourcecode_query(ServiceData *pD)
 {
-	SourceCodeQuery scq(pB);
+	SourceCodeQuery scq(pD);
 	scq.process_task();
 }
 
-void RouteCallBackSet::sourcecode_create(BusinessInterface *pB)
+void RouteCallBackSet::sourcecode_create(ServiceData *pD)
 {
-	SourceCodeCreate scc(pB);
+	SourceCodeCreate scc(pD);
 	scc.process_task();
 }
 
-void RouteCallBackSet::sourcecode_modify(BusinessInterface *pB)
+void RouteCallBackSet::sourcecode_modify(ServiceData *pD)
 {
-	SourceCodeModify scm(pB);
+	SourceCodeModify scm(pD);
 	scm.process_task();
 }
 
-void RouteCallBackSet::sourcecode_deploy(BusinessInterface *pB)
+void RouteCallBackSet::sourcecode_deploy(ServiceData *pD)
 {
-	SourceCodeDeploy scd(pB);
+	SourceCodeDeploy scd(pD);
 	scd.process_task();
 }
 
-void RouteCallBackSet::sourcecode_build(BusinessInterface *pB)
+void RouteCallBackSet::sourcecode_build(ServiceData *pD)
 {
-	SourceCodeBuild scb(pB);
+	SourceCodeBuild scb(pD);
 	scb.process_task();
 }
 
-void RouteCallBackSet::sourcecode_delete(BusinessInterface *pB)
+void RouteCallBackSet::sourcecode_delete(ServiceData *pD)
 {
-	SourceCodeDelete scd(pB);
+	SourceCodeDelete scd(pD);
 	scd.process_task();
 }

@@ -58,11 +58,11 @@ const char* ServiceTemplate::library_version()
 	return "0.1";
 }
 
-const char* ServiceTemplate::dispatch_by_route_path(int nIndex, BusinessInterface *pB)
+const char* ServiceTemplate::dispatch_by_route_path(int nIndex, ServiceData *pD)
 {
 	if (nIndex >= 0 && nIndex < nRouteCount)
 	{
-		fpRoutesProcess[nIndex](pB);
+		fpRoutesProcess[nIndex](pD);
 		return "1";
 	}
 	else

@@ -18,7 +18,7 @@ public:
 	const char* name();
 	const char* version();
 	const char* library_version();
-	const char* dispatch_by_route_path(int nIndex, BusinessInterface *pB);
+	const char* dispatch_by_route_path(int nIndex, ServiceData *pD);
 
 	bool register_service_name(const char *szName);
 	bool register_service_unique_id(const char *szID);

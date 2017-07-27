@@ -1,5 +1,5 @@
 #pragma once
-#include "BusinessInterface.h"
+#include "ServiceData.h"
 
 #define Http_Operator_Get			"get"		//	请求获取Request - URI所标识的资源
 #define Http_Operator_Post			"post"		//	在Request - URI所标识的资源后附加新的数据
@@ -33,7 +33,7 @@ public:
 	// 用于获取插件基础库的版本
 	virtual const char* library_version() = 0;
 	// 用于根据API执行
-	virtual const char* dispatch_by_route_path(int nIndex, BusinessInterface *pB) = 0;
+	virtual const char* dispatch_by_route_path(int nIndex, ServiceData *pD) = 0;
 	// 注册服务名
 	virtual bool register_service_name(const char *szName) = 0;
 	// 注册服务唯一标识

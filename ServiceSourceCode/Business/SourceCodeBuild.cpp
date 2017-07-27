@@ -7,7 +7,7 @@
 #include "../Database/Resource_SourceCode.h"
 #include "../Database/Resource_Host.h"
 
-SourceCodeBuild::SourceCodeBuild(BusinessInterface *pB) :m_pB(pB)
+SourceCodeBuild::SourceCodeBuild(ServiceData *pD) :m_pD(pD)
 {
 }
 
@@ -21,13 +21,13 @@ void SourceCodeBuild::process_task()
 	string sFailedDetail;
 	if (!check_inputdata(sFailedDetail))
 	{
-		m_pB->set_respond_back(HTTP_BADREQUEST, "1", "param missing", sFailedDetail);
+		m_pD->set_respond_back(HTTP_BADREQUEST, "1", "param missing", sFailedDetail);
 		return;
 	}
 
 	// 找到对应的sourcecode，通过clone_url
 	DB::Conditions conditions;
-	conditions.insert(pair<string, string>("clone_url", m_pB->request_data().jData["clone_url"].asString()));
+	conditions.insert(pair<string, string>("clone_url", m_pD->request_data().jData["clone_url"].asString()));
 	DB::Resource_SourceCodeData *pRSCD = DB::Resource_SourceCode().query()->where(conditions)->first();
 	if (pRSCD)
 	{
@@ -60,10 +60,10 @@ void SourceCodeBuild::process_task()
 	}
 	else
 	{
-		m_pB->set_respond_back(HTTP_BADREQUEST, "1", "no source code matched", "");
+		m_pD->set_respond_back(HTTP_BADREQUEST, "1", "no source code matched", "");
 		return;
 	}
-	m_pB->set_respond_back(HTTP_OK, "0", "successed", "");
+	m_pD->set_respond_back(HTTP_OK, "0", "successed", "");
 }
 
 bool SourceCodeBuild::check_inputdata(string &sFailedDetail)
@@ -74,19 +74,19 @@ bool SourceCodeBuild::check_inputdata(string &sFailedDetail)
 	size
 	clone_url
 	*/
-	if (m_pB->request_data().jData["name"].asString().compare("") == 0)
+	if (m_pD->request_data().jData["name"].asString().compare("") == 0)
 	{
 		sFailedDetail = "name is missing";
 		return false;
 	}
 
-	if (m_pB->request_data().jData["head"].asString().compare("") == 0)
+	if (m_pD->request_data().jData["head"].asString().compare("") == 0)
 	{
 		sFailedDetail = "head is missing";
 		return false;
 	}
 
-	if (m_pB->request_data().jData["clone_url"].asString().compare("") == 0)
+	if (m_pD->request_data().jData["clone_url"].asString().compare("") == 0)
 	{
 		sFailedDetail = "clone_url is missing";
 		return false;

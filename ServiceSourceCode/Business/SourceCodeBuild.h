@@ -1,15 +1,15 @@
 #pragma once
-#include "BusinessInterface.h"
+#include "ServiceData.h"
 
 class SourceCodeBuild
 {
 public:
-	SourceCodeBuild(BusinessInterface *pB);
+	SourceCodeBuild(ServiceData *pB);
 	~SourceCodeBuild();
 	void process_task();
 private:
 
 	bool check_inputdata(std::string &sFailedDetail);
 	void* get_buildrule_host(std::string sDeployid);
-	BusinessInterface *m_pB;
+	ServiceData *m_pD;
 };

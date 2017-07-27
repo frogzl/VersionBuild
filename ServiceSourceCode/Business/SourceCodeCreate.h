@@ -1,5 +1,5 @@
 #pragma once
-#include "BusinessInterface.h"
+#include "ServiceData.h"
 #include "../Database/Resource_SourceCode.h"
 #include "../Database/BuildRule.h"
 #include "../Database/BuildRule_Deploy.h"
@@ -7,9 +7,9 @@
 class SourceCodeCreate
 {
 public:
-	SourceCodeCreate(BusinessInterface *pB);
+	SourceCodeCreate(ServiceData *pD);
 	~SourceCodeCreate();
 	void process_task();
 protected:
-	BusinessInterface *m_pB;
+	ServiceData *m_pD;
 };

@@ -1,7 +1,7 @@
 #include "SourceCodeDelete.h"
 #include "../Exception/HttpRequestException.h"
 
-SourceCodeDelete::SourceCodeDelete(BusinessInterface *pB) :m_pB(pB)
+SourceCodeDelete::SourceCodeDelete(ServiceData *pD) :m_pD(pD)
 {
 }
 

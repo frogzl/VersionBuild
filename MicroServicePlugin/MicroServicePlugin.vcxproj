@@ -148,13 +148,13 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BusinessTemplate.cpp" />
+    <ClCompile Include="ServiceDataTemplate.cpp" />
     <ClCompile Include="MicroServicePlugin.cpp" />
     <ClCompile Include="ServiceTemplate.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BusinessTemplate.h" />
-    <ClInclude Include="include\BusinessInterface.h" />
+    <ClInclude Include="ServiceDataTemplate.h" />
+    <ClInclude Include="include\ServiceData.h" />
     <ClInclude Include="include\MicroServicePlugin.h" />
     <ClInclude Include="include\ServiceInterface.h" />
     <ClInclude Include="ServiceTemplate.h" />

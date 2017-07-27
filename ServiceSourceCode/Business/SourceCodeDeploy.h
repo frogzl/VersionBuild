@@ -1,12 +1,12 @@
 #pragma once
-#include "BusinessInterface.h"
+#include "ServiceData.h"
 
 class SourceCodeDeploy
 {
 public:
-	SourceCodeDeploy(BusinessInterface *pB);
+	SourceCodeDeploy(ServiceData *pD);
 	~SourceCodeDeploy();
 	void process_task();
 protected:
-	BusinessInterface *m_pB;
+	ServiceData *m_pD;
 };

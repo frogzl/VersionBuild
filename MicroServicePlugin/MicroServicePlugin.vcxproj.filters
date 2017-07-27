@@ -27,7 +27,7 @@
     <ClCompile Include="ServiceTemplate.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="BusinessTemplate.cpp">
+    <ClCompile Include="ServiceDataTemplate.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,16 +35,16 @@
     <ClInclude Include="include\ServiceInterface.h">
       <Filter>头文件\include</Filter>
     </ClInclude>
-    <ClInclude Include="include\BusinessInterface.h">
-      <Filter>头文件\include</Filter>
-    </ClInclude>
-    <ClInclude Include="BusinessTemplate.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="include\MicroServicePlugin.h">
       <Filter>头文件\include</Filter>
     </ClInclude>
     <ClInclude Include="ServiceTemplate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ServiceData.h">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceDataTemplate.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

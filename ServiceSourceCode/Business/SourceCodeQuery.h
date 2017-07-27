@@ -1,12 +1,12 @@
 #pragma once
-#include "BusinessInterface.h"
+#include "ServiceData.h"
 
 class SourceCodeQuery
 {
 public:
-	SourceCodeQuery(BusinessInterface *pB);
+	SourceCodeQuery(ServiceData *pD);
 	~SourceCodeQuery();
 	void process_task();
 protected:
-	BusinessInterface *m_pB;
+	ServiceData *m_pD;
 };

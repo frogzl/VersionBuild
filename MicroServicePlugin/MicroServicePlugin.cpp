@@ -1,10 +1,10 @@
 #include "include/MicroServicePlugin.h"
 #include "ServiceTemplate.h"
-#include "BusinessTemplate.h"
+#include "ServiceDataTemplate.h"
 
-DLL_API BusinessInterface* create_business()
+DLL_API ServiceData* create_service_data()
 {
-	return new BusinessTemplate();
+	return new ServiceDataTemplate();
 }
 
 DLL_API ServiceInterface* create_plugin_template()

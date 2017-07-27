@@ -1,11 +1,11 @@
 #pragma once
-#include "BusinessInterface.h"
+#include "ServiceData.h"
 class SourceCodeDelete
 {
 public:
-	SourceCodeDelete(BusinessInterface *pB);
+	SourceCodeDelete(ServiceData *pD);
 	~SourceCodeDelete();
 	void process_task();
 protected:
-	BusinessInterface *m_pB;
+	ServiceData *m_pD;
 };

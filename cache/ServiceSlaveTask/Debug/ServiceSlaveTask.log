@@ -1,6 +1,3 @@
-﻿  dllmain.cpp
-  stdafx.cpp
-  ServiceSlaveTask.cpp
-  Generating Code...
-  ServiceSlaveTask.vcxproj -> E:\VersionBuild\bin\Debug\x64\MicroTaskPlugins\ServiceSlaveTask.dll
-  ServiceSlaveTask.vcxproj -> E:\VersionBuild\bin\Debug\x64\MicroTaskPlugins\ServiceSlaveTask.dll
+﻿  ServiceSlaveTask.cpp
+  ServiceSlaveTask.vcxproj -> E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\ServiceSlaveTask.dll
+  ServiceSlaveTask.vcxproj -> E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\ServiceSlaveTask.dll
