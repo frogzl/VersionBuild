@@ -10,8 +10,6 @@
 #define DLL_API __declspec(dllimport)
 #endif
 #include "TaskInterface.h"
-DLL_API const char* library_version();
-
 DLL_API TaskInterface* create_plugin_template();
 
 DLL_API TaskInterface*  instantiate_plugin_template(TaskInterface *pInterface);

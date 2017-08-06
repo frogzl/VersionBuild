@@ -74,7 +74,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)bin\$(Configuration)\$(Platform)\MicroTaskPlugins\</OutDir>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\$(Platform)\MicroServicePlugins\</OutDir>
     <IntDir>$(SolutionDir)cache\$(ProjectName)\$(Configuration)\</IntDir>
     <IncludePath>$(SolutionDir)MicroServicePlugin\include;..\..\jsoncpp-src-0.5.0\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)bin\$(Configuration)\$(Platform)\MicroServicePlugins\;..\..\jsoncpp-src-0.5.0\lib\x64;$(LibraryPath)</LibraryPath>

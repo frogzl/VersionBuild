@@ -58,15 +58,15 @@ const char* ServiceTemplate::library_version()
 	return "0.1";
 }
 
-const char* ServiceTemplate::dispatch_by_route_path(int nIndex, ServiceData *pD)
+bool ServiceTemplate::dispatch_by_route_path(int nIndex, ServiceData *pD)
 {
 	if (nIndex >= 0 && nIndex < nRouteCount)
 	{
 		fpRoutesProcess[nIndex](pD);
-		return "1";
+		return true;
 	}
 	else
-		return "0";
+		return false;
 }
 
 bool ServiceTemplate::register_service_name(const char *szName)

@@ -8,6 +8,7 @@
 #define Http_Operator_Delete		"delete"	//	请求服务器删除Request - URI所标识的资源
 #define Http_Operator_Trace			"trace"		// 请求服务器回送收到的请求信息，主要用于测试或诊断
 #define Http_Operator_Options		"options"	//	请求查询服务器的性能，或者查询与资源相关的选项和需求
+#define Http_Operator_Other		"other"	//	other
 
 typedef struct
 {
@@ -33,7 +34,7 @@ public:
 	// 用于获取插件基础库的版本
 	virtual const char* library_version() = 0;
 	// 用于根据API执行
-	virtual const char* dispatch_by_route_path(int nIndex, ServiceData *pD) = 0;
+	virtual bool dispatch_by_route_path(int nIndex, ServiceData *pD) = 0;
 	// 注册服务名
 	virtual bool register_service_name(const char *szName) = 0;
 	// 注册服务唯一标识
