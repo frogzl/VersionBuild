@@ -1,7 +1,7 @@
 #include "PluginCenter.h"
-#include <Windows.h>
 #include <io.h>
 #include "Common.h"
+#include <Windows.h>
 void PluginCenter::load_service_plugins()
 {
 	char szPath[255];
@@ -95,30 +95,65 @@ bool PluginCenter::analysis_service_path(const char *szOperator, const char *szP
 {
 	std::vector<std::string> vecItem;
 	split(szPath, "/", vecItem);
-	if (vecItem.size() == 0)
-		return false;
-	if (vecItem[0].compare("service") != 0)
+	if (vecItem.size() < 3)
 		return false;
 
 	PluginService *pPlugin = enum_service_plugin(szOperator, vecItem[1].c_str(), vecItem[2].c_str());
 	if (pPlugin)
 	{
-		pService->setCreateIndex(parse_service_path(3, vecItem, pService->data()->request_data().mParameters));
-		pService->setPlugin(pPlugin);
+		int nCreateIndex = pPlugin->parse_path(szOperator, szPath, pService->data()->request_data().vecParameters);
+		if (nCreateIndex != -1)
+		{
+			pService->setCreateIndex(nCreateIndex);
+			pService->setPlugin(pPlugin);
+			return true;
+		}
+		else
+			return false;
 	}
 }
 
 void PluginCenter::append_route(const char* szUniqueID, const char* szVersion, Route_Info &ri)
 {
+	string sSplit = "_";
+	string sKey = szUniqueID + sSplit + szVersion + sSplit + ri.szOperation;
+	map<string, RoutePart>::iterator itFind = mRoute.find(sKey);
 
+	vector<string> vecPart;
+	split(ri.szPath, "/", &vecPart);
+	int nPartCnt = vecPart.size();
+	if (itFind != mRoute.end())
+	{
+		RoutePart *pTmp = &(itFind->second);
+		for (int nIndex = 0; nIndex < nPartCnt; nIndex++)
+		{
+			if (vecPart[nIndex].compare("") == 0)
+				continue;
+			pTmp = pTmp->insert(vecPart[nIndex]);
+		}
+		if (pTmp != &(itFind->second))
+			pTmp->set_create_index(ri.nIndex);
+	}
+	else
+	{
+		RoutePart rp;
+		RoutePart *pTmp = &rp;
+		for (int nIndex = 0; nIndex < nPartCnt; nIndex++)
+		{
+			if (vecPart[nIndex].compare("") == 0)
+				continue;
+			pTmp = pTmp->insert(vecPart[nIndex]);
+		}
+		if (pTmp != &(itFind->second))
+			pTmp->set_create_index(ri.nIndex);
+		mRoute.insert(pair<string, RoutePart>(sKey, rp));
+	}
 }
 
 PluginService* PluginCenter::enum_service_plugin(const char *szOperator, const char *szPluginID, const char *szPluginVersion)
 {
-
-}
-
-int PluginCenter::parse_service_path(int nStartIndex, std::vector<std::string> &vecItem, std::map<int, std::string>&mParam)
-{
+	string sSplit = "_";
+	string sKey = szPluginID + sSplit + szPluginVersion + sSplit + szOperator;
+	map<string, RoutePart>::iterator itFind = mRoute.find(sKey);
 
 }

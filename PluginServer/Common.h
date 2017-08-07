@@ -19,7 +19,7 @@
 #include <iostream>
 #include <json/json.h>
 #include <direct.h>
-
+#include <algorithm>
 #ifdef WIN32
 #include <ws2tcpip.h>
 #include <io.h>
@@ -78,3 +78,7 @@ void split(string s, string delim, vector<string>* ret);
 int compare(string str1, string str2);
 
 string file_md5(string sFilePath);
+// trim from start 
+std::string &ltrim(std::string &s);
+// trim from end 
+std::string &rtrim(std::string &s);

@@ -162,6 +162,7 @@
     <ClInclude Include="PluginCenter.h" />
     <ClInclude Include="PluginService.h" />
     <ClInclude Include="PluginTask.h" />
+    <ClInclude Include="RoutePart.h" />
     <ClInclude Include="Service.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="SystemConfig.h" />
@@ -177,6 +178,7 @@
     <ClCompile Include="PluginCenter.cpp" />
     <ClCompile Include="PluginService.cpp" />
     <ClCompile Include="PluginTask.cpp" />
+    <ClCompile Include="RoutePart.cpp" />
     <ClCompile Include="Service.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="SystemConfig.cpp" />

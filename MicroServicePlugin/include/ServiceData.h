@@ -20,7 +20,7 @@
 typedef struct
 {
 	std::map<std::string, std::string> mHeaders;	// 报文头信息
-	std::map<int, std::string> mParameters; // url上的参数，mParameters[0]第一个参数，mParameters[1]第二个参数等等
+	std::vector<std::string> vecParameters; // url上的参数，vecParameters[0]第一个参数，vecParameters[1]第二个参数等等
 	std::map<std::string, std::string> mConditions; // url上“？”后面的条件
 	Json::Value jData;				// 报文体数据
 }Request_Data;

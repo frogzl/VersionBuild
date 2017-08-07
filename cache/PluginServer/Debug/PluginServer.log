@@ -1,4 +1,5 @@
 ﻿  PluginCenter.cpp
-  SystemConfig.cpp
-  PluginServer.vcxproj -> E:\VersionBuild\bin\Debug\x64\PluginServer.exe
-  PluginServer.vcxproj -> E:\VersionBuild\bin\Debug\x64\PluginServer.exe
+  PluginService.cpp
+e:\versionbuild\pluginserver\pluginservice.cpp(71): error C4716: “PluginService::parse_path”: 必须返回一个值
+e:\versionbuild\pluginserver\plugincenter.cpp(114): warning C4715: “PluginCenter::analysis_service_path”: 不是所有的控件路径都返回值
+e:\versionbuild\pluginserver\plugincenter.cpp(125): error C4716: “PluginCenter::enum_service_plugin”: 必须返回一个值

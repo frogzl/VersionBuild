@@ -64,3 +64,8 @@ bool PluginService::dispatch(int nIndex, ServiceData *pD)
 {
 	return pServiceIf->dispatch_by_route_path(nIndex, pD);
 }
+
+int PluginService::parse_path(const char *szOperator, const char *szPath, vector<string> &vecParameters)
+{
+
+}

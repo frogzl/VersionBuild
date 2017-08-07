@@ -1,7 +1,8 @@
 #pragma once
 #include "ServiceInterface.h"
 #include <string>
-
+#include <vector>
+using namespace std;
 typedef ServiceData* (*FunCreateBusiness)();
 typedef ServiceInterface* (*FunCreatePluginTemplate)();
 typedef ServiceInterface* (*FunInstantiatePluginTemplate)(ServiceInterface *pInterface);
@@ -19,6 +20,7 @@ public:
 
 	bool enable() { return bEnable; }
 	bool dispatch(int nIndex, ServiceData *pD);
+	int parse_path(const char *szOperator, const char *szPath, vector<string> &vecParameters);
 private:
 	ServiceInterface *pServiceIf;
 	FunCreateBusiness func_create_business;

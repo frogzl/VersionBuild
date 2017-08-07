@@ -101,3 +101,17 @@ int compare(string str1, string str2)
 	else                              
 		return str1.compare(str2); //若长度相等，则头到尾按位比较
 }
+
+// trim from start 
+std::string &ltrim(std::string &s)
+{
+	s.erase(s.begin(), std::find_if(s.begin(), s.end(), std::not1(std::ptr_fun<int, int>(isspace))));
+	return s;
+}
+
+// trim from end 
+std::string &rtrim(std::string &s)
+{
+	s.erase(std::find_if(s.rbegin(), s.rend(), std::not1(std::ptr_fun<int, int>(isspace))).base(), s.end());
+	return s;
+}

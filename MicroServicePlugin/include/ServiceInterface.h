@@ -13,7 +13,7 @@
 typedef struct
 {
 	const char *szPath;					// 路由模板
-	const char *szoperation;			// http 操作
+	const char *szOperation;			// http 操作
 	int nIndex;							// 索引
 }Route_Info;
 
