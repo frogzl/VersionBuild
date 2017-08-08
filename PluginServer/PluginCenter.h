@@ -4,6 +4,9 @@
 #include "PluginService.h"
 #include "PluginTask.h"
 #include "RoutePart.h"
+#include <map>
+#include <string>
+using namespace std;
 class PluginCenter
 {
 public:

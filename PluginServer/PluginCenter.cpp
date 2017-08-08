@@ -2,6 +2,10 @@
 #include <io.h>
 #include "Common.h"
 #include <Windows.h>
+#include <assert.h>
+map<string, PluginService*> PluginCenter::mPluginService;
+map<string, PluginTask*> PluginCenter::mPluginTask;
+
 void PluginCenter::load_service_plugins()
 {
 	char szPath[255];
@@ -10,14 +14,20 @@ void PluginCenter::load_service_plugins()
 	int nPos = (int)sPath.find("PluginServer.exe", 0);
 	int nNameSize = sizeof("PluginServer.exe");
 	sPath.erase(nPos, nNameSize - 1);
-	std::string sPluginServicePath = sPath + "MicroServicePlugins";
-
+	string sPluginServicePath = sPath + "MicroServicePlugins";
+	string sTmp = sPluginServicePath + "\\*.dll";
 	_finddata_t fd;
-	intptr_t pf = _findfirst("e:/*.*", &fd);
+	intptr_t pf = _findfirst(sTmp.c_str(), &fd);
 	while (!_findnext(pf, &fd))
 	{
-		std::string sDll = sPluginServicePath + " \\" + fd.name;
-		PluginService *pPlugin = new PluginService(sDll);
+		if (strcmp("MicroServicePlugin.dll", fd.name) == 0)
+			continue;
+
+		std::string sDll = sPluginServicePath + "\\" + fd.name;
+		GetCurrentDirectoryA(255, szPath);
+		SetCurrentDirectoryA(sPluginServicePath.c_str());
+		PluginService *pPlugin = new PluginService(fd.name);
+		SetCurrentDirectoryA(szPath);
 		if (pPlugin->enable())
 		{
 			string sKey = generate_plugin_key(pPlugin->unique_id(), pPlugin->version());
@@ -47,22 +57,22 @@ void PluginCenter::load_task_plugins()
 
 void PluginCenter::install_service_plugin(const char *szPluginID, const char *szPluginVersion)
 {
-
+	assert(false);
 }
 
 void PluginCenter::install_task_plugin(const char *szPluginID, const char *szPluginVersion)
 {
-
+	assert(false);
 }
 
 void PluginCenter::uninstall_service_plugin(const char *szPluginID, const char *szPluginVersion)
 {
-
+	assert(false);
 }
 
 void PluginCenter::uninstall_task_plugin(const char *szPluginID, const char *szPluginVersion)
 {
-
+	assert(false);
 }
 
 Service* PluginCenter::parse_service_path(const char *szOperator, const char *szPath)
@@ -87,7 +97,7 @@ void PluginCenter::free_service(Service *&pService)
 
 void PluginCenter::free_task(Task *&pTask)
 {
-
+	assert(false);
 }
 
 void PluginCenter::destory()
@@ -111,18 +121,19 @@ bool PluginCenter::analysis_service_path(const char *szOperator, const char *szP
 		return false;
 
 	PluginService *pPlugin = enum_service_plugin(vecItem[1].c_str(), vecItem[2].c_str());
-	if (pPlugin)
+	if (!pPlugin)
+		return false;
+	pService->setData(pPlugin->create_data());
+	int nCreateIndex = pPlugin->parse_path(szOperator, szPath, pService->data()->request_data().vecParameters);
+	if (nCreateIndex != -1)
 	{
-		int nCreateIndex = pPlugin->parse_path(szOperator, szPath, pService->data()->request_data().vecParameters);
-		if (nCreateIndex != -1)
-		{
-			pService->setCreateIndex(nCreateIndex);
-			pService->setPlugin(pPlugin);
-			return true;
-		}
-		else
-			return false;
+
+		pService->setCreateIndex(nCreateIndex);
+		pService->setPlugin(pPlugin);
+		return true;
 	}
+	else
+		return false;
 }
 
 PluginService* PluginCenter::enum_service_plugin(const char *szPluginID, const char *szPluginVersion)

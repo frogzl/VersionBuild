@@ -1,5 +1,5 @@
 #include "ServiceTemplate.h"
-
+#include "include/MicroServicePlugin.h"
 ServiceTemplate::ServiceTemplate()
 {
 	nRouteCount = -1;
@@ -35,7 +35,8 @@ void ServiceTemplate::destory()
 
 int ServiceTemplate::route_infos(Route_Info *&routeInfos)
 {
-	return 0;
+	routeInfos = riRouteInfos;
+	return nRouteCount;
 }
 
 const char* ServiceTemplate::unique_id()
@@ -56,6 +57,11 @@ const char* ServiceTemplate::version()
 const char* ServiceTemplate::library_version()
 {
 	return "0.1";
+}
+
+ServiceData* ServiceTemplate::create_data()
+{
+	return  create_service_data();
 }
 
 bool ServiceTemplate::dispatch_by_route_path(int nIndex, ServiceData *pD)
@@ -93,7 +99,7 @@ bool ServiceTemplate::register_service_route(const char *szPath, const char *szO
 	Route_Info ri;
 	ri.nIndex = (int)pVecTmpFP->size();
 	ri.szPath = szPath;
-	ri.szoperation = szOperation;
+	ri.szOperation = szOperation;
 	pVecTmpRI->push_back(ri);
 	pVecTmpFP->push_back(pCallBack);
 	return true;

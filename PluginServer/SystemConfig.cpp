@@ -6,6 +6,7 @@
 SystemConfig* SystemConfig::g_Instance = 0;
 SystemConfig::SystemConfig()
 {
+	initConfig();
 }
 
 
@@ -18,8 +19,8 @@ void SystemConfig::initConfig()
 	char szPath[255];
 	GetModuleFileNameA(NULL, szPath, 255);
 	string sPath(szPath);
-	int nPos = (int)sPath.find("VersionBuildServer.exe", 0);
-	int nCount = sizeof("VersionBuildServer.exe");
+	int nPos = (int)sPath.find("PluginServer.exe", 0);
+	int nCount = sizeof("PluginServer.exe");
 	sPath.erase(nPos, nCount - 1);
 	sPath += "config";
 	ifstream is;

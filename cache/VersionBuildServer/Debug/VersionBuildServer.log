@@ -1,7 +1,4 @@
-﻿  VBHttpServer.cpp
-  VBHttpServerItem.cpp
-  VersionBuildServer.cpp
-LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/FORCE”规范)
+﻿LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/FORCE”规范)
 BuildRuleDeploy.obj : warning LNK4006: "public: static char const * * DB::BuildRuleData::names" (?names@BuildRuleData@DB@@2PAPEBDA) 已在 BuildRuleBuild.obj 中定义；已忽略第二个定义
 BuildRuleDeploy.obj : warning LNK4006: "private: static char const * const DB::BuildRuleData::table_" (?table_@BuildRuleData@DB@@0PEBDEB) 已在 BuildRuleBuild.obj 中定义；已忽略第二个定义
 BuildRuleDeploy.obj : warning LNK4006: "public: static char const * * DB::BuildRule_DependData::names" (?names@BuildRule_DependData@DB@@2PAPEBDA) 已在 BuildRuleBuild.obj 中定义；已忽略第二个定义

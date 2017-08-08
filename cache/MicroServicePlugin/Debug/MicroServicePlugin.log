@@ -1,9 +1,5 @@
-﻿  ServiceDataTemplate.cpp
-  Generating Code...
-  Compiling...
-  ServiceTemplate.cpp
-  MicroServicePlugin.cpp
-  Generating Code...
+﻿  ServiceTemplate.cpp
+cl : 命令行 warning D9028: 最小重新生成失败，正在转换为标准生成
   LINK : 没有找到 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\MicroServicePlugin.dll 或上一个增量链接没有生成它；正在执行完全链接
      正在创建库 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\MicroServicePlugin.lib 和对象 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\MicroServicePlugin.exp
   MicroServicePlugin.vcxproj -> E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\MicroServicePlugin.dll

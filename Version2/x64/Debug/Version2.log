@@ -39,10 +39,3 @@
   moc_dlgtitlebar.cpp
   moc_http.cpp
   moc_maintitlebar.cpp
-  moc_modelresourcelist.cpp
-  moc_statusbar.cpp
-  moc_tabapplication.cpp
-  moc_tabresource.cpp
-  qrc_version2.cpp
-  LINK : 没有找到 E:\VersionBuild\bin\Debug\x64\\Version2.exe 或上一个增量链接没有生成它；正在执行完全链接
-  Version2.vcxproj -> E:\VersionBuild\bin\Debug\x64\Version2.exe

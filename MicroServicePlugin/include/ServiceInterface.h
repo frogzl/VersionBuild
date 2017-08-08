@@ -33,6 +33,8 @@ public:
 	virtual const char* version() = 0;
 	// 用于获取插件基础库的版本
 	virtual const char* library_version() = 0;
+	// 创建数据接口
+	virtual ServiceData* create_data() = 0;
 	// 用于根据API执行
 	virtual bool dispatch_by_route_path(int nIndex, ServiceData *pD) = 0;
 	// 注册服务名

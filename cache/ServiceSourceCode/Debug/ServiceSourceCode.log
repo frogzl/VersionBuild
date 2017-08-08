@@ -1,5 +1,4 @@
-﻿  SourceCodeQuery.cpp
-LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/FORCE”规范)
+﻿LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/FORCE”规范)
 SourceCodeCreate.obj : warning LNK4006: "public: static char const * * DB::Resource_SourceCodeData::names" (?names@Resource_SourceCodeData@DB@@2PAPEBDA) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
 SourceCodeCreate.obj : warning LNK4006: "private: static char const * const DB::Resource_SourceCodeData::table_" (?table_@Resource_SourceCodeData@DB@@0PEBDEB) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
 SourceCodeCreate.obj : warning LNK4006: "public: static char const * * DB::BuildRuleData::names" (?names@BuildRuleData@DB@@2PAPEBDA) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义

@@ -18,6 +18,7 @@ public:
 	const char* name();
 	const char* version();
 	const char* library_version();
+	ServiceData* create_data();
 	bool dispatch_by_route_path(int nIndex, ServiceData *pD);
 
 	bool register_service_name(const char *szName);

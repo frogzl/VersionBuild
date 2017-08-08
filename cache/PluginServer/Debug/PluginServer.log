@@ -1,28 +1,3 @@
-﻿生成启动时间为 2017/8/8 8:37:25。
-     1>项目“E:\Workspace\VersionBuild\PluginServer\PluginServer.vcxproj”在节点 2 上(Build 个目标)。
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /MP /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"E:\Workspace\VersionBuild\cache\PluginServer\Debug\\" /Fd"E:\Workspace\VersionBuild\cache\PluginServer\Debug\vc100.pdb" /Gd /TP /errorReport:prompt PluginService.cpp
-         PluginService.cpp
-       ManifestResourceCompile:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"E:\Workspace\VersionBuild\cache\PluginServer\Debug\PluginServer.exe.embed.manifest.res" E:\Workspace\VersionBuild\cache\PluginServer\Debug\PluginServer_manifest.rc 
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Workspace\VersionBuild\bin\Debug\x64\PluginServer.exe" /INCREMENTAL /NOLOGO ws2_32.lib libevent.lib libevent_extras.lib libevent_core.lib lib_jsond.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:LIBCMTD /MANIFEST /ManifestFile:"E:\Workspace\VersionBuild\cache\PluginServer\Debug\PluginServer.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\Workspace\VersionBuild\bin\Debug\x64\PluginServer.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Workspace\VersionBuild\bin\Debug\x64\PluginServer.lib" /MACHINE:X64 E:\Workspace\VersionBuild\cache\PluginServer\Debug\PluginServer.exe.embed.manifest.res
-         E:\Workspace\VersionBuild\cache\PluginServer\Debug\Common.obj
-         E:\Workspace\VersionBuild\cache\PluginServer\Debug\HttpServer.obj
-         E:\Workspace\VersionBuild\cache\PluginServer\Debug\HttpServerItem.obj
-         E:\Workspace\VersionBuild\cache\PluginServer\Debug\main.obj
-         E:\Workspace\VersionBuild\cache\PluginServer\Debug\PluginCenter.obj
-         E:\Workspace\VersionBuild\cache\PluginServer\Debug\PluginService.obj
-         E:\Workspace\VersionBuild\cache\PluginServer\Debug\PluginTask.obj
-         E:\Workspace\VersionBuild\cache\PluginServer\Debug\RoutePart.obj
-         E:\Workspace\VersionBuild\cache\PluginServer\Debug\Service.obj
-         E:\Workspace\VersionBuild\cache\PluginServer\Debug\stdafx.obj
-         E:\Workspace\VersionBuild\cache\PluginServer\Debug\SystemConfig.obj
-         E:\Workspace\VersionBuild\cache\PluginServer\Debug\Task.obj
-         E:\Workspace\VersionBuild\cache\PluginServer\Debug\TaskServer.obj
-     1>LINK : fatal error LNK1104: 无法打开文件“lib_jsond.lib”
-     1>已完成生成项目“E:\Workspace\VersionBuild\PluginServer\PluginServer.vcxproj”(Build 个目标)的操作 - 失败。
-
-生成失败。
-
-已用时间 00:00:00.94
+﻿  SystemConfig.cpp
+  PluginServer.vcxproj -> E:\VersionBuild\bin\Debug\x64\PluginServer.exe
+  PluginServer.vcxproj -> E:\VersionBuild\bin\Debug\x64\PluginServer.exe

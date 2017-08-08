@@ -1,13 +1,14 @@
 #pragma once
+#include "Common.h"
+#include <windows.h>
 #include "ServiceInterface.h"
 #include "RoutePart.h"
 #include <string>
 #include <vector>
 #include <map>
 using namespace std;
-typedef ServiceData* (*FunCreateBusiness)();
-typedef ServiceInterface* (*FunCreatePluginTemplate)();
-typedef ServiceInterface* (*FunInstantiatePluginTemplate)(ServiceInterface *pInterface);
+typedef ServiceInterface* (*FUNCProduceOne)();
+
 class PluginService
 {
 public:
@@ -18,6 +19,7 @@ public:
 	const char* name() { return pServiceIf->name(); }
 	const char* version() { return pServiceIf->version(); }
 	const char* library_version() { return pServiceIf->library_version(); }
+	ServiceData* create_data() { return pServiceIf->create_data(); }
 	int route_infos(Route_Info *&routeInfos) { return pServiceIf->route_infos(routeInfos); }
 	bool enable() { return bEnable; }
 	bool init_functions(string &sPath);
@@ -25,9 +27,7 @@ public:
 	int parse_path(const char *szOperator, const char *szPath, vector<string> &vecParameters);
 private:
 	ServiceInterface *pServiceIf;
-	FunCreateBusiness func_create_business;
-	FunCreatePluginTemplate func_ceate_plugin_template;
-	FunInstantiatePluginTemplate func_instantiate_plugin_template;
+	FUNCProduceOne func_produce_one;
 	bool bEnable;
 
 	map<string, RoutePart> mRoutes;
