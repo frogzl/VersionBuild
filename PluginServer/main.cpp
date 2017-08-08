@@ -27,8 +27,8 @@ int main()
 	hs.wait_for_end();
 	ts.wait_for_end();
 
+	PluginCenter::destory();
 	clear_socket_environment();
-
     return 0;
 }
 

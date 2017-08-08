@@ -20,16 +20,15 @@ void PluginCenter::load_service_plugins()
 		PluginService *pPlugin = new PluginService(sDll);
 		if (pPlugin->enable())
 		{
-			Route_Info *routeInfos = NULL;
-			int nRouteCnt = pPlugin->route_infos(routeInfos);
-			for (int nIndex = 0; nIndex < nRouteCnt; nIndex++)
-				append_route(pPlugin->unique_id(), pPlugin->version(), routeInfos[nIndex]);
+			string sKey = generate_plugin_key(pPlugin->unique_id(), pPlugin->version());
+			map<string, PluginService*>::iterator itFind = mPluginService.find(sKey);
+			if (itFind == mPluginService.end())
+				mPluginService.insert(pair<string, PluginService*>(sKey, pPlugin));
+			else
+				delete pPlugin;
 		}
 		else
-		{
 			delete pPlugin;
-			continue;
-		}
 	}
 	_findclose(pf);
 }
@@ -91,6 +90,19 @@ void PluginCenter::free_task(Task *&pTask)
 
 }
 
+void PluginCenter::destory()
+{
+	map<string, PluginService*>::iterator it = mPluginService.begin();
+	while (it != mPluginService.end())
+		delete it->second;
+}
+
+string PluginCenter::generate_plugin_key(const char *szPluginID, const char *szPluginVersion)
+{
+	string sSplit = "_";
+	return szPluginID + sSplit + szPluginVersion;
+}
+
 bool PluginCenter::analysis_service_path(const char *szOperator, const char *szPath, Service *pService)
 {
 	std::vector<std::string> vecItem;
@@ -98,7 +110,7 @@ bool PluginCenter::analysis_service_path(const char *szOperator, const char *szP
 	if (vecItem.size() < 3)
 		return false;
 
-	PluginService *pPlugin = enum_service_plugin(szOperator, vecItem[1].c_str(), vecItem[2].c_str());
+	PluginService *pPlugin = enum_service_plugin(vecItem[1].c_str(), vecItem[2].c_str());
 	if (pPlugin)
 	{
 		int nCreateIndex = pPlugin->parse_path(szOperator, szPath, pService->data()->request_data().vecParameters);
@@ -113,47 +125,11 @@ bool PluginCenter::analysis_service_path(const char *szOperator, const char *szP
 	}
 }
 
-void PluginCenter::append_route(const char* szUniqueID, const char* szVersion, Route_Info &ri)
+PluginService* PluginCenter::enum_service_plugin(const char *szPluginID, const char *szPluginVersion)
 {
-	string sSplit = "_";
-	string sKey = szUniqueID + sSplit + szVersion + sSplit + ri.szOperation;
-	map<string, RoutePart>::iterator itFind = mRoute.find(sKey);
-
-	vector<string> vecPart;
-	split(ri.szPath, "/", &vecPart);
-	int nPartCnt = vecPart.size();
-	if (itFind != mRoute.end())
-	{
-		RoutePart *pTmp = &(itFind->second);
-		for (int nIndex = 0; nIndex < nPartCnt; nIndex++)
-		{
-			if (vecPart[nIndex].compare("") == 0)
-				continue;
-			pTmp = pTmp->insert(vecPart[nIndex]);
-		}
-		if (pTmp != &(itFind->second))
-			pTmp->set_create_index(ri.nIndex);
-	}
+	map<string, PluginService*>::iterator itFind = mPluginService.find(generate_plugin_key(szPluginID, szPluginVersion));
+	if (itFind != mPluginService.end())
+		return itFind->second;
 	else
-	{
-		RoutePart rp;
-		RoutePart *pTmp = &rp;
-		for (int nIndex = 0; nIndex < nPartCnt; nIndex++)
-		{
-			if (vecPart[nIndex].compare("") == 0)
-				continue;
-			pTmp = pTmp->insert(vecPart[nIndex]);
-		}
-		if (pTmp != &(itFind->second))
-			pTmp->set_create_index(ri.nIndex);
-		mRoute.insert(pair<string, RoutePart>(sKey, rp));
-	}
-}
-
-PluginService* PluginCenter::enum_service_plugin(const char *szOperator, const char *szPluginID, const char *szPluginVersion)
-{
-	string sSplit = "_";
-	string sKey = szPluginID + sSplit + szPluginVersion + sSplit + szOperator;
-	map<string, RoutePart>::iterator itFind = mRoute.find(sKey);
-
+		return NULL;
 }

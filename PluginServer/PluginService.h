@@ -1,7 +1,9 @@
 #pragma once
 #include "ServiceInterface.h"
+#include "RoutePart.h"
 #include <string>
 #include <vector>
+#include <map>
 using namespace std;
 typedef ServiceData* (*FunCreateBusiness)();
 typedef ServiceInterface* (*FunCreatePluginTemplate)();
@@ -17,8 +19,8 @@ public:
 	const char* version() { return pServiceIf->version(); }
 	const char* library_version() { return pServiceIf->library_version(); }
 	int route_infos(Route_Info *&routeInfos) { return pServiceIf->route_infos(routeInfos); }
-
 	bool enable() { return bEnable; }
+	bool init_functions(string &sPath);
 	bool dispatch(int nIndex, ServiceData *pD);
 	int parse_path(const char *szOperator, const char *szPath, vector<string> &vecParameters);
 private:
@@ -27,5 +29,8 @@ private:
 	FunCreatePluginTemplate func_ceate_plugin_template;
 	FunInstantiatePluginTemplate func_instantiate_plugin_template;
 	bool bEnable;
+
+	map<string, RoutePart> mRoutes;
+	HMODULE hDll;
 };
 
