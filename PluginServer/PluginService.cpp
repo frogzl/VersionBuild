@@ -1,6 +1,12 @@
 #include "PluginService.h"
 PluginService::PluginService(std::string sPath)
 {
+	pServiceIf = NULL;
+	func_produce_one = NULL;
+	bEnable = false;
+	hDll = NULL;
+	hRouteMutex = NULL;
+
 	if (init_functions(sPath))
 	{
 		pServiceIf = func_produce_one();
@@ -26,7 +32,11 @@ PluginService::PluginService(std::string sPath)
 					mRoutes[ri[nIndexRoute].szOperation].insert(ri[nIndexRoute].szPath, ri[nIndexRoute].nIndex);
 				}
 			}
-			bEnable = true;
+			hRouteMutex= CreateMutex(nullptr, FALSE, nullptr);
+			if (hRouteMutex)
+				bEnable = true;
+			else
+				bEnable = false;
 		}
 	}
 	else
@@ -35,6 +45,7 @@ PluginService::PluginService(std::string sPath)
 
 PluginService::~PluginService()
 {
+	if (hRouteMutex) CloseHandle(hRouteMutex);
 }
 
 bool PluginService::init_functions(string &sPath)
@@ -51,10 +62,7 @@ bool PluginService::init_functions(string &sPath)
 		return true;
 	}
 	else
-	{
 		return false;
-	}
-
 }
 
 bool PluginService::dispatch(int nIndex, ServiceData *pD)
@@ -64,11 +72,14 @@ bool PluginService::dispatch(int nIndex, ServiceData *pD)
 
 int PluginService::parse_path(string &sRouteKey, const char *szPath, vector<string> &vecParameters)
 {
+	WaitForSingleObject(hRouteMutex, INFINITE);
 	map<string, RoutePart>::iterator itFind = mRoutes.find(sRouteKey);
 	if (itFind != mRoutes.end())
 	{
 		RoutePart &rp = itFind->second;
+		ReleaseMutex(hRouteMutex);
 		return rp.parse_path(szPath, vecParameters);
 	}
+	ReleaseMutex(hRouteMutex);
 	return -1;
 }

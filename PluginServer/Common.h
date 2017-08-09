@@ -82,3 +82,5 @@ string file_md5(string sFilePath);
 std::string &ltrim(std::string &s);
 // trim from end 
 std::string &rtrim(std::string &s);
+
+string app_root_path();

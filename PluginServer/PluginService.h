@@ -30,6 +30,7 @@ private:
 	FUNCProduceOne func_produce_one;
 	bool bEnable;
 
+	HANDLE hRouteMutex;
 	map<string, RoutePart> mRoutes;
 	HMODULE hDll;
 };

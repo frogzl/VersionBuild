@@ -5,28 +5,23 @@
 #include <assert.h>
 map<string, PluginService*> PluginCenter::mPluginService;
 map<string, PluginTask*> PluginCenter::mPluginTask;
+HANDLE PluginCenter::hPluginServiceMutex = NULL;
+HANDLE PluginCenter::hPluginTaskMutex = NULL;
 
 void PluginCenter::load_service_plugins()
 {
-	char szPath[255];
-	GetModuleFileNameA(NULL, szPath, 255);
-	std::string sPath(szPath);
-	int nPos = (int)sPath.find("PluginServer.exe", 0);
-	int nNameSize = sizeof("PluginServer.exe");
-	sPath.erase(nPos, nNameSize - 1);
-	string sPluginServicePath = sPath + "MicroServicePlugins";
-	string sTmp = sPluginServicePath + "\\*.dll";
-	_finddata_t fd;
-	intptr_t pf = _findfirst(sTmp.c_str(), &fd);
-	while (!_findnext(pf, &fd))
-	{
-		if (strcmp("MicroServicePlugin.dll", fd.name) == 0)
-			continue;
+	if (!hPluginServiceMutex)
+		hPluginServiceMutex = CreateMutex(NULL, FALSE, NULL);
 
-		std::string sDll = sPluginServicePath + "\\" + fd.name;
+	char szPath[255];
+	map<string, string> mDll;
+	enum_dll_path(0, app_root_path() + "MicroServicePlugins", 2, mDll);
+	map<string, string>::iterator it = mDll.begin();
+	while (it != mDll.end())
+	{
 		GetCurrentDirectoryA(255, szPath);
-		SetCurrentDirectoryA(sPluginServicePath.c_str());
-		PluginService *pPlugin = new PluginService(fd.name);
+		SetCurrentDirectoryA(it->first.c_str());
+		PluginService *pPlugin = new PluginService(it->second);
 		SetCurrentDirectoryA(szPath);
 		if (pPlugin->enable())
 		{
@@ -39,12 +34,15 @@ void PluginCenter::load_service_plugins()
 		}
 		else
 			delete pPlugin;
+		it++;
 	}
-	_findclose(pf);
 }
 
 void PluginCenter::load_task_plugins()
 {
+	if (!hPluginTaskMutex)
+		hPluginTaskMutex = CreateMutex(NULL, FALSE, NULL);
+
 	char szPath[255];
 	GetModuleFileNameA(NULL, szPath, 255);
 	std::string sPath(szPath);
@@ -139,9 +137,54 @@ bool PluginCenter::analysis_service_path(const char *szOperator, const char *szP
 
 PluginService* PluginCenter::enum_service_plugin(const char *szPluginID, const char *szPluginVersion)
 {
+	PluginService *pPlugin= NULL;
+	WaitForSingleObject(hPluginServiceMutex, INFINITE);
 	map<string, PluginService*>::iterator itFind = mPluginService.find(generate_plugin_key(szPluginID, szPluginVersion));
 	if (itFind != mPluginService.end())
-		return itFind->second;
+		pPlugin = itFind->second;
+	ReleaseMutex(hPluginServiceMutex);
+	return pPlugin;
+}
+
+void PluginCenter::enum_dll_path(int nLayer, string sPath, int nDepth, map<string, string> &mDll)
+{
+	if (nLayer > nDepth)
+		return;
+
+	_finddata_t fd;
+	string sTmp = "";
+	if (nLayer == nDepth)
+	{
+		sTmp = sPath + "\\plugin_*.dll";
+		intptr_t pf = _findfirst(sTmp.c_str(), &fd);
+		if (pf != -1)
+		{
+			do {
+				printf("%s\n", fd.name);
+				mDll.insert(pair<string, string>(sPath, fd.name));
+			} while (!_findnext(pf, &fd));
+			_findclose(pf);
+		}
+	}
 	else
-		return NULL;
+	{
+		sTmp = sPath + "\\*";
+		intptr_t pf = _findfirst(sTmp.c_str(), &fd);
+		if (pf != -1)
+		{
+			do
+			{
+				if (((int)fd.attrib & _A_SUBDIR) == _A_SUBDIR)
+				{
+					if (strcmp(".", fd.name) != 0 && strcmp("..", fd.name) != 0)
+					{
+						printf("%s ", fd.name);
+						enum_dll_path(nLayer + 1, sPath + "\\" + fd.name, nDepth, mDll);
+					}
+				}
+			} while (!_findnext(pf, &fd));
+
+			_findclose(pf);
+		}
+	}
 }

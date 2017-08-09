@@ -25,7 +25,10 @@ private:
 	static string generate_plugin_key(const char *szPluginID, const char *szPluginVersion);
 	static bool analysis_service_path(const char *szOperator, const char *szPath, Service *pService);
 	static PluginService* enum_service_plugin(const char *szPluginID, const char *szPluginVersion);
+	static void enum_dll_path(int nLayer, string sPath, int nDepth, map<string, string> &mDll);
 private:
+	static HANDLE hPluginServiceMutex;
+	static HANDLE hPluginTaskMutex;
 	static map<string, PluginService*> mPluginService;
 	static map<string, PluginTask*> mPluginTask;
 };

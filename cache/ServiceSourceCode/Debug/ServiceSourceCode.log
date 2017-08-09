@@ -1,4 +1,42 @@
-﻿LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/FORCE”规范)
+﻿  HttpClient.cpp
+Tools\HttpClient.cpp(217): warning C4244: “参数”: 从“__int64”转换到“long”，可能丢失数据
+  SystemConfig.cpp
+SystemConfig.cpp(21): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+SystemConfig.cpp(61): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+SystemConfig.cpp(75): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  stdafx.cpp
+  ServiceSourceCode.cpp
+  RouteCallBackSet.cpp
+  HttpRequestException.cpp
+  Storage.cpp
+  SourceCode_Deploy.cpp
+  Resource_SourceCode.cpp
+  Resource_Host.cpp
+  Resource_Document.cpp
+  Resource_CompressionPackage.cpp
+  Resource.cpp
+  Database.cpp
+  BuildRule_Deploy.cpp
+  BuildRule_Depend.cpp
+  BuildRule.cpp
+  BuildResult.cpp
+  Common.cpp
+Common.cpp(83): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+Common.cpp(83): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+Common.cpp(301): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+  SourceCodeQuery.cpp
+  Generating Code...
+  Compiling...
+  SourceCodeModify.cpp
+  SourceCodeDeploy.cpp
+  SourceCodeDelete.cpp
+  SourceCodeCreate.cpp
+Business\SourceCodeCreate.cpp(127): warning C4018: “<”: 有符号/无符号不匹配
+Business\SourceCodeCreate.cpp(175): warning C4018: “<”: 有符号/无符号不匹配
+  SourceCodeBuild.cpp
+  Generating Code...
+  dllmain.cpp
+LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/FORCE”规范)
 SourceCodeCreate.obj : warning LNK4006: "public: static char const * * DB::Resource_SourceCodeData::names" (?names@Resource_SourceCodeData@DB@@2PAPEBDA) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
 SourceCodeCreate.obj : warning LNK4006: "private: static char const * const DB::Resource_SourceCodeData::table_" (?table_@Resource_SourceCodeData@DB@@0PEBDEB) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
 SourceCodeCreate.obj : warning LNK4006: "public: static char const * * DB::BuildRuleData::names" (?names@BuildRuleData@DB@@2PAPEBDA) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
@@ -73,8 +111,8 @@ RouteCallBackSet.obj : warning LNK4006: "public: static char const * * DB::Build
 RouteCallBackSet.obj : warning LNK4006: "private: static char const * const DB::BuildRule_DependData::table_" (?table_@BuildRule_DependData@DB@@0PEBDEB) 已在 SourceCodeCreate.obj 中定义；已忽略第二个定义
 HttpClient.obj : warning LNK4006: "public: static char const * * DB::Resource_HostData::names" (?names@Resource_HostData@DB@@2PAPEBDA) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
 HttpClient.obj : warning LNK4006: "private: static char const * const DB::Resource_HostData::table_" (?table_@Resource_HostData@DB@@0PEBDEB) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
-     正在创建库 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\ServiceSourceCode.lib 和对象 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\ServiceSourceCode.exp
-E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\ServiceSourceCode.dll : warning LNK4088: 因 /FORCE 选项生成了映像；映像可能不能运行
+     正在创建库 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\e2cb8547-7aa0-4fe0-bad0-0f974d9270c6\1\plugin_ServiceSourceCode.lib 和对象 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\e2cb8547-7aa0-4fe0-bad0-0f974d9270c6\1\plugin_ServiceSourceCode.exp
+E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\e2cb8547-7aa0-4fe0-bad0-0f974d9270c6\1\plugin_ServiceSourceCode.dll : warning LNK4088: 因 /FORCE 选项生成了映像；映像可能不能运行
   正在生成代码
   已完成代码的生成
 SourceCodeCreate.obj : warning LNK4006: "public: static char const * * DB::Resource_SourceCodeData::names" (?names@Resource_SourceCodeData@DB@@2PAPEBDA) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
@@ -113,6 +151,6 @@ RouteCallBackSet.obj : warning LNK4006: "public: static char const * * DB::Build
 RouteCallBackSet.obj : warning LNK4006: "private: static char const * const DB::BuildRule_DependData::table_" (?table_@BuildRule_DependData@DB@@0PEBDEB) 已在 SourceCodeCreate.obj 中定义；已忽略第二个定义
 HttpClient.obj : warning LNK4006: "public: static char const * * DB::Resource_HostData::names" (?names@Resource_HostData@DB@@2PAPEBDA) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
 HttpClient.obj : warning LNK4006: "private: static char const * const DB::Resource_HostData::table_" (?table_@Resource_HostData@DB@@0PEBDEB) 已在 SourceCodeBuild.obj 中定义；已忽略第二个定义
-E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\ServiceSourceCode.dll : warning LNK4088: 因 /FORCE 选项生成了映像；映像可能不能运行
-  ServiceSourceCode.vcxproj -> E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\ServiceSourceCode.dll
-  ServiceSourceCode.vcxproj -> E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\ServiceSourceCode.dll
+E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\e2cb8547-7aa0-4fe0-bad0-0f974d9270c6\1\plugin_ServiceSourceCode.dll : warning LNK4088: 因 /FORCE 选项生成了映像；映像可能不能运行
+  ServiceSourceCode.vcxproj -> E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\e2cb8547-7aa0-4fe0-bad0-0f974d9270c6\1\plugin_ServiceSourceCode.dll
+  ServiceSourceCode.vcxproj -> E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\e2cb8547-7aa0-4fe0-bad0-0f974d9270c6\1\plugin_ServiceSourceCode.dll

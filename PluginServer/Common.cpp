@@ -115,3 +115,14 @@ std::string &rtrim(std::string &s)
 	s.erase(std::find_if(s.rbegin(), s.rend(), std::not1(std::ptr_fun<int, int>(isspace))).base(), s.end());
 	return s;
 }
+
+string app_root_path()
+{
+	char szPath[255];
+	GetModuleFileNameA(NULL, szPath, 255);
+	std::string sPath(szPath);
+	int nPos = (int)sPath.find("PluginServer.exe", 0);
+	int nNameSize = sizeof("PluginServer.exe");
+	sPath.erase(nPos, nNameSize - 1);
+	return sPath;
+}
