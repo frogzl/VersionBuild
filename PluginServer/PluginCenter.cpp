@@ -52,7 +52,6 @@ void PluginCenter::load_task_plugins()
 	int nCount = sizeof("PluginServer.exe");
 	sPath.erase(nPos, nCount - 1);
 	std::string sPluginTaskPath = sPath + "MicroTaskPlugins";
-
 }
 
 void PluginCenter::install_service_plugin(const char *szPluginID, const char *szPluginVersion)
@@ -123,8 +122,10 @@ bool PluginCenter::analysis_service_path(const char *szOperator, const char *szP
 	PluginService *pPlugin = enum_service_plugin(vecItem[1].c_str(), vecItem[2].c_str());
 	if (!pPlugin)
 		return false;
+
 	pService->setData(pPlugin->create_data());
-	int nCreateIndex = pPlugin->parse_path(szOperator, szPath, pService->data()->request_data().vecParameters);
+	string sKey = generate_plugin_key(pPlugin->unique_id(), pPlugin->version());
+	int nCreateIndex = pPlugin->parse_path(sKey, szPath, pService->data()->request_data().vecParameters);
 	if (nCreateIndex != -1)
 	{
 
