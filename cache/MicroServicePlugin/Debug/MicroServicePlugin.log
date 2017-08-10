@@ -1,18 +1,35 @@
-﻿生成启动时间为 2017/8/10 9:58:07。
-     1>项目“E:\Workspace\VersionBuild\MicroServicePlugin\MicroServicePlugin.vcxproj”在节点 2 上(Build 个目标)。
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D DLL_EXPORTS /D WIN32 /D _DEBUG /D _LIB /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"E:\Workspace\VersionBuild\cache\MicroServicePlugin\Debug\\" /Fd"E:\Workspace\VersionBuild\cache\MicroServicePlugin\Debug\vc100.pdb" /Gd /TP /errorReport:prompt ServiceDataTemplate.cpp MicroServicePlugin.cpp ServiceTemplate.cpp
-         ServiceTemplate.cpp
-         MicroServicePlugin.cpp
-         ServiceDataTemplate.cpp
-     1>ServiceDataTemplate.cpp(33): error C2039: “mParameters”: 不是“Request_Data”的成员
-                 e:\workspace\versionbuild\microserviceplugin\include/ServiceData.h(21) : 参见“Request_Data”的声明
-     1>ServiceDataTemplate.cpp(53): error C2039: “mParameters”: 不是“Request_Data”的成员
-                 e:\workspace\versionbuild\microserviceplugin\include/ServiceData.h(21) : 参见“Request_Data”的声明
-     1>ServiceDataTemplate.cpp(53): error C2228: “.insert”的左边必须有类/结构/联合
-         Generating Code...
-     1>已完成生成项目“E:\Workspace\VersionBuild\MicroServicePlugin\MicroServicePlugin.vcxproj”(Build 个目标)的操作 - 失败。
-
-生成失败。
-
-已用时间 00:00:01.90
+﻿  ServiceTemplate.cpp
+  MicroServicePlugin.cpp
+  ServiceDataTemplate.cpp
+ServiceDataTemplate.cpp(33): error C2679: 二进制“=”: 没有找到接受“std::map<_Kty,_Ty>”类型的右操作数的运算符(或没有可接受的转换)
+          with
+          [
+              _Kty=int,
+              _Ty=std::string
+          ]
+          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\vector(599): 可能是“std::vector<_Ty> &std::vector<_Ty>::operator =(std::vector<_Ty> &&)”
+          with
+          [
+              _Ty=std::string
+          ]
+          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\vector(708): 或       “std::vector<_Ty> &std::vector<_Ty>::operator =(const std::vector<_Ty> &)”
+          with
+          [
+              _Ty=std::string
+          ]
+          尝试匹配参数列表“(std::vector<_Ty>, std::map<_Kty,_Ty>)”时
+          with
+          [
+              _Ty=std::string
+          ]
+          and
+          [
+              _Kty=int,
+              _Ty=std::string
+          ]
+ServiceDataTemplate.cpp(53): error C2661: “std::vector<_Ty>::insert”: 没有重载函数接受 1 个参数
+          with
+          [
+              _Ty=std::string
+          ]
+  Generating Code...

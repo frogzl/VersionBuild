@@ -13,6 +13,24 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="头文件\Business">
+      <UniqueIdentifier>{bff72267-2a3d-4900-8c70-fcff02b063a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Exception">
+      <UniqueIdentifier>{305e78cd-04c9-4987-b4ff-249362bbc6ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Tools">
+      <UniqueIdentifier>{8f5a1c44-b29c-4935-9b06-ba684db879ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Bussiness">
+      <UniqueIdentifier>{b58ba3c0-15c2-4de2-b639-c42c0a9761eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Exception">
+      <UniqueIdentifier>{e71105bb-2d67-4a65-83fb-d149189b9d44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Tools">
+      <UniqueIdentifier>{fff7718c-1914-498f-aaf5-39b357862207}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -22,6 +40,36 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\SourceCodeBuild.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\SourceCodeCreate.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\SourceCodeDelete.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\SourceCodeDeploy.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\SourceCodeModify.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\SourceCodeQuery.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception\HttpRequestException.h">
+      <Filter>头文件\Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\HttpClient.h">
+      <Filter>头文件\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RouteCallBackSet.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -35,5 +83,40 @@
     <ClCompile Include="dllmain.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Business\SourceCodeQuery.cpp">
+      <Filter>源文件\Bussiness</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\SourceCodeModify.cpp">
+      <Filter>源文件\Bussiness</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\SourceCodeDeploy.cpp">
+      <Filter>源文件\Bussiness</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\SourceCodeDelete.cpp">
+      <Filter>源文件\Bussiness</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\SourceCodeCreate.cpp">
+      <Filter>源文件\Bussiness</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\SourceCodeBuild.cpp">
+      <Filter>源文件\Bussiness</Filter>
+    </ClCompile>
+    <ClCompile Include="Exception\HttpRequestException.cpp">
+      <Filter>源文件\Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\HttpClient.cpp">
+      <Filter>源文件\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Common.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RouteCallBackSet.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ServiceSlaveTask.def">
+      <Filter>源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>

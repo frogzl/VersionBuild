@@ -13,6 +13,30 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="头文件\Business">
+      <UniqueIdentifier>{7a042ea2-095d-4e96-be69-ca86a9652fa4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Database">
+      <UniqueIdentifier>{5127b562-cc67-4d51-b602-e41bcae21fa3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Exception">
+      <UniqueIdentifier>{07e0c987-307a-47bf-aaa6-c1bcd8e20ab9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Tools">
+      <UniqueIdentifier>{53d189d4-158b-49f7-8a36-ed56f559e906}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Business">
+      <UniqueIdentifier>{0e7a537a-e7fa-484b-aea5-25aa361cd2c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Database">
+      <UniqueIdentifier>{dcdb9a3b-a6b8-4f7e-9e65-31e76a6ef09b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Exception">
+      <UniqueIdentifier>{e697ffc4-28ab-4a22-8ca5-a52fd3fd2a57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Tools">
+      <UniqueIdentifier>{542c4357-75e6-4439-8517-02300b73cd6a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -23,6 +47,66 @@
     </ClInclude>
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\BuildResult.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\BuildRule.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\BuildRule_Depend.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\BuildRule_Deploy.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\Database.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\Resource.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\Resource_CompressionPackage.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\Resource_Document.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\Resource_Host.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\Resource_SourceCode.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\SourceCode_Deploy.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\Storage.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception\HttpRequestException.h">
+      <Filter>头文件\Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\HttpClient.h">
+      <Filter>头文件\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RouteCallBackSet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\CreateTask.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\QueryTask.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\DeleteTask.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\FinishTask.h">
+      <Filter>头文件\Business</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -35,5 +119,70 @@
     <ClCompile Include="dllmain.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Database\BuildResult.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\BuildRule.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\BuildRule_Depend.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\BuildRule_Deploy.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\Database.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\Resource.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\Resource_CompressionPackage.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\Resource_Document.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\Resource_Host.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\Resource_SourceCode.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\SourceCode_Deploy.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\Storage.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Exception\HttpRequestException.cpp">
+      <Filter>源文件\Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\HttpClient.cpp">
+      <Filter>源文件\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Common.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RouteCallBackSet.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\CreateTask.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\QueryTask.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\DeleteTask.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\FinishTask.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ServiceMasterTask.def">
+      <Filter>源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -1,26 +1,22 @@
-﻿生成启动时间为 2017/8/10 10:09:33。
-     1>项目“E:\Workspace\VersionBuild\MicroTaskPlugin\MicroTaskPlugin.vcxproj”在节点 2 上(Build 个目标)。
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D DLL_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"E:\Workspace\VersionBuild\cache\MicroTaskPlugin\Debug\\" /Fd"E:\Workspace\VersionBuild\cache\MicroTaskPlugin\Debug\vc100.pdb" /Gd /TP /errorReport:prompt dllmain.cpp
-         dllmain.cpp
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D DLL_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"E:\Workspace\VersionBuild\cache\MicroTaskPlugin\Debug\\" /Fd"E:\Workspace\VersionBuild\cache\MicroTaskPlugin\Debug\vc100.pdb" /Gd /TP /errorReport:prompt MicroTaskPlugin.cpp TaskDataTemplate.cpp TaskInterface.cpp TaskTemplate.cpp
-         TaskTemplate.cpp
-         TaskInterface.cpp
-         TaskDataTemplate.cpp
-         MicroTaskPlugin.cpp
-         Generating Code...
-       ManifestResourceCompile:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"E:\Workspace\VersionBuild\cache\MicroTaskPlugin\Debug\MicroTaskPlugin.dll.embed.manifest.res" E:\Workspace\VersionBuild\cache\MicroTaskPlugin\Debug\MicroTaskPlugin_manifest.rc 
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Workspace\VersionBuild\bin\Debug\x64\MicroTaskPlugins\MicroTaskPlugin.dll" /INCREMENTAL /NOLOGO lib_jsond.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"E:\Workspace\VersionBuild\cache\MicroTaskPlugin\Debug\MicroTaskPlugin.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\Workspace\VersionBuild\bin\Debug\x64\MicroTaskPlugins\MicroTaskPlugin.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Workspace\VersionBuild\bin\Debug\x64\MicroTaskPlugins\MicroTaskPlugin.lib" /MACHINE:X64 /DLL E:\Workspace\VersionBuild\cache\MicroTaskPlugin\Debug\MicroTaskPlugin.dll.embed.manifest.res
-         E:\Workspace\VersionBuild\cache\MicroTaskPlugin\Debug\dllmain.obj
-         E:\Workspace\VersionBuild\cache\MicroTaskPlugin\Debug\MicroTaskPlugin.obj
-         E:\Workspace\VersionBuild\cache\MicroTaskPlugin\Debug\TaskDataTemplate.obj
-         E:\Workspace\VersionBuild\cache\MicroTaskPlugin\Debug\TaskInterface.obj
-         E:\Workspace\VersionBuild\cache\MicroTaskPlugin\Debug\TaskTemplate.obj
-     1>LINK : fatal error LNK1104: 无法打开文件“lib_jsond.lib”
-     1>已完成生成项目“E:\Workspace\VersionBuild\MicroTaskPlugin\MicroTaskPlugin.vcxproj”(Build 个目标)的操作 - 失败。
-
-生成失败。
-
-已用时间 00:00:02.58
+﻿  dllmain.cpp
+  TaskTemplate.cpp
+e:\versionbuild\microtaskplugin\include\TaskData.h(19): error C2146: 语法错误: 缺少“;”(在标识符“finish_url”的前面)
+e:\versionbuild\microtaskplugin\include\TaskData.h(19): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+e:\versionbuild\microtaskplugin\include\TaskData.h(19): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+e:\versionbuild\microtaskplugin\include\TaskData.h(19): warning C4183: “finish_url”: 缺少返回类型；假定为返回“int”的成员函数
+  TaskInterface.cpp
+e:\versionbuild\microtaskplugin\include\TaskData.h(19): error C2146: 语法错误: 缺少“;”(在标识符“finish_url”的前面)
+e:\versionbuild\microtaskplugin\include\TaskData.h(19): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+e:\versionbuild\microtaskplugin\include\TaskData.h(19): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+e:\versionbuild\microtaskplugin\include\TaskData.h(19): warning C4183: “finish_url”: 缺少返回类型；假定为返回“int”的成员函数
+  TaskDataTemplate.cpp
+e:\versionbuild\microtaskplugin\include/TaskData.h(19): error C2146: 语法错误: 缺少“;”(在标识符“finish_url”的前面)
+e:\versionbuild\microtaskplugin\include/TaskData.h(19): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+e:\versionbuild\microtaskplugin\include/TaskData.h(19): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+e:\versionbuild\microtaskplugin\include/TaskData.h(19): warning C4183: “finish_url”: 缺少返回类型；假定为返回“int”的成员函数
+  MicroTaskPlugin.cpp
+e:\versionbuild\microtaskplugin\include\TaskData.h(19): error C2146: 语法错误: 缺少“;”(在标识符“finish_url”的前面)
+e:\versionbuild\microtaskplugin\include\TaskData.h(19): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+e:\versionbuild\microtaskplugin\include\TaskData.h(19): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+e:\versionbuild\microtaskplugin\include\TaskData.h(19): warning C4183: “finish_url”: 缺少返回类型；假定为返回“int”的成员函数
+  Generating Code...

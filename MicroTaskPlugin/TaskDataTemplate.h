@@ -11,7 +11,7 @@ public:
 	int status();
 	Json::Value& data();
 	Json::Value& processed_data();
-	string finish_url();
+	const char* finish_url();
 
 	void set_task_id(const char* id);
 	void set_status(int nStatus);

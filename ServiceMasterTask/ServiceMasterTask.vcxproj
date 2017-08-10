@@ -98,6 +98,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>ServiceMasterTask.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -113,6 +114,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>MicroServicePlugin.lib;lib_jsond.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>ServiceMasterTask.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -131,6 +133,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>ServiceMasterTask.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -149,16 +152,54 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>ServiceMasterTask.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Business\CreateTask.h" />
+    <ClInclude Include="Business\QueryTask.h" />
+    <ClInclude Include="Business\DeleteTask.h" />
+    <ClInclude Include="Business\FinishTask.h" />
+    <ClInclude Include="Common.h" />
+    <ClInclude Include="Database\BuildResult.h" />
+    <ClInclude Include="Database\BuildRule.h" />
+    <ClInclude Include="Database\BuildRule_Depend.h" />
+    <ClInclude Include="Database\BuildRule_Deploy.h" />
+    <ClInclude Include="Database\Database.h" />
+    <ClInclude Include="Database\Resource.h" />
+    <ClInclude Include="Database\Resource_CompressionPackage.h" />
+    <ClInclude Include="Database\Resource_Document.h" />
+    <ClInclude Include="Database\Resource_Host.h" />
+    <ClInclude Include="Database\Resource_SourceCode.h" />
+    <ClInclude Include="Database\SourceCode_Deploy.h" />
+    <ClInclude Include="Database\Storage.h" />
+    <ClInclude Include="Exception\HttpRequestException.h" />
+    <ClInclude Include="RouteCallBackSet.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="Tools\HttpClient.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Business\CreateTask.cpp" />
+    <ClCompile Include="Business\QueryTask.cpp" />
+    <ClCompile Include="Business\DeleteTask.cpp" />
+    <ClCompile Include="Business\FinishTask.cpp" />
+    <ClCompile Include="Common.cpp" />
+    <ClCompile Include="Database\BuildResult.cpp" />
+    <ClCompile Include="Database\BuildRule.cpp" />
+    <ClCompile Include="Database\BuildRule_Depend.cpp" />
+    <ClCompile Include="Database\BuildRule_Deploy.cpp" />
+    <ClCompile Include="Database\Database.cpp" />
+    <ClCompile Include="Database\Resource.cpp" />
+    <ClCompile Include="Database\Resource_CompressionPackage.cpp" />
+    <ClCompile Include="Database\Resource_Document.cpp" />
+    <ClCompile Include="Database\Resource_Host.cpp" />
+    <ClCompile Include="Database\Resource_SourceCode.cpp" />
+    <ClCompile Include="Database\SourceCode_Deploy.cpp" />
+    <ClCompile Include="Database\Storage.cpp" />
     <ClCompile Include="dllmain.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -173,8 +214,14 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
       </PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Exception\HttpRequestException.cpp" />
+    <ClCompile Include="RouteCallBackSet.cpp" />
     <ClCompile Include="ServiceMasterTask.cpp" />
     <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Tools\HttpClient.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ServiceMasterTask.def" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

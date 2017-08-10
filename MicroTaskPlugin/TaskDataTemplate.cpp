@@ -28,9 +28,9 @@ Json::Value& TaskDataTemplate::processed_data()
 	return _jProcessedData;
 }
 
-string TaskDataTemplate::finish_url()
+const char* TaskDataTemplate::finish_url()
 {
-	return _sFinishUrl;
+	return _sFinishUrl.c_str();
 }
 
 void TaskDataTemplate::set_successful_result(Json::Value &jResult)

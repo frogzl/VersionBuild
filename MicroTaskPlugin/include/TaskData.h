@@ -16,7 +16,7 @@ public:
 	// 处理返回数据
 	virtual Json::Value& processed_data() = 0;
 	// 结束URL
-	string finish_url();
+	virtual const char* finish_url();
 
 	void set_task_id(const char* id);
 	void set_status(int nStatus);
