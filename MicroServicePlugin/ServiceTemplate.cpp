@@ -1,5 +1,5 @@
 #include "ServiceTemplate.h"
-#include "include/MicroServicePlugin.h"
+#include "ServiceDataTemplate.h"
 ServiceTemplate::ServiceTemplate()
 {
 	nRouteCount = -1;
@@ -61,7 +61,7 @@ const char* ServiceTemplate::library_version()
 
 ServiceData* ServiceTemplate::create_data()
 {
-	return  create_service_data();
+	return  new ServiceDataTemplate();
 }
 
 bool ServiceTemplate::dispatch_by_route_path(int nIndex, ServiceData *pD)

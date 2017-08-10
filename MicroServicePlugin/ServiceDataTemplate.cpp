@@ -30,7 +30,7 @@ void ServiceDataTemplate::set_request_headers(std::map<std::string, std::string>
 
 void ServiceDataTemplate::set_request_parameters(std::map<int, std::string> &mParameters)
 {
-	m_rdInData.mParameters = mParameters;
+	m_rdInData.vecParameters = mParameters;
 }
 
 void ServiceDataTemplate::set_request_conditions(std::map<std::string, std::string> mConditions)
@@ -50,7 +50,7 @@ void ServiceDataTemplate::insert_request_header(const char* szKey, const char* s
 
 void ServiceDataTemplate::insert_request_parameter(int &nKey, const char* szValue)
 {
-	m_rdInData.mParameters.insert(std::pair<int, std::string>(nKey, szValue));
+	m_rdInData.vecParameters.insert(std::pair<int, std::string>(nKey, szValue));
 }
 
 void ServiceDataTemplate::insert_request_condition(const char* szKey, const char* szValue)

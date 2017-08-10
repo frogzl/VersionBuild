@@ -28,6 +28,11 @@ Json::Value& TaskDataTemplate::processed_data()
 	return _jProcessedData;
 }
 
+string TaskDataTemplate::finish_url()
+{
+	return _sFinishUrl;
+}
+
 void TaskDataTemplate::set_successful_result(Json::Value &jResult)
 {
 	_status = 0;

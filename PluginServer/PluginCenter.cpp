@@ -44,12 +44,28 @@ void PluginCenter::load_task_plugins()
 		hPluginTaskMutex = CreateMutex(NULL, FALSE, NULL);
 
 	char szPath[255];
-	GetModuleFileNameA(NULL, szPath, 255);
-	std::string sPath(szPath);
-	int nPos = (int)sPath.find("PluginServer.exe", 0);
-	int nCount = sizeof("PluginServer.exe");
-	sPath.erase(nPos, nCount - 1);
-	std::string sPluginTaskPath = sPath + "MicroTaskPlugins";
+	map<string, string> mDll;
+	enum_dll_path(0, app_root_path() + "MicroTaskPlugins", 2, mDll);
+	map<string, string>::iterator it = mDll.begin();
+	while (it != mDll.end())
+	{
+		GetCurrentDirectoryA(255, szPath);
+		SetCurrentDirectoryA(it->first.c_str());
+		PluginTask *pPlugin = new PluginTask(it->second);
+		SetCurrentDirectoryA(szPath);
+		if (pPlugin->enable())
+		{
+			string sKey = generate_plugin_key(pPlugin->unique_id(), pPlugin->version());
+			map<string, PluginTask*>::iterator itFind = mPluginTask.find(sKey);
+			if (itFind == mPluginTask.end())
+				mPluginTask.insert(pair<string, PluginTask*>(sKey, pPlugin));
+			else
+				delete pPlugin;
+		}
+		else
+			delete pPlugin;
+		it++;
+	}
 }
 
 void PluginCenter::install_service_plugin(const char *szPluginID, const char *szPluginVersion)

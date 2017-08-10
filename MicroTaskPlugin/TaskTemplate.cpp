@@ -1,5 +1,5 @@
 #include "TaskTemplate.h"
-
+#include "TaskDataTemplate.h"
 TaskTemplate::TaskTemplate()
 {
 	nRouteCount = -1;
@@ -56,6 +56,11 @@ const char* TaskTemplate::version()
 const char* TaskTemplate::library_version()
 {
 	return "0.1";
+}
+
+TaskData* TaskTemplate::create_data()
+{
+	return new TaskDataTemplate();
 }
 
 const char* TaskTemplate::dispatch_by_route_path(int nIndex, TaskData *pTD)

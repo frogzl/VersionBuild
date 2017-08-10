@@ -20,6 +20,7 @@ public:
 	const char* name();
 	const char* version();
 	const char* library_version();
+	TaskData* create_data();
 	const char* dispatch_by_route_path(int nIndex, TaskData *pTD);
 	bool register_task_name(const char *szName);
 	bool register_task_unique_id(const char *szID);
