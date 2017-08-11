@@ -159,12 +159,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Business\SourceCodeBuild.h" />
-    <ClInclude Include="Business\SourceCodeCreate.h" />
-    <ClInclude Include="Business\SourceCodeDelete.h" />
-    <ClInclude Include="Business\SourceCodeDeploy.h" />
-    <ClInclude Include="Business\SourceCodeModify.h" />
-    <ClInclude Include="Business\SourceCodeQuery.h" />
+    <ClInclude Include="Business\StartTask.h" />
     <ClInclude Include="Common.h" />
     <ClInclude Include="Exception\HttpRequestException.h" />
     <ClInclude Include="RouteCallBackSet.h" />
@@ -173,12 +168,7 @@
     <ClInclude Include="Tools\HttpClient.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Business\SourceCodeBuild.cpp" />
-    <ClCompile Include="Business\SourceCodeCreate.cpp" />
-    <ClCompile Include="Business\SourceCodeDelete.cpp" />
-    <ClCompile Include="Business\SourceCodeDeploy.cpp" />
-    <ClCompile Include="Business\SourceCodeModify.cpp" />
-    <ClCompile Include="Business\SourceCodeQuery.cpp" />
+    <ClCompile Include="Business\StartTask.cpp" />
     <ClCompile Include="Common.cpp" />
     <ClCompile Include="dllmain.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>

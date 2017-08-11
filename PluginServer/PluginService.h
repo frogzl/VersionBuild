@@ -34,4 +34,3 @@ private:
 	map<string, RoutePart> mRoutes;
 	HMODULE hDll;
 };
-

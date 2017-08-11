@@ -42,24 +42,6 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Business\SourceCodeBuild.h">
-      <Filter>头文件\Business</Filter>
-    </ClInclude>
-    <ClInclude Include="Business\SourceCodeCreate.h">
-      <Filter>头文件\Business</Filter>
-    </ClInclude>
-    <ClInclude Include="Business\SourceCodeDelete.h">
-      <Filter>头文件\Business</Filter>
-    </ClInclude>
-    <ClInclude Include="Business\SourceCodeDeploy.h">
-      <Filter>头文件\Business</Filter>
-    </ClInclude>
-    <ClInclude Include="Business\SourceCodeModify.h">
-      <Filter>头文件\Business</Filter>
-    </ClInclude>
-    <ClInclude Include="Business\SourceCodeQuery.h">
-      <Filter>头文件\Business</Filter>
-    </ClInclude>
     <ClInclude Include="Exception\HttpRequestException.h">
       <Filter>头文件\Exception</Filter>
     </ClInclude>
@@ -72,6 +54,9 @@
     <ClInclude Include="RouteCallBackSet.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Business\StartTask.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -82,24 +67,6 @@
     </ClCompile>
     <ClCompile Include="dllmain.cpp">
       <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Business\SourceCodeQuery.cpp">
-      <Filter>源文件\Bussiness</Filter>
-    </ClCompile>
-    <ClCompile Include="Business\SourceCodeModify.cpp">
-      <Filter>源文件\Bussiness</Filter>
-    </ClCompile>
-    <ClCompile Include="Business\SourceCodeDeploy.cpp">
-      <Filter>源文件\Bussiness</Filter>
-    </ClCompile>
-    <ClCompile Include="Business\SourceCodeDelete.cpp">
-      <Filter>源文件\Bussiness</Filter>
-    </ClCompile>
-    <ClCompile Include="Business\SourceCodeCreate.cpp">
-      <Filter>源文件\Bussiness</Filter>
-    </ClCompile>
-    <ClCompile Include="Business\SourceCodeBuild.cpp">
-      <Filter>源文件\Bussiness</Filter>
     </ClCompile>
     <ClCompile Include="Exception\HttpRequestException.cpp">
       <Filter>源文件\Exception</Filter>
@@ -112,6 +79,9 @@
     </ClCompile>
     <ClCompile Include="RouteCallBackSet.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\StartTask.cpp">
+      <Filter>源文件\Bussiness</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
