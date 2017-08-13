@@ -76,7 +76,7 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)bin\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(SolutionDir)cache\$(ProjectName)\$(Configuration)\</IntDir>
-    <IncludePath>$(SolutionDir)MicroTaskPlugin\include;$(SolutionDir)MicroServicePlugin\include;..\..\libevent-2.0.22-stable\WIN32-Code;..\..\libevent-2.0.22-stable\include;..\..\jsoncpp-src-0.5.0\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)MicroServicePlugin\include;..\..\libevent-2.0.22-stable\WIN32-Code;..\..\libevent-2.0.22-stable\include;..\..\jsoncpp-src-0.5.0\include;D:\openssl-1.0.1t\bin\include;$(IncludePath)</IncludePath>
     <LibraryPath>..\..\libevent-2.0.22-stable\x64;..\..\jsoncpp-src-0.5.0\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -157,33 +157,29 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Common.h" />
+    <ClInclude Include="Helper.h" />
     <ClInclude Include="HttpServer.h" />
     <ClInclude Include="HttpServerItem.h" />
     <ClInclude Include="PluginCenter.h" />
     <ClInclude Include="PluginService.h" />
-    <ClInclude Include="PluginTask.h" />
     <ClInclude Include="RoutePart.h" />
     <ClInclude Include="Service.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="SystemConfig.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="Task.h" />
-    <ClInclude Include="TaskServer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Common.cpp" />
+    <ClCompile Include="Helper.cpp" />
     <ClCompile Include="HttpServer.cpp" />
     <ClCompile Include="HttpServerItem.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PluginCenter.cpp" />
     <ClCompile Include="PluginService.cpp" />
-    <ClCompile Include="PluginTask.cpp" />
     <ClCompile Include="RoutePart.cpp" />
     <ClCompile Include="Service.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="SystemConfig.cpp" />
-    <ClCompile Include="Task.cpp" />
-    <ClCompile Include="TaskServer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

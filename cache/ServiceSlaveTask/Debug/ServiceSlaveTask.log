@@ -1,6 +1,12 @@
-﻿  dllmain.cpp
-  stdafx.cpp
-  ServiceSlaveTask.cpp
-  Generating Code...
+﻿LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/LTCG”规范)
+     正在创建库 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\cc0e7465-9c6d-4802-8786-2bafd9ef9ff4\1\plugin_ServiceSlaveTask.lib 和对象 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\cc0e7465-9c6d-4802-8786-2bafd9ef9ff4\1\plugin_ServiceSlaveTask.exp
+LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+  正在生成代码
+  已完成代码的生成
   ServiceSlaveTask.vcxproj -> E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\cc0e7465-9c6d-4802-8786-2bafd9ef9ff4\1\plugin_ServiceSlaveTask.dll
+LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/LTCG”规范)
+     正在创建库 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\cc0e7465-9c6d-4802-8786-2bafd9ef9ff4\1\plugin_ServiceSlaveTask.lib 和对象 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\cc0e7465-9c6d-4802-8786-2bafd9ef9ff4\1\plugin_ServiceSlaveTask.exp
+LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+  正在生成代码
+  已完成代码的生成
   ServiceSlaveTask.vcxproj -> E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\cc0e7465-9c6d-4802-8786-2bafd9ef9ff4\1\plugin_ServiceSlaveTask.dll

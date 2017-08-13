@@ -33,6 +33,16 @@ const char* TaskDataTemplate::finish_url()
 	return _sFinishUrl.c_str();
 }
 
+void TaskDataTemplate::set_task_id(const char* id)
+{
+	_taskID = id;
+}
+
+void TaskDataTemplate::set_status(int nStatus)
+{
+	_status = nStatus;
+}
+
 void TaskDataTemplate::set_successful_result(Json::Value &jResult)
 {
 	_status = 0;

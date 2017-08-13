@@ -1,8 +1,5 @@
-﻿  HttpServer.cpp
-  HttpServerItem.cpp
-  PluginCenter.cpp
-  PluginService.cpp
-  Service.cpp
+﻿  Helper.cpp
   main.cpp
-  PluginServer.vcxproj -> E:\VersionBuild\bin\Debug\x64\PluginServer.exe
-  PluginServer.vcxproj -> E:\VersionBuild\bin\Debug\x64\PluginServer.exe
+  SystemConfig.cpp
+Helper.cpp(1): fatal error C1083: 无法打开包括文件:“HttpClient.h”: No such file or directory
+main.cpp(7): fatal error C1083: 无法打开包括文件:“TaskServer.h”: No such file or directory

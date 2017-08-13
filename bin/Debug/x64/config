@@ -1,19 +1,26 @@
 {
-"service":{
-"guid":"{6CAEE506-B89D-41e4-9AEE-3C71224ABC62}",
-"type":7
-},
-
-"network":{
-"worker":10,
-"port":10001,
-"backlog":10240
-},
-"database-connect":{
-"host":"127.0.0.1",
-"user":"root",
-"password":"root",
-"name":"version_build2",
-"port":3306
-}
+    "server": {
+        "guid": "{6CAEE506-B89D-41e4-9AEE-3C71224ABC62}",
+        "network": {
+            "worker": 10,
+            "port": 7000,
+            "backlog": 10240,
+            "ip": "127.0.0.1"
+        }
+    },
+    "reverse-proxy-server": {
+        "port": 7001,
+        "ip": "127.0.0.1"
+    },
+    "guard-server": {
+        "port": 7002,
+        "ip": "127.0.0.1"
+    },
+    "database-connect": {
+        "host": "127.0.0.1",
+        "user": "root",
+        "password": "root",
+        "name": "version_build2",
+        "port": 3306
+    }
 }

@@ -45,9 +45,6 @@
     <ClInclude Include="Exception\HttpRequestException.h">
       <Filter>头文件\Exception</Filter>
     </ClInclude>
-    <ClInclude Include="Tools\HttpClient.h">
-      <Filter>头文件\Tools</Filter>
-    </ClInclude>
     <ClInclude Include="Common.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -56,6 +53,21 @@
     </ClInclude>
     <ClInclude Include="Business\StartTask.h">
       <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="PluginCenter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PluginTask.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Task.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskServer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ProcessingCenter.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -71,9 +83,6 @@
     <ClCompile Include="Exception\HttpRequestException.cpp">
       <Filter>源文件\Exception</Filter>
     </ClCompile>
-    <ClCompile Include="Tools\HttpClient.cpp">
-      <Filter>源文件\Tools</Filter>
-    </ClCompile>
     <ClCompile Include="Common.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -82,6 +91,21 @@
     </ClCompile>
     <ClCompile Include="Business\StartTask.cpp">
       <Filter>源文件\Bussiness</Filter>
+    </ClCompile>
+    <ClCompile Include="PluginCenter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="PluginTask.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Task.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskServer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessingCenter.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

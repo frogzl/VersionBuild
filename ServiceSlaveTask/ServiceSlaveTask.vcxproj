@@ -76,8 +76,8 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)bin\$(Configuration)\$(Platform)\MicroServicePlugins\cc0e7465-9c6d-4802-8786-2bafd9ef9ff4\1\</OutDir>
     <IntDir>$(SolutionDir)cache\$(ProjectName)\$(Configuration)\</IntDir>
-    <IncludePath>$(SolutionDir)MicroServicePlugin\include;..\..\jsoncpp-src-0.5.0\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)bin\$(Configuration)\$(Platform)\MicroServicePlugins\;..\..\jsoncpp-src-0.5.0\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)MicroTaskPlugin\include;$(SolutionDir)MicroServicePlugin\include;..\..\jsoncpp-src-0.5.0\include;E:\libIconv\libIconv\Iconv;D:\openssl-1.0.1t\bin\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)bin\$(Configuration)\$(Platform)\MicroServicePlugins\;..\..\jsoncpp-src-0.5.0\lib\x64;D:\openssl-1.0.1t\bin\lib;E:\libIconv\x64\Release;$(LibraryPath)</LibraryPath>
     <TargetName>plugin_$(ProjectName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -107,14 +107,15 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;SERVICESLAVETASK_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;SERVICESLAVETASK_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>MicroServicePlugin.lib;lib_jsond.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>MicroServicePlugin.lib;lib_jsond.lib;libIconv.lib;libeay32.lib;ssleay32.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>ServiceSlaveTask.def</ModuleDefinitionFile>
+      <AdditionalOptions>/LTCG %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -162,10 +163,14 @@
     <ClInclude Include="Business\StartTask.h" />
     <ClInclude Include="Common.h" />
     <ClInclude Include="Exception\HttpRequestException.h" />
+    <ClInclude Include="PluginCenter.h" />
+    <ClInclude Include="PluginTask.h" />
+    <ClInclude Include="ProcessingCenter.h" />
     <ClInclude Include="RouteCallBackSet.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="Tools\HttpClient.h" />
+    <ClInclude Include="Task.h" />
+    <ClInclude Include="TaskServer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Business\StartTask.cpp" />
@@ -185,10 +190,14 @@
       </PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Exception\HttpRequestException.cpp" />
+    <ClCompile Include="PluginCenter.cpp" />
+    <ClCompile Include="PluginTask.cpp" />
+    <ClCompile Include="ProcessingCenter.cpp" />
     <ClCompile Include="RouteCallBackSet.cpp" />
     <ClCompile Include="ServiceSlaveTask.cpp" />
     <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="Tools\HttpClient.cpp" />
+    <ClCompile Include="Task.cpp" />
+    <ClCompile Include="TaskServer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ServiceSlaveTask.def" />

@@ -12,7 +12,7 @@ ServiceInterface* produce_one()
 	pService->register_service_route("/task/{id}", Http_Operator_Get, RouteCallBackSet::query_task);
 	pService->register_service_route("/task", Http_Operator_Get, RouteCallBackSet::query_task);
 	pService->register_service_route("/task", Http_Operator_Post, RouteCallBackSet::create_task);
-	pService->register_service_route("/task/{id}/finish_state", Http_Operator_Post, RouteCallBackSet::finish_task);
+	pService->register_service_route("/task/{id}/finish", Http_Operator_Post, RouteCallBackSet::finish_task);
 	pService->register_service_route("/task/{id}", Http_Operator_Delete, RouteCallBackSet::delete_task);
 	return instantiate_plugin_template(pService);
 }

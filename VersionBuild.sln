@@ -21,8 +21,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ServiceSlaveTask", "Service
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TaskBuild", "TaskBuild\TaskBuild.vcxproj", "{34D06064-FFDF-4249-A2CE-553177FE703B}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Server", "Server\Server.vcxproj", "{6F24FA7C-7077-4791-B0D6-203BFA746482}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PluginServer", "PluginServer\PluginServer.vcxproj", "{2532BECB-F97B-4207-9A07-03A1BE54F7AB}"
 EndProject
 Global
@@ -139,16 +137,6 @@ Global
 		{34D06064-FFDF-4249-A2CE-553177FE703B}.Release|Win32.Build.0 = Release|Win32
 		{34D06064-FFDF-4249-A2CE-553177FE703B}.Release|x64.ActiveCfg = Release|x64
 		{34D06064-FFDF-4249-A2CE-553177FE703B}.Release|x64.Build.0 = Release|x64
-		{6F24FA7C-7077-4791-B0D6-203BFA746482}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
-		{6F24FA7C-7077-4791-B0D6-203BFA746482}.Debug|Mixed Platforms.Build.0 = Debug|Win32
-		{6F24FA7C-7077-4791-B0D6-203BFA746482}.Debug|Win32.ActiveCfg = Debug|Win32
-		{6F24FA7C-7077-4791-B0D6-203BFA746482}.Debug|Win32.Build.0 = Debug|Win32
-		{6F24FA7C-7077-4791-B0D6-203BFA746482}.Debug|x64.ActiveCfg = Debug|Win32
-		{6F24FA7C-7077-4791-B0D6-203BFA746482}.Release|Mixed Platforms.ActiveCfg = Release|Win32
-		{6F24FA7C-7077-4791-B0D6-203BFA746482}.Release|Mixed Platforms.Build.0 = Release|Win32
-		{6F24FA7C-7077-4791-B0D6-203BFA746482}.Release|Win32.ActiveCfg = Release|Win32
-		{6F24FA7C-7077-4791-B0D6-203BFA746482}.Release|Win32.Build.0 = Release|Win32
-		{6F24FA7C-7077-4791-B0D6-203BFA746482}.Release|x64.ActiveCfg = Release|Win32
 		{2532BECB-F97B-4207-9A07-03A1BE54F7AB}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
 		{2532BECB-F97B-4207-9A07-03A1BE54F7AB}.Debug|Mixed Platforms.Build.0 = Debug|Win32
 		{2532BECB-F97B-4207-9A07-03A1BE54F7AB}.Debug|Win32.ActiveCfg = Debug|Win32

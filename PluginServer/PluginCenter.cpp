@@ -4,9 +4,7 @@
 #include <Windows.h>
 #include <assert.h>
 map<string, PluginService*> PluginCenter::mPluginService;
-map<string, PluginTask*> PluginCenter::mPluginTask;
 HANDLE PluginCenter::hPluginServiceMutex = NULL;
-HANDLE PluginCenter::hPluginTaskMutex = NULL;
 
 void PluginCenter::load_service_plugins()
 {
@@ -38,52 +36,12 @@ void PluginCenter::load_service_plugins()
 	}
 }
 
-void PluginCenter::load_task_plugins()
-{
-	if (!hPluginTaskMutex)
-		hPluginTaskMutex = CreateMutex(NULL, FALSE, NULL);
-
-	char szPath[255];
-	map<string, string> mDll;
-	enum_dll_path(0, app_root_path() + "MicroTaskPlugins", 2, mDll);
-	map<string, string>::iterator it = mDll.begin();
-	while (it != mDll.end())
-	{
-		GetCurrentDirectoryA(255, szPath);
-		SetCurrentDirectoryA(it->first.c_str());
-		PluginTask *pPlugin = new PluginTask(it->second);
-		SetCurrentDirectoryA(szPath);
-		if (pPlugin->enable())
-		{
-			string sKey = generate_plugin_key(pPlugin->unique_id(), pPlugin->version());
-			map<string, PluginTask*>::iterator itFind = mPluginTask.find(sKey);
-			if (itFind == mPluginTask.end())
-				mPluginTask.insert(pair<string, PluginTask*>(sKey, pPlugin));
-			else
-				delete pPlugin;
-		}
-		else
-			delete pPlugin;
-		it++;
-	}
-}
-
 void PluginCenter::install_service_plugin(const char *szPluginID, const char *szPluginVersion)
 {
 	assert(false);
 }
 
-void PluginCenter::install_task_plugin(const char *szPluginID, const char *szPluginVersion)
-{
-	assert(false);
-}
-
 void PluginCenter::uninstall_service_plugin(const char *szPluginID, const char *szPluginVersion)
-{
-	assert(false);
-}
-
-void PluginCenter::uninstall_task_plugin(const char *szPluginID, const char *szPluginVersion)
 {
 	assert(false);
 }
@@ -97,20 +55,10 @@ Service* PluginCenter::parse_service_path(const char *szOperator, const char *sz
 	return 0;
 }
 
-Task* PluginCenter::parse_task_path()
-{
-	return 0;
-}
-
 void PluginCenter::free_service(Service *&pService)
 {
 	delete pService;
 	pService = NULL;
-}
-
-void PluginCenter::free_task(Task *&pTask)
-{
-	assert(false);
 }
 
 void PluginCenter::destory()
@@ -138,8 +86,7 @@ bool PluginCenter::analysis_service_path(const char *szOperator, const char *szP
 		return false;
 
 	pService->setData(pPlugin->create_data());
-	string sKey = generate_plugin_key(pPlugin->unique_id(), pPlugin->version());
-	int nCreateIndex = pPlugin->parse_path(sKey, szPath, pService->data()->request_data().vecParameters);
+	int nCreateIndex = pPlugin->parse_path(szOperator, szPath, pService->data()->request_data().vecParameters);
 	if (nCreateIndex != -1)
 	{
 

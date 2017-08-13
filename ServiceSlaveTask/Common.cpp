@@ -41,7 +41,7 @@ void clear_socket_environment()
 	WSACleanup();
 }
 
-void split(string& s, const char *pDelim, vector<string>& ret)
+void split(string s, const char *pDelim, vector<string>& ret)
 {
 	size_t last = 0;
 	size_t index = s.find_first_of(pDelim, last);
@@ -260,22 +260,6 @@ string getGUID()
 	return buffer;
 }
 
-void split(string& s, string delim, vector<string>* ret)
-{
-	size_t last = 0;
-	size_t index = s.find_first_of(delim, last);
-	while (index != std::string::npos)
-	{
-		ret->push_back(s.substr(last, index - last));
-		last = index + 1;
-		index = s.find_first_of(delim, last);
-	}
-	if (index - last > 0)
-	{
-		ret->push_back(s.substr(last, index - last));
-	}
-}
-
 int compare(string str1, string str2) 
 {
 	//相等返回0，大于返回1，小于返回-1
@@ -319,4 +303,29 @@ string file_md5(string sFilePath)
 	}
 
 	return sFileMd5;
+}
+
+// trim from start 
+std::string &ltrim(std::string &s)
+{
+	s.erase(s.begin(), std::find_if(s.begin(), s.end(), std::not1(std::ptr_fun<int, int>(isspace))));
+	return s;
+}
+
+// trim from end 
+std::string &rtrim(std::string &s)
+{
+	s.erase(std::find_if(s.rbegin(), s.rend(), std::not1(std::ptr_fun<int, int>(isspace))).base(), s.end());
+	return s;
+}
+
+string app_root_path()
+{
+	char szPath[255];
+	GetModuleFileNameA(NULL, szPath, 255);
+	std::string sPath(szPath);
+	int nPos = (int)sPath.find("PluginServer.exe", 0);
+	int nNameSize = sizeof("PluginServer.exe");
+	sPath.erase(nPos, nNameSize - 1);
+	return sPath;
 }

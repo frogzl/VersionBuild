@@ -70,10 +70,10 @@ bool PluginService::dispatch(int nIndex, ServiceData *pD)
 	return pServiceIf->dispatch_by_route_path(nIndex, pD);
 }
 
-int PluginService::parse_path(string &sRouteKey, const char *szPath, vector<string> &vecParameters)
+int PluginService::parse_path(const char *szOperation, const char *szPath, vector<string> &vecParameters)
 {
 	WaitForSingleObject(hRouteMutex, INFINITE);
-	map<string, RoutePart>::iterator itFind = mRoutes.find(sRouteKey);
+	map<string, RoutePart>::iterator itFind = mRoutes.find(szOperation);
 	if (itFind != mRoutes.end())
 	{
 		RoutePart &rp = itFind->second;

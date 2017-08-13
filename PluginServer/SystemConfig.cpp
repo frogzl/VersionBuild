@@ -29,18 +29,27 @@ void SystemConfig::initConfig()
 	Json::Value root;
 	if (reader.parse(is, root))   ///root保存整个Json对象的value
 	{
-		if (!root["service"].isNull())
+		if (!root["server"].isNull())
 		{
-			Json::Value obj = root["service"];
-			m_sServiceGuid = obj["guid"].asString();
-			m_nServiceType = obj["type"].asInt();
+			Json::Value obj = root["server"];
+			m_sGuid = obj["guid"].asString();
+			Json::Value objNetwork = root["network"];
+			m_nWorker = objNetwork["worker"].asInt();
+			m_nBacklog = objNetwork["backlog"].asInt();
+			m_nPort = objNetwork["port"].asInt();
+			m_sIP = objNetwork["ip"].asString();
 		}
-		if (!root["network"].isNull())
+		if (!root["reverse-proxy-server"].isNull())
 		{
-			Json::Value obj = root["network"];
-			m_nWorker = obj["worker"].asInt();
-			m_nBacklog = obj["backlog"].asInt();
-			m_nNetworkPort = obj["port"].asInt();
+			Json::Value obj = root["reverse-proxy-server"];
+			m_nRPSPort = obj["port"].asInt();
+			m_sRPSIP = obj["ip"].asString();
+		}
+		if (!root["guard-server"].isNull())
+		{
+			Json::Value obj = root["guard-server"];
+			m_nGSPort = obj["port"].asInt();
+			m_sGSIP = obj["ip"].asString();
 		}
 		if (!root["database-connect"].isNull())
 		{

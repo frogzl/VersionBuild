@@ -24,7 +24,7 @@ public:
 	bool enable() { return bEnable; }
 	bool init_functions(string &sPath);
 	bool dispatch(int nIndex, ServiceData *pD);
-	int parse_path(string &sRouteKey, const char *szPath, vector<string> &vecParameters);
+	int parse_path(const char *szOperation, const char *szPath, vector<string> &vecParameters);
 private:
 	ServiceInterface *pServiceIf;
 	FUNCProduceOne func_produce_one;

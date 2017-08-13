@@ -20,11 +20,24 @@ public:
 	void initConfig();
 	string getStoragePath();
 	string getStorageTmpPath();
+
+public:
+	// server
+	string m_sGuid;
 	int m_nWorker;
-	int m_nNetworkPort;
+	int m_nPort;
 	int m_nBacklog;
-	string m_sServiceGuid;
-	unsigned int m_nServiceType;
+	string m_sIP;
+
+	// reverse-proxy-server
+	int m_nRPSPort;
+	string m_sRPSIP;
+
+	// guard-server
+	int m_nGSPort;
+	string m_sGSIP;
+
+	// database-connect
 	string m_sHost;
 	string m_sUser;
 	string m_sPassword;

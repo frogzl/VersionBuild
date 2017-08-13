@@ -13,11 +13,6 @@ int main()
 		return 1;
 
 	PluginCenter::load_service_plugins();
-	PluginCenter::load_task_plugins();
-
-	// 启动Task服务
-	TaskServer ts;
-	ts.start();
 
 	// 启动http服务
 	HttpServer hs(SystemConfig::instance()->m_nWorker);
@@ -25,7 +20,6 @@ int main()
 
 	// 等待结束
 	hs.wait_for_end();
-	ts.wait_for_end();
 
 	PluginCenter::destory();
 	clear_socket_environment();

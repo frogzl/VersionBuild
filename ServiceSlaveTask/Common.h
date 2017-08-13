@@ -6,13 +6,6 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <process.h>
-#include <event2/event.h>
-#include <event2/http.h>
-#include <event2/buffer.h>
-#include <event2/bufferevent.h>
-#include <event2/bufferevent_compat.h>
-#include <event2/util.h>
-#include <event2/keyvalq_struct.h>
 #include <map>
 #include <vector>
 #include <iconv.h>
@@ -20,8 +13,7 @@
 #include <iostream>
 #include <json/json.h>
 #include <direct.h>
-#include <git2.h>
-
+#include <algorithm>
 #ifdef WIN32
 #include <ws2tcpip.h>
 #include <io.h>
@@ -55,8 +47,6 @@
 #define Register_Route_Post(a, b, c) { VBController::register_class(#b, m(b));VBRoute::post(a, #b, c); }
 #define Buffer_Size 10 * 1024 * 1024
 
-#include "../util-internal.h"
-
 using namespace std;
 
 struct table_entry
@@ -68,7 +58,7 @@ extern struct table_entry content_type_table[];
 
 int initialize_socket_environment();
 void clear_socket_environment();
-void split(string& s, const char *pDelim, vector<string>& ret);
+void split(string s, const char *pDelim, vector<string>& ret);
 int u2g(const char *inbuf, int inlen, char *outbuf, int outlen);
 int g2u(const char *inbuf, size_t inlen, char *outbuf, size_t outlen);
 
@@ -83,7 +73,12 @@ BYTE Decode_GetByte(char c);
 char Encode_GetChar(BYTE num);
 
 string getGUID();
-void split(string& s, string delim, vector<string>* ret);
 int compare(string str1, string str2);
 
 string file_md5(string sFilePath);
+// trim from start 
+std::string &ltrim(std::string &s);
+// trim from end 
+std::string &rtrim(std::string &s);
+
+string app_root_path();
