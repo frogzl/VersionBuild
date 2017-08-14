@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "SystemConfig.h"
 #include <Windows.h>
 #include <io.h>  
@@ -31,14 +32,14 @@ void SystemConfig::init_config()
 		if (!root["reverse-proxy-server"].isNull())
 		{
 			Json::Value obj = root["reverse-proxy-server"];
-			m_nRPSPort = obj["port"].asInt();
-			m_sRPSIP = obj["ip"].asString();
+			_nRPSPort = obj["port"].asInt();
+			_sRPSIP = obj["ip"].asString();
 		}
 		if (!root["guard-server"].isNull())
 		{
 			Json::Value obj = root["guard-server"];
-			m_nGSPort = obj["port"].asInt();
-			m_sGSIP = obj["ip"].asString();
+			_nGSPort = obj["port"].asInt();
+			_sGSIP = obj["ip"].asString();
 		}
 	}
 }

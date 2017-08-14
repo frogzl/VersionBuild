@@ -20,12 +20,12 @@ public:
 
 public:
 	// reverse-proxy-server
-	int m_nRPSPort;
-	string m_sRPSIP;
+	int _nRPSPort;
+	string _sRPSIP;
 
 	// guard-server
-	int m_nGSPort;
-	string m_sGSIP;
+	int _nGSPort;
+	string _sGSIP;
 private:
 	static SystemConfig* g_Instance;
 };

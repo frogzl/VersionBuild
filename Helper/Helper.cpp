@@ -14,7 +14,7 @@ namespace Helper
 
 	namespace Network
 	{
-		HELPER_API bool __stdcall post(HostType enHT, string sPluginID, string sPluginVersion, Request_Data &inData, FUNCNETWORK func)
+		HELPER_API bool __stdcall post(HostType enHT, string sPluginID, string sPluginVersion, string sPath, Request_Data &inData, FUNCNETWORK func)
 		{
 			Http http;
 			if (http.post(enHT, sPluginID, sPluginVersion, inData))
@@ -26,7 +26,7 @@ namespace Helper
 				return false;
 		}
 
-		HELPER_API bool __stdcall get(HostType enHT, string sPluginID, string sPluginVersion, Request_Data &inData, FUNCNETWORK func)
+		HELPER_API bool __stdcall get(HostType enHT, string sPluginID, string sPluginVersion, string sPath, Request_Data &inData, FUNCNETWORK func)
 		{
 			Http http;
 			if (http.get(enHT, sPluginID, sPluginVersion, inData))
@@ -38,7 +38,7 @@ namespace Helper
 				return false;
 		}
 
-		HELPER_API bool __stdcall upload(string sPluginID, string sPluginVersion, Request_Data &inData, FUNCNETWORK func)
+		HELPER_API bool __stdcall upload(string sPluginID, string sPluginVersion, string sPath, Request_Data &inData, FUNCNETWORK func)
 		{
 			Http http;
 			if (http.upload(sPluginID, sPluginVersion, inData))
@@ -50,7 +50,7 @@ namespace Helper
 				return false;
 		}
 
-		HELPER_API bool __stdcall download(string sPluginID, string sPluginVersion, Request_Data &inData, FUNCNETWORK func)
+		HELPER_API bool __stdcall download(string sPluginID, string sPluginVersion, string sPath, Request_Data &inData, FUNCNETWORK func)
 		{
 			Http http;
 			if (http.download(sPluginID, sPluginVersion, inData))
