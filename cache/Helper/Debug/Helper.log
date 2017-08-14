@@ -1,0 +1,31 @@
+﻿生成启动时间为 2017/8/14 11:12:08。
+     1>项目“E:\Workspace\VersionBuild\Helper\Helper.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D HELPER_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"E:\Workspace\VersionBuild\cache\Helper\Debug\Helper.pch" /Fo"E:\Workspace\VersionBuild\cache\Helper\Debug\\" /Fd"E:\Workspace\VersionBuild\cache\Helper\Debug\vc100.pdb" /Gd /TP /errorReport:prompt Http.cpp
+         Http.cpp
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"E:\Workspace\VersionBuild\cache\Helper\Debug\Helper.dll.embed.manifest.res" E:\Workspace\VersionBuild\cache\Helper\Debug\Helper_manifest.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Workspace\VersionBuild\bin\Debug\x64\Helper.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"E:\Workspace\VersionBuild\cache\Helper\Debug\Helper.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\Workspace\VersionBuild\bin\Debug\x64\Helper.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Workspace\VersionBuild\bin\Debug\x64\Helper.lib" /MACHINE:X64 /DLL E:\Workspace\VersionBuild\cache\Helper\Debug\Helper.dll.embed.manifest.res
+         E:\Workspace\VersionBuild\cache\Helper\Debug\dllmain.obj
+         E:\Workspace\VersionBuild\cache\Helper\Debug\Helper.obj
+         E:\Workspace\VersionBuild\cache\Helper\Debug\Http.obj
+         E:\Workspace\VersionBuild\cache\Helper\Debug\stdafx.obj
+            正在创建库 E:\Workspace\VersionBuild\bin\Debug\x64\Helper.lib 和对象 E:\Workspace\VersionBuild\bin\Debug\x64\Helper.exp
+         Helper.vcxproj -> E:\Workspace\VersionBuild\bin\Debug\x64\Helper.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"E:\Workspace\VersionBuild\cache\Helper\Debug\Helper.dll.embed.manifest" /manifest E:\Workspace\VersionBuild\cache\Helper\Debug\Helper.dll.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"E:\Workspace\VersionBuild\cache\Helper\Debug\Helper.dll.embed.manifest.res" E:\Workspace\VersionBuild\cache\Helper\Debug\Helper_manifest.rc 
+       LinkEmbedManifest:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Workspace\VersionBuild\bin\Debug\x64\Helper.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"E:\Workspace\VersionBuild\cache\Helper\Debug\Helper.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\Workspace\VersionBuild\bin\Debug\x64\Helper.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Workspace\VersionBuild\bin\Debug\x64\Helper.lib" /MACHINE:X64 /DLL E:\Workspace\VersionBuild\cache\Helper\Debug\Helper.dll.embed.manifest.res
+         E:\Workspace\VersionBuild\cache\Helper\Debug\dllmain.obj
+         E:\Workspace\VersionBuild\cache\Helper\Debug\Helper.obj
+         E:\Workspace\VersionBuild\cache\Helper\Debug\Http.obj
+         E:\Workspace\VersionBuild\cache\Helper\Debug\stdafx.obj
+            正在创建库 E:\Workspace\VersionBuild\bin\Debug\x64\Helper.lib 和对象 E:\Workspace\VersionBuild\bin\Debug\x64\Helper.exp
+         Helper.vcxproj -> E:\Workspace\VersionBuild\bin\Debug\x64\Helper.dll
+     1>已完成生成项目“E:\Workspace\VersionBuild\Helper\Helper.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.85

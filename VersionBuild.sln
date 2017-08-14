@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VersionBuildServer", "VersionBuildServer\VersionBuildServer.vcxproj", "{0673EBC5-216A-4FAA-81EB-5AA8DEFABD79}"
 EndProject
@@ -22,6 +22,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TaskBuild", "TaskBuild\TaskBuild.vcxproj", "{34D06064-FFDF-4249-A2CE-553177FE703B}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PluginServer", "PluginServer\PluginServer.vcxproj", "{2532BECB-F97B-4207-9A07-03A1BE54F7AB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Helper", "Helper\Helper.vcxproj", "{FB610BB2-3EAA-49DA-898C-13E52401421C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -149,6 +151,16 @@ Global
 		{2532BECB-F97B-4207-9A07-03A1BE54F7AB}.Release|Win32.Build.0 = Release|Win32
 		{2532BECB-F97B-4207-9A07-03A1BE54F7AB}.Release|x64.ActiveCfg = Release|x64
 		{2532BECB-F97B-4207-9A07-03A1BE54F7AB}.Release|x64.Build.0 = Release|x64
+		{FB610BB2-3EAA-49DA-898C-13E52401421C}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{FB610BB2-3EAA-49DA-898C-13E52401421C}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{FB610BB2-3EAA-49DA-898C-13E52401421C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FB610BB2-3EAA-49DA-898C-13E52401421C}.Debug|Win32.Build.0 = Debug|Win32
+		{FB610BB2-3EAA-49DA-898C-13E52401421C}.Debug|x64.ActiveCfg = Debug|x64
+		{FB610BB2-3EAA-49DA-898C-13E52401421C}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{FB610BB2-3EAA-49DA-898C-13E52401421C}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{FB610BB2-3EAA-49DA-898C-13E52401421C}.Release|Win32.ActiveCfg = Release|Win32
+		{FB610BB2-3EAA-49DA-898C-13E52401421C}.Release|Win32.Build.0 = Release|Win32
+		{FB610BB2-3EAA-49DA-898C-13E52401421C}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

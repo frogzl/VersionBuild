@@ -19,17 +19,11 @@
     <Filter Include="头文件\Exception">
       <UniqueIdentifier>{305e78cd-04c9-4987-b4ff-249362bbc6ec}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\Tools">
-      <UniqueIdentifier>{8f5a1c44-b29c-4935-9b06-ba684db879ad}</UniqueIdentifier>
-    </Filter>
     <Filter Include="源文件\Bussiness">
       <UniqueIdentifier>{b58ba3c0-15c2-4de2-b639-c42c0a9761eb}</UniqueIdentifier>
     </Filter>
     <Filter Include="源文件\Exception">
       <UniqueIdentifier>{e71105bb-2d67-4a65-83fb-d149189b9d44}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="源文件\Tools">
-      <UniqueIdentifier>{fff7718c-1914-498f-aaf5-39b357862207}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
