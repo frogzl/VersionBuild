@@ -1,114 +1,19 @@
-﻿  SystemConfig.cpp
-  Http.cpp
-Http.cpp(21): error C2780: “_Ty *std::begin(_Ty (&)[_Size])”: 应输入 1 个参数，却提供了 0 个
-          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\xutility(995) : 参见“std::begin”的声明
-Http.cpp(21): error C2780: “_Container::const_iterator std::begin(const _Container &)”: 应输入 1 个参数，却提供了 0 个
-          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\xutility(976) : 参见“std::begin”的声明
-Http.cpp(21): error C2780: “_Container::iterator std::begin(_Container &)”: 应输入 1 个参数，却提供了 0 个
-          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\xutility(970) : 参见“std::begin”的声明
-Http.cpp(21): error C2780: “_InIt std::begin(const std::pair<_InIt,_InIt> &)”: 应输入 1 个参数，却提供了 0 个
-          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\utility(401) : 参见“std::begin”的声明
-Http.cpp(22): error C3861: “append_header”: 找不到标识符
-Http.cpp(23): error C3861: “append_data”: 找不到标识符
-Http.cpp(24): error C3861: “request_send”: 找不到标识符
-Http.cpp(25): error C2780: “_Ty *std::end(_Ty (&)[_Size])”: 应输入 1 个参数，却提供了 0 个
-          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\xutility(1002) : 参见“std::end”的声明
-Http.cpp(25): error C2780: “_Container::const_iterator std::end(const _Container &)”: 应输入 1 个参数，却提供了 0 个
-          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\xutility(988) : 参见“std::end”的声明
-Http.cpp(25): error C2780: “_Container::iterator std::end(_Container &)”: 应输入 1 个参数，却提供了 0 个
-          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\xutility(982) : 参见“std::end”的声明
-Http.cpp(25): error C2780: “_InIt std::end(const std::pair<_InIt,_InIt> &)”: 应输入 1 个参数，却提供了 0 个
-          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\utility(407) : 参见“std::end”的声明
-Http.cpp(33): error C2065: “sHost”: 未声明的标识符
-Http.cpp(33): error C2228: “.c_str”的左边必须有类/结构/联合
-          类型是“'unknown-type'”
-Http.cpp(33): error C2065: “nPort”: 未声明的标识符
-Http.cpp(36): error C2065: “sHost”: 未声明的标识符
-Http.cpp(36): error C2228: “.c_str”的左边必须有类/结构/联合
-          类型是“'unknown-type'”
-Http.cpp(41): error C2065: “sHost”: 未声明的标识符
-Http.cpp(41): error C2228: “.c_str”的左边必须有类/结构/联合
-          类型是“'unknown-type'”
-Http.cpp(41): error C2065: “nPort”: 未声明的标识符
-Http.cpp(41): error C2065: “sPath”: 未声明的标识符
-Http.cpp(41): error C2228: “.c_str”的左边必须有类/结构/联合
-          类型是“'unknown-type'”
-Http.cpp(44): error C2065: “sData”: 未声明的标识符
-Http.cpp(44): error C2228: “.c_str”的左边必须有类/结构/联合
-          类型是“'unknown-type'”
-Http.cpp(44): error C2065: “sData”: 未声明的标识符
-Http.cpp(44): error C2228: “.size”的左边必须有类/结构/联合
-          类型是“'unknown-type'”
-Http.cpp(47): error C2065: “sPath”: 未声明的标识符
-Http.cpp(47): error C2228: “.c_str”的左边必须有类/结构/联合
-          类型是“'unknown-type'”
-Http.cpp(51): error C2065: “m_nHttpCode”: 未声明的标识符
-Http.cpp(57): error C2065: “m_sErrorCode”: 未声明的标识符
-Http.cpp(68): error C2780: “_Ty *std::begin(_Ty (&)[_Size])”: 应输入 1 个参数，却提供了 0 个
-          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\xutility(995) : 参见“std::begin”的声明
-Http.cpp(68): error C2780: “_Container::const_iterator std::begin(const _Container &)”: 应输入 1 个参数，却提供了 0 个
-          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\xutility(976) : 参见“std::begin”的声明
-Http.cpp(68): error C2780: “_Container::iterator std::begin(_Container &)”: 应输入 1 个参数，却提供了 0 个
-          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\xutility(970) : 参见“std::begin”的声明
-Http.cpp(68): error C2780: “_InIt std::begin(const std::pair<_InIt,_InIt> &)”: 应输入 1 个参数，却提供了 0 个
-          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\utility(401) : 参见“std::begin”的声明
-Http.cpp(69): error C3861: “add_header”: 找不到标识符
-Http.cpp(70): error C2780: “_Ty *std::end(_Ty (&)[_Size])”: 应输入 1 个参数，却提供了 0 个
-          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\xutility(1002) : 参见“std::end”的声明
-Http.cpp(70): error C2780: “_Container::const_iterator std::end(const _Container &)”: 应输入 1 个参数，却提供了 0 个
-          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\xutility(988) : 参见“std::end”的声明
-Http.cpp(70): error C2780: “_Container::iterator std::end(_Container &)”: 应输入 1 个参数，却提供了 0 个
-          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\xutility(982) : 参见“std::end”的声明
-Http.cpp(70): error C2780: “_InIt std::end(const std::pair<_InIt,_InIt> &)”: 应输入 1 个参数，却提供了 0 个
-          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\utility(407) : 参见“std::end”的声明
-Http.cpp(78): error C2065: “sHost”: 未声明的标识符
-Http.cpp(78): error C2228: “.c_str”的左边必须有类/结构/联合
-          类型是“'unknown-type'”
-Http.cpp(78): error C2065: “nPort”: 未声明的标识符
-Http.cpp(81): error C2065: “sHost”: 未声明的标识符
-Http.cpp(81): error C2228: “.c_str”的左边必须有类/结构/联合
-          类型是“'unknown-type'”
-Http.cpp(86): error C2065: “sParam”: 未声明的标识符
-Http.cpp(86): error C2228: “.compare”的左边必须有类/结构/联合
-          类型是“'unknown-type'”
-Http.cpp(87): error C2065: “sHost”: 未声明的标识符
-Http.cpp(87): error C2228: “.c_str”的左边必须有类/结构/联合
-          类型是“'unknown-type'”
-Http.cpp(87): error C2065: “nPort”: 未声明的标识符
-Http.cpp(87): error C2065: “sPath”: 未声明的标识符
-Http.cpp(87): error C2228: “.c_str”的左边必须有类/结构/联合
-          类型是“'unknown-type'”
-Http.cpp(87): error C2065: “sParam”: 未声明的标识符
-Http.cpp(87): error C2228: “.c_str”的左边必须有类/结构/联合
-          类型是“'unknown-type'”
-Http.cpp(89): error C2065: “sHost”: 未声明的标识符
-Http.cpp(89): error C2228: “.c_str”的左边必须有类/结构/联合
-          类型是“'unknown-type'”
-Http.cpp(89): error C2065: “nPort”: 未声明的标识符
-Http.cpp(89): error C2065: “sPath”: 未声明的标识符
-Http.cpp(89): error C2228: “.c_str”的左边必须有类/结构/联合
-          类型是“'unknown-type'”
-Http.cpp(96): error C2065: “m_nHttpCode”: 未声明的标识符
-Http.cpp(102): error C2065: “m_sErrorCode”: 未声明的标识符
-Http.cpp(128): error C2039: “set_http_code”: 不是“Helper::Network::Http”的成员
-          e:\versionbuild\helper\Http.h(16) : 参见“Helper::Network::Http”的声明
-Http.cpp(131): error C2039: “set_http_code”: 不是“Helper::Network::Http”的成员
-          e:\versionbuild\helper\Http.h(16) : 参见“Helper::Network::Http”的声明
-Http.cpp(143): error C2653: “Json”: 不是类或命名空间名称
-Http.cpp(143): error C2065: “Value”: 未声明的标识符
-Http.cpp(143): error C2146: 语法错误: 缺少“;”(在标识符“m_inputData”的前面)
-Http.cpp(143): error C2065: “m_inputData”: 未声明的标识符
-Http.cpp(144): error C2653: “Json”: 不是类或命名空间名称
-Http.cpp(144): error C2065: “Reader”: 未声明的标识符
-Http.cpp(144): error C2146: 语法错误: 缺少“;”(在标识符“reader”的前面)
-Http.cpp(144): error C2065: “reader”: 未声明的标识符
-Http.cpp(145): error C2065: “reader”: 未声明的标识符
-Http.cpp(145): error C2228: “.parse”的左边必须有类/结构/联合
-          类型是“'unknown-type'”
-Http.cpp(145): error C2065: “m_inputData”: 未声明的标识符
-Http.cpp(146): error C2039: “set_http_respond_data”: 不是“Helper::Network::Http”的成员
-          e:\versionbuild\helper\Http.h(16) : 参见“Helper::Network::Http”的声明
-Http.cpp(146): error C2065: “m_inputData”: 未声明的标识符
-  Helper.cpp
-  Generating Code...
-e:\versionbuild\helper\helper.cpp(13): error C4716: “init_environment”: 必须返回一个值
+﻿生成启动时间为 2017/8/15 13:09:30。
+     1>项目“E:\Workspace\VersionBuild\Helper\Helper.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D HELPER_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"E:\Workspace\VersionBuild\cache\Helper\Debug\Helper.pch" /Fo"E:\Workspace\VersionBuild\cache\Helper\Debug\\" /Fd"E:\Workspace\VersionBuild\cache\Helper\Debug\vc100.pdb" /Gd /TP /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D HELPER_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"E:\Workspace\VersionBuild\cache\Helper\Debug\Helper.pch" /Fo"E:\Workspace\VersionBuild\cache\Helper\Debug\\" /Fd"E:\Workspace\VersionBuild\cache\Helper\Debug\vc100.pdb" /Gd /TP /errorReport:prompt Common.cpp Helper.cpp Http.cpp SystemConfig.cpp
+         SystemConfig.cpp
+         Http.cpp
+     1>e:\workspace\versionbuild\helper\Http.h(2): fatal error C1083: 无法打开包括文件:“HelperTypes.h”: No such file or directory
+         Helper.cpp
+     1>e:\workspace\versionbuild\helper\Http.h(2): fatal error C1083: 无法打开包括文件:“HelperTypes.h”: No such file or directory
+         Common.cpp
+     1>e:\workspace\versionbuild\helper\Common.h(18): fatal error C1083: 无法打开包括文件:“iconv.h”: No such file or directory
+         Generating Code...
+     1>已完成生成项目“E:\Workspace\VersionBuild\Helper\Helper.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:01.77

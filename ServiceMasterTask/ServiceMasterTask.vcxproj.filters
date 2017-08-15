@@ -22,9 +22,6 @@
     <Filter Include="头文件\Exception">
       <UniqueIdentifier>{07e0c987-307a-47bf-aaa6-c1bcd8e20ab9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\Tools">
-      <UniqueIdentifier>{53d189d4-158b-49f7-8a36-ed56f559e906}</UniqueIdentifier>
-    </Filter>
     <Filter Include="源文件\Business">
       <UniqueIdentifier>{0e7a537a-e7fa-484b-aea5-25aa361cd2c3}</UniqueIdentifier>
     </Filter>
@@ -33,9 +30,6 @@
     </Filter>
     <Filter Include="源文件\Exception">
       <UniqueIdentifier>{e697ffc4-28ab-4a22-8ca5-a52fd3fd2a57}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="源文件\Tools">
-      <UniqueIdentifier>{542c4357-75e6-4439-8517-02300b73cd6a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -86,9 +80,6 @@
     </ClInclude>
     <ClInclude Include="Exception\HttpRequestException.h">
       <Filter>头文件\Exception</Filter>
-    </ClInclude>
-    <ClInclude Include="Tools\HttpClient.h">
-      <Filter>头文件\Tools</Filter>
     </ClInclude>
     <ClInclude Include="Common.h">
       <Filter>头文件</Filter>
@@ -157,9 +148,6 @@
     </ClCompile>
     <ClCompile Include="Exception\HttpRequestException.cpp">
       <Filter>源文件\Exception</Filter>
-    </ClCompile>
-    <ClCompile Include="Tools\HttpClient.cpp">
-      <Filter>源文件\Tools</Filter>
     </ClCompile>
     <ClCompile Include="Common.cpp">
       <Filter>源文件</Filter>

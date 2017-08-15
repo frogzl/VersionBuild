@@ -73,8 +73,8 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)bin\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(SolutionDir)cache\$(ProjectName)\$(Configuration)\</IntDir>
-    <IncludePath>..\..\libevent-2.0.22-stable\include;..\..\libevent-2.0.22-stable\WIN32-Code;..\..\jsoncpp-src-0.5.0\include;$(IncludePath)</IncludePath>
-    <LibraryPath>..\..\libevent-2.0.22-stable\x64;..\..\jsoncpp-src-0.5.0\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\..\libevent-2.0.22-stable\include;..\..\libevent-2.0.22-stable\WIN32-Code;..\..\jsoncpp-src-0.5.0\include;E:\libIconv\libIconv\Iconv;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\libevent-2.0.22-stable\x64;..\..\jsoncpp-src-0.5.0\lib\x64;E:\libIconv\x64\Release;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -106,6 +106,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ws2_32.lib;libevent.lib;libevent_extras.lib;libevent_core.lib;libIconv.lib;lib_jsond.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -146,14 +147,16 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Helper.h" />
-    <ClInclude Include="HelperTypes.h" />
+    <ClInclude Include="Common.h" />
     <ClInclude Include="Http.h" />
+    <ClInclude Include="include\Helper.h" />
+    <ClInclude Include="include\HelperTypes.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="SystemConfig.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Common.cpp" />
     <ClCompile Include="dllmain.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>

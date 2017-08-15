@@ -1,7 +1,7 @@
 #include "ProcessingCenter.h"
+#include "Helper.h"
 
-
-
+using namespace Helper;
 ProcessingCenter::ProcessingCenter()
 {
 }
@@ -24,4 +24,8 @@ void ProcessingCenter::process(void *pParam)
 {
 	Task *pTask = (Task*)pParam;
 	pTask->process();
+
+	Network::Request_Data rd;
+	rd.sData = Json::FastWriter().write(pTask->data()->processed_data());
+	Network::post(Network::enReverseProxy, pTask->data()->finish_url(), rd, NULL);
 }

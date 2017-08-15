@@ -76,8 +76,8 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)bin\$(Configuration)\$(Platform)\MicroTaskPlugins\</OutDir>
     <IntDir>$(SolutionDir)cache\$(ProjectName)\$(Configuration)\</IntDir>
-    <IncludePath>$(SolutionDir)MicroTaskPlugin\include;..\..\jsoncpp-src-0.5.0\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)bin\$(Configuration)\$(Platform)\MicroTaskPlugins\;..\..\jsoncpp-src-0.5.0\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)MicroTaskPlugin\include;..\..\jsoncpp-src-0.5.0\include;$(SolutionDir)Helper\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)bin\$(Configuration)\$(Platform)\MicroTaskPlugins\;..\..\jsoncpp-src-0.5.0\lib\x64;$(SolutionDir)bin\$(Configuration)\$(Platform)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -113,7 +113,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>TaskBuild.def</ModuleDefinitionFile>
-      <AdditionalDependencies>MicroTaskPlugin.lib;lib_jsond.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>MicroTaskPlugin.lib;Helper.lib;lib_jsond.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
