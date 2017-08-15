@@ -73,8 +73,8 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)bin\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(SolutionDir)cache\$(ProjectName)\$(Configuration)\</IntDir>
-    <IncludePath>..\..\libevent-2.0.22-stable\include;..\..\libevent-2.0.22-stable\WIN32-Code;..\..\jsoncpp-src-0.5.0\include;E:\libIconv\libIconv\Iconv;$(IncludePath)</IncludePath>
-    <LibraryPath>..\..\libevent-2.0.22-stable\x64;..\..\jsoncpp-src-0.5.0\lib\x64;E:\libIconv\x64\Release;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\..\libevent-2.0.22-stable\include;..\..\libevent-2.0.22-stable\WIN32-Code;..\..\jsoncpp-src-0.5.0\include;E:\libIconv\libIconv\Iconv;D:\openssl-1.0.1t\bin\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\libevent-2.0.22-stable\x64;..\..\jsoncpp-src-0.5.0\lib\x64;E:\libIconv\x64\Release;D:\openssl-1.0.1t\bin\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -100,13 +100,13 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;HELPER_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;HELPER_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ws2_32.lib;libevent.lib;libevent_extras.lib;libevent_core.lib;libIconv.lib;lib_jsond.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;libevent.lib;libevent_extras.lib;libevent_core.lib;libIconv.lib;lib_jsond.lib;libeay32.lib;ssleay32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

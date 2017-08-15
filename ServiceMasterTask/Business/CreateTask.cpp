@@ -1,6 +1,5 @@
 #include "CreateTask.h"
 #include "../Exception/HttpRequestException.h"
-#include "../Tools/HttpClient.h"
 #include "../Database/SourceCode_Deploy.h"
 #include "../Database/BuildRule.h"
 #include "../Database/BuildRule_Deploy.h"

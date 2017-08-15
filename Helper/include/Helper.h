@@ -7,7 +7,7 @@
 #ifdef HELPER_EXPORTS
 #define HELPER_API extern "C" __declspec(dllexport)
 #else
-#define HELPER_API __declspec(dllimport)
+#define HELPER_API extern "C" __declspec(dllimport)
 #endif
 #include "HelperTypes.h"
 namespace Helper
@@ -18,9 +18,9 @@ namespace Helper
 		typedef bool(*FUNCNETWORK)(Respond_Data *pData);
 
 		HELPER_API bool __stdcall post(HostType enHT, string sPluginID, string sPluginVersion, string sPath, Request_Data &inData, FUNCNETWORK);
-		HELPER_API bool __stdcall post(HostType enHT, string sUrl, Request_Data &inData, FUNCNETWORK);
+		HELPER_API bool __stdcall post2(HostType enHT, string sUrl, Request_Data &inData, FUNCNETWORK);
 		HELPER_API bool __stdcall get(HostType enHT, string sPluginID, string sPluginVersion, string sPath, Request_Data &inData, FUNCNETWORK);
-		HELPER_API bool __stdcall get(HostType enHT, string sUrl, Request_Data &inData, FUNCNETWORK);
+		HELPER_API bool __stdcall get2(HostType enHT, string sUrl, Request_Data &inData, FUNCNETWORK);
 		HELPER_API bool __stdcall upload(string sPluginID, string sPluginVersion, string sPath, string sLocalPath);
 		HELPER_API bool __stdcall download(string sPluginID, string sPluginVersion, string sPath, string sLocalPath);
 	}

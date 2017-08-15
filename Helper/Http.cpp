@@ -34,7 +34,7 @@ namespace Helper
 			{
 				http_append_headers(inData.mHeaders);
 				http_append_data(inData.sData);
-				http_request_send(EVHTTP_REQ_POST, sUrl, &(inData.mConditions), NULL);
+				http_request_send(EVHTTP_REQ_POST, sUrl, &(inData.mConditions), NULL, NULL);
 				http_end();
 				return true;
 			}
@@ -54,7 +54,7 @@ namespace Helper
 			if (http_begin(enHT))
 			{
 				http_append_headers(inData.mHeaders);
-				http_request_send(EVHTTP_REQ_GET, sUrl, &(inData.mConditions), NULL);
+				http_request_send(EVHTTP_REQ_GET, sUrl, &(inData.mConditions), NULL, NULL);
 				http_end();
 				return true;
 			}
@@ -128,7 +128,7 @@ namespace Helper
 				}
 				delete[] szBuf;
 			}
-		
+
 			delete pJData;
 			return bRet;
 		}
@@ -321,9 +321,9 @@ namespace Helper
 			return true;
 		}
 
-		bool Http::http_request_send(evhttp_cmd_type type, 
-			string &sRoute, 
-			map<string, string> *pMConditions, 
+		bool Http::http_request_send(evhttp_cmd_type type,
+			string &sRoute,
+			map<string, string> *pMConditions,
 			bool(*cb)(Respond_Data *, void *), void *arg)
 		{
 			char szUrl[255] = { 0 };
@@ -358,7 +358,7 @@ namespace Helper
 			evhttp_request_free(_pRequest);
 			evhttp_connection_free(_pConnection);
 			event_base_free(_pBase);
-			
+
 			return true;
 		}
 

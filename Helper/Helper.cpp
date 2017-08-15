@@ -10,6 +10,7 @@ namespace Helper
 	HELPER_API bool __stdcall init_environment()
 	{
 		SystemConfig::instance()->init_config();
+		return true;
 	}
 
 	namespace Network
@@ -26,7 +27,7 @@ namespace Helper
 				return false;
 		}
 
-		HELPER_API bool __stdcall post(HostType enHT, string sUrl, Request_Data &inData, FUNCNETWORK func)
+		HELPER_API bool __stdcall post2(HostType enHT, string sUrl, Request_Data &inData, FUNCNETWORK func)
 		{
 			Http http;
 			if (http.post(enHT, sUrl, inData))
@@ -50,7 +51,7 @@ namespace Helper
 				return false;
 		}
 
-		HELPER_API bool __stdcall get(HostType enHT, string sUrl, Request_Data &inData, FUNCNETWORK func)
+		HELPER_API bool __stdcall get2(HostType enHT, string sUrl, Request_Data &inData, FUNCNETWORK func)
 		{
 			Http http;
 			if (http.get(enHT, sUrl, inData))
