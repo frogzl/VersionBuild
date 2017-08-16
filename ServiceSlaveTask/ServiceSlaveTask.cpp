@@ -5,6 +5,7 @@
 #include "RouteCallBackSet.h"
 #include "PluginCenter.h"
 #include "TaskServer.h"
+#include "Helper.h"
 ServiceInterface* produce_one()
 {
 	static bool bFirst = true;
@@ -12,6 +13,8 @@ ServiceInterface* produce_one()
 	{
 		bFirst = false;
 		PluginCenter::load_task_plugins();
+		Helper::init_environment();
+
 		// Æô¶¯Task·þÎñ
 		static TaskServer ts;
 		ts.start();

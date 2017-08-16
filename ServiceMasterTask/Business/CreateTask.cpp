@@ -80,10 +80,64 @@ void CreateTask::process_task()
 				delete pDBPluginTask;
 				return;
 			}
+			Json::Value jValue;
+			jValue["task_instance_id"] = tiData.guid;
+			m_pD->set_respond_back(HTTP_OK, "0", "successed", "", jValue);
+			delete pDBPlugin;
+			delete pDBPluginTask;
 		}
 		else
 		{
 			// 位置相关业务
+			conditions.clear();
+			conditions.insert(pair<string, string>("guid", sPluginDeployID));
+			DB::Plugin_DeployData *pDBPluginDeploy = DB::Plugin_Deploy().query()->where(conditions)->first();
+			if (!pDBPluginDeploy)
+			{
+				sprintf(szBuf, "query plugin deploy failed.", _sUniqueID.c_str(), _sVersion.c_str(), _sTaskPath.c_str());
+				m_pD->set_respond_back(499, "1", szBuf, "");
+				delete pDBPlugin;
+				delete pDBPluginTask;
+				return;
+			}
+
+			DB::Task_InstanceData tiData;
+			tiData.guid = getGUID();
+			tiData.plugin_task_id = pDBPluginTask->guid;
+			tiData.plugin_deploy_id = sPluginDeployID;
+			tiData.status = 0x0001;
+			tiData.status_description = "待处理";
+			tiData.data = Json::FastWriter().write(m_pD->request_data().jData["data"]);
+			tiData.processed_data = "";
+			tiData.finish_url = m_pD->request_data().jData["finish_url"].asString();
+			if (!DB::Task_Instance().create(tiData)->exec())
+			{
+				sprintf(szBuf, "create task instance failed %s[%s] %s.", _sUniqueID.c_str(), _sVersion.c_str(), _sTaskPath.c_str());
+				m_pD->set_respond_back(499, "1", szBuf, "");
+				delete pDBPlugin;
+				delete pDBPluginTask;
+				delete pDBPluginDeploy;
+				return;
+			}
+
+			string sErrorMsg = "";
+			Network::Request_Data rd;
+			rd.sData = Json::FastWriter().write(m_pD->request_data().jData);
+			sprintf(szBuf, "/task/{%s}/process?nh=%s&sh=%s", tiData.guid.c_str(), pDBPluginDeploy->proxy_host_id.c_str(), pDBPluginDeploy->server_host_id.c_str());
+			if (!Network::post(Network::enReverseProxy, "cc0e7465-9c6d-4802-8786-2bafd9ef9ff4", "1", szBuf, rd, process_task_callback, &sErrorMsg))
+			{
+				m_pD->set_respond_back(499, "1", sErrorMsg, "");
+				delete pDBPlugin;
+				delete pDBPluginTask;
+				delete pDBPluginDeploy;
+				return;
+			}
+			Json::Value jValue;
+			jValue["task_instance_id"] = tiData.guid;
+			m_pD->set_respond_back(HTTP_OK, "0", "successed", "", jValue);
+			delete pDBPlugin;
+			delete pDBPluginTask;
+			delete pDBPluginDeploy;
 		}
 	}
 }
@@ -118,6 +172,7 @@ bool CreateTask::check_input_data()
 bool CreateTask::process_task_callback(Network::Respond_Data *pData, void *pArg)
 {
 	string &sErrorMsg = *(string*)pArg;
-	sErrorMsg = "abc";
+	if (pData->nHttpStatus != 200)
+		return false;
 	return true;
 }

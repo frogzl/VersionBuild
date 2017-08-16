@@ -20,7 +20,6 @@
 #include <iostream>
 #include <json/json.h>
 #include <direct.h>
-#include <git2.h>
 
 #ifdef WIN32
 #include <ws2tcpip.h>

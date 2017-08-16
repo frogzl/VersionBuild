@@ -54,10 +54,10 @@ void SystemConfig::initConfig()
 		if (!root["database-connect"].isNull())
 		{
 			Json::Value obj = root["database-connect"];
-			m_sHost = obj["host"].asString();
-			m_sUser = obj["user"].asString();
-			m_sPassword = obj["password"].asString();
-			m_sName = obj["name"].asString();
+			m_sDBHost = obj["host"].asString();
+			m_sDBUser = obj["user"].asString();
+			m_sDBPassword = obj["password"].asString();
+			m_sDBName = obj["name"].asString();
 			m_nDBPort = obj["port"].asInt();
 		}
 	}
