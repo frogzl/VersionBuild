@@ -15,49 +15,49 @@ namespace Helper
 
 	namespace Network
 	{
-		HELPER_API bool __stdcall post(HostType enHT, string sPluginID, string sPluginVersion, string sPath, Request_Data &inData, FUNCNETWORK func)
+		HELPER_API bool __stdcall post(HostType enHT, string sPluginID, string sPluginVersion, string sPath, Request_Data &inData, FUNCNETWORK func, void*pArg)
 		{
 			Http http;
 			if (http.post(enHT, sPluginID, sPluginVersion, sPath, inData))
 			{
 				Respond_Data &rd = http.Respond();
-				return func(&rd);
+				return func(&rd, pArg);
 			}
 			else
 				return false;
 		}
 
-		HELPER_API bool __stdcall post2(HostType enHT, string sUrl, Request_Data &inData, FUNCNETWORK func)
+		HELPER_API bool __stdcall post2(HostType enHT, string sUrl, Request_Data &inData, FUNCNETWORK func, void*pArg)
 		{
 			Http http;
 			if (http.post(enHT, sUrl, inData))
 			{
 				Respond_Data &rd = http.Respond();
-				return func(&rd);
+				return func(&rd, pArg);
 			}
 			else
 				return false;
 		}
 
-		HELPER_API bool __stdcall get(HostType enHT, string sPluginID, string sPluginVersion, string sPath, Request_Data &inData, FUNCNETWORK func)
+		HELPER_API bool __stdcall get(HostType enHT, string sPluginID, string sPluginVersion, string sPath, Request_Data &inData, FUNCNETWORK func, void*pArg)
 		{
 			Http http;
 			if (http.get(enHT, sPluginID, sPluginVersion, sPath, inData))
 			{
 				Respond_Data &rd = http.Respond();
-				return func(&rd);
+				return func(&rd, pArg);
 			}
 			else
 				return false;
 		}
 
-		HELPER_API bool __stdcall get2(HostType enHT, string sUrl, Request_Data &inData, FUNCNETWORK func)
+		HELPER_API bool __stdcall get2(HostType enHT, string sUrl, Request_Data &inData, FUNCNETWORK func, void*pArg)
 		{
 			Http http;
 			if (http.get(enHT, sUrl, inData))
 			{
 				Respond_Data &rd = http.Respond();
-				return func(&rd);
+				return func(&rd, pArg);
 			}
 			else
 				return false;

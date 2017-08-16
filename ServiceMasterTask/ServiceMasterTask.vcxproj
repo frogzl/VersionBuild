@@ -76,8 +76,8 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)bin\$(Configuration)\$(Platform)\MicroServicePlugins\ffeafe48-3c6e-49d8-a85c-783167eada00\1\</OutDir>
     <IntDir>$(SolutionDir)cache\$(ProjectName)\$(Configuration)\</IntDir>
-    <IncludePath>$(SolutionDir)MicroServicePlugin\include;..\..\jsoncpp-src-0.5.0\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)bin\$(Configuration)\$(Platform)\MicroServicePlugins\;..\..\jsoncpp-src-0.5.0\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)MicroServicePlugin\include;..\..\jsoncpp-src-0.5.0\include;$(SolutionDir)Helper\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)bin\$(Configuration)\$(Platform)\MicroServicePlugins\;..\..\jsoncpp-src-0.5.0\lib\x64;$(SolutionDir)bin\$(Configuration)\$(Platform)\;$(LibraryPath)</LibraryPath>
     <TargetName>plugin_$(ProjectName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -113,7 +113,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>MicroServicePlugin.lib;lib_jsond.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>MicroServicePlugin.lib;lib_jsond.lib;Helper.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>ServiceMasterTask.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
@@ -164,21 +164,15 @@
     <ClInclude Include="Business\DeleteTask.h" />
     <ClInclude Include="Business\FinishTask.h" />
     <ClInclude Include="Common.h" />
-    <ClInclude Include="Database\BuildResult.h" />
-    <ClInclude Include="Database\BuildRule.h" />
-    <ClInclude Include="Database\BuildRule_Depend.h" />
-    <ClInclude Include="Database\BuildRule_Deploy.h" />
+    <ClInclude Include="Database\Plugin.h" />
+    <ClInclude Include="Database\Plugin_Deploy.h" />
+    <ClInclude Include="Database\Plugin_Task.h" />
+    <ClInclude Include="Database\Task_Instance.h" />
     <ClInclude Include="Database\Database.h" />
-    <ClInclude Include="Database\Resource.h" />
-    <ClInclude Include="Database\Resource_CompressionPackage.h" />
-    <ClInclude Include="Database\Resource_Document.h" />
-    <ClInclude Include="Database\Resource_Host.h" />
-    <ClInclude Include="Database\Resource_SourceCode.h" />
-    <ClInclude Include="Database\SourceCode_Deploy.h" />
-    <ClInclude Include="Database\Storage.h" />
     <ClInclude Include="Exception\HttpRequestException.h" />
     <ClInclude Include="RouteCallBackSet.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="SystemConfig.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
@@ -187,18 +181,11 @@
     <ClCompile Include="Business\DeleteTask.cpp" />
     <ClCompile Include="Business\FinishTask.cpp" />
     <ClCompile Include="Common.cpp" />
-    <ClCompile Include="Database\BuildResult.cpp" />
-    <ClCompile Include="Database\BuildRule.cpp" />
-    <ClCompile Include="Database\BuildRule_Depend.cpp" />
-    <ClCompile Include="Database\BuildRule_Deploy.cpp" />
+    <ClCompile Include="Database\Plugin.cpp" />
+    <ClCompile Include="Database\Plugin_Deploy.cpp" />
+    <ClCompile Include="Database\Plugin_Task.cpp" />
+    <ClCompile Include="Database\Task_Instance.cpp" />
     <ClCompile Include="Database\Database.cpp" />
-    <ClCompile Include="Database\Resource.cpp" />
-    <ClCompile Include="Database\Resource_CompressionPackage.cpp" />
-    <ClCompile Include="Database\Resource_Document.cpp" />
-    <ClCompile Include="Database\Resource_Host.cpp" />
-    <ClCompile Include="Database\Resource_SourceCode.cpp" />
-    <ClCompile Include="Database\SourceCode_Deploy.cpp" />
-    <ClCompile Include="Database\Storage.cpp" />
     <ClCompile Include="dllmain.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -217,6 +204,7 @@
     <ClCompile Include="RouteCallBackSet.cpp" />
     <ClCompile Include="ServiceMasterTask.cpp" />
     <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="SystemConfig.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ServiceMasterTask.def" />

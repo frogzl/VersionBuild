@@ -15,10 +15,10 @@ namespace DB {
 	{
 		con = mysqlpp::Connection(true);
 		con.set_option(new mysqlpp::SetCharsetNameOption("UTF8"));
-		return con.connect(SystemConfig::instance()->m_sName.c_str(),
-			SystemConfig::instance()->m_sHost.c_str(),
-			SystemConfig::instance()->m_sUser.c_str(),
-			SystemConfig::instance()->m_sPassword.c_str());
+		return con.connect(SystemConfig::instance()->m_sDBName.c_str(),
+			SystemConfig::instance()->m_sDBHost.c_str(),
+			SystemConfig::instance()->m_sDBUser.c_str(),
+			SystemConfig::instance()->m_sDBPassword.c_str());
 	}
 
 	void Database::close_database()

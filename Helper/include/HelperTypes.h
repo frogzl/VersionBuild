@@ -4,6 +4,7 @@
 #include <string>
 using namespace std;
 
+
 namespace Helper
 {
 	namespace Network
@@ -27,5 +28,6 @@ namespace Helper
 			string sData;				// respond data
 			map<string, string> mHeaders;	// respond custom headers
 		}Respond_Data;
+		typedef bool(*FUNCNETWORK)(Helper::Network::Respond_Data *pData, void*);
 	}
 }

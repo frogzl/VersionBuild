@@ -42,40 +42,7 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Database\BuildResult.h">
-      <Filter>头文件\Database</Filter>
-    </ClInclude>
-    <ClInclude Include="Database\BuildRule.h">
-      <Filter>头文件\Database</Filter>
-    </ClInclude>
-    <ClInclude Include="Database\BuildRule_Depend.h">
-      <Filter>头文件\Database</Filter>
-    </ClInclude>
-    <ClInclude Include="Database\BuildRule_Deploy.h">
-      <Filter>头文件\Database</Filter>
-    </ClInclude>
     <ClInclude Include="Database\Database.h">
-      <Filter>头文件\Database</Filter>
-    </ClInclude>
-    <ClInclude Include="Database\Resource.h">
-      <Filter>头文件\Database</Filter>
-    </ClInclude>
-    <ClInclude Include="Database\Resource_CompressionPackage.h">
-      <Filter>头文件\Database</Filter>
-    </ClInclude>
-    <ClInclude Include="Database\Resource_Document.h">
-      <Filter>头文件\Database</Filter>
-    </ClInclude>
-    <ClInclude Include="Database\Resource_Host.h">
-      <Filter>头文件\Database</Filter>
-    </ClInclude>
-    <ClInclude Include="Database\Resource_SourceCode.h">
-      <Filter>头文件\Database</Filter>
-    </ClInclude>
-    <ClInclude Include="Database\SourceCode_Deploy.h">
-      <Filter>头文件\Database</Filter>
-    </ClInclude>
-    <ClInclude Include="Database\Storage.h">
       <Filter>头文件\Database</Filter>
     </ClInclude>
     <ClInclude Include="Exception\HttpRequestException.h">
@@ -99,6 +66,21 @@
     <ClInclude Include="Business\FinishTask.h">
       <Filter>头文件\Business</Filter>
     </ClInclude>
+    <ClInclude Include="SystemConfig.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\Plugin.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\Plugin_Task.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\Plugin_Deploy.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\Task_Instance.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -110,40 +92,7 @@
     <ClCompile Include="dllmain.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Database\BuildResult.cpp">
-      <Filter>源文件\Database</Filter>
-    </ClCompile>
-    <ClCompile Include="Database\BuildRule.cpp">
-      <Filter>源文件\Database</Filter>
-    </ClCompile>
-    <ClCompile Include="Database\BuildRule_Depend.cpp">
-      <Filter>源文件\Database</Filter>
-    </ClCompile>
-    <ClCompile Include="Database\BuildRule_Deploy.cpp">
-      <Filter>源文件\Database</Filter>
-    </ClCompile>
     <ClCompile Include="Database\Database.cpp">
-      <Filter>源文件\Database</Filter>
-    </ClCompile>
-    <ClCompile Include="Database\Resource.cpp">
-      <Filter>源文件\Database</Filter>
-    </ClCompile>
-    <ClCompile Include="Database\Resource_CompressionPackage.cpp">
-      <Filter>源文件\Database</Filter>
-    </ClCompile>
-    <ClCompile Include="Database\Resource_Document.cpp">
-      <Filter>源文件\Database</Filter>
-    </ClCompile>
-    <ClCompile Include="Database\Resource_Host.cpp">
-      <Filter>源文件\Database</Filter>
-    </ClCompile>
-    <ClCompile Include="Database\Resource_SourceCode.cpp">
-      <Filter>源文件\Database</Filter>
-    </ClCompile>
-    <ClCompile Include="Database\SourceCode_Deploy.cpp">
-      <Filter>源文件\Database</Filter>
-    </ClCompile>
-    <ClCompile Include="Database\Storage.cpp">
       <Filter>源文件\Database</Filter>
     </ClCompile>
     <ClCompile Include="Exception\HttpRequestException.cpp">
@@ -166,6 +115,21 @@
     </ClCompile>
     <ClCompile Include="Business\FinishTask.cpp">
       <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemConfig.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\Plugin.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\Plugin_Deploy.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\Plugin_Task.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\Task_Instance.cpp">
+      <Filter>源文件\Database</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
