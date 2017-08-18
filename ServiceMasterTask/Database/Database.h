@@ -5,6 +5,8 @@
 #include <ssqls.h>
 #include <stack>
 #include <string>
+#include <map>
+#include <vector>
 using namespace std;
 namespace DB {
 #define dd(d) #d

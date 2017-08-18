@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\Business">
+      <UniqueIdentifier>{c123d32f-5132-4f36-bd59-5fec3d8b26b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Database">
+      <UniqueIdentifier>{3cb67ec4-bfaf-4ec8-a138-ee80d489fa9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Exception">
+      <UniqueIdentifier>{7faa7779-c446-4f77-98f2-b81f2f2a4ec8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Business">
+      <UniqueIdentifier>{20c48547-6cc4-4b36-8993-23caacbed9c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Database">
+      <UniqueIdentifier>{d45c6597-b150-48d3-a2b2-c48ac7f71c5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Exception">
+      <UniqueIdentifier>{0717fc71-f492-49a2-99ac-be1a527ef260}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RouteCallBackSet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception\HttpRequestException.h">
+      <Filter>头文件\Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\CreateHost.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\DeleteHost.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\ModifyHost.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\QueryExecutableRole.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\CreateExecutableRoleDeploymentInformation.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\DeleteExecutableRoleDeploymentInformation.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\ModifyExecutableRoleDeploymentInformation.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\QueryExecutableRoleDeploymentInformation.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\QueryHost.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\Database.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\Executable_Role.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\Host.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\Executable_Role_Deploy.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceHost.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RouteCallBackSet.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Exception\HttpRequestException.cpp">
+      <Filter>源文件\Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\CreateHost.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\DeleteHost.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\ModifyHost.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\QueryExecutableRole.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\CreateExecutableRoleDeploymentInformation.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\DeleteExecutableRoleDeploymentInformation.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\ModifyExecutableRoleDeploymentInformation.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\QueryExecutableRoleDeploymentInformation.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Common.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\QueryHost.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\Database.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\Executable_Role.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\Host.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\Executable_Role_Deploy.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ServiceHost.def">
+      <Filter>源文件</Filter>
+    </None>
+  </ItemGroup>
+</Project>

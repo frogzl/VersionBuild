@@ -42,9 +42,6 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Database\Database.h">
-      <Filter>头文件\Database</Filter>
-    </ClInclude>
     <ClInclude Include="Exception\HttpRequestException.h">
       <Filter>头文件\Exception</Filter>
     </ClInclude>
@@ -69,13 +66,16 @@
     <ClInclude Include="SystemConfig.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Database\Database.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
     <ClInclude Include="Database\Plugin.h">
       <Filter>头文件\Database</Filter>
     </ClInclude>
-    <ClInclude Include="Database\Plugin_Task.h">
+    <ClInclude Include="Database\Plugin_Deploy.h">
       <Filter>头文件\Database</Filter>
     </ClInclude>
-    <ClInclude Include="Database\Plugin_Deploy.h">
+    <ClInclude Include="Database\Plugin_Task.h">
       <Filter>头文件\Database</Filter>
     </ClInclude>
     <ClInclude Include="Database\Task_Instance.h">
@@ -91,9 +91,6 @@
     </ClCompile>
     <ClCompile Include="dllmain.cpp">
       <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Database\Database.cpp">
-      <Filter>源文件\Database</Filter>
     </ClCompile>
     <ClCompile Include="Exception\HttpRequestException.cpp">
       <Filter>源文件\Exception</Filter>
@@ -118,6 +115,9 @@
     </ClCompile>
     <ClCompile Include="SystemConfig.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\Database.cpp">
+      <Filter>源文件\Database</Filter>
     </ClCompile>
     <ClCompile Include="Database\Plugin.cpp">
       <Filter>源文件\Database</Filter>

@@ -165,11 +165,11 @@
     <ClInclude Include="Business\DeleteTask.h" />
     <ClInclude Include="Business\FinishTask.h" />
     <ClInclude Include="Common.h" />
+    <ClInclude Include="Database\Database.h" />
     <ClInclude Include="Database\Plugin.h" />
     <ClInclude Include="Database\Plugin_Deploy.h" />
     <ClInclude Include="Database\Plugin_Task.h" />
     <ClInclude Include="Database\Task_Instance.h" />
-    <ClInclude Include="Database\Database.h" />
     <ClInclude Include="Exception\HttpRequestException.h" />
     <ClInclude Include="RouteCallBackSet.h" />
     <ClInclude Include="stdafx.h" />
@@ -182,11 +182,11 @@
     <ClCompile Include="Business\DeleteTask.cpp" />
     <ClCompile Include="Business\FinishTask.cpp" />
     <ClCompile Include="Common.cpp" />
+    <ClCompile Include="Database\Database.cpp" />
     <ClCompile Include="Database\Plugin.cpp" />
     <ClCompile Include="Database\Plugin_Deploy.cpp" />
     <ClCompile Include="Database\Plugin_Task.cpp" />
     <ClCompile Include="Database\Task_Instance.cpp" />
-    <ClCompile Include="Database\Database.cpp" />
     <ClCompile Include="dllmain.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
