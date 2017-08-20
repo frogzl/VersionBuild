@@ -12,7 +12,7 @@ private:
 private:
 	ServiceData *m_pD;
 
-	string _sExecutableRoleID;
-	string _sHostID;
+	std::string _sExecutableRoleID;
+	std::string _sHostID;
 	int _nPort;
 };

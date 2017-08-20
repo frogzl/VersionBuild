@@ -80,6 +80,15 @@ namespace Helper
 			else
 				return false;
 		}
+
+		HELPER_API bool __stdcall download_block(string sPluginID, string sPluginVersion, string sPath, int nStart, int nCount, char *szBuf)
+		{
+			Http http;
+			if (http.download_block(sPluginID, sPluginVersion, sPath, , nStart, nCount, szBuf))
+				return true;
+			else
+				return false;
+		}
 	}
 
 }

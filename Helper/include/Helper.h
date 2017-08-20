@@ -21,6 +21,7 @@ namespace Helper
 		HELPER_API bool __stdcall get2(HostType enHT, string sUrl, Request_Data &inData, FUNCNETWORK, void*);
 		HELPER_API bool __stdcall upload(string sPluginID, string sPluginVersion, string sPath, string sLocalPath);
 		HELPER_API bool __stdcall download(string sPluginID, string sPluginVersion, string sPath, string sLocalPath);
+		HELPER_API bool __stdcall download_block(string sPluginID, string sPluginVersion, string sPath, int nStart, int nCount, char *szBuf);
 	}
 
 }

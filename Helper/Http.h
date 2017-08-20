@@ -30,12 +30,14 @@ namespace Helper
 			bool get(HostType enHT, string sUrl, Request_Data &inData);
 			bool upload(string sPluginID, string sPluginVersion, string sPath, string sLocalPath);
 			bool download(string sPluginID, string sPluginVersion, string sPath, string sLocalPath);
+			bool download_block(string sPluginID, string sPluginVersion, string sPath, int nStart, int nCount, char *szBuf);
 			Respond_Data& Respond() { return *_rd; }
 
 		private:
 			static void http_request_done(struct evhttp_request *req, void *arg);
 			static bool http_analytical_upload_response(Respond_Data *_rd, void *arg);
 			static bool http_analytical_download_response(Respond_Data *_rd, void *arg);
+			static bool http_analytical_download_response2(Respond_Data *_rd, void *arg);
 
 			bool http_begin(HostType enHT);
 			bool http_append_headers(map<string, string> &mHeaders);

@@ -10,7 +10,7 @@ ServiceInterface* produce_one()
 	{
 		bFirst = false;
 		ServiceInterface* pService = create_plugin_template();
-		pService->register_service_name("MasterTask");
+		pService->register_service_name("Host");
 		pService->register_service_unique_id("9f9c1098-a202-4d32-ab82-a960631db67c");
 		pService->register_service_version("1");
 

@@ -1,0 +1,104 @@
+﻿  stdafx.cpp
+  SystemConfig.cpp
+  ServiceHost.cpp
+  RouteCallBackSet.cpp
+  HttpRequestException.cpp
+  Executable_Role_Deploy.cpp
+  Host.cpp
+  Executable_Role.cpp
+  Database.cpp
+  Common.cpp
+Common.cpp(83): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+Common.cpp(83): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+Common.cpp(301): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+  QueryHost.cpp
+  QueryExecutableRoleDeploymentInformation.cpp
+  QueryExecutableRole.cpp
+  ModifyHost.cpp
+  ModifyExecutableRoleDeploymentInformation.cpp
+  DeleteHost.cpp
+  DeleteExecutableRoleDeploymentInformation.cpp
+  CreateHost.cpp
+  CreateExecutableRoleDeploymentInformation.cpp
+  Generating Code...
+  dllmain.cpp
+LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/FORCE”规范)
+QueryExecutableRoleDeploymentInformation.obj : warning LNK4006: "public: static char const * * DB::Executable_Role_DeployData::names" (?names@Executable_Role_DeployData@DB@@2PAPEBDA) 已在 CreateExecutableRoleDeploymentInformation.obj 中定义；已忽略第二个定义
+QueryExecutableRoleDeploymentInformation.obj : warning LNK4006: "private: static char const * const DB::Executable_Role_DeployData::table_" (?table_@Executable_Role_DeployData@DB@@0PEBDEB) 已在 CreateExecutableRoleDeploymentInformation.obj 中定义；已忽略第二个定义
+QueryHost.obj : warning LNK4006: "public: static char const * * DB::HostData::names" (?names@HostData@DB@@2PAPEBDA) 已在 CreateHost.obj 中定义；已忽略第二个定义
+QueryHost.obj : warning LNK4006: "private: static char const * const DB::HostData::table_" (?table_@HostData@DB@@0PEBDEB) 已在 CreateHost.obj 中定义；已忽略第二个定义
+Executable_Role.obj : warning LNK4006: "public: static char const * * DB::Executable_RoleData::names" (?names@Executable_RoleData@DB@@2PAPEBDA) 已在 QueryExecutableRole.obj 中定义；已忽略第二个定义
+Executable_Role.obj : warning LNK4006: "private: static char const * const DB::Executable_RoleData::table_" (?table_@Executable_RoleData@DB@@0PEBDEB) 已在 QueryExecutableRole.obj 中定义；已忽略第二个定义
+Host.obj : warning LNK4006: "public: static char const * * DB::HostData::names" (?names@HostData@DB@@2PAPEBDA) 已在 CreateHost.obj 中定义；已忽略第二个定义
+Host.obj : warning LNK4006: "private: static char const * const DB::HostData::table_" (?table_@HostData@DB@@0PEBDEB) 已在 CreateHost.obj 中定义；已忽略第二个定义
+Executable_Role_Deploy.obj : warning LNK4006: "public: static char const * * DB::Executable_Role_DeployData::names" (?names@Executable_Role_DeployData@DB@@2PAPEBDA) 已在 CreateExecutableRoleDeploymentInformation.obj 中定义；已忽略第二个定义
+Executable_Role_Deploy.obj : warning LNK4006: "private: static char const * const DB::Executable_Role_DeployData::table_" (?table_@Executable_Role_DeployData@DB@@0PEBDEB) 已在 CreateExecutableRoleDeploymentInformation.obj 中定义；已忽略第二个定义
+  libIconv.lib(iconv.obj) : 找到 MSIL .netmodule 或使用 /GL 编译的模块；正在使用 /LTCG 重新启动链接；将 /LTCG 添加到链接命令行以改进链接器性能
+LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/LTCG”规范)
+QueryExecutableRoleDeploymentInformation.obj : warning LNK4006: "public: static char const * * DB::Executable_Role_DeployData::names" (?names@Executable_Role_DeployData@DB@@2PAPEBDA) 已在 CreateExecutableRoleDeploymentInformation.obj 中定义；已忽略第二个定义
+QueryExecutableRoleDeploymentInformation.obj : warning LNK4006: "private: static char const * const DB::Executable_Role_DeployData::table_" (?table_@Executable_Role_DeployData@DB@@0PEBDEB) 已在 CreateExecutableRoleDeploymentInformation.obj 中定义；已忽略第二个定义
+QueryHost.obj : warning LNK4006: "public: static char const * * DB::HostData::names" (?names@HostData@DB@@2PAPEBDA) 已在 CreateHost.obj 中定义；已忽略第二个定义
+QueryHost.obj : warning LNK4006: "private: static char const * const DB::HostData::table_" (?table_@HostData@DB@@0PEBDEB) 已在 CreateHost.obj 中定义；已忽略第二个定义
+Executable_Role.obj : warning LNK4006: "public: static char const * * DB::Executable_RoleData::names" (?names@Executable_RoleData@DB@@2PAPEBDA) 已在 QueryExecutableRole.obj 中定义；已忽略第二个定义
+Executable_Role.obj : warning LNK4006: "private: static char const * const DB::Executable_RoleData::table_" (?table_@Executable_RoleData@DB@@0PEBDEB) 已在 QueryExecutableRole.obj 中定义；已忽略第二个定义
+Host.obj : warning LNK4006: "public: static char const * * DB::HostData::names" (?names@HostData@DB@@2PAPEBDA) 已在 CreateHost.obj 中定义；已忽略第二个定义
+Host.obj : warning LNK4006: "private: static char const * const DB::HostData::table_" (?table_@HostData@DB@@0PEBDEB) 已在 CreateHost.obj 中定义；已忽略第二个定义
+Executable_Role_Deploy.obj : warning LNK4006: "public: static char const * * DB::Executable_Role_DeployData::names" (?names@Executable_Role_DeployData@DB@@2PAPEBDA) 已在 CreateExecutableRoleDeploymentInformation.obj 中定义；已忽略第二个定义
+Executable_Role_Deploy.obj : warning LNK4006: "private: static char const * const DB::Executable_Role_DeployData::table_" (?table_@Executable_Role_DeployData@DB@@0PEBDEB) 已在 CreateExecutableRoleDeploymentInformation.obj 中定义；已忽略第二个定义
+     正在创建库 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\9f9c1098-a202-4d32-ab82-a960631db67c\1\plugin_ServiceHost.lib 和对象 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\9f9c1098-a202-4d32-ab82-a960631db67c\1\plugin_ServiceHost.exp
+LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\9f9c1098-a202-4d32-ab82-a960631db67c\1\plugin_ServiceHost.dll : warning LNK4088: 因 /FORCE 选项生成了映像；映像可能不能运行
+  正在生成代码
+  已完成代码的生成
+QueryExecutableRoleDeploymentInformation.obj : warning LNK4006: "public: static char const * * DB::Executable_Role_DeployData::names" (?names@Executable_Role_DeployData@DB@@2PAPEBDA) 已在 CreateExecutableRoleDeploymentInformation.obj 中定义；已忽略第二个定义
+QueryExecutableRoleDeploymentInformation.obj : warning LNK4006: "private: static char const * const DB::Executable_Role_DeployData::table_" (?table_@Executable_Role_DeployData@DB@@0PEBDEB) 已在 CreateExecutableRoleDeploymentInformation.obj 中定义；已忽略第二个定义
+QueryHost.obj : warning LNK4006: "public: static char const * * DB::HostData::names" (?names@HostData@DB@@2PAPEBDA) 已在 CreateHost.obj 中定义；已忽略第二个定义
+QueryHost.obj : warning LNK4006: "private: static char const * const DB::HostData::table_" (?table_@HostData@DB@@0PEBDEB) 已在 CreateHost.obj 中定义；已忽略第二个定义
+Executable_Role.obj : warning LNK4006: "public: static char const * * DB::Executable_RoleData::names" (?names@Executable_RoleData@DB@@2PAPEBDA) 已在 QueryExecutableRole.obj 中定义；已忽略第二个定义
+Executable_Role.obj : warning LNK4006: "private: static char const * const DB::Executable_RoleData::table_" (?table_@Executable_RoleData@DB@@0PEBDEB) 已在 QueryExecutableRole.obj 中定义；已忽略第二个定义
+Host.obj : warning LNK4006: "public: static char const * * DB::HostData::names" (?names@HostData@DB@@2PAPEBDA) 已在 CreateHost.obj 中定义；已忽略第二个定义
+Host.obj : warning LNK4006: "private: static char const * const DB::HostData::table_" (?table_@HostData@DB@@0PEBDEB) 已在 CreateHost.obj 中定义；已忽略第二个定义
+Executable_Role_Deploy.obj : warning LNK4006: "public: static char const * * DB::Executable_Role_DeployData::names" (?names@Executable_Role_DeployData@DB@@2PAPEBDA) 已在 CreateExecutableRoleDeploymentInformation.obj 中定义；已忽略第二个定义
+Executable_Role_Deploy.obj : warning LNK4006: "private: static char const * const DB::Executable_Role_DeployData::table_" (?table_@Executable_Role_DeployData@DB@@0PEBDEB) 已在 CreateExecutableRoleDeploymentInformation.obj 中定义；已忽略第二个定义
+E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\9f9c1098-a202-4d32-ab82-a960631db67c\1\plugin_ServiceHost.dll : warning LNK4088: 因 /FORCE 选项生成了映像；映像可能不能运行
+  ServiceHost.vcxproj -> E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\9f9c1098-a202-4d32-ab82-a960631db67c\1\plugin_ServiceHost.dll
+LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/FORCE”规范)
+QueryExecutableRoleDeploymentInformation.obj : warning LNK4006: "public: static char const * * DB::Executable_Role_DeployData::names" (?names@Executable_Role_DeployData@DB@@2PAPEBDA) 已在 CreateExecutableRoleDeploymentInformation.obj 中定义；已忽略第二个定义
+QueryExecutableRoleDeploymentInformation.obj : warning LNK4006: "private: static char const * const DB::Executable_Role_DeployData::table_" (?table_@Executable_Role_DeployData@DB@@0PEBDEB) 已在 CreateExecutableRoleDeploymentInformation.obj 中定义；已忽略第二个定义
+QueryHost.obj : warning LNK4006: "public: static char const * * DB::HostData::names" (?names@HostData@DB@@2PAPEBDA) 已在 CreateHost.obj 中定义；已忽略第二个定义
+QueryHost.obj : warning LNK4006: "private: static char const * const DB::HostData::table_" (?table_@HostData@DB@@0PEBDEB) 已在 CreateHost.obj 中定义；已忽略第二个定义
+Executable_Role.obj : warning LNK4006: "public: static char const * * DB::Executable_RoleData::names" (?names@Executable_RoleData@DB@@2PAPEBDA) 已在 QueryExecutableRole.obj 中定义；已忽略第二个定义
+Executable_Role.obj : warning LNK4006: "private: static char const * const DB::Executable_RoleData::table_" (?table_@Executable_RoleData@DB@@0PEBDEB) 已在 QueryExecutableRole.obj 中定义；已忽略第二个定义
+Host.obj : warning LNK4006: "public: static char const * * DB::HostData::names" (?names@HostData@DB@@2PAPEBDA) 已在 CreateHost.obj 中定义；已忽略第二个定义
+Host.obj : warning LNK4006: "private: static char const * const DB::HostData::table_" (?table_@HostData@DB@@0PEBDEB) 已在 CreateHost.obj 中定义；已忽略第二个定义
+Executable_Role_Deploy.obj : warning LNK4006: "public: static char const * * DB::Executable_Role_DeployData::names" (?names@Executable_Role_DeployData@DB@@2PAPEBDA) 已在 CreateExecutableRoleDeploymentInformation.obj 中定义；已忽略第二个定义
+Executable_Role_Deploy.obj : warning LNK4006: "private: static char const * const DB::Executable_Role_DeployData::table_" (?table_@Executable_Role_DeployData@DB@@0PEBDEB) 已在 CreateExecutableRoleDeploymentInformation.obj 中定义；已忽略第二个定义
+  libIconv.lib(iconv.obj) : 找到 MSIL .netmodule 或使用 /GL 编译的模块；正在使用 /LTCG 重新启动链接；将 /LTCG 添加到链接命令行以改进链接器性能
+LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/LTCG”规范)
+QueryExecutableRoleDeploymentInformation.obj : warning LNK4006: "public: static char const * * DB::Executable_Role_DeployData::names" (?names@Executable_Role_DeployData@DB@@2PAPEBDA) 已在 CreateExecutableRoleDeploymentInformation.obj 中定义；已忽略第二个定义
+QueryExecutableRoleDeploymentInformation.obj : warning LNK4006: "private: static char const * const DB::Executable_Role_DeployData::table_" (?table_@Executable_Role_DeployData@DB@@0PEBDEB) 已在 CreateExecutableRoleDeploymentInformation.obj 中定义；已忽略第二个定义
+QueryHost.obj : warning LNK4006: "public: static char const * * DB::HostData::names" (?names@HostData@DB@@2PAPEBDA) 已在 CreateHost.obj 中定义；已忽略第二个定义
+QueryHost.obj : warning LNK4006: "private: static char const * const DB::HostData::table_" (?table_@HostData@DB@@0PEBDEB) 已在 CreateHost.obj 中定义；已忽略第二个定义
+Executable_Role.obj : warning LNK4006: "public: static char const * * DB::Executable_RoleData::names" (?names@Executable_RoleData@DB@@2PAPEBDA) 已在 QueryExecutableRole.obj 中定义；已忽略第二个定义
+Executable_Role.obj : warning LNK4006: "private: static char const * const DB::Executable_RoleData::table_" (?table_@Executable_RoleData@DB@@0PEBDEB) 已在 QueryExecutableRole.obj 中定义；已忽略第二个定义
+Host.obj : warning LNK4006: "public: static char const * * DB::HostData::names" (?names@HostData@DB@@2PAPEBDA) 已在 CreateHost.obj 中定义；已忽略第二个定义
+Host.obj : warning LNK4006: "private: static char const * const DB::HostData::table_" (?table_@HostData@DB@@0PEBDEB) 已在 CreateHost.obj 中定义；已忽略第二个定义
+Executable_Role_Deploy.obj : warning LNK4006: "public: static char const * * DB::Executable_Role_DeployData::names" (?names@Executable_Role_DeployData@DB@@2PAPEBDA) 已在 CreateExecutableRoleDeploymentInformation.obj 中定义；已忽略第二个定义
+Executable_Role_Deploy.obj : warning LNK4006: "private: static char const * const DB::Executable_Role_DeployData::table_" (?table_@Executable_Role_DeployData@DB@@0PEBDEB) 已在 CreateExecutableRoleDeploymentInformation.obj 中定义；已忽略第二个定义
+     正在创建库 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\9f9c1098-a202-4d32-ab82-a960631db67c\1\plugin_ServiceHost.lib 和对象 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\9f9c1098-a202-4d32-ab82-a960631db67c\1\plugin_ServiceHost.exp
+LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\9f9c1098-a202-4d32-ab82-a960631db67c\1\plugin_ServiceHost.dll : warning LNK4088: 因 /FORCE 选项生成了映像；映像可能不能运行
+  正在生成代码
+  已完成代码的生成
+QueryExecutableRoleDeploymentInformation.obj : warning LNK4006: "public: static char const * * DB::Executable_Role_DeployData::names" (?names@Executable_Role_DeployData@DB@@2PAPEBDA) 已在 CreateExecutableRoleDeploymentInformation.obj 中定义；已忽略第二个定义
+QueryExecutableRoleDeploymentInformation.obj : warning LNK4006: "private: static char const * const DB::Executable_Role_DeployData::table_" (?table_@Executable_Role_DeployData@DB@@0PEBDEB) 已在 CreateExecutableRoleDeploymentInformation.obj 中定义；已忽略第二个定义
+QueryHost.obj : warning LNK4006: "public: static char const * * DB::HostData::names" (?names@HostData@DB@@2PAPEBDA) 已在 CreateHost.obj 中定义；已忽略第二个定义
+QueryHost.obj : warning LNK4006: "private: static char const * const DB::HostData::table_" (?table_@HostData@DB@@0PEBDEB) 已在 CreateHost.obj 中定义；已忽略第二个定义
+Executable_Role.obj : warning LNK4006: "public: static char const * * DB::Executable_RoleData::names" (?names@Executable_RoleData@DB@@2PAPEBDA) 已在 QueryExecutableRole.obj 中定义；已忽略第二个定义
+Executable_Role.obj : warning LNK4006: "private: static char const * const DB::Executable_RoleData::table_" (?table_@Executable_RoleData@DB@@0PEBDEB) 已在 QueryExecutableRole.obj 中定义；已忽略第二个定义
+Host.obj : warning LNK4006: "public: static char const * * DB::HostData::names" (?names@HostData@DB@@2PAPEBDA) 已在 CreateHost.obj 中定义；已忽略第二个定义
+Host.obj : warning LNK4006: "private: static char const * const DB::HostData::table_" (?table_@HostData@DB@@0PEBDEB) 已在 CreateHost.obj 中定义；已忽略第二个定义
+Executable_Role_Deploy.obj : warning LNK4006: "public: static char const * * DB::Executable_Role_DeployData::names" (?names@Executable_Role_DeployData@DB@@2PAPEBDA) 已在 CreateExecutableRoleDeploymentInformation.obj 中定义；已忽略第二个定义
+Executable_Role_Deploy.obj : warning LNK4006: "private: static char const * const DB::Executable_Role_DeployData::table_" (?table_@Executable_Role_DeployData@DB@@0PEBDEB) 已在 CreateExecutableRoleDeploymentInformation.obj 中定义；已忽略第二个定义
+E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\9f9c1098-a202-4d32-ab82-a960631db67c\1\plugin_ServiceHost.dll : warning LNK4088: 因 /FORCE 选项生成了映像；映像可能不能运行
+  ServiceHost.vcxproj -> E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\9f9c1098-a202-4d32-ab82-a960631db67c\1\plugin_ServiceHost.dll

@@ -9,6 +9,7 @@
         }
     },
     "reverse-proxy-server": {
+        "guid":"33340385-0bf4-4bab-a53e-9a8cb88ed12a",
         "port": 7001,
         "ip": "127.0.0.1"
     },
@@ -22,5 +23,10 @@
         "password": "root",
         "name": "version_build2",
         "port": 3306
+    }，
+    "6b59871e-274e-43ab-ab08-6cedcd60cdd9":{
+        "1":{
+            "partition":["d:","e:"]
+        }
     }
 }

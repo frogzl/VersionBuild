@@ -8,7 +8,5 @@ public:
 	~QueryHost();
 	void process_task();
 private:
-	bool check_input_data();
-private:
 	ServiceData *m_pD;
 };

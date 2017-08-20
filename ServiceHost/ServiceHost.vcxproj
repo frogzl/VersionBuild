@@ -73,6 +73,9 @@
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(SolutionDir)MicroServicePlugin\include;..\..\libevent-2.0.22-stable\WIN32-Code;..\..\libevent-2.0.22-stable\include;E:\MySQL++\3.2.3\include;C:\Program Files\MySQL\MySQL Server 5.6\include;E:\libIconv\libIconv\Iconv;..\..\jsoncpp-src-0.5.0\include;E:\libgit2-0.24.1\include;D:\openssl-1.0.1t\bin\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)bin\$(Configuration)\$(Platform)\MicroServicePlugins\;..\..\libevent-2.0.22-stable\x64;E:\MySQL++\3.2.3;C:\Program Files\MySQL\MySQL Server 5.6\lib;E:\libIconv\x64\Release;..\..\jsoncpp-src-0.5.0\lib\x64;E:\libgit2-0.24.1\lib\x64;D:\openssl-1.0.1t\bin\lib;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\$(Platform)\MicroServicePlugins\9f9c1098-a202-4d32-ab82-a960631db67c\1\</OutDir>
+    <IntDir>$(SolutionDir)cache\$(ProjectName)\$(Configuration)\</IntDir>
+    <TargetName>plugin_$(ProjectName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -99,7 +102,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;SERVICEHOST_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;SERVICEHOST_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
@@ -107,6 +110,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>ServiceHost.def</ModuleDefinitionFile>
       <AdditionalDependencies>MicroServicePlugin.lib;git2d.lib;ws2_32.lib;libevent.lib;libevent_extras.lib;libevent_core.lib;libmysql.lib;mysqlpp_d.lib;libIconv.lib;lib_jsond.lib;libeay32.lib;ssleay32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -166,6 +170,7 @@
     <ClInclude Include="Exception\HttpRequestException.h" />
     <ClInclude Include="RouteCallBackSet.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="SystemConfig.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
@@ -206,6 +211,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="SystemConfig.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ServiceHost.def" />

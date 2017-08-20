@@ -187,6 +187,55 @@ namespace Helper
 			return bRet;
 		}
 
+		bool Http::download_block(string sPluginID, string sPluginVersion, string sPath, int nStart, int nCount, char *szBuf)
+		{
+			Json::Value *pJData = new Json::Value();
+
+			long long llStart = 0;
+			long long llEnd = _llBlock;
+			long long llTotle = 0;
+			bool bRet = false;
+				if (http_begin(enReverseProxy))
+				{
+					// 设置range头
+					char szRange[255];
+					sprintf(szRange, "bytes %ld-%ld/%ld", llStart, llEnd, llTotle);
+					http_append_header("range", szRange);
+
+					// 发起请求
+					DownloadParam dlParam;
+					dlParam.sLocalPath = sLocalPath;
+					string sRoute = "/" + sPluginID + "/" + sPluginVersion + sPath;
+					if (!http_request_send(EVHTTP_REQ_GET,
+						sRoute,
+						NULL,
+						http_analytical_download_response2,
+						&dlParam))
+					{
+						http_end();
+						break;
+					}
+					if (llEnd == llTotle)
+					{
+						http_end();
+						bRet = true;
+						break;
+					}
+
+					llStart = dlParam.llEnd;
+					llEnd = llStart + _llBlock;
+					llTotle = dlParam.llTotle;
+
+					http_end();
+				}
+				else
+				{
+					break;
+				}
+			delete pJData;
+			return bRet;
+		}
+
 		void Http::http_request_done(struct evhttp_request *req, void *arg)
 		{
 			Http*pItem = (Http*)arg;
@@ -255,6 +304,31 @@ namespace Helper
 				if (reader.parse(rd->sData.c_str(), *pRJData))
 				{
 					Base64_Decode(sLocalPath.c_str(), "ab", (*pRJData)["data"].asString().c_str(), (*pRJData)["data"].asString().length());
+					delete pRJData;
+					return true;
+				}
+				else
+				{
+					delete pRJData;
+					return false;
+				}
+			}
+			else
+			{
+				return false;
+			}
+		}
+
+		bool Http::http_analytical_download_response2(Respond_Data *rd, void *arg)
+		{
+			char *szBuf = (char*)arg;
+			if (rd->nHttpStatus == 200)
+			{
+				Json::Value *pRJData = new Json::Value();
+				Json::Reader reader;
+				if (reader.parse(rd->sData.c_str(), *pRJData))
+				{
+					Base64_Decode(szBuf, (*pRJData)["data"].asString().c_str(), (*pRJData)["data"].asString().length());
 					delete pRJData;
 					return true;
 				}
