@@ -1,0 +1,36 @@
+﻿  ServiceVersionControll.cpp
+LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/FORCE”规范)
+Upload.obj : warning LNK4006: "public: static char const * * DB::StorageData::names" (?names@StorageData@DB@@2PAPEBDA) 已在 Download.obj 中定义；已忽略第二个定义
+Upload.obj : warning LNK4006: "private: static char const * const DB::StorageData::table_" (?table_@StorageData@DB@@0PEBDEB) 已在 Download.obj 中定义；已忽略第二个定义
+Upload.obj : warning LNK4006: "public: static char const * * DB::BlockData::names" (?names@BlockData@DB@@2PAPEBDA) 已在 Download.obj 中定义；已忽略第二个定义
+Upload.obj : warning LNK4006: "private: static char const * const DB::BlockData::table_" (?table_@BlockData@DB@@0PEBDEB) 已在 Download.obj 中定义；已忽略第二个定义
+Block.obj : warning LNK4006: "public: static char const * * DB::BlockData::names" (?names@BlockData@DB@@2PAPEBDA) 已在 Download.obj 中定义；已忽略第二个定义
+Block.obj : warning LNK4006: "private: static char const * const DB::BlockData::table_" (?table_@BlockData@DB@@0PEBDEB) 已在 Download.obj 中定义；已忽略第二个定义
+Storage.obj : warning LNK4006: "public: static char const * * DB::StorageData::names" (?names@StorageData@DB@@2PAPEBDA) 已在 Download.obj 中定义；已忽略第二个定义
+Storage.obj : warning LNK4006: "private: static char const * const DB::StorageData::table_" (?table_@StorageData@DB@@0PEBDEB) 已在 Download.obj 中定义；已忽略第二个定义
+  libIconv.lib(iconv.obj) : 找到 MSIL .netmodule 或使用 /GL 编译的模块；正在使用 /LTCG 重新启动链接；将 /LTCG 添加到链接命令行以改进链接器性能
+LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/LTCG”规范)
+Upload.obj : warning LNK4006: "public: static char const * * DB::StorageData::names" (?names@StorageData@DB@@2PAPEBDA) 已在 Download.obj 中定义；已忽略第二个定义
+Upload.obj : warning LNK4006: "private: static char const * const DB::StorageData::table_" (?table_@StorageData@DB@@0PEBDEB) 已在 Download.obj 中定义；已忽略第二个定义
+Upload.obj : warning LNK4006: "public: static char const * * DB::BlockData::names" (?names@BlockData@DB@@2PAPEBDA) 已在 Download.obj 中定义；已忽略第二个定义
+Upload.obj : warning LNK4006: "private: static char const * const DB::BlockData::table_" (?table_@BlockData@DB@@0PEBDEB) 已在 Download.obj 中定义；已忽略第二个定义
+Block.obj : warning LNK4006: "public: static char const * * DB::BlockData::names" (?names@BlockData@DB@@2PAPEBDA) 已在 Download.obj 中定义；已忽略第二个定义
+Block.obj : warning LNK4006: "private: static char const * const DB::BlockData::table_" (?table_@BlockData@DB@@0PEBDEB) 已在 Download.obj 中定义；已忽略第二个定义
+Storage.obj : warning LNK4006: "public: static char const * * DB::StorageData::names" (?names@StorageData@DB@@2PAPEBDA) 已在 Download.obj 中定义；已忽略第二个定义
+Storage.obj : warning LNK4006: "private: static char const * const DB::StorageData::table_" (?table_@StorageData@DB@@0PEBDEB) 已在 Download.obj 中定义；已忽略第二个定义
+     正在创建库 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\33ff9e34-a9a3-4d42-a84c-8ecea956354f\1\plugin_ServiceVersionControll.lib 和对象 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\33ff9e34-a9a3-4d42-a84c-8ecea956354f\1\plugin_ServiceVersionControll.exp
+LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\33ff9e34-a9a3-4d42-a84c-8ecea956354f\1\plugin_ServiceVersionControll.dll : warning LNK4088: 因 /FORCE 选项生成了映像；映像可能不能运行
+  正在生成代码
+  已完成代码的生成
+Upload.obj : warning LNK4006: "public: static char const * * DB::StorageData::names" (?names@StorageData@DB@@2PAPEBDA) 已在 Download.obj 中定义；已忽略第二个定义
+Upload.obj : warning LNK4006: "private: static char const * const DB::StorageData::table_" (?table_@StorageData@DB@@0PEBDEB) 已在 Download.obj 中定义；已忽略第二个定义
+Upload.obj : warning LNK4006: "public: static char const * * DB::BlockData::names" (?names@BlockData@DB@@2PAPEBDA) 已在 Download.obj 中定义；已忽略第二个定义
+Upload.obj : warning LNK4006: "private: static char const * const DB::BlockData::table_" (?table_@BlockData@DB@@0PEBDEB) 已在 Download.obj 中定义；已忽略第二个定义
+Block.obj : warning LNK4006: "public: static char const * * DB::BlockData::names" (?names@BlockData@DB@@2PAPEBDA) 已在 Download.obj 中定义；已忽略第二个定义
+Block.obj : warning LNK4006: "private: static char const * const DB::BlockData::table_" (?table_@BlockData@DB@@0PEBDEB) 已在 Download.obj 中定义；已忽略第二个定义
+Storage.obj : warning LNK4006: "public: static char const * * DB::StorageData::names" (?names@StorageData@DB@@2PAPEBDA) 已在 Download.obj 中定义；已忽略第二个定义
+Storage.obj : warning LNK4006: "private: static char const * const DB::StorageData::table_" (?table_@StorageData@DB@@0PEBDEB) 已在 Download.obj 中定义；已忽略第二个定义
+E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\33ff9e34-a9a3-4d42-a84c-8ecea956354f\1\plugin_ServiceVersionControll.dll : warning LNK4088: 因 /FORCE 选项生成了映像；映像可能不能运行
+  ServiceVersionControll.vcxproj -> E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\33ff9e34-a9a3-4d42-a84c-8ecea956354f\1\plugin_ServiceVersionControll.dll
+  ServiceVersionControll.vcxproj -> E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\33ff9e34-a9a3-4d42-a84c-8ecea956354f\1\plugin_ServiceVersionControll.dll

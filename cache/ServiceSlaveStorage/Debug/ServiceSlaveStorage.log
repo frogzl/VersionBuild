@@ -1,6 +1,4 @@
-﻿  DownloadBlock.cpp
-  dllmain.cpp
-LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/FORCE”规范)
+﻿LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/FORCE”规范)
   libIconv.lib(iconv.obj) : 找到 MSIL .netmodule 或使用 /GL 编译的模块；正在使用 /LTCG 重新启动链接；将 /LTCG 添加到链接命令行以改进链接器性能
 LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/LTCG”规范)
      正在创建库 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\6b59871e-274e-43ab-ab08-6cedcd60cdd9\1\plugin_ServiceSlaveStorage.lib 和对象 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\6b59871e-274e-43ab-ab08-6cedcd60cdd9\1\plugin_ServiceSlaveStorage.exp
@@ -8,11 +6,4 @@ LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请�
   正在生成代码
   已完成代码的生成
   ServiceSlaveStorage.vcxproj -> E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\6b59871e-274e-43ab-ab08-6cedcd60cdd9\1\plugin_ServiceSlaveStorage.dll
-LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/FORCE”规范)
-  libIconv.lib(iconv.obj) : 找到 MSIL .netmodule 或使用 /GL 编译的模块；正在使用 /LTCG 重新启动链接；将 /LTCG 添加到链接命令行以改进链接器性能
-LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/LTCG”规范)
-     正在创建库 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\6b59871e-274e-43ab-ab08-6cedcd60cdd9\1\plugin_ServiceSlaveStorage.lib 和对象 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\6b59871e-274e-43ab-ab08-6cedcd60cdd9\1\plugin_ServiceSlaveStorage.exp
-LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
-  正在生成代码
-  已完成代码的生成
   ServiceSlaveStorage.vcxproj -> E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\6b59871e-274e-43ab-ab08-6cedcd60cdd9\1\plugin_ServiceSlaveStorage.dll
