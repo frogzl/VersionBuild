@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include "include/Helper.h"
 #include "Http.h"
+#include "Common.h"
 #include "SystemConfig.h"
 namespace Helper
 {
@@ -81,11 +82,21 @@ namespace Helper
 				return false;
 		}
 
-		HELPER_API bool __stdcall download_block(string sPluginID, string sPluginVersion, string sPath, int nStart, int nCount, char *szBuf)
+		HELPER_API bool __stdcall download_block(string sPluginID, string sPluginVersion, string sPath, Request_Data &inData, char *szBuf)
 		{
 			Http http;
-			if (http.download_block(sPluginID, sPluginVersion, sPath, , nStart, nCount, szBuf))
-				return true;
+			if (http.download_block(sPluginID, sPluginVersion, sPath, inData))
+			{
+				Json::Value jData;
+				Json::Reader reader;
+				if (reader.parse(http.Respond().sData, jData))
+				{
+					Base64_Decode(szBuf, jData["data"].asString().c_str(), jData["data"].asString().length());
+					return true;
+				}
+				else
+					return false;
+			}
 			else
 				return false;
 		}

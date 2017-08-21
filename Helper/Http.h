@@ -30,7 +30,7 @@ namespace Helper
 			bool get(HostType enHT, string sUrl, Request_Data &inData);
 			bool upload(string sPluginID, string sPluginVersion, string sPath, string sLocalPath);
 			bool download(string sPluginID, string sPluginVersion, string sPath, string sLocalPath);
-			bool download_block(string sPluginID, string sPluginVersion, string sPath, int nStart, int nCount, char *szBuf);
+			bool download_block(string sPluginID, string sPluginVersion, string sPath, Request_Data &inData);
 			Respond_Data& Respond() { return *_rd; }
 
 		private:
@@ -43,9 +43,9 @@ namespace Helper
 			bool http_append_headers(map<string, string> &mHeaders);
 			bool http_append_header(string sName, string sValue);
 			bool http_append_data(string &sData);
-			bool http_request_send(evhttp_cmd_type type, 
-				string &sRoute, 
-				map<string, string> *pMConditions, 
+			bool http_request_send(evhttp_cmd_type type,
+				string &sRoute,
+				map<string, string> *pMConditions,
 				bool(*cb)(Respond_Data *, void *), void *arg);
 			bool http_end();
 		private:

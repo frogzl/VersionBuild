@@ -12,6 +12,7 @@ private:
 private:
 	ServiceData *m_pD;
 
-	std::string _sName;
-	std::string _sIP;
+	std::string _sPath;
+	long long _llStart;
+	long long _llEnd;
 };

@@ -187,52 +187,31 @@ namespace Helper
 			return bRet;
 		}
 
-		bool Http::download_block(string sPluginID, string sPluginVersion, string sPath, int nStart, int nCount, char *szBuf)
+		bool Http::download_block(string sPluginID, string sPluginVersion, string sPath, Request_Data &inData)
 		{
-			Json::Value *pJData = new Json::Value();
-
-			long long llStart = 0;
-			long long llEnd = _llBlock;
-			long long llTotle = 0;
 			bool bRet = false;
-				if (http_begin(enReverseProxy))
+			if (http_begin(enReverseProxy))
+			{
+				// 设置range头
+				map<string, string>::iterator itHeader = inData.mHeaders.begin();
+				while (itHeader != inData.mHeaders.end())
 				{
-					// 设置range头
-					char szRange[255];
-					sprintf(szRange, "bytes %ld-%ld/%ld", llStart, llEnd, llTotle);
-					http_append_header("range", szRange);
-
-					// 发起请求
-					DownloadParam dlParam;
-					dlParam.sLocalPath = sLocalPath;
-					string sRoute = "/" + sPluginID + "/" + sPluginVersion + sPath;
-					if (!http_request_send(EVHTTP_REQ_GET,
-						sRoute,
-						NULL,
-						http_analytical_download_response2,
-						&dlParam))
-					{
-						http_end();
-						break;
-					}
-					if (llEnd == llTotle)
-					{
-						http_end();
-						bRet = true;
-						break;
-					}
-
-					llStart = dlParam.llEnd;
-					llEnd = llStart + _llBlock;
-					llTotle = dlParam.llTotle;
-
-					http_end();
+					http_append_header(itHeader->first, itHeader->second);
+					itHeader++;
 				}
-				else
-				{
-					break;
-				}
-			delete pJData;
+
+				// 发起请求
+				string sRoute = "/" + sPluginID + "/" + sPluginVersion + sPath;
+				if (http_request_send(EVHTTP_REQ_GET,
+					sRoute,
+					&(inData.mConditions),
+					NULL,
+					NULL))
+					bRet = true;
+
+				http_end();
+			}
+
 			return bRet;
 		}
 
@@ -296,14 +275,14 @@ namespace Helper
 
 		bool Http::http_analytical_download_response(Respond_Data *rd, void *arg)
 		{
-			string &sLocalPath = *(string*)arg;
+			DownloadParam &dp = *(DownloadParam*)arg;
 			if (rd->nHttpStatus == 200)
 			{
 				Json::Value *pRJData = new Json::Value();
 				Json::Reader reader;
 				if (reader.parse(rd->sData.c_str(), *pRJData))
 				{
-					Base64_Decode(sLocalPath.c_str(), "ab", (*pRJData)["data"].asString().c_str(), (*pRJData)["data"].asString().length());
+					Base64_Decode(dp.sLocalPath.c_str(), "ab", (*pRJData)["data"].asString().c_str(), (*pRJData)["data"].asString().length());
 					delete pRJData;
 					return true;
 				}
