@@ -29,6 +29,14 @@ void SystemConfig::initConfig()
 	Json::Value root;
 	if (reader.parse(is, root))   ///root保存整个Json对象的value
 	{
+		if (!root["host"].isNull())
+		{
+			Json::Value obj = root["host"];
+			m_sHostGuid = obj["guid"].asString();
+			Json::Value objV = obj["partition"];
+			for (int nIndex = 0; nIndex < objV.size(); nIndex++)
+				vecPartition.push_back(objV[nIndex].asString());
+		}
 		if (!root["server"].isNull())
 		{
 			Json::Value obj = root["server"];
@@ -60,13 +68,6 @@ void SystemConfig::initConfig()
 			m_sDBPassword = obj["password"].asString();
 			m_sDBName = obj["name"].asString();
 			m_nDBPort = obj["port"].asInt();
-		}
-		if (!root["6b59871e-274e-43ab-ab08-6cedcd60cdd9"].isNull())
-		{
-			Json::Value obj = root["6b59871e-274e-43ab-ab08-6cedcd60cdd9"];
-			Json::Value objV = obj["1"];
-			for (int nIndex = 0; nIndex < objV.size(); nIndex++)
-				vecPartition.push_back(objV[nIndex]);
 		}
 	}
 }

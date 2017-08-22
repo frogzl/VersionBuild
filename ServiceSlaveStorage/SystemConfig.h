@@ -45,7 +45,8 @@ public:
 	string m_sDBName;
 	int m_nDBPort;
 
-	// self configure
+	// host configure
+	string m_sHostGuid;
 	vector<string> vecPartition;
 private:
 	static SystemConfig* g_Instance;
