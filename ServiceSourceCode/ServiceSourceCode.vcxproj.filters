@@ -84,31 +84,7 @@
     <ClInclude Include="Database\BuildRule_Depend.h">
       <Filter>头文件\Database</Filter>
     </ClInclude>
-    <ClInclude Include="Database\BuildRule_Deploy.h">
-      <Filter>头文件\Database</Filter>
-    </ClInclude>
     <ClInclude Include="Database\Database.h">
-      <Filter>头文件\Database</Filter>
-    </ClInclude>
-    <ClInclude Include="Database\Resource.h">
-      <Filter>头文件\Database</Filter>
-    </ClInclude>
-    <ClInclude Include="Database\Resource_CompressionPackage.h">
-      <Filter>头文件\Database</Filter>
-    </ClInclude>
-    <ClInclude Include="Database\Resource_Document.h">
-      <Filter>头文件\Database</Filter>
-    </ClInclude>
-    <ClInclude Include="Database\Resource_Host.h">
-      <Filter>头文件\Database</Filter>
-    </ClInclude>
-    <ClInclude Include="Database\Resource_SourceCode.h">
-      <Filter>头文件\Database</Filter>
-    </ClInclude>
-    <ClInclude Include="Database\SourceCode_Deploy.h">
-      <Filter>头文件\Database</Filter>
-    </ClInclude>
-    <ClInclude Include="Database\Storage.h">
       <Filter>头文件\Database</Filter>
     </ClInclude>
     <ClInclude Include="Exception\HttpRequestException.h">
@@ -116,6 +92,9 @@
     </ClInclude>
     <ClInclude Include="Tools\HttpClient.h">
       <Filter>头文件\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\SourceCode.h">
+      <Filter>头文件\Database</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -164,31 +143,7 @@
     <ClCompile Include="Database\BuildRule_Depend.cpp">
       <Filter>源文件\Database</Filter>
     </ClCompile>
-    <ClCompile Include="Database\BuildRule_Deploy.cpp">
-      <Filter>源文件\Database</Filter>
-    </ClCompile>
     <ClCompile Include="Database\Database.cpp">
-      <Filter>源文件\Database</Filter>
-    </ClCompile>
-    <ClCompile Include="Database\Resource.cpp">
-      <Filter>源文件\Database</Filter>
-    </ClCompile>
-    <ClCompile Include="Database\Resource_CompressionPackage.cpp">
-      <Filter>源文件\Database</Filter>
-    </ClCompile>
-    <ClCompile Include="Database\Resource_Document.cpp">
-      <Filter>源文件\Database</Filter>
-    </ClCompile>
-    <ClCompile Include="Database\Resource_Host.cpp">
-      <Filter>源文件\Database</Filter>
-    </ClCompile>
-    <ClCompile Include="Database\Resource_SourceCode.cpp">
-      <Filter>源文件\Database</Filter>
-    </ClCompile>
-    <ClCompile Include="Database\SourceCode_Deploy.cpp">
-      <Filter>源文件\Database</Filter>
-    </ClCompile>
-    <ClCompile Include="Database\Storage.cpp">
       <Filter>源文件\Database</Filter>
     </ClCompile>
     <ClCompile Include="Exception\HttpRequestException.cpp">
@@ -196,6 +151,9 @@
     </ClCompile>
     <ClCompile Include="Tools\HttpClient.cpp">
       <Filter>源文件\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\SourceCode.cpp">
+      <Filter>源文件\Database</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

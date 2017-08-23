@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\Business">
+      <UniqueIdentifier>{ff9c60f9-6c2c-4bb6-8b4f-0536dcd637a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Database">
+      <UniqueIdentifier>{4f2ca7d7-2155-443d-8ed1-bb14a9016ed4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Exception">
+      <UniqueIdentifier>{92c42ef2-8b1d-4025-b2f9-0b2a9b5f10d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Business">
+      <UniqueIdentifier>{8c246c63-bd76-48c8-93d3-5638b2f99cd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Database">
+      <UniqueIdentifier>{8d321de1-09db-4152-8a9a-5d514af5b86c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Exception">
+      <UniqueIdentifier>{a83bd5c8-1951-4173-80db-b047a6f36b1d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceCompilingTools.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\Database.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception\HttpRequestException.h">
+      <Filter>头文件\Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RouteCallBackSet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemConfig.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\CreateCompilingToolTemplate.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\QueryCompilingToolTemplate.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\CreateCompilingToolInstance.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\QueryCompilingToolInstance.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\CompilingTool.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\CompilingToolInstance.h">
+      <Filter>头文件\Database</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceCompilingTools.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\Database.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Exception\HttpRequestException.cpp">
+      <Filter>源文件\Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="Common.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RouteCallBackSet.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemConfig.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\CreateCompilingToolTemplate.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\QueryCompilingToolTemplate.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\CreateCompilingToolInstance.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\QueryCompilingToolInstance.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\CompilingTool.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\CompilingToolInstance.cpp">
+      <Filter>源文件\Database</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ServiceCompilingTools.def">
+      <Filter>源文件</Filter>
+    </None>
+  </ItemGroup>
+</Project>
