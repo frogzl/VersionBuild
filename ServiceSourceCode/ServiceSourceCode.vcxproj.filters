@@ -57,24 +57,6 @@
     <ClInclude Include="SystemConfig.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Business\SourceCodeBuild.h">
-      <Filter>头文件\Business</Filter>
-    </ClInclude>
-    <ClInclude Include="Business\SourceCodeCreate.h">
-      <Filter>头文件\Business</Filter>
-    </ClInclude>
-    <ClInclude Include="Business\SourceCodeDelete.h">
-      <Filter>头文件\Business</Filter>
-    </ClInclude>
-    <ClInclude Include="Business\SourceCodeDeploy.h">
-      <Filter>头文件\Business</Filter>
-    </ClInclude>
-    <ClInclude Include="Business\SourceCodeModify.h">
-      <Filter>头文件\Business</Filter>
-    </ClInclude>
-    <ClInclude Include="Business\SourceCodeQuery.h">
-      <Filter>头文件\Business</Filter>
-    </ClInclude>
     <ClInclude Include="Database\BuildResult.h">
       <Filter>头文件\Database</Filter>
     </ClInclude>
@@ -96,6 +78,30 @@
     <ClInclude Include="Database\SourceCode.h">
       <Filter>头文件\Database</Filter>
     </ClInclude>
+    <ClInclude Include="Business\AddSourceCode.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\AddBuildRule.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\AddBuildRuleDepends.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\AddBuildRuleResult.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\QuerySourceCode.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\QueryBuildRule.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\QueryBuildRuleDepends.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\QueryBuildRuleResult.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -115,24 +121,6 @@
     </ClCompile>
     <ClCompile Include="SystemConfig.cpp">
       <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Business\SourceCodeBuild.cpp">
-      <Filter>源文件\Business</Filter>
-    </ClCompile>
-    <ClCompile Include="Business\SourceCodeCreate.cpp">
-      <Filter>源文件\Business</Filter>
-    </ClCompile>
-    <ClCompile Include="Business\SourceCodeDelete.cpp">
-      <Filter>源文件\Business</Filter>
-    </ClCompile>
-    <ClCompile Include="Business\SourceCodeDeploy.cpp">
-      <Filter>源文件\Business</Filter>
-    </ClCompile>
-    <ClCompile Include="Business\SourceCodeModify.cpp">
-      <Filter>源文件\Business</Filter>
-    </ClCompile>
-    <ClCompile Include="Business\SourceCodeQuery.cpp">
-      <Filter>源文件\Business</Filter>
     </ClCompile>
     <ClCompile Include="Database\BuildResult.cpp">
       <Filter>源文件\Database</Filter>
@@ -154,6 +142,30 @@
     </ClCompile>
     <ClCompile Include="Database\SourceCode.cpp">
       <Filter>源文件\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\AddSourceCode.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\AddBuildRule.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\AddBuildRuleDepends.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\AddBuildRuleResult.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\QuerySourceCode.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\QueryBuildRule.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\QueryBuildRuleDepends.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\QueryBuildRuleResult.cpp">
+      <Filter>源文件\Business</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

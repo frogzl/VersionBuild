@@ -161,12 +161,14 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Business\SourceCodeBuild.h" />
-    <ClInclude Include="Business\SourceCodeCreate.h" />
-    <ClInclude Include="Business\SourceCodeDelete.h" />
-    <ClInclude Include="Business\SourceCodeDeploy.h" />
-    <ClInclude Include="Business\SourceCodeModify.h" />
-    <ClInclude Include="Business\SourceCodeQuery.h" />
+    <ClInclude Include="Business\AddSourceCode.h" />
+    <ClInclude Include="Business\AddBuildRule.h" />
+    <ClInclude Include="Business\AddBuildRuleDepends.h" />
+    <ClInclude Include="Business\AddBuildRuleResult.h" />
+    <ClInclude Include="Business\QueryBuildRuleDepends.h" />
+    <ClInclude Include="Business\QueryBuildRuleResult.h" />
+    <ClInclude Include="Business\QuerySourceCode.h" />
+    <ClInclude Include="Business\QueryBuildRule.h" />
     <ClInclude Include="Common.h" />
     <ClInclude Include="Database\BuildResult.h" />
     <ClInclude Include="Database\BuildRule.h" />
@@ -181,12 +183,14 @@
     <ClInclude Include="Tools\HttpClient.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Business\SourceCodeBuild.cpp" />
-    <ClCompile Include="Business\SourceCodeCreate.cpp" />
-    <ClCompile Include="Business\SourceCodeDelete.cpp" />
-    <ClCompile Include="Business\SourceCodeDeploy.cpp" />
-    <ClCompile Include="Business\SourceCodeModify.cpp" />
-    <ClCompile Include="Business\SourceCodeQuery.cpp" />
+    <ClCompile Include="Business\AddSourceCode.cpp" />
+    <ClCompile Include="Business\AddBuildRule.cpp" />
+    <ClCompile Include="Business\AddBuildRuleDepends.cpp" />
+    <ClCompile Include="Business\AddBuildRuleResult.cpp" />
+    <ClCompile Include="Business\QueryBuildRuleDepends.cpp" />
+    <ClCompile Include="Business\QueryBuildRuleResult.cpp" />
+    <ClCompile Include="Business\QuerySourceCode.cpp" />
+    <ClCompile Include="Business\QueryBuildRule.cpp" />
     <ClCompile Include="Common.cpp" />
     <ClCompile Include="Database\BuildResult.cpp" />
     <ClCompile Include="Database\BuildRule.cpp" />

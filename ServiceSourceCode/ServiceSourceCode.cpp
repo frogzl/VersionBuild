@@ -18,17 +18,32 @@ ServiceInterface* produce_one()
 		pService->register_service_version("1");
 
 		// 添加源码记录
-		pService->register_service_route("/source-code", Http_Operator_Post, RouteCallBackSet::sourcecode_query);
+		pService->register_service_route("/source-code", Http_Operator_Post, RouteCallBackSet::add_source_code);
 
 		// 添加构建规则
-		pService->register_service_route("/source-code/{id}/build-rule", Http_Operator_Post, RouteCallBackSet::sourcecode_query);
+		pService->register_service_route("/source-code/{id}/build-rule", Http_Operator_Post, RouteCallBackSet::add_build_rule);
 
 		// 添加构建规则的依赖源码项目
-		pService->register_service_route("/source-code/{id}/build-rule/{id}/depends", Http_Operator_Post, RouteCallBackSet::sourcecode_query);
+		pService->register_service_route("/source-code/{id}/build-rule/{id}/depends", Http_Operator_Post, RouteCallBackSet::add_build_rule_depends);
 
 		// 添加构建结果
-		pService->register_service_route("/source-code/{id}/build-rule/{id}/build-result", Http_Operator_Post, RouteCallBackSet::sourcecode_query);
+		pService->register_service_route("/source-code/{id}/build-rule/{id}/build-result", Http_Operator_Post, RouteCallBackSet::add_build_rule_result);
 
+		// 查询源码记录
+		pService->register_service_route("/source-code", Http_Operator_Get, RouteCallBackSet::query_source_code);
+		pService->register_service_route("/source-code/{id}", Http_Operator_Get, RouteCallBackSet::query_source_code);
+
+		// 查询构建规则
+		pService->register_service_route("/source-code/{id}/build-rule", Http_Operator_Get, RouteCallBackSet::query_build_rule);
+		pService->register_service_route("/source-code/{id}/build-rule/{id}", Http_Operator_Get, RouteCallBackSet::query_build_rule);
+
+		// 查询构建规则的依赖源码项目
+		pService->register_service_route("/source-code/{id}/build-rule/{id}/depends", Http_Operator_Get, RouteCallBackSet::query_build_rule_depends);
+		pService->register_service_route("/source-code/{id}/build-rule/{id}/depends/{id}", Http_Operator_Get, RouteCallBackSet::query_build_rule_depends);
+
+		// 查询构建结果
+		pService->register_service_route("/source-code/{id}/build-rule/{id}/build-result", Http_Operator_Get, RouteCallBackSet::query_build_rule_result);
+		pService->register_service_route("/source-code/{id}/build-rule/{id}/build-result/{id}", Http_Operator_Get, RouteCallBackSet::query_build_rule_result);
 
 		return instantiate_plugin_template(pService);
 	}

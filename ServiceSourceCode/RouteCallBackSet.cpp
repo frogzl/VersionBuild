@@ -1,43 +1,57 @@
 #include "RouteCallBackSet.h"
-#include "Business\SourceCodeBuild.h"
-#include "Business\SourceCodeCreate.h"
-#include "Business\SourceCodeDelete.h"
-#include "Business\SourceCodeDeploy.h"
-#include "Business\SourceCodeModify.h"
-#include "Business\SourceCodeQuery.h"
+#include "Business/AddBuildRule.h"
+#include "Business/AddBuildRuleDepends.h"
+#include "Business/AddBuildRuleResult.h"
+#include "Business/AddSourceCode.h"
+#include "Business/QueryBuildRule.h"
+#include "Business/QueryBuildRuleDepends.h"
+#include "Business/QueryBuildRuleResult.h"
+#include "Business/QuerySourceCode.h"
 
-void RouteCallBackSet::sourcecode_query(ServiceData *pD)
+void RouteCallBackSet::add_source_code(ServiceData *pD)
 {
-	SourceCodeQuery scq(pD);
-	scq.process_task();
+	AddSourceCode asc(pD);
+	asc.process_task();
 }
 
-void RouteCallBackSet::sourcecode_create(ServiceData *pD)
+void RouteCallBackSet::add_build_rule(ServiceData *pD)
 {
-	SourceCodeCreate scc(pD);
-	scc.process_task();
+	AddBuildRule abr(pD);
+	abr.process_task();
 }
 
-void RouteCallBackSet::sourcecode_modify(ServiceData *pD)
+void RouteCallBackSet::add_build_rule_depends(ServiceData *pD)
 {
-	SourceCodeModify scm(pD);
-	scm.process_task();
+	AddBuildRuleDepends abrd(pD);
+	abrd.process_task();
 }
 
-void RouteCallBackSet::sourcecode_deploy(ServiceData *pD)
+void RouteCallBackSet::add_build_rule_result(ServiceData *pD)
 {
-	SourceCodeDeploy scd(pD);
-	scd.process_task();
+	AddBuildRuleResult abrr(pD);
+	abrr.process_task();
 }
 
-void RouteCallBackSet::sourcecode_build(ServiceData *pD)
+void RouteCallBackSet::query_source_code(ServiceData *pD)
 {
-	SourceCodeBuild scb(pD);
-	scb.process_task();
+	QuerySourceCode qsc(pD);
+	qsc.process_task();
 }
 
-void RouteCallBackSet::sourcecode_delete(ServiceData *pD)
+void RouteCallBackSet::query_build_rule(ServiceData *pD)
 {
-	SourceCodeDelete scd(pD);
-	scd.process_task();
+	QueryBuildRule qbr(pD);
+	qbr.process_task();
+}
+
+void RouteCallBackSet::query_build_rule_depends(ServiceData *pD)
+{
+	QueryBuildRuleDepends qbrd(pD);
+	qbrd.process_task();
+}
+
+void RouteCallBackSet::query_build_rule_result(ServiceData *pD)
+{
+	QueryBuildRuleResult qbrr(pD);
+	qbrr.process_task();
 }
