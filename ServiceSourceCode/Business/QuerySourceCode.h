@@ -6,6 +6,10 @@ public:
 	QuerySourceCode(ServiceData *pD);
 	~QuerySourceCode();
 	void process_task();
-protected:
+private:
+	bool check_inputdata();
+private:
 	ServiceData *m_pD;
+
+	std::string _sSourceCodeID;
 };

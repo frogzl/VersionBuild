@@ -22,9 +22,6 @@
     <Filter Include="头文件\Exception">
       <UniqueIdentifier>{8744e855-16c5-47e1-a537-66f5b67b4584}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\Tools">
-      <UniqueIdentifier>{11486833-5035-4346-8ba3-54852ef95af1}</UniqueIdentifier>
-    </Filter>
     <Filter Include="源文件\Business">
       <UniqueIdentifier>{7e4cb05e-4b25-4601-b36f-2350de8ba893}</UniqueIdentifier>
     </Filter>
@@ -33,9 +30,6 @@
     </Filter>
     <Filter Include="源文件\Exception">
       <UniqueIdentifier>{2cca70a3-cfbd-43c9-9240-d7629c2e88a9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="源文件\Tools">
-      <UniqueIdentifier>{e5875821-9ef9-40e5-9f63-6f37c8094cca}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -72,9 +66,6 @@
     <ClInclude Include="Exception\HttpRequestException.h">
       <Filter>头文件\Exception</Filter>
     </ClInclude>
-    <ClInclude Include="Tools\HttpClient.h">
-      <Filter>头文件\Tools</Filter>
-    </ClInclude>
     <ClInclude Include="Database\SourceCode.h">
       <Filter>头文件\Database</Filter>
     </ClInclude>
@@ -100,6 +91,21 @@
       <Filter>头文件\Business</Filter>
     </ClInclude>
     <ClInclude Include="Business\QueryBuildRuleResult.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\UpdateBuildRule.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\UpdateBuildRuleDepends.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\UpdateBuildRuleResult.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\UpdateSourceCode.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\BuildSourceCode.h">
       <Filter>头文件\Business</Filter>
     </ClInclude>
   </ItemGroup>
@@ -137,9 +143,6 @@
     <ClCompile Include="Exception\HttpRequestException.cpp">
       <Filter>源文件\Exception</Filter>
     </ClCompile>
-    <ClCompile Include="Tools\HttpClient.cpp">
-      <Filter>源文件\Tools</Filter>
-    </ClCompile>
     <ClCompile Include="Database\SourceCode.cpp">
       <Filter>源文件\Database</Filter>
     </ClCompile>
@@ -165,6 +168,21 @@
       <Filter>源文件\Business</Filter>
     </ClCompile>
     <ClCompile Include="Business\QueryBuildRuleResult.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\UpdateBuildRule.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\UpdateBuildRuleDepends.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\UpdateBuildRuleResult.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\UpdateSourceCode.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\BuildSourceCode.cpp">
       <Filter>源文件\Business</Filter>
     </ClCompile>
   </ItemGroup>
