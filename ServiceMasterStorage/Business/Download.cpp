@@ -77,10 +77,14 @@ void Download::process_task()
 					long long llRealEnd = (_llEnd <= llMax) ? _llEnd : llMax;
 					sprintf(szBuf, "bytes %I64d-%I64d/%I64d", _llStart, llRealEnd, pSD->size);
 					m_pD->set_respond_header("range", szBuf);
-					Json::Value jValue;
-					jValue["data"] = Base64_Encode(szBuf, llRealEnd - _llStart);
-					m_pD->set_respond_back(HTTP_OK, "0", "successed", "", jValue);
-				}
+					Json::Value jData;
+					jData["file_name"] = pSD->file_name;
+					jData["data"] = Base64_Encode(szBuf, llRealEnd - _llStart);
+					Json::Value jRespond;
+					jRespond["data"] = jData;
+					m_pD->set_respond_back(HTTP_OK, "0", "successed", "", jRespond);
+
+			}
 				else
 				{
 					sprintf(szBuf, "block %s for storage %s is not found.", bd.guid.c_str(), _sStorageID.c_str());

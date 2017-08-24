@@ -133,7 +133,7 @@ namespace Helper
 			return bRet;
 		}
 
-		bool Http::download(string sPluginID, string sPluginVersion, string sPath, string sLocalPath)
+		bool Http::download(string sPluginID, string sPluginVersion, string sPath, string &sLocalPath)
 		{
 			string sFileName = "";
 			Json::Value *pJData = new Json::Value();
@@ -165,6 +165,7 @@ namespace Helper
 						http_end();
 						break;
 					}
+					sFileName = dlParam.sLocalPath;
 					if (llEnd == llTotle)
 					{
 						http_end();
@@ -183,6 +184,7 @@ namespace Helper
 					break;
 				}
 			}
+			sLocalPath = sFileName;
 			delete pJData;
 			return bRet;
 		}
@@ -282,7 +284,9 @@ namespace Helper
 				Json::Reader reader;
 				if (reader.parse(rd->sData.c_str(), *pRJData))
 				{
-					Base64_Decode(dp.sLocalPath.c_str(), "ab", (*pRJData)["data"].asString().c_str(), (*pRJData)["data"].asString().length());
+					Json::Value jData = (*pRJData)["data"];
+					dp.sLocalPath += ("//" + jData["file_name"].asString());
+					Base64_Decode(dp.sLocalPath.c_str(), "ab", jData["data"].asString().c_str(), jData["data"].asString().length());
 					delete pRJData;
 					return true;
 				}

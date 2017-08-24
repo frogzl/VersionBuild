@@ -29,7 +29,7 @@ namespace Helper
 			bool get(HostType enHT, string sPluginID, string sPluginVersion, string sPath, Request_Data &inData);
 			bool get(HostType enHT, string sUrl, Request_Data &inData);
 			bool upload(string sPluginID, string sPluginVersion, string sPath, string sLocalPath);
-			bool download(string sPluginID, string sPluginVersion, string sPath, string sLocalPath);
+			bool download(string sPluginID, string sPluginVersion, string sPath, string &sLocalPath);
 			bool download_block(string sPluginID, string sPluginVersion, string sPath, Request_Data &inData);
 			Respond_Data& Respond() { return *_rd; }
 

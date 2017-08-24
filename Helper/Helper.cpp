@@ -73,7 +73,7 @@ namespace Helper
 				return false;
 		}
 
-		HELPER_API bool __stdcall download(string sPluginID, string sPluginVersion, string sPath, string sLocalPath)
+		HELPER_API bool __stdcall download(string sPluginID, string sPluginVersion, string sPath, string &sLocalPath)
 		{
 			Http http;
 			if (http.download(sPluginID, sPluginVersion, sPath, sLocalPath))

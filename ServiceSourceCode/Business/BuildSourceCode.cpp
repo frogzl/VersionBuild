@@ -4,6 +4,7 @@
 #include "../Database/SourceCode.h"
 #include "../Database/BuildRule.h"
 #include "../Database/BuildRule_Depend.h"
+#include "../Database/BuildResult.h"
 BuildSourceCode::BuildSourceCode(ServiceData *pD) :m_pD(pD)
 {
 }
@@ -12,6 +13,23 @@ BuildSourceCode::~BuildSourceCode()
 {
 }
 
+/*
+{
+"deploy_commands":"",
+"update_commands":"",
+"target":{
+"file_name":"",
+"file_path":"",
+"output_directory_template":""
+},
+"depends":[
+{"storage_id":"","alias":""},
+{"storage_id":"","alias":""},
+{"storage_id":"","alias":""},
+{"storage_id":"","alias":""}
+]
+}
+*/
 void BuildSourceCode::process_task(ENState enState)
 {
 	// 检查输入参数是否存在
@@ -20,6 +38,17 @@ void BuildSourceCode::process_task(ENState enState)
 	{
 		if (lock_source_code())
 		{
+			sprintf(szBuf, "`guid`='%s'", _sSourceCodeID.c_str());
+			DB::SourceCodeData *pSCD = DB::SourceCode().query()->where(szBuf)->first();
+			if (pSCD)
+			{
+				delete pSCD;
+			}
+			else
+			{
+				m_pD->set_respond_back(499, "4", "this source code don't found.", "");
+				return;
+			}
 			if (enState == enAutoBuild)
 				sprintf(szBuf, "`source_code_id`=\"%s\" and `auto_build`=1", _sSourceCodeID.c_str());
 			else
@@ -28,12 +57,51 @@ void BuildSourceCode::process_task(ENState enState)
 			vector<DB::BuildRuleData> *pVecBRD = DB::BuildRule().query()->where(szBuf)->all();
 			if (pVecBRD)
 			{
+				int nBRCnt = pVecBRD->size();
+				for (int nIndexBR = 0; nIndexBR < nBRCnt; nIndexBR++)
+				{
+					DB::BuildRuleData &data = (*pVecBRD)[nIndexBR];
+					sprintf(szBuf, "`build_rule_id`=\"%s\"", data.guid.c_str());
+					vector<DB::BuildRule_DependData> *pVecBRDD = DB::BuildRule_Depend().query("depend_build_result_id")->where(szBuf)->all();
+					if (pVecBRDD)
+					{
+						string sStorageIDs = "";
+						int nBRDDCnt = pVecBRDD->size();
+						for (int nIndexBRDD = 0; nIndexBRDD < nBRDDCnt; nIndexBRDD++)
+						{
+							if (nIndexBRDD != nBRDDCnt - 1)
+								sStorageIDs += ("'" + (*pVecBRDD)[nIndexBRDD].depend_build_result_id + "',");
+							else
+								sStorageIDs += ("'" + (*pVecBRDD)[nIndexBRDD].depend_build_result_id + "'");
+						}
+						delete pVecBRDD;
 
+						sprintf(szBuf, "`guid` in (%s)", sStorageIDs.c_str());
+						vector<DB::BuildResultData> *pVecBResultD = DB::BuildResult().query("storage_id")->where(szBuf)->all();
+						if (pVecBResultD)
+						{
+							Json::Value jDepends;
+							int nBResultCnt = pVecBResultD->size();
+							for (int nIndexBResult = 0; nIndexBResult < nBResultCnt; nIndexBResult++)
+							{
+								Json::Value jStorage;
+								jStorage["storage_id"] = (*pVecBResultD)[nIndexBResult].storage_id;
+								jDepends.append(jStorage);
+							}
+							delete pVecBResultD;
+						}
+						else
+						{
+							m_pD->set_respond_back(499, "6", "failed to find build rule depends.", "");
+							break;
+						}
+					}
+				}
 				delete pVecBRD;
 			}
 			else
 			{
-				m_pD->set_respond_back(499, "4", "this source code don't have build rule which you want.", "");
+				m_pD->set_respond_back(499, "5", "this source code don't have build rule which you want.", "");
 			}
 		}
 	}

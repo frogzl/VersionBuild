@@ -15,6 +15,9 @@ ServiceInterface* produce_one()
 		pService->register_service_unique_id("f1f1420f-f69d-44cc-a454-313d05f81959");
 		pService->register_service_version("1");
 
+		// ²éÑ¯
+		pService->register_service_route("/file-info/{id}", Http_Operator_Get, RouteCallBackSet::query_file_info);
+
 		// ÉÏ´«
 		pService->register_service_route("/file", Http_Operator_Post, RouteCallBackSet::upload);
 
