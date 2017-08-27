@@ -1,28 +1,4 @@
-﻿  stdafx.cpp
-  SystemConfig.cpp
-  ServiceHost.cpp
-  RouteCallBackSet.cpp
-  HttpRequestException.cpp
-  Executable_Role_Deploy.cpp
-  Host.cpp
-  Executable_Role.cpp
-  Database.cpp
-  Common.cpp
-Common.cpp(83): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
-Common.cpp(83): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
-Common.cpp(301): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
-  QueryHost.cpp
-  QueryExecutableRoleDeploymentInformation.cpp
-  QueryExecutableRole.cpp
-  ModifyHost.cpp
-  ModifyExecutableRoleDeploymentInformation.cpp
-  DeleteHost.cpp
-  DeleteExecutableRoleDeploymentInformation.cpp
-  CreateHost.cpp
-  CreateExecutableRoleDeploymentInformation.cpp
-  Generating Code...
-  dllmain.cpp
-LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/FORCE”规范)
+﻿LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/FORCE”规范)
 QueryExecutableRoleDeploymentInformation.obj : warning LNK4006: "public: static char const * * DB::Executable_Role_DeployData::names" (?names@Executable_Role_DeployData@DB@@2PAPEBDA) 已在 CreateExecutableRoleDeploymentInformation.obj 中定义；已忽略第二个定义
 QueryExecutableRoleDeploymentInformation.obj : warning LNK4006: "private: static char const * const DB::Executable_Role_DeployData::table_" (?table_@Executable_Role_DeployData@DB@@0PEBDEB) 已在 CreateExecutableRoleDeploymentInformation.obj 中定义；已忽略第二个定义
 QueryHost.obj : warning LNK4006: "public: static char const * * DB::HostData::names" (?names@HostData@DB@@2PAPEBDA) 已在 CreateHost.obj 中定义；已忽略第二个定义

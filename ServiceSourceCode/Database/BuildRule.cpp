@@ -14,7 +14,7 @@ namespace DB {
 		Define_Table_Create_Function_Filter_String(source_code_id)
 		Define_Table_Create_Function_Filter_Number(inner_id)
 		Define_Table_Create_Function_Filter_Number(status)
-		Define_Table_Create_Function_Filter_String(auto_build)
+		Define_Table_Create_Function_Filter_Number(auto_build)
 		Define_Table_Create_Function_Filter_String(proxy_host_id)
 		Define_Table_Create_Function_Filter_String(server_host_id)
 		Define_Table_Create_Function_Filter_String(task_id)
@@ -22,6 +22,7 @@ namespace DB {
 		Define_Table_Create_Function_Filter_String(target_file_path)
 		Define_Table_Create_Function_Filter_String(compile_tool_ins_id)
 		Define_Table_Create_Function_Filter_String(output_directory_template)
+		Define_Table_Create_Function_Filter_String(depoly_path)
 		Define_Table_Create_Function_Filter_End()
 		Define_Table_Create_Function_End()
 
@@ -40,7 +41,7 @@ namespace DB {
 		Define_Table_Update_Function_Filter_String(source_code_id)
 		Define_Table_Update_Function_Filter_Number(inner_id)
 		Define_Table_Update_Function_Filter_Number(status)
-		Define_Table_Update_Function_Filter_String(auto_build)
+		Define_Table_Update_Function_Filter_Number(auto_build)
 		Define_Table_Update_Function_Filter_String(proxy_host_id)
 		Define_Table_Update_Function_Filter_String(server_host_id)
 		Define_Table_Update_Function_Filter_String(task_id)
@@ -48,6 +49,7 @@ namespace DB {
 		Define_Table_Update_Function_Filter_String(target_file_path)
 		Define_Table_Update_Function_Filter_String(compile_tool_ins_id)
 		Define_Table_Update_Function_Filter_String(output_directory_template)
+		Define_Table_Update_Function_Filter_String(depoly_path)
 		Define_Table_Update_Function_Filter_End()
 		Define_Table_Update_Function_End()
 

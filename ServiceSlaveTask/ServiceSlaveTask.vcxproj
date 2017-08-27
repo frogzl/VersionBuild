@@ -77,7 +77,7 @@
     <OutDir>$(SolutionDir)bin\$(Configuration)\$(Platform)\MicroServicePlugins\cc0e7465-9c6d-4802-8786-2bafd9ef9ff4\1\</OutDir>
     <IntDir>$(SolutionDir)cache\$(ProjectName)\$(Configuration)\</IntDir>
     <IncludePath>$(SolutionDir)MicroTaskPlugin\include;$(SolutionDir)MicroServicePlugin\include;..\..\jsoncpp-src-0.5.0\include;E:\libIconv\libIconv\Iconv;D:\openssl-1.0.1t\bin\include;$(SolutionDir)Helper\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)bin\$(Configuration)\$(Platform)\MicroServicePlugins\;..\..\jsoncpp-src-0.5.0\lib\x64;D:\openssl-1.0.1t\bin\lib;E:\libIconv\x64\Release;$(SolutionDir)bin\$(Configuration)\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(SolutionDir)bin\$(Configuration)\$(Platform)\;..\..\jsoncpp-src-0.5.0\lib\x64;D:\openssl-1.0.1t\bin\lib;E:\libIconv\x64\Release;$(LibraryPath)</LibraryPath>
     <TargetName>plugin_$(ProjectName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

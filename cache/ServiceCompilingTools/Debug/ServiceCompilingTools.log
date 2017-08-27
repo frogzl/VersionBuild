@@ -1,0 +1,91 @@
+﻿  CompilingTool.cpp
+  QueryCompilingToolTemplate.cpp
+Business\QueryCompilingToolTemplate.cpp(27): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  CreateCompilingToolTemplate.cpp
+Business\CreateCompilingToolTemplate.cpp(17): warning C4101: “szBuf”: 未引用的局部变量
+  Generating Code...
+  Compiling...
+  CreateCompilingToolInstance.cpp
+Business\CreateCompilingToolInstance.cpp(38): warning C4018: “<”: 有符号/无符号不匹配
+  Generating Code...
+  dllmain.cpp
+LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/FORCE”规范)
+QueryCompilingToolTemplate.obj : warning LNK4006: "public: static char const * * DB::CompilingToolData::names" (?names@CompilingToolData@DB@@2PAPEBDA) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+QueryCompilingToolTemplate.obj : warning LNK4006: "private: static char const * const DB::CompilingToolData::table_" (?table_@CompilingToolData@DB@@0PEBDEB) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+CreateCompilingToolInstance.obj : warning LNK4006: "public: static char const * * DB::CompilingToolData::names" (?names@CompilingToolData@DB@@2PAPEBDA) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+CreateCompilingToolInstance.obj : warning LNK4006: "private: static char const * const DB::CompilingToolData::table_" (?table_@CompilingToolData@DB@@0PEBDEB) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+QueryCompilingToolInstance.obj : warning LNK4006: "public: static char const * * DB::CompilingToolInstanceData::names" (?names@CompilingToolInstanceData@DB@@2PAPEBDA) 已在 CreateCompilingToolInstance.obj 中定义；已忽略第二个定义
+QueryCompilingToolInstance.obj : warning LNK4006: "private: static char const * const DB::CompilingToolInstanceData::table_" (?table_@CompilingToolInstanceData@DB@@0PEBDEB) 已在 CreateCompilingToolInstance.obj 中定义；已忽略第二个定义
+CompilingTool.obj : warning LNK4006: "public: static char const * * DB::CompilingToolData::names" (?names@CompilingToolData@DB@@2PAPEBDA) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+CompilingTool.obj : warning LNK4006: "private: static char const * const DB::CompilingToolData::table_" (?table_@CompilingToolData@DB@@0PEBDEB) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+CompilingToolInstance.obj : warning LNK4006: "public: static char const * * DB::CompilingToolInstanceData::names" (?names@CompilingToolInstanceData@DB@@2PAPEBDA) 已在 CreateCompilingToolInstance.obj 中定义；已忽略第二个定义
+CompilingToolInstance.obj : warning LNK4006: "private: static char const * const DB::CompilingToolInstanceData::table_" (?table_@CompilingToolInstanceData@DB@@0PEBDEB) 已在 CreateCompilingToolInstance.obj 中定义；已忽略第二个定义
+  libIconv.lib(iconv.obj) : 找到 MSIL .netmodule 或使用 /GL 编译的模块；正在使用 /LTCG 重新启动链接；将 /LTCG 添加到链接命令行以改进链接器性能
+LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/LTCG”规范)
+QueryCompilingToolTemplate.obj : warning LNK4006: "public: static char const * * DB::CompilingToolData::names" (?names@CompilingToolData@DB@@2PAPEBDA) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+QueryCompilingToolTemplate.obj : warning LNK4006: "private: static char const * const DB::CompilingToolData::table_" (?table_@CompilingToolData@DB@@0PEBDEB) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+CreateCompilingToolInstance.obj : warning LNK4006: "public: static char const * * DB::CompilingToolData::names" (?names@CompilingToolData@DB@@2PAPEBDA) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+CreateCompilingToolInstance.obj : warning LNK4006: "private: static char const * const DB::CompilingToolData::table_" (?table_@CompilingToolData@DB@@0PEBDEB) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+QueryCompilingToolInstance.obj : warning LNK4006: "public: static char const * * DB::CompilingToolInstanceData::names" (?names@CompilingToolInstanceData@DB@@2PAPEBDA) 已在 CreateCompilingToolInstance.obj 中定义；已忽略第二个定义
+QueryCompilingToolInstance.obj : warning LNK4006: "private: static char const * const DB::CompilingToolInstanceData::table_" (?table_@CompilingToolInstanceData@DB@@0PEBDEB) 已在 CreateCompilingToolInstance.obj 中定义；已忽略第二个定义
+CompilingTool.obj : warning LNK4006: "public: static char const * * DB::CompilingToolData::names" (?names@CompilingToolData@DB@@2PAPEBDA) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+CompilingTool.obj : warning LNK4006: "private: static char const * const DB::CompilingToolData::table_" (?table_@CompilingToolData@DB@@0PEBDEB) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+CompilingToolInstance.obj : warning LNK4006: "public: static char const * * DB::CompilingToolInstanceData::names" (?names@CompilingToolInstanceData@DB@@2PAPEBDA) 已在 CreateCompilingToolInstance.obj 中定义；已忽略第二个定义
+CompilingToolInstance.obj : warning LNK4006: "private: static char const * const DB::CompilingToolInstanceData::table_" (?table_@CompilingToolInstanceData@DB@@0PEBDEB) 已在 CreateCompilingToolInstance.obj 中定义；已忽略第二个定义
+     正在创建库 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\3b3595eb-6e88-4339-a80f-fb1bf51bed5b\1\plugin_ServiceCompilingTools.lib 和对象 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\3b3595eb-6e88-4339-a80f-fb1bf51bed5b\1\plugin_ServiceCompilingTools.exp
+LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\3b3595eb-6e88-4339-a80f-fb1bf51bed5b\1\plugin_ServiceCompilingTools.dll : warning LNK4088: 因 /FORCE 选项生成了映像；映像可能不能运行
+  正在生成代码
+  已完成代码的生成
+QueryCompilingToolTemplate.obj : warning LNK4006: "public: static char const * * DB::CompilingToolData::names" (?names@CompilingToolData@DB@@2PAPEBDA) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+QueryCompilingToolTemplate.obj : warning LNK4006: "private: static char const * const DB::CompilingToolData::table_" (?table_@CompilingToolData@DB@@0PEBDEB) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+CreateCompilingToolInstance.obj : warning LNK4006: "public: static char const * * DB::CompilingToolData::names" (?names@CompilingToolData@DB@@2PAPEBDA) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+CreateCompilingToolInstance.obj : warning LNK4006: "private: static char const * const DB::CompilingToolData::table_" (?table_@CompilingToolData@DB@@0PEBDEB) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+QueryCompilingToolInstance.obj : warning LNK4006: "public: static char const * * DB::CompilingToolInstanceData::names" (?names@CompilingToolInstanceData@DB@@2PAPEBDA) 已在 CreateCompilingToolInstance.obj 中定义；已忽略第二个定义
+QueryCompilingToolInstance.obj : warning LNK4006: "private: static char const * const DB::CompilingToolInstanceData::table_" (?table_@CompilingToolInstanceData@DB@@0PEBDEB) 已在 CreateCompilingToolInstance.obj 中定义；已忽略第二个定义
+CompilingTool.obj : warning LNK4006: "public: static char const * * DB::CompilingToolData::names" (?names@CompilingToolData@DB@@2PAPEBDA) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+CompilingTool.obj : warning LNK4006: "private: static char const * const DB::CompilingToolData::table_" (?table_@CompilingToolData@DB@@0PEBDEB) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+CompilingToolInstance.obj : warning LNK4006: "public: static char const * * DB::CompilingToolInstanceData::names" (?names@CompilingToolInstanceData@DB@@2PAPEBDA) 已在 CreateCompilingToolInstance.obj 中定义；已忽略第二个定义
+CompilingToolInstance.obj : warning LNK4006: "private: static char const * const DB::CompilingToolInstanceData::table_" (?table_@CompilingToolInstanceData@DB@@0PEBDEB) 已在 CreateCompilingToolInstance.obj 中定义；已忽略第二个定义
+E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\3b3595eb-6e88-4339-a80f-fb1bf51bed5b\1\plugin_ServiceCompilingTools.dll : warning LNK4088: 因 /FORCE 选项生成了映像；映像可能不能运行
+  ServiceCompilingTools.vcxproj -> E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\3b3595eb-6e88-4339-a80f-fb1bf51bed5b\1\plugin_ServiceCompilingTools.dll
+LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/FORCE”规范)
+QueryCompilingToolTemplate.obj : warning LNK4006: "public: static char const * * DB::CompilingToolData::names" (?names@CompilingToolData@DB@@2PAPEBDA) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+QueryCompilingToolTemplate.obj : warning LNK4006: "private: static char const * const DB::CompilingToolData::table_" (?table_@CompilingToolData@DB@@0PEBDEB) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+CreateCompilingToolInstance.obj : warning LNK4006: "public: static char const * * DB::CompilingToolData::names" (?names@CompilingToolData@DB@@2PAPEBDA) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+CreateCompilingToolInstance.obj : warning LNK4006: "private: static char const * const DB::CompilingToolData::table_" (?table_@CompilingToolData@DB@@0PEBDEB) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+QueryCompilingToolInstance.obj : warning LNK4006: "public: static char const * * DB::CompilingToolInstanceData::names" (?names@CompilingToolInstanceData@DB@@2PAPEBDA) 已在 CreateCompilingToolInstance.obj 中定义；已忽略第二个定义
+QueryCompilingToolInstance.obj : warning LNK4006: "private: static char const * const DB::CompilingToolInstanceData::table_" (?table_@CompilingToolInstanceData@DB@@0PEBDEB) 已在 CreateCompilingToolInstance.obj 中定义；已忽略第二个定义
+CompilingTool.obj : warning LNK4006: "public: static char const * * DB::CompilingToolData::names" (?names@CompilingToolData@DB@@2PAPEBDA) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+CompilingTool.obj : warning LNK4006: "private: static char const * const DB::CompilingToolData::table_" (?table_@CompilingToolData@DB@@0PEBDEB) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+CompilingToolInstance.obj : warning LNK4006: "public: static char const * * DB::CompilingToolInstanceData::names" (?names@CompilingToolInstanceData@DB@@2PAPEBDA) 已在 CreateCompilingToolInstance.obj 中定义；已忽略第二个定义
+CompilingToolInstance.obj : warning LNK4006: "private: static char const * const DB::CompilingToolInstanceData::table_" (?table_@CompilingToolInstanceData@DB@@0PEBDEB) 已在 CreateCompilingToolInstance.obj 中定义；已忽略第二个定义
+  libIconv.lib(iconv.obj) : 找到 MSIL .netmodule 或使用 /GL 编译的模块；正在使用 /LTCG 重新启动链接；将 /LTCG 添加到链接命令行以改进链接器性能
+LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/LTCG”规范)
+QueryCompilingToolTemplate.obj : warning LNK4006: "public: static char const * * DB::CompilingToolData::names" (?names@CompilingToolData@DB@@2PAPEBDA) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+QueryCompilingToolTemplate.obj : warning LNK4006: "private: static char const * const DB::CompilingToolData::table_" (?table_@CompilingToolData@DB@@0PEBDEB) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+CreateCompilingToolInstance.obj : warning LNK4006: "public: static char const * * DB::CompilingToolData::names" (?names@CompilingToolData@DB@@2PAPEBDA) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+CreateCompilingToolInstance.obj : warning LNK4006: "private: static char const * const DB::CompilingToolData::table_" (?table_@CompilingToolData@DB@@0PEBDEB) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+QueryCompilingToolInstance.obj : warning LNK4006: "public: static char const * * DB::CompilingToolInstanceData::names" (?names@CompilingToolInstanceData@DB@@2PAPEBDA) 已在 CreateCompilingToolInstance.obj 中定义；已忽略第二个定义
+QueryCompilingToolInstance.obj : warning LNK4006: "private: static char const * const DB::CompilingToolInstanceData::table_" (?table_@CompilingToolInstanceData@DB@@0PEBDEB) 已在 CreateCompilingToolInstance.obj 中定义；已忽略第二个定义
+CompilingTool.obj : warning LNK4006: "public: static char const * * DB::CompilingToolData::names" (?names@CompilingToolData@DB@@2PAPEBDA) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+CompilingTool.obj : warning LNK4006: "private: static char const * const DB::CompilingToolData::table_" (?table_@CompilingToolData@DB@@0PEBDEB) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+CompilingToolInstance.obj : warning LNK4006: "public: static char const * * DB::CompilingToolInstanceData::names" (?names@CompilingToolInstanceData@DB@@2PAPEBDA) 已在 CreateCompilingToolInstance.obj 中定义；已忽略第二个定义
+CompilingToolInstance.obj : warning LNK4006: "private: static char const * const DB::CompilingToolInstanceData::table_" (?table_@CompilingToolInstanceData@DB@@0PEBDEB) 已在 CreateCompilingToolInstance.obj 中定义；已忽略第二个定义
+     正在创建库 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\3b3595eb-6e88-4339-a80f-fb1bf51bed5b\1\plugin_ServiceCompilingTools.lib 和对象 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\3b3595eb-6e88-4339-a80f-fb1bf51bed5b\1\plugin_ServiceCompilingTools.exp
+LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\3b3595eb-6e88-4339-a80f-fb1bf51bed5b\1\plugin_ServiceCompilingTools.dll : warning LNK4088: 因 /FORCE 选项生成了映像；映像可能不能运行
+  正在生成代码
+  已完成代码的生成
+QueryCompilingToolTemplate.obj : warning LNK4006: "public: static char const * * DB::CompilingToolData::names" (?names@CompilingToolData@DB@@2PAPEBDA) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+QueryCompilingToolTemplate.obj : warning LNK4006: "private: static char const * const DB::CompilingToolData::table_" (?table_@CompilingToolData@DB@@0PEBDEB) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+CreateCompilingToolInstance.obj : warning LNK4006: "public: static char const * * DB::CompilingToolData::names" (?names@CompilingToolData@DB@@2PAPEBDA) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+CreateCompilingToolInstance.obj : warning LNK4006: "private: static char const * const DB::CompilingToolData::table_" (?table_@CompilingToolData@DB@@0PEBDEB) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+QueryCompilingToolInstance.obj : warning LNK4006: "public: static char const * * DB::CompilingToolInstanceData::names" (?names@CompilingToolInstanceData@DB@@2PAPEBDA) 已在 CreateCompilingToolInstance.obj 中定义；已忽略第二个定义
+QueryCompilingToolInstance.obj : warning LNK4006: "private: static char const * const DB::CompilingToolInstanceData::table_" (?table_@CompilingToolInstanceData@DB@@0PEBDEB) 已在 CreateCompilingToolInstance.obj 中定义；已忽略第二个定义
+CompilingTool.obj : warning LNK4006: "public: static char const * * DB::CompilingToolData::names" (?names@CompilingToolData@DB@@2PAPEBDA) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+CompilingTool.obj : warning LNK4006: "private: static char const * const DB::CompilingToolData::table_" (?table_@CompilingToolData@DB@@0PEBDEB) 已在 CreateCompilingToolTemplate.obj 中定义；已忽略第二个定义
+CompilingToolInstance.obj : warning LNK4006: "public: static char const * * DB::CompilingToolInstanceData::names" (?names@CompilingToolInstanceData@DB@@2PAPEBDA) 已在 CreateCompilingToolInstance.obj 中定义；已忽略第二个定义
+CompilingToolInstance.obj : warning LNK4006: "private: static char const * const DB::CompilingToolInstanceData::table_" (?table_@CompilingToolInstanceData@DB@@0PEBDEB) 已在 CreateCompilingToolInstance.obj 中定义；已忽略第二个定义
+E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\3b3595eb-6e88-4339-a80f-fb1bf51bed5b\1\plugin_ServiceCompilingTools.dll : warning LNK4088: 因 /FORCE 选项生成了映像；映像可能不能运行
+  ServiceCompilingTools.vcxproj -> E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\3b3595eb-6e88-4339-a80f-fb1bf51bed5b\1\plugin_ServiceCompilingTools.dll

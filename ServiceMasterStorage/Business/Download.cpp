@@ -36,7 +36,8 @@ void Download::process_task()
 				bool bRet = false;
 				char *szData = new char[_llEnd - _llStart + 1];
 				long long llMax = 0;
-				for (int nIndex = 0; nIndex < nCount; nIndex++)
+				int nIndex = 0;
+				for (; nIndex < nCount; nIndex++)
 				{
 					DB::BlockData &bd = (*pBlocks)[nIndex];
 					Network::Request_Data rd;
@@ -66,7 +67,7 @@ void Download::process_task()
 						bRet = Network::download_block("6b59871e-274e-43ab-ab08-6cedcd60cdd9", "1", szBuf, rd, szData);
 					else
 						bRet = Network::download_block("6b59871e-274e-43ab-ab08-6cedcd60cdd9", "1", szBuf, rd, szData + bd.start - _llStart);
-					
+
 					if (!bRet)
 						break;
 					if (bd.end >= llMax)
@@ -84,10 +85,10 @@ void Download::process_task()
 					jRespond["data"] = jData;
 					m_pD->set_respond_back(HTTP_OK, "0", "successed", "", jRespond);
 
-			}
+				}
 				else
 				{
-					sprintf(szBuf, "block %s for storage %s is not found.", bd.guid.c_str(), _sStorageID.c_str());
+					sprintf(szBuf, "block %s for storage %s is not found.", (*pBlocks)[nIndex].guid.c_str(), _sStorageID.c_str());
 					m_pD->set_respond_back(499, "1", szBuf, "");
 				}
 				delete[] szData;

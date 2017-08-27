@@ -1,5 +1,6 @@
-﻿  TaskDataTemplate.cpp
-     正在创建库 E:\VersionBuild\bin\Debug\x64\MicroTaskPlugins\MicroTaskPlugin.lib 和对象 E:\VersionBuild\bin\Debug\x64\MicroTaskPlugins\MicroTaskPlugin.exp
+﻿  TaskTemplate.cpp
+  TaskInterface.cpp
+  MicroTaskPlugin.cpp
+  Generating Code...
   MicroTaskPlugin.vcxproj -> E:\VersionBuild\bin\Debug\x64\MicroTaskPlugins\MicroTaskPlugin.dll
-     正在创建库 E:\VersionBuild\bin\Debug\x64\MicroTaskPlugins\MicroTaskPlugin.lib 和对象 E:\VersionBuild\bin\Debug\x64\MicroTaskPlugins\MicroTaskPlugin.exp
   MicroTaskPlugin.vcxproj -> E:\VersionBuild\bin\Debug\x64\MicroTaskPlugins\MicroTaskPlugin.dll

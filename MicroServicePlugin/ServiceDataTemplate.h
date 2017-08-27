@@ -12,11 +12,11 @@ public:
 
 	void set_request_data(Request_Data &rd);
 	void set_request_headers(std::map<std::string, std::string> &mHeaders);
-	void set_request_parameters(std::map<int, std::string> &mParameters); 
+	void set_request_parameters(std::vector<std::string> &vecParameters);
 	void set_request_conditions(std::map<std::string, std::string> mConditions);
 	void set_request_body(Json::Value &jData);
 	void insert_request_header(const char* szKey, const char* szValue);
-	void insert_request_parameter(int &nKey, const char* szValue);
+	void insert_request_parameter(const char* szValue);
 	void insert_request_condition(const char* szKey, const char* szValue);
 
 	void set_respond_header(string sKey, string sValue);

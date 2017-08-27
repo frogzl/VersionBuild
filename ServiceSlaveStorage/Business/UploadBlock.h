@@ -1,5 +1,6 @@
 #pragma once
 #include "ServiceData.h"
+#include "../Common.h"
 class UploadBlock
 {
 	typedef struct

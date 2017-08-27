@@ -4,7 +4,6 @@
 #include "stdafx.h"
 #include "Common.h"
 #include "HttpServer.h"
-#include "TaskServer.h"
 #include "SystemConfig.h"
 #include "PluginCenter.h"
 int main()
@@ -16,7 +15,7 @@ int main()
 
 	// 启动http服务
 	HttpServer hs(SystemConfig::instance()->m_nWorker);
-	hs.start(SystemConfig::instance()->m_nNetworkPort, SystemConfig::instance()->m_nBacklog);
+	hs.start(SystemConfig::instance()->m_nPort, SystemConfig::instance()->m_nBacklog);
 
 	// 等待结束
 	hs.wait_for_end();

@@ -63,15 +63,15 @@ TaskData* TaskTemplate::create_data()
 	return new TaskDataTemplate();
 }
 
-const char* TaskTemplate::dispatch_by_route_path(int nIndex, TaskData *pTD)
+bool TaskTemplate::dispatch_by_route_path(int nIndex, TaskData *pTD)
 {
 	if (nIndex >= 0 && nIndex < nRouteCount)
 	{
 		fpTaskCreateProcess[nIndex](pTD);
-		return "1";
+		return true;
 	}
 	else
-		return "0";
+		return false;
 }
 
 bool TaskTemplate::register_task_name(const char *szName)

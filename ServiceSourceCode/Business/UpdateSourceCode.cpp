@@ -33,7 +33,7 @@ void UpdateSourceCode::process_task()
 		if (m_pD->request_data().jData["version_control_id"].isString())
 		{
 			setFilter.insert("version_control_id");
-			scd.version_control_id = m_pD->request_data().jData["version_control_id"].asString();
+			scd.version_control_ins_id = m_pD->request_data().jData["version_control_ins_id"].asString();
 		}
 
 		if (m_pD->request_data().jData["start_version"].isInt())

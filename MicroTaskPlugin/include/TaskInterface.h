@@ -26,7 +26,7 @@ public:
 	// 创建数据接口
 	virtual TaskData* create_data() = 0;
 	// 用于根据API执行
-	virtual const char* dispatch_by_route_path(int nIndex, TaskData *pTD) = 0;
+	virtual bool dispatch_by_route_path(int nIndex, TaskData *pTD) = 0;
 	// 注册服务名
 	virtual bool register_task_name(const char *szName) = 0;
 	// 注册服务唯一标识

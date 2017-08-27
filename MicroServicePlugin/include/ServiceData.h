@@ -44,11 +44,11 @@ public:
 
 	virtual void set_request_data(Request_Data &rd) = 0;
 	virtual void set_request_headers(std::map<std::string, std::string> &mHeaders) = 0;
-	virtual void set_request_parameters(std::map<int, std::string> &mParameters) = 0;
+	virtual void set_request_parameters(std::vector<std::string> &vecParameters) = 0;
 	virtual void set_request_conditions(std::map<std::string, std::string> mConditions) = 0;
 	virtual void set_request_body(Json::Value &jData) = 0;
 	virtual void insert_request_header(const char* szKey, const char* szValue) = 0;
-	virtual void insert_request_parameter(int &nKey, const char* szValue) = 0;
+	virtual void insert_request_parameter(const char* szValue) = 0;
 	virtual void insert_request_condition(const char* szKey, const char* szValue) = 0;
 	virtual void set_respond_header(std::string sKey, std::string sValue) = 0;
 	virtual void set_respond_back(int nHttpStatus, std::string sCode, std::string sMessage, std::string sDiscription) = 0;

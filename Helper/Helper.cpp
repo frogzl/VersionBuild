@@ -64,11 +64,14 @@ namespace Helper
 				return false;
 		}
 
-		HELPER_API bool __stdcall upload(string sPluginID, string sPluginVersion, string sPath, string sLocalPath)
+		HELPER_API bool __stdcall upload(string sPluginID, string sPluginVersion, string sPath, string sLocalPath,string &sStorageID)
 		{
 			Http http;
 			if (http.upload(sPluginID, sPluginVersion, sPath, sLocalPath))
+			{
+				sStorageID = http.Respond().sData;
 				return true;
+			}
 			else
 				return false;
 		}

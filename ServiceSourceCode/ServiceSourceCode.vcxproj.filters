@@ -108,6 +108,12 @@
     <ClInclude Include="Business\BuildSourceCode.h">
       <Filter>头文件\Business</Filter>
     </ClInclude>
+    <ClInclude Include="Business\DeployBuildRule.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\UpdateDeployResult.h">
+      <Filter>头文件\Business</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -183,6 +189,12 @@
       <Filter>源文件\Business</Filter>
     </ClCompile>
     <ClCompile Include="Business\BuildSourceCode.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\DeployBuildRule.cpp">
+      <Filter>源文件\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\UpdateDeployResult.cpp">
       <Filter>源文件\Business</Filter>
     </ClCompile>
   </ItemGroup>

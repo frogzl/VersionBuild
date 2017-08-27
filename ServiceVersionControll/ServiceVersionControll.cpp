@@ -15,12 +15,16 @@ ServiceInterface* produce_one()
 		pService->register_service_version("1");
 
 		// 查询支持那些版本控制
-		pService->register_service_route("/version-tools", Http_Operator_Get, RouteCallBackSet::upload);
-		pService->register_service_route("/version-tools/{id}", Http_Operator_Get, RouteCallBackSet::upload);
+		pService->register_service_route("/version-control", Http_Operator_Get, RouteCallBackSet::upload);
+		pService->register_service_route("/version-control/{id}", Http_Operator_Get, RouteCallBackSet::upload);
 
+		// 查询支持那些版本控制
+		pService->register_service_route("/version-control-product", Http_Operator_Get, RouteCallBackSet::upload);
+		pService->register_service_route("/version-control-product/{id}", Http_Operator_Get, RouteCallBackSet::upload);
+		
 		// 查询支持那些版本控制产品
-		pService->register_service_route("/version-tools/{id}/product", Http_Operator_Get, RouteCallBackSet::upload);
-		pService->register_service_route("/version-tools/{id}/product/{id}", Http_Operator_Get, RouteCallBackSet::upload);
+		pService->register_service_route("/version-control-instance", Http_Operator_Get, RouteCallBackSet::upload);
+		pService->register_service_route("/version-control-instance/{id}", Http_Operator_Get, RouteCallBackSet::upload);
 
 		return instantiate_plugin_template(pService);
 	}

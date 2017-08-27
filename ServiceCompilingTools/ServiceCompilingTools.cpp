@@ -14,18 +14,18 @@ ServiceInterface* produce_one()
 		pService->register_service_version("1");
 
 		// 添加新的编译工具模板
-		pService->register_service_route("/compiling-tool", Http_Operator_Post, RouteCallBackSet::upload);
+		pService->register_service_route("/compiling-tool", Http_Operator_Post, RouteCallBackSet::create_compiling_tool_template);
 	
 		// 查询编译工具模板
-		pService->register_service_route("/compiling-tool", Http_Operator_Get, RouteCallBackSet::upload);
-		pService->register_service_route("/compiling-tool/{id}", Http_Operator_Get, RouteCallBackSet::upload);
+		pService->register_service_route("/compiling-tool", Http_Operator_Get, RouteCallBackSet::query_compiling_tool_template);
+		pService->register_service_route("/compiling-tool/{id}", Http_Operator_Get, RouteCallBackSet::query_compiling_tool_template);
 
 		// 添加新的编译工具实例
-		pService->register_service_route("/compiling-tool-instance", Http_Operator_Post, RouteCallBackSet::upload);
+		pService->register_service_route("/compiling-tool-instance", Http_Operator_Post, RouteCallBackSet::create_compiling_tool_instance);
 
 		// 查询编译工具模板
-		pService->register_service_route("/compiling-tool-instance", Http_Operator_Get, RouteCallBackSet::upload);
-		pService->register_service_route("/compiling-tool-instance/{id}", Http_Operator_Get, RouteCallBackSet::upload);
+		pService->register_service_route("/compiling-tool-instance", Http_Operator_Get, RouteCallBackSet::query_compiling_tool_instance);
+		pService->register_service_route("/compiling-tool-instance/{id}", Http_Operator_Get, RouteCallBackSet::query_compiling_tool_instance);
 
 		return instantiate_plugin_template(pService);
 	}

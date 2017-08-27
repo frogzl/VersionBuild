@@ -12,6 +12,8 @@
 #include "Business/UpdateBuildRuleResult.h"
 #include "Business/UpdateSourceCode.h"
 #include "Business/BuildSourceCode.h"
+#include "Business/DeployBuildRule.h"
+#include "Business/UpdateDeployResult.h"
 void RouteCallBackSet::add_source_code(ServiceData *pD)
 {
 	AddSourceCode asc(pD);
@@ -84,6 +86,12 @@ void RouteCallBackSet::update_build_rule_result(ServiceData *pD)
 	ubrr.process_task();
 }
 
+void RouteCallBackSet::update_deploy_result(ServiceData *pD)
+{
+	UpdateDeployResult udr(pD);
+	udr.process_task();
+}
+
 void RouteCallBackSet::auto_build_source_code(ServiceData *pD)
 {
 	BuildSourceCode bsc(pD);
@@ -94,4 +102,10 @@ void RouteCallBackSet::build_source_code(ServiceData *pD)
 {
 	BuildSourceCode bsc(pD);
 	bsc.process_task(BuildSourceCode::enBuild);
+}
+
+void RouteCallBackSet::deploy_build_rule(ServiceData *pD)
+{
+	DeployBuildRule dbr(pD);
+	dbr.process_task();
 }

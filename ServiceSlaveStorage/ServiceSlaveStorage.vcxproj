@@ -78,7 +78,7 @@
     <IntDir>$(SolutionDir)cache\$(ProjectName)\$(Configuration)\</IntDir>
     <TargetName>plugin_$(ProjectName)</TargetName>
     <IncludePath>$(SolutionDir)MicroServicePlugin\include;..\..\libevent-2.0.22-stable\WIN32-Code;..\..\libevent-2.0.22-stable\include;E:\MySQL++\3.2.3\include;C:\Program Files\MySQL\MySQL Server 5.6\include;E:\libIconv\libIconv\Iconv;..\..\jsoncpp-src-0.5.0\include;E:\libgit2-0.24.1\include;D:\openssl-1.0.1t\bin\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)bin\$(Configuration)\$(Platform)\MicroServicePlugins\;..\..\libevent-2.0.22-stable\x64;E:\MySQL++\3.2.3;C:\Program Files\MySQL\MySQL Server 5.6\lib;E:\libIconv\x64\Release;..\..\jsoncpp-src-0.5.0\lib\x64;E:\libgit2-0.24.1\lib\x64;D:\openssl-1.0.1t\bin\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(SolutionDir)bin\$(Configuration)\$(Platform)\;..\..\libevent-2.0.22-stable\x64;E:\MySQL++\3.2.3;C:\Program Files\MySQL\MySQL Server 5.6\lib;E:\libIconv\x64\Release;..\..\jsoncpp-src-0.5.0\lib\x64;E:\libgit2-0.24.1\lib\x64;D:\openssl-1.0.1t\bin\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>

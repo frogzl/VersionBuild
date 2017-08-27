@@ -15,7 +15,9 @@ public:
 	static void update_build_rule(ServiceData *pD);
 	static void update_build_rule_depends(ServiceData *pD);
 	static void update_build_rule_result(ServiceData *pD);
+	static void update_deploy_result(ServiceData *pD);
 	static void auto_build_source_code(ServiceData *pD);
 	static void build_source_code(ServiceData *pD);
+	static void deploy_build_rule(ServiceData *pD);
 };
 

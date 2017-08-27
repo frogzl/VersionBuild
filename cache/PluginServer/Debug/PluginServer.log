@@ -1,5 +1,5 @@
-﻿  Helper.cpp
-  main.cpp
-  SystemConfig.cpp
-Helper.cpp(1): fatal error C1083: 无法打开包括文件:“HttpClient.h”: No such file or directory
-main.cpp(7): fatal error C1083: 无法打开包括文件:“TaskServer.h”: No such file or directory
+﻿  main.cpp
+  LINK : 没有找到 E:\VersionBuild\bin\Debug\x64\PluginServer.exe 或上一个增量链接没有生成它；正在执行完全链接
+LINK : warning LNK4098: 默认库“LIBCMT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+  PluginServer.vcxproj -> E:\VersionBuild\bin\Debug\x64\PluginServer.exe
+  PluginServer.vcxproj -> E:\VersionBuild\bin\Debug\x64\PluginServer.exe

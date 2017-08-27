@@ -85,10 +85,11 @@ bool PluginCenter::analysis_task_path(const char *szPath, Task *pTask)
 		return false;
 
 	pTask->setData(pPlugin->create_data());
-	int nCreateIndex = pPlugin->parse_path(szPath);
+	string sPath = szPath;
+	sPath = sPath.substr(2 + vecItem[1].length() + vecItem[2].length());
+	int nCreateIndex = pPlugin->parse_path(sPath.c_str());
 	if (nCreateIndex != -1)
 	{
-
 		pTask->setCreateIndex(nCreateIndex);
 		pTask->setPlugin(pPlugin);
 		return true;

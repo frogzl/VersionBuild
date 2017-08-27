@@ -60,10 +60,17 @@ ServiceInterface* produce_one()
 		// 更新构建结果
 		pService->register_service_route("/source-code/{id}/build-rule/{id}/build-result/{id}", Http_Operator_Put, RouteCallBackSet::update_build_rule_result);
 
+		// 更新部署结果
+		pService->register_service_route("/source-code/{id}/build-rule/{id}/depoly-result", Http_Operator_Put, RouteCallBackSet::update_deploy_result);
+
 		// 编译-----------------------------------------------------------
 		// 编译源码
 		pService->register_service_route("/source-code/{id}/state/auto-build", Http_Operator_Put, RouteCallBackSet::auto_build_source_code);
 		pService->register_service_route("/source-code/{id}/state/build", Http_Operator_Put, RouteCallBackSet::build_source_code);
+
+		// 部署-----------------------------------------------------------
+		// 部署源码
+		pService->register_service_route("/source-code/{id}/build-rule/{id}/state/deploy", Http_Operator_Put, RouteCallBackSet::deploy_build_rule);
 
 		return instantiate_plugin_template(pService);
 	}

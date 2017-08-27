@@ -1,4 +1,32 @@
-﻿  ServiceMasterTask.cpp
+﻿  SystemConfig.cpp
+  stdafx.cpp
+  ServiceMasterTask.cpp
+  RouteCallBackSet.cpp
+  HttpRequestException.cpp
+  Task_Instance.cpp
+  Plugin_Task.cpp
+  Plugin_Deploy.cpp
+  Plugin.cpp
+  Database.cpp
+  Common.cpp
+Common.cpp(83): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+Common.cpp(83): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+Common.cpp(166): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : 参见“fopen”的声明
+Common.cpp(259): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(363) : 参见“_snprintf”的声明
+Common.cpp(297): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : 参见“fopen”的声明
+Common.cpp(301): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+Common.cpp(317): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : 参见“sprintf”的声明
+  FinishTask.cpp
+  DeleteTask.cpp
+  QueryTask.cpp
+  CreateTask.cpp
+  Generating Code...
+e:\versionbuild\servicemastertask\business\createtask.cpp(170): warning C4715: “CreateTask::check_input_data”: 不是所有的控件路径都返回值
+  dllmain.cpp
 LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/FORCE”规范)
 Plugin.obj : warning LNK4006: "public: static char const * * DB::PluginData::names" (?names@PluginData@DB@@2PAPEBDA) 已在 CreateTask.obj 中定义；已忽略第二个定义
 Plugin.obj : warning LNK4006: "private: static char const * const DB::PluginData::table_" (?table_@PluginData@DB@@0PEBDEB) 已在 CreateTask.obj 中定义；已忽略第二个定义
@@ -33,4 +61,37 @@ Task_Instance.obj : warning LNK4006: "public: static char const * * DB::Task_Ins
 Task_Instance.obj : warning LNK4006: "private: static char const * const DB::Task_InstanceData::table_" (?table_@Task_InstanceData@DB@@0PEBDEB) 已在 CreateTask.obj 中定义；已忽略第二个定义
 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\ffeafe48-3c6e-49d8-a85c-783167eada00\1\plugin_ServiceMasterTask.dll : warning LNK4088: 因 /FORCE 选项生成了映像；映像可能不能运行
   ServiceMasterTask.vcxproj -> E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\ffeafe48-3c6e-49d8-a85c-783167eada00\1\plugin_ServiceMasterTask.dll
+LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/FORCE”规范)
+Plugin.obj : warning LNK4006: "public: static char const * * DB::PluginData::names" (?names@PluginData@DB@@2PAPEBDA) 已在 CreateTask.obj 中定义；已忽略第二个定义
+Plugin.obj : warning LNK4006: "private: static char const * const DB::PluginData::table_" (?table_@PluginData@DB@@0PEBDEB) 已在 CreateTask.obj 中定义；已忽略第二个定义
+Plugin_Deploy.obj : warning LNK4006: "public: static char const * * DB::Plugin_DeployData::names" (?names@Plugin_DeployData@DB@@2PAPEBDA) 已在 CreateTask.obj 中定义；已忽略第二个定义
+Plugin_Deploy.obj : warning LNK4006: "private: static char const * const DB::Plugin_DeployData::table_" (?table_@Plugin_DeployData@DB@@0PEBDEB) 已在 CreateTask.obj 中定义；已忽略第二个定义
+Plugin_Task.obj : warning LNK4006: "public: static char const * * DB::Plugin_TaskData::names" (?names@Plugin_TaskData@DB@@2PAPEBDA) 已在 CreateTask.obj 中定义；已忽略第二个定义
+Plugin_Task.obj : warning LNK4006: "private: static char const * const DB::Plugin_TaskData::table_" (?table_@Plugin_TaskData@DB@@0PEBDEB) 已在 CreateTask.obj 中定义；已忽略第二个定义
+Task_Instance.obj : warning LNK4006: "public: static char const * * DB::Task_InstanceData::names" (?names@Task_InstanceData@DB@@2PAPEBDA) 已在 CreateTask.obj 中定义；已忽略第二个定义
+Task_Instance.obj : warning LNK4006: "private: static char const * const DB::Task_InstanceData::table_" (?table_@Task_InstanceData@DB@@0PEBDEB) 已在 CreateTask.obj 中定义；已忽略第二个定义
+  libIconv.lib(iconv.obj) : 找到 MSIL .netmodule 或使用 /GL 编译的模块；正在使用 /LTCG 重新启动链接；将 /LTCG 添加到链接命令行以改进链接器性能
+LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/LTCG”规范)
+Plugin.obj : warning LNK4006: "public: static char const * * DB::PluginData::names" (?names@PluginData@DB@@2PAPEBDA) 已在 CreateTask.obj 中定义；已忽略第二个定义
+Plugin.obj : warning LNK4006: "private: static char const * const DB::PluginData::table_" (?table_@PluginData@DB@@0PEBDEB) 已在 CreateTask.obj 中定义；已忽略第二个定义
+Plugin_Deploy.obj : warning LNK4006: "public: static char const * * DB::Plugin_DeployData::names" (?names@Plugin_DeployData@DB@@2PAPEBDA) 已在 CreateTask.obj 中定义；已忽略第二个定义
+Plugin_Deploy.obj : warning LNK4006: "private: static char const * const DB::Plugin_DeployData::table_" (?table_@Plugin_DeployData@DB@@0PEBDEB) 已在 CreateTask.obj 中定义；已忽略第二个定义
+Plugin_Task.obj : warning LNK4006: "public: static char const * * DB::Plugin_TaskData::names" (?names@Plugin_TaskData@DB@@2PAPEBDA) 已在 CreateTask.obj 中定义；已忽略第二个定义
+Plugin_Task.obj : warning LNK4006: "private: static char const * const DB::Plugin_TaskData::table_" (?table_@Plugin_TaskData@DB@@0PEBDEB) 已在 CreateTask.obj 中定义；已忽略第二个定义
+Task_Instance.obj : warning LNK4006: "public: static char const * * DB::Task_InstanceData::names" (?names@Task_InstanceData@DB@@2PAPEBDA) 已在 CreateTask.obj 中定义；已忽略第二个定义
+Task_Instance.obj : warning LNK4006: "private: static char const * const DB::Task_InstanceData::table_" (?table_@Task_InstanceData@DB@@0PEBDEB) 已在 CreateTask.obj 中定义；已忽略第二个定义
+     正在创建库 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\ffeafe48-3c6e-49d8-a85c-783167eada00\1\plugin_ServiceMasterTask.lib 和对象 E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\ffeafe48-3c6e-49d8-a85c-783167eada00\1\plugin_ServiceMasterTask.exp
+LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\ffeafe48-3c6e-49d8-a85c-783167eada00\1\plugin_ServiceMasterTask.dll : warning LNK4088: 因 /FORCE 选项生成了映像；映像可能不能运行
+  正在生成代码
+  已完成代码的生成
+Plugin.obj : warning LNK4006: "public: static char const * * DB::PluginData::names" (?names@PluginData@DB@@2PAPEBDA) 已在 CreateTask.obj 中定义；已忽略第二个定义
+Plugin.obj : warning LNK4006: "private: static char const * const DB::PluginData::table_" (?table_@PluginData@DB@@0PEBDEB) 已在 CreateTask.obj 中定义；已忽略第二个定义
+Plugin_Deploy.obj : warning LNK4006: "public: static char const * * DB::Plugin_DeployData::names" (?names@Plugin_DeployData@DB@@2PAPEBDA) 已在 CreateTask.obj 中定义；已忽略第二个定义
+Plugin_Deploy.obj : warning LNK4006: "private: static char const * const DB::Plugin_DeployData::table_" (?table_@Plugin_DeployData@DB@@0PEBDEB) 已在 CreateTask.obj 中定义；已忽略第二个定义
+Plugin_Task.obj : warning LNK4006: "public: static char const * * DB::Plugin_TaskData::names" (?names@Plugin_TaskData@DB@@2PAPEBDA) 已在 CreateTask.obj 中定义；已忽略第二个定义
+Plugin_Task.obj : warning LNK4006: "private: static char const * const DB::Plugin_TaskData::table_" (?table_@Plugin_TaskData@DB@@0PEBDEB) 已在 CreateTask.obj 中定义；已忽略第二个定义
+Task_Instance.obj : warning LNK4006: "public: static char const * * DB::Task_InstanceData::names" (?names@Task_InstanceData@DB@@2PAPEBDA) 已在 CreateTask.obj 中定义；已忽略第二个定义
+Task_Instance.obj : warning LNK4006: "private: static char const * const DB::Task_InstanceData::table_" (?table_@Task_InstanceData@DB@@0PEBDEB) 已在 CreateTask.obj 中定义；已忽略第二个定义
+E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\ffeafe48-3c6e-49d8-a85c-783167eada00\1\plugin_ServiceMasterTask.dll : warning LNK4088: 因 /FORCE 选项生成了映像；映像可能不能运行
   ServiceMasterTask.vcxproj -> E:\VersionBuild\bin\Debug\x64\MicroServicePlugins\ffeafe48-3c6e-49d8-a85c-783167eada00\1\plugin_ServiceMasterTask.dll

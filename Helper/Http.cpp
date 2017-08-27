@@ -109,6 +109,7 @@ namespace Helper
 								http_end();
 								break;
 							}
+							_rd->sData = sStorageID;
 							http_end();
 
 							if (stRead < _llBlock)
